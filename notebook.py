@@ -47,6 +47,9 @@ census = pandas.read_excel('census-2011-ks211ni.xlsx', sheet_name='SA', skiprows
 census.drop(columns=['SA','All usual residents'], inplace=True)
 sa_stats = nimdm.merge(census, how='left', left_on='SA2011', right_on='SA Code')
 
+# Include area populations
+sa_stats = sa_stats.merge(pops, how='left', left_on='SA2011', right_on='Area_Code')
+
 # Add centre points of each SA
 trans = Transformer.from_crs("EPSG:29902", "EPSG:4326", always_xy=True)
 coords = sa2011[['SA2011','X_COORD','Y_COORD']]
