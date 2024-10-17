@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://unpkg.com/echarts@5.4.3/dist/echarts.js"></script>
+    <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+      .bottom-sheet {
+        min-height: auto;
+        max-height: 80vh;
+        padding: 24px;
+        overflow-y: auto;
+        overflow: visible;
+      }
+    </style>
+    </head>
+  <body>
+    <!-- Prepare a DOM with a defined width and height for ECharts -->
+    <div id="main" style="width:90vw;height:100vh;"></div>
+
+    <div id="bottom-sheet" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Settings</h4>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <select id="x-select" onchange="updateSelect(this.value, 'x')" class="material-select"></select>
+                <label>X axis</label>
+              </div>
+
+              <div class="input-field col s6">
+                <select id="y-select" onchange="updateSelect(this.value, 'y')" class="material-select"></select>
+                <label>Y axis</label>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="input-field col s6">
+                <select id="colour-select" onchange="updateSelect(this.value, 'colour')" class="material-select"></select>
+                <label>Colour</label>
+              </div>
+
+              <div class="input-field col s6">
+                <select id="multiple-select" onchange="updateSelect(this.value, 'multiple')" class="material-select"></select>
+                <label>Small multiples</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <select id="palette-select" onchange="updateSelect(this.value, 'palette')" class="material-select"></select>
+                <label>Palette</label>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  
+    <script type="text/javascript">
+      // Initialize the echarts instance based on the prepared dom
+      var myChart = echarts.init(document.getElementById('main'));
+      var store = null;
+      const dimensions = {
+              "name" : {type: 'None'},
+              "Multiple Deprivation Measure Rank" : {type: 'Metric', bins: [10], extremes: ['Most Deprived', 'Least Deprived']},
+              "Income Domain Rank" : {type: 'Metric', bins: [10], extremes: ['Most Deprived', 'Least Deprived']},
+              "Employment Domain Rank" : {type: 'Metric', bins: [10], extremes: ['Most Deprived', 'Least Deprived']},
+              "Health Deprivation and Disability Domain Rank" : {type: 'Metric', bins: [10], extremes: ['Most Deprived', 'Least Deprived']},
+              "Education, Skills and Training Domain Rank" : {type: 'Metric', bins: [10], extremes: ['Most Deprived', 'Least Deprived']},
+              "Access to Services Domain Rank" : {type: 'Metric', bins: [10], extremes: ['Most Deprived', 'Least Deprived']},
+              "Living Environment Domain Rank" : {type: 'Metric', bins: [10], extremes: ['Most Deprived', 'Least Deprived']},
+              "Crime and Disorder Domain Rank" : {type: 'Metric', bins: [10], extremes: ['Most Deprived', 'Least Deprived']},
+              "Proportion of the population living in households whose equivalised income is below 60 per cent of the NI median" : {type: 'Metric', title: 'Proportion living in households where income under 60% of NI median', bins: [10], extremes: ['Least Deprived', 'Most Deprived']},
+              "Proportion of the working age population who are employment deprived" : {type: 'Metric', bins: [10], extremes: ['Most Deprived', 'Least Deprived']},
+              "Religion: Catholic (%)" : {type: 'Metric', bins: [10], extremes: ['Least Catholic', 'Most Catholic']},
+              "Religion: Presbyterian Church in Ireland (%)" : {type: 'Metric', bins: [10], extremes: ['Least Presbyterian', 'Most Presbyterian']},
+              "Religion: Church of Ireland (%)" : {type: 'Metric', bins: [10], extremes: ['Least Church of Ireland', 'Most Church of Ireland']},
+              "Religion: Methodist Church in Ireland (%)" : {type: 'Metric', bins: [10], extremes: ['Least Methodist', 'Most Methodist']},
+              "Religion: Other Christian (including Christian related) (%)" : {type: 'Metric', bins: [10], extremes: ['Least Other Christian', 'Most Other Christian']},
+              "Religion: Other religions (%)" : {type: 'Metric', bins: [10], extremes: ['Least Other religions', 'Most Other religions']},
+              "Religion: No religion (%)" : {type: 'Metric', bins: [10], extremes: ['Least No religion', 'Most No religion']},
+              "Religion: Religion not stated (%)" : {type: 'Metric', bins: [10], extremes: ['Least not stated', 'Most not stated']},
+              "centre_x" : {type: 'Metric', title: 'Longitude', dataMin: true},
+              "centre_y" : {type: 'Metric', title: 'Latitude', dataMin: true},
+              "2015 Default Urban/Rural" : {type: "Category", title: "Urban/Rural", order: ["Urban","Mixed urban/rural","Rural"]},
+              "LGD2014NAME": {type: "Category", title: "Local Government District"},
+        };
+      const metbrewer = { // Colours from https://github.com/BlakeRMills/MetBrewer
+        Archambault: {colours : ["#88a0dc", "#381a61", "#7c4b73", "#ed968c", "#ab3329", "#e78429", "#f9d14a"], order: [2, 7, 5, 1, 6, 4, 3], colorblind: true},
+        Austria: {colours : ["#a40000", "#16317d", "#007e2f", "#ffcd12", "#b86092", "#721b3e", "#00b7a7"], order: [1, 2, 3, 4, 6, 5, 7], colorblind: false},
+        Benedictus: {colours : ["#9a133d", "#b93961", "#d8527c", "#f28aaa", "#f9b4c9", "#f9e0e8", "#ffffff", "#eaf3ff", "#c5daf6", "#a1c2ed", "#6996e3", "#4060c8", "#1a318b"], order: [9, 5, 11, 1, 7, 3, 13, 4, 8, 2, 12, 6, 10], colorblind: false},
+        Cassatt1: {colours : ["#b1615c", "#d88782", "#e3aba7", "#edd7d9", "#c9c9dd", "#9d9dc7", "#8282aa", "#5a5a83"], order: [3, 6, 1, 8, 4, 5, 2, 7], colorblind: true},
+        Cassatt2: {colours : ["#2d223c", "#574571", "#90719f", "#b695bc", "#dec5da", "#c1d1aa", "#7fa074", "#466c4b", "#2c4b27", "#0e2810"], order: [7, 3, 9, 1, 5, 6, 2, 10, 4, 8], colorblind: true},
+        Cross: {colours : ["#c969a1", "#ce4441", "#ee8577", "#eb7926", "#ffbb44", "#859b6c", "#62929a", "#004f63", "#122451"], order: [4, 7, 1, 8, 2, 6, 3, 5, 9], colorblind: false},
+        Degas: {colours : ["#591d06", "#96410e", "#e5a335", "#556219", "#418979", "#2b614e", "#053c29"], order: [5, 2, 1, 3, 4, 7, 6], colorblind: false},
+        Demuth: {colours : ["#591c19", "#9b332b", "#b64f32", "#d39a2d", "#f7c267", "#b9b9b8", "#8b8b99", "#5d6174", "#41485f", "#262d42"], order: [9, 5, 1, 7, 3, 4, 8, 2, 6, 10], colorblind: true},
+        Derain: {colours : ["#efc86e", "#97c684", "#6f9969", "#aab5d5", "#808fe1", "#5c66a8", "#454a74"], order: [4, 2, 5, 7, 1, 3, 6], colorblind: true},
+        Egypt: {colours : ["#dd5129", "#0f7ba2", "#43b284", "#fab255"], order: [1, 2, 3, 4], colorblind: true},
+        Gauguin: {colours : ["#b04948", "#811e18", "#9e4013", "#c88a2c", "#4c6216", "#1a472a"], order: [2, 5, 4, 3, 1, 6], colorblind: false},
+        Greek: {colours : ["#3c0d03", "#8d1c06", "#e67424", "#ed9b49", "#f5c34d"], order: [2, 3, 5, 1, 4], colorblind: true},
+        Hiroshige: {colours : ["#e76254", "#ef8a47", "#f7aa58", "#ffd06f", "#ffe6b7", "#aadce0", "#72bcd5", "#528fad", "#376795", "#1e466e"], order: [6, 2, 9, 3, 7, 5, 1, 10, 4, 8], colorblind: true},
+        Hokusai1: {colours : ["#6d2f20", "#b75347", "#df7e66", "#e09351", "#edc775", "#94b594", "#224b5e"], order: [2, 7, 4, 6, 5, 1, 3], colorblind: false},
+        Hokusai2: {colours : ["#abc9c8", "#72aeb6", "#4692b0", "#2f70a1", "#134b73", "#0a3351"], order: [5, 2, 4, 1, 6, 3], colorblind: true},
+        Hokusai3: {colours : ["#d8d97a", "#95c36e", "#74c8c3", "#5a97c1", "#295384", "#0a2e57"], order: [4, 2, 5, 3, 1, 6], colorblind: true},
+        Homer1: {colours : ["#551f00", "#a62f00", "#df7700", "#f5b642", "#fff179", "#c3f4f6", "#6ad5e8", "#32b2da"], order: [6, 3, 2, 7, 4, 8, 5, 1], colorblind: false},
+        Homer2: {colours : ["#bf3626", "#e9851d", "#f9c53b", "#aeac4c", "#788f33", "#165d43"], order: [3, 1, 4, 6, 2, 5], colorblind: false},
+        Ingres: {colours : ["#041d2c", "#06314e", "#18527e", "#2e77ab", "#d1b252", "#a97f2f", "#7e5522", "#472c0b"], order: [4, 5, 3, 6, 2, 7, 1, 8], colorblind: true},
+        Isfahan1: {colours : ["#4e3910", "#845d29", "#ae8548", "#e3c28b", "#4fb6ca", "#178f92", "#175f5d", "#054544"], order: [5, 2, 8, 4, 6, 1, 7, 3], colorblind: true},
+        Isfahan2: {colours : ["#d7aca1", "#ddc000", "#79ad41", "#34b6c6", "#4063a3"], order: [4, 2, 3, 5, 1], colorblind: true},
+        Java: {colours : ["#663171", "#cf3a36", "#ea7428", "#e2998a", "#0c7156"], order: [1, 4, 2, 5, 3], colorblind: true},
+        Johnson: {colours : ["#a00e00", "#d04e00", "#f6c200", "#0086a8", "#132b69"], order: [3, 1, 4, 2, 5], colorblind: true},
+        Juarez: {colours : ["#a82203", "#208cc0", "#f1af3a", "#cf5e4e", "#637b31", "#003967"], order: [1, 2, 3, 4, 5, 6], colorblind: false},
+        Kandinsky: {colours : ["#3b7c70", "#ce9642", "#898e9f", "#3b3a3e"], order: [1, 2, 3, 4], colorblind: true},
+        Klimt: {colours : ["#df9ed4", "#c93f55", "#eacc62", "#469d76", "#3c4b99", "#924099"], order: [5, 2, 3, 4, 6, 1], colorblind: false},
+        Lakota: {colours : ["#04a3bd", "#f0be3d", "#931e18", "#da7901", "#247d3f", "#20235b"], order: [1, 2, 3, 4, 5, 6], colorblind: false},
+        Manet: {colours : ["#3b2319", "#80521c", "#d29c44", "#ebc174", "#ede2cc", "#7ec5f4", "#4585b7", "#225e92", "#183571", "#43429b", "#5e65be"], order: [8, 3, 10, 4, 7, 9, 11, 2, 6, 1, 5], colorblind: false},
+        Monet: {colours : ["#4e6d58", "#749e89", "#abccbe", "#e3cacf", "#c399a2", "#9f6e71", "#41507b", "#7d87b2", "#c2cae3"], order: [2, 5, 8, 3, 4, 9, 1, 6, 7], colorblind: false},
+        Moreau: {colours : ["#421600", "#792504", "#bc7524", "#8dadca", "#527baa", "#104839", "#082844"], order: [2, 5, 3, 4, 7, 1, 6], colorblind: false},
+        Morgenstern: {colours : ["#98768e", "#b08ba5", "#c7a2b6", "#dfbbc8", "#ffc680", "#ffb178", "#db8872", "#a56457"], order: [7, 5, 8, 4, 6, 3, 2, 1], colorblind: true},
+        Nattier: {colours : ["#52271c", "#944839", "#c08e39", "#7f793c", "#565c33", "#184948", "#022a2a"], order: [1, 6, 3, 4, 7, 2, 5], colorblind: false},
+        Navajo: {colours : ["#660d20", "#e59a52", "#edce79", "#094568", "#e1c59a"], order: [1, 2, 3, 4, 5], colorblind: false},
+        NewKingdom: {colours : ["#e1846c", "#9eb4e0", "#e6bb9e", "#9c6849", "#735852"], order: [2, 1, 3, 4, 5], colorblind: false},
+        Nizami: {colours : ["#dd7867", "#b83326", "#c8570d", "#edb144", "#8cc8bc", "#7da7ea", "#5773c0", "#1d4497"], order: [5, 2, 6, 8, 3, 7, 4, 1], colorblind: false},
+        OKeeffe1: {colours : ["#6b200c", "#973d21", "#da6c42", "#ee956a", "#fbc2a9", "#f6f2ee", "#bad6f9", "#7db0ea", "#447fdd", "#225bb2", "#133e7e"], order: [8, 6, 1, 4, 10, 3, 11, 5, 2, 7, 9], colorblind: true},
+        OKeeffe2: {colours : ["#fbe3c2", "#f2c88f", "#ecb27d", "#e69c6b", "#d37750", "#b9563f", "#92351e"], order: [7, 1, 6, 4, 2, 5, 3], colorblind: true},
+        Paquin: {colours : ["#831818", "#c62320", "#f05b43", "#f78462", "#feac81", "#f7dea3", "#ced1af", "#98ab76", "#748f46", "#47632a", "#275024"], order: [10, 6, 1, 8, 4, 3, 5, 9, 2, 7, 11], colorblind: false},
+        Peru1: {colours : ["#b5361c", "#e35e28", "#1c9d7c", "#31c7ba", "#369cc9", "#3a507f"], order: [3, 1, 5, 2, 4, 6], colorblind: false},
+        Peru2: {colours : ["#65150b", "#961f1f", "#c0431f", "#f19425", "#c59349", "#533d14"], order: [4, 1, 3, 5, 2, 6], colorblind: false},
+        Pillement: {colours : ["#a9845b", "#697852", "#738e8e", "#44636f", "#2b4655", "#0f252f"], order: [4, 3, 2, 5, 1, 6], colorblind: true},
+        Pissaro: {colours : ["#134130", "#4c825d", "#8cae9e", "#8dc7dc", "#508ca7", "#1a5270", "#0e2a4d"], order: [6, 2, 4, 1, 7, 5, 3], colorblind: false},
+        Redon: {colours : ["#5b859e", "#1e395f", "#75884b", "#1e5a46", "#df8d71", "#af4f2f", "#d48f90", "#732f30", "#ab84a5", "#59385c", "#d8b847", "#b38711"], order: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], colorblind: false},
+        Renoir: {colours : ["#17154f", "#2f357c", "#6c5d9e", "#9d9cd5", "#b0799a", "#f6b3b0", "#e48171", "#bf3729", "#e69b00", "#f5bb50", "#ada43b", "#355828"], order: [2, 5, 9, 12, 3, 8, 7, 10, 4, 1, 6, 11], colorblind: false},
+        Signac: {colours : ["#fbe183", "#f4c40f", "#fe9b00", "#d8443c", "#9b3441", "#de597c", "#e87b89", "#e6a2a6", "#aa7aa1", "#9f5691", "#633372", "#1f6e9c", "#2b9b81", "#92c051"], order: [13, 3, 2, 1, 11, 5, 8, 14, 12, 10, 7, 4, 6, 9], colorblind: false},
+        Tam: {colours : ["#ffd353", "#ffb242", "#ef8737", "#de4f33", "#bb292c", "#9f2d55", "#62205f", "#341648"], order: [3, 8, 1, 6, 2, 7, 4, 5], colorblind: true},
+        Tara: {colours : ["#eab1c6", "#d35e17", "#e18a1f", "#e9b109", "#829d44"], order: [1, 3, 2, 5, 4], colorblind: false},
+        Thomas: {colours : ["#b24422", "#c44d76", "#4457a5", "#13315f", "#b1a1cc", "#59386c", "#447861", "#7caf5c"], order: [3, 2, 8, 6, 1, 4, 7, 5], colorblind: false},
+        Tiepolo: {colours : ["#802417", "#c06636", "#ce9344", "#e8b960", "#646e3b", "#2b5851", "#508ea2", "#17486f"], order: [1, 2, 8, 4, 3, 5, 7, 6], colorblind: false},
+        Troy: {colours : ["#421401", "#6c1d0e", "#8b3a2b", "#c27668", "#7ba0b4", "#44728c", "#235070", "#0a2d46"], order: [2, 7, 4, 5, 1, 8, 3, 6], colorblind: true},
+        Tsimshian: {colours : ["#582310", "#aa361d", "#82c45f", "#318f49", "#0cb4bb", "#2673a3", "#473d7d"], order: [6, 1, 7, 4, 1, 5, 3], colorblind: false},
+        VanGogh1: {colours : ["#2c2d54", "#434475", "#6b6ca3", "#969bc7", "#87bcbd", "#89ab7c", "#6f9954"], order: [3, 5, 7, 4, 6, 2, 1], colorblind: false},
+        VanGogh2: {colours : ["#bd3106", "#d9700e", "#e9a00e", "#eebe04", "#5b7314", "#c3d6ce", "#89a6bb", "#454b87"], order: [1, 5, 8, 2, 7, 4, 6, 3], colorblind: false},
+        VanGogh3: {colours : ["#e7e5cc", "#c2d6a4", "#9cc184", "#669d62", "#3c7c3d", "#1f5b25", "#1e3d14", "#192813"], order: [7, 5, 1, 4, 8, 2, 3, 6], colorblind: true},
+        Veronese: {colours : ["#67322e", "#99610a", "#c38f16", "#6e948c", "#2c6b67", "#175449", "#122c43"], order: [5, 1, 7, 2, 3, 6, 4], colorblind: true},
+        Wissing: {colours : ["#4b1d0d", "#7c291e", "#ba7233", "#3a4421", "#2d5380"], order: [2, 3, 5, 4, 1], colorblind: false}
+      };
+      // TODO: move the dataset settings to a JSON file (sa-metadata.json)
+      // TODO: new URL parameter to set/hide the title
+      // TODO: new URL parameter to prevent setting the parameters
+      // TODO: new URL parameter to choose the medatadata and stats JSON files
+      // TODO: move to new repo
+      // TODO: add field descriptions to metadata file and display
+      var settings = {
+        palette: "Signac",
+        x: Object.entries(dimensions).filter(a => a[1].type=='Metric')[0][0],
+        y: Object.entries(dimensions).filter(a => a[1].type=='Metric')[1][0],
+        colour: Object.entries(dimensions).filter(a => a[1].type=='Category')[0][0],
+        smallMultiple: 'None'
+      };
+      var categories = [];
+      var isSmallMultiple = false;
+      var chartAxes = 0;
+      var chartSeries = 0;
+      var bottomSheet = document.querySelector('.bottom-sheet');
+      var bottomSheetInstance = M.Modal.init(bottomSheet);
+
+      function tooltipCallback(args) {
+        return (
+          ((args.data[3] != 'Count of SAs') ? (args.data[3] + '<br />') : '') +
+          (dimensions[settings.x] ? useTitleIfExists(settings.x) : settings.x) + ': ' + args.data[0] + '<br />' +
+          ((args.data[3] != 'Count of SAs') ? (useTitleIfExists(settings.y) + ': ') : ('Count of SAs: ')) + args.data[1] + '<br />' +
+          args.marker + ' ' + useTitleIfExists(settings.colour) + ': ' + args.data[4]
+        );
+      }
+
+      function createOptGroup(label) {
+        var g = document.createElement("optgroup");
+        g.label = label;
+        return(g);
+      }
+
+      function createOption(text, value, selected, disabled) {
+        var el = document.createElement("option");
+        el.text = text;
+        el.value = value;
+        el.selected = selected;
+        el.disabled = disabled;
+        return(el);
+      }
+
+      function hideSelected(selectorId, hide, selected, showCountOfSAs = false) {
+        var select = document.getElementById(selectorId);
+        for (var i=0; i<select.length; i++) {
+          if (select[i].value == 'Count of SAs') {
+            select[i].disabled = !showCountOfSAs;
+            select[i].selected = showCountOfSAs;
+          } else {
+            select[i].disabled = (select[i].value == hide) || (showCountOfSAs);
+            select[i].selected = (select[i].value == selected) && (!showCountOfSAs);
+          }
+        }
+      }
+
+      function useTitleIfExists(column) {
+        if (dimensions[column].hasOwnProperty('title')) {
+          return(dimensions[column].title);
+        } else {
+          return(column);
+        }
+      }
+
+      function labelExtremes(column, idx, maxIdx, value) {
+        if ((dimensions[column].type == 'Binned') && (dimensions[column].hasOwnProperty('extremes'))) {
+          if (idx == 0) {
+            return (value + ' - ' + dimensions[column].extremes[0]);
+          } else if (idx == maxIdx) {
+            return (value + ' - ' + dimensions[column].extremes[1]);
+          }
+        }
+        return (value);
+      }
+
+      function orderCategories(column) {
+        var cats = [...new Set(store.map(a => a[column]))];
+        if (dimensions[column].type == 'Binned') {
+          cats.sort((a, b) => parseInt(a) - parseInt(b));
+        } else if (dimensions[column].hasOwnProperty('order')) {
+          cats.sort((a, b) => dimensions[column].order.indexOf(a) - dimensions[column].order.indexOf(b));
+        } else {
+          cats.sort();
+        }
+        return(cats);
+      }
+
+      $('.material-select').on('contentChanged', function() {
+        $(this).formSelect();
+      });
+
+      // Specify the configuration items and data for the chart
+      myChart.setOption({
+        toolbox: {feature: {
+          saveAsImage: {},
+          myTool1: {
+            show: true,
+            title: 'Choose variables',
+            icon: 'path://M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z',
+            onclick: function (){
+              bottomSheetInstance.open();
+            }
+          },
+          myTool2: {
+            show: true,
+            title: 'Copy URL',
+            icon: 'path://M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z',
+            onclick: function (){
+              const url = location.protocol + '//' + location.host + location.pathname + '?' + (new URLSearchParams(settings).toString());
+              navigator.clipboard.writeText(url);
+            }
+          }
+        }},
+        tooltip: {trigger: "item", formatter: tooltipCallback},
+      });
+
+      function updateChart() {
+        categories = orderCategories(settings.colour);
+        isSmallMultiple = (settings.smallMultiple != 'None');
+        var series = [];
+        var yAxis = [];
+        var xAxis = [];
+        var grid = [];
+        var titles = [];
+        const xHasDataMin = dimensions[settings.x] ? (dimensions[settings.x].dataMin ? true : false) : false;
+        const yHasDataMin = dimensions[settings.y] ? (dimensions[settings.y].dataMin ? true : false) : false;
+        const yBinned = (dimensions[settings.y].type == 'Binned');
+        const xBinned = (dimensions[settings.x].type == 'Binned');
+        const colourBinned = (dimensions[settings.colour].type == 'Binned');
+        const xCategories = xBinned ? [...new Set(store.map(a => a[settings.x]))] : [];
+        if (isSmallMultiple) {
+          var yCategories = orderCategories(settings.smallMultiple);
+          const height = 100 / yCategories.length;
+          const pixels = window.innerHeight;
+          var multHeight = (pixels * height) / 100;
+          if (multHeight < 200) {
+            multHeight = 200;
+            myChart.resize({height: ((multHeight+30)*yCategories.length)+50 + 'px'});
+          } else {
+            multHeight = multHeight - (pixels / 15);
+            myChart.resize({height: ((multHeight+30)*yCategories.length)+50 + 'px'});
+          }
+          // Create the data object dependent on whether x is binned or not
+          var data = {};
+          yCategories.forEach(function(cat, idx) {
+            if (dimensions[settings.x].type == 'Binned') {
+              const subset = Object.entries(store.filter(d => d[settings.smallMultiple] == cat).reduce(
+                function (acc, item) {
+                  acc[item[settings.x]][item[settings.colour]]++;
+                  return(acc);
+                },
+                Object.fromEntries([...new Set(store.map(a => a[settings.x]))].sort().map(a => [a, Object.fromEntries(categories.map(d => [d, 0]))])) // This is necessary for ordering of x axis
+              )).sort(
+                (a, b) => a[0] - b[0]
+              ).map(
+                e => Object.entries(e[1]).map(d => [e[0], d[1],  metbrewer[settings.palette].colours[categories.indexOf(colourBinned ? parseInt(d[0]) : d[0])], 'Count of SAs', colourBinned ? parseInt(d[0]) : d[0]])
+              ).flat(1);
+              data[cat] = subset;
+            } else {
+              data[cat] = store.filter(d => d[settings.smallMultiple] == cat).map(d => [d[settings.x], d[settings.y], metbrewer[settings.palette].colours[categories.indexOf(d[settings.colour])], d.SA2011, labelExtremes(settings.colour, categories.indexOf(d[settings.colour]), categories.length-1, d[settings.colour])]);
+            }
+          });
+          // Get the y/x axis min/max after the data calculations
+          const yMin = Object.values(data).flat().reduce((a,b) => (yBinned ? ((a < parseInt(b[1])) ? a : parseInt(b[1])) : ((a < b[1]) ? a : b[1])));
+          var yMax = Object.values(data).flat().reduce((a,b) => (yBinned ? ((a > parseInt(b[1])) ? a : parseInt(b[1])) : ((a > b[1]) ? a : b[1])));
+          const xMin = Object.values(data).flat().reduce((a,b) => (xBinned ? ((a < parseInt(b[0])) ? a : parseInt(b[0])) : ((a < b[0]) ? a : b[0])));
+          const xMax = Object.values(data).flat().reduce((a,b) => (xBinned ? ((a > parseInt(b[0])) ? a : parseInt(b[0])) : ((a > b[0]) ? a : b[0])));
+          if ((settings.smallMultiple!=settings.colour) && (xBinned)) {
+            yCategories.forEach(function(cat, idx) {
+              xCategories.forEach(function(col, cidx) {
+                const subset = data[cat].filter(a => a[0]==col);
+                const total = subset.reduce((a,b) => a+b[1], 0);
+                yMax = (total > yMax) ? total : yMax;
+              });
+            });
+          }
+          // Set up the plots
+          yCategories.forEach(function(cat, idx) {
+            if ((settings.smallMultiple!=settings.colour) && (xBinned)) {
+              categories.slice().reverse().forEach(function(col, cidx) {
+                const subset = data[cat].filter(a => a[4]==col);
+                series.push({
+                  type: 'bar',
+                  name: '',
+                  id: (idx*categories.length)+cidx,
+                  yAxisIndex: idx,
+                  xAxisIndex: idx,
+                  coordinateSystem: 'cartesian2d',
+                  data : subset,
+                  stack: cat,
+                  itemStyle : {
+                    color: function(data) {
+                      return data.value[2];
+                    }
+                  }
+                });
+              });
+            } else {
+              series.push({
+                type: xBinned ? 'bar' : 'scatter',
+                name: ((settings.smallMultiple==settings.colour) ? labelExtremes(settings.smallMultiple, idx, yCategories.length-1, cat) : ''),
+                id: idx,
+                yAxisIndex: idx,
+                xAxisIndex: idx,
+                coordinateSystem: 'cartesian2d',
+                data : data[cat],
+                stack: xBinned ? cat : null,
+                itemStyle : {
+                  color: function(data) {
+                    return data.value[2];
+                  }
+                }
+              });
+            }
+            yAxis.push({
+              id: idx,
+              type: 'value',
+              name: xBinned ? 'Count of SAs' : useTitleIfExists(settings.y),
+              nameLocation: 'middle',
+              nameGap: 40,
+              gridIndex: idx,
+              min: yHasDataMin ? yMin: null,
+              max: yMax,
+              axisLabel: {
+                show: true,
+                showMinLabel: yHasDataMin ? false : null,
+                showMaxLabel: false
+              },
+              axisLine: {show: true},
+              axisTick: {show: true}
+            });
+            xAxis.push({
+              id: idx,
+              type: xBinned ? 'category' : 'value',
+              name: (idx == yCategories.length-1) ? useTitleIfExists(settings.x) : '',
+              min: xHasDataMin ? xMin: null,
+              max: xBinned ? xMax-1 : xMax,
+              gridIndex: idx,
+              axisLabel: {
+                show: (idx == yCategories.length-1),
+                showMinLabel: xHasDataMin ? false : null, 
+                showMaxLabel: xHasDataMin ? false : null,
+                formatter: function (value, idx) {
+                  return (labelExtremes(settings.x, idx, xCategories.length-1, value));
+                }
+              },
+              axisLine: {show: (idx == yCategories.length-1)},
+              axisTick: {show: (idx == yCategories.length-1)}
+            });
+            grid.push({
+              id: idx,
+              left: '5%',
+              right: '21%',
+              top: ((multHeight+30)*idx)+50,
+              height: multHeight,
+            });
+            titles.push({
+              textAlign: 'right',
+              text: labelExtremes(settings.smallMultiple, idx, yCategories.length-1, cat),
+              left: '78%',
+              top: ((multHeight+30)*idx)+30,
+              textStyle: {
+                fontSize: 14,
+                fontWeight: 'normal'
+              }
+            });
+          });
+          if (settings.smallMultiple != settings.colour) {
+            categories.forEach(function(cat, idx) {
+              series.push(
+                {
+                  type: 'scatter',
+                  name: labelExtremes(settings.colour, idx, categories.length-1, cat),
+                  id: series.length,
+                  data: null,
+                  itemStyle : {
+                    color: metbrewer[settings.palette].colours[idx]
+                  }
+                }
+              );
+            });
+          }
+        } else {
+          myChart.resize({height: window.innerHeight});
+          var data = {};
+          categories.forEach(function(cat, idx) {
+            if (xBinned) {
+              data[idx] = Object.entries(store.filter(d => d[settings.colour] == cat).reduce(
+                function (acc, item) {
+                  acc[item[settings.x]]++;
+                  return(acc)
+                },
+                Object.fromEntries([...new Set(store.map(a => a[settings.x]))].sort().map(a => [a, 0])) // This is necessary for ordering of x axis
+              )).sort(
+                (a, b) => a[0] - b[0]
+              ).map(e => [e[0], e[1], cat, 'Count of SAs', cat]);
+            } else {
+              data[idx] = store.filter(d => d[settings.colour] == cat).map(d => [d[settings.x], d[settings.y], d[settings.colour], d.SA2011, d[settings.colour]]);
+            }
+          });
+          categories.forEach(function(cat, idx) {
+            const newidx = xBinned ? (categories.length-idx-1) : idx;
+            series.push({
+              type: xBinned ? 'bar': 'scatter',
+              name: labelExtremes(settings.colour, newidx, categories.length-1, String(categories[newidx])),
+              id: newidx,
+              yAxisIndex: 0,
+              xAxisIndex: 0,
+              coordinateSystem: 'cartesian2d',
+              data: data[newidx],
+              stack: xBinned ? 'x': null,
+              itemStyle : {
+                color: metbrewer[settings.palette].colours[newidx]
+              },
+            });
+          });
+          yAxis.push({
+            id: 0,
+            type: isSmallMultiple ? 'category' : 'value',
+            name: xBinned ? 'Count of SAs' : useTitleIfExists(settings.y),
+            show: !isSmallMultiple,
+            min: yHasDataMin ? 'dataMin': null,
+            max: yHasDataMin ? 'dataMax': null,
+            axisLabel: {
+              showMinLabel: yHasDataMin ? false : null, 
+              showMaxLabel: yHasDataMin ? false : null,
+            },
+          });
+          xAxis.push({
+            id: 0,
+            type: xBinned ? 'category' : 'value',
+            name: useTitleIfExists(settings.x),
+            min: xHasDataMin ? 'dataMin': null,
+            max: xHasDataMin ? 'dataMax': null,
+            axisLabel: {
+              showMinLabel: xHasDataMin ? false : null, 
+              showMaxLabel: xHasDataMin ? false : null,
+              formatter: function (value, idx) {
+                return (labelExtremes(settings.x, idx, xCategories.length-1, value));
+              }
+            },
+          });
+          grid.push({
+            id: 0,
+            left: '5%',
+            right: '21%',
+            top: '50',
+            height: '90%',
+          });
+          titles.push({
+            text: ''
+          });
+        }
+        if (series.length < chartSeries) {
+          for (var idx = series.length; idx < chartSeries; idx++)
+          {
+            series.push(
+              {
+                type: 'scatter',
+                id: idx,
+                showSymbol: false,
+                data: [],
+                name: ''
+              }
+            );
+          }
+        }
+        if (yAxis.length < chartAxes) {
+          for (var idx = yAxis.length; idx < chartAxes; idx++)
+          {
+            yAxis.push({
+              name: '',
+              id: idx,
+              axisLabel: {show: false},
+              axisLine: {show: false},
+              axisTick: {show: false}
+            });
+            xAxis.push({
+              name: '',
+              id: idx,
+              axisLabel: {show: false},
+              axisLine: {show: false},
+              axisTick: {show: false}
+            });
+            grid.push({
+              id: idx,
+              left: '5%',
+              right: '21%',
+              top: '50',
+              height: '0%',
+              show: false
+            });
+            titles.push({
+              text: ''
+            });
+          }
+        }
+        titles.push({text: 'NI Small Area statistics explorer'});
+        chartSeries = series.length;
+        chartAxes = yAxis.length;
+        var legendData = [];
+        categories.forEach(function(cat, idx) {
+          const name = labelExtremes(settings.colour, idx, categories.length-1, String(cat));
+          if ((settings.smallMultiple == settings.colour) || (!isSmallMultiple & xBinned)) {
+            legendData.push({
+              name: name,
+              itemStyle: {color: metbrewer[settings.palette].colours[idx]},
+            });
+          } else {
+            legendData.push(name);
+          }
+        });
+        myChart.setOption({
+          title: titles,
+          grid: grid,
+          xAxis: xAxis,
+          yAxis: yAxis,
+          series: series,
+          legend : {
+            top: 'middle',
+            right: 0,
+            orient: 'vertical',
+            align: 'right',
+            icon: 'roundRect',
+            data: legendData,
+          },
+        });
+      }
+
+      $.get('sa-stats.json').done(function(data) {
+        store = data.sort((a, b) => b.SA2011 - a.SA2011);
+        Object.entries(dimensions).filter(v => v[1].bins).forEach((d, idx) => {
+          const binSize = store.length / d[1].bins[0];
+          const suffix = (d[1].bins[0]==10) ? ' decile' : (d[1].bins[0]==100) ? ' centile' : ' binned';
+          // Calculate the binned variables
+          store.map((a, idx) =>
+          {
+            return({
+              index: idx,
+              value: a[d[0]]
+            });
+          }).sort((a,b) => (a.value - b.value)).map((e, i) =>
+          {
+            const value = parseInt(i/binSize)+1;
+            store[e.index][d[0] + suffix] = value;
+          });
+          dimensions[d[0] + suffix] = {
+            type: 'Binned'
+          };
+          if (d[1].hasOwnProperty('extremes')) {
+            dimensions[d[0] + suffix].extremes = d[1].extremes;
+          }
+          if (d[1].title) {
+            dimensions[d[0] + suffix].title = d[1].title + suffix;
+          }
+        });
+        const params = new URLSearchParams(location.search);
+        if (metbrewer.hasOwnProperty(params.get("palette"))) {
+          settings.palette = params.get("palette");
+        }
+        if (dimensions.hasOwnProperty(params.get("x"))) {
+          settings.x = params.get("x");
+        }
+        if (dimensions.hasOwnProperty(params.get("y"))) {
+          settings.y = params.get("y");
+        }
+        if (dimensions.hasOwnProperty(params.get("colour"))) {
+          settings.colour = params.get("colour");
+        }
+        if (dimensions.hasOwnProperty(params.get("smallMultiple"))) {
+          settings.smallMultiple = params.get("smallMultiple");
+        }
+        updateChart();
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems);
+
+        // Fill out the options in the selectors based on the dimensions of the dataset
+        // Hide x options when selected for y and vice versa
+        var ogxm = createOptGroup('Metrics');
+        var ogxb = createOptGroup('Binned metrics');
+        var ogym = createOptGroup('Metrics');
+        var ogmc = createOptGroup('Categories');
+        var ogmb = createOptGroup('Binned metrics');
+        var ogcc = createOptGroup('Categories');
+        var ogcb = createOptGroup('Binned metrics');
+        for (const [key, value] of Object.entries(dimensions)) {
+          if (value.type == 'Metric') {
+            ogxm.append(createOption(useTitleIfExists(key), key, (key == settings.x), (key == settings.y)));
+            ogym.append(createOption(useTitleIfExists(key), key, (key == settings.y), (key == settings.x)));
+          } else if (value.type == 'Category') {
+            ogmc.append(createOption(useTitleIfExists(key), key, false, false));
+            ogcc.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
+          } else if (value.type == 'Binned') {
+            ogxb.append(createOption(useTitleIfExists(key), key, (key == settings.x), false));
+            ogmb.append(createOption(useTitleIfExists(key), key, false, false));
+            ogcb.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
+          }
+        }
+        ogym.append(createOption('Count of SAs', 'Count of SAs', false, true));
+        document.getElementById("x-select").append(ogxm, ogxb);
+        document.getElementById("y-select").append(ogym);
+        ogmc.append(createOption('None', 'None', true, false));
+        document.getElementById("multiple-select").append(ogmc, ogmb);
+        document.getElementById("colour-select").append(ogcc, ogcb);
+
+        for (const key of Object.keys(metbrewer)) {
+          document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
+        }
+        $('#x-select').formSelect();
+        $('#y-select').formSelect();
+        $('#multiple-select').formSelect();
+        $('#colour-select').formSelect();
+        $('#palette-select').formSelect();
+      });
+
+      // When the selectors change, update the chart options
+      function updateSelect(name, target) {
+        if (target == 'x') {
+          settings.x = name;
+          updateChart();
+          // Hide relevant y options
+          hideSelected("y-select", settings.x, settings.y, (dimensions[settings.x].type == 'Binned'));
+          $('#y-select').formSelect();
+        } else if (target == 'y') {
+          settings.y = name;
+          updateChart();
+          // Hide relevant x options
+          hideSelected("x-select", settings.y, settings.x);
+          $('#x-select').formSelect();
+        } else if (target == 'multiple') {
+          settings.smallMultiple = name;
+          updateChart();
+        } else if (target == 'colour') {
+          settings.colour = name;
+          updateChart();
+          // Handle the case where the palette doesn't hold enough colours by hiding options and selecting an alternative
+          var change = false;
+          if (categories.length > metbrewer[settings.palette].colours.length) {
+            change = true;
+          }
+          var pselect = document.getElementById("palette-select");
+          for (var i=0; i<pselect.length; i++) {
+            if (categories.length > metbrewer[pselect[i].value].colours.length) {
+              pselect[i].disabled = true;
+              pselect[i].selected = false;
+            } else {
+              pselect[i].disabled = false;
+              if (change) {
+                settings.palette = pselect[i].value;
+                pselect[i].selected = true;
+                change = false;
+                updateChart();
+              }
+            }
+          }
+          $('#palette-select').formSelect();
+        } else if (target == 'palette') {
+          settings.palette = name;
+          updateChart();
+        }
+      }
+
+    </script>
+  </body>
+</html>
+
