@@ -5,6 +5,7 @@ from pyproj import Transformer
 import re
 import os
 import requests
+import numpy
 
 def download_file_if_not_exists(url, fname=None):
     if fname is None:
@@ -56,6 +57,15 @@ coords = sa2011[['SA2011','X_COORD','Y_COORD']]
 coords['centre_x'],coords['centre_y'] = trans.transform(coords['X_COORD'].values, coords['Y_COORD'].values)
 coords.drop(columns=['X_COORD','Y_COORD'], inplace=True)
 sa_stats = sa_stats.merge(coords, how='left', left_on='SA2011', right_on='SA2011')
+
+# %%
+conn = pandas.read_csv('sa-connectivity.csv', index_col=0)
+SAfrom = conn[conn['Travel Minutes']==30].groupby('SA2011_from').agg(SAs_to_30=('SA2011_to', 'count'), MYE_to_30=('MYE_to', 'sum')).reset_index()
+SAto = conn[conn['Travel Minutes']==30].groupby('SA2011_to').agg(SAs_from_30=('SA2011_from', 'count'), MYE_from_30=('MYE_from', 'sum')).reset_index()
+conn = SAfrom.merge(SAto, how='left', left_on='SA2011_from', right_on='SA2011_to').rename(columns={'SA2011':'SA2011_from'}).rename(columns={'SA2011_from': 'SA2011'}).drop(columns=['SA2011_to'])
+sa_stats = sa_stats.merge(conn, how='left', left_on='SA2011', right_on='SA2011')
+
+# %%
 sa_stats.to_json('sa-stats.json', orient='records')
 
 # %%
