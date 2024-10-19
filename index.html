@@ -81,9 +81,14 @@
       var bottomSheet = document.querySelector('.bottom-sheet');
       var bottomSheetInstance = M.Modal.init(bottomSheet);
       const params = new URLSearchParams(location.search);
+      if (params.get("metadataURL")) {
+        settings.metadataURL = params.get("metadataURL");
+      } else {
+        settings.metadataURL = "sa-metadata.json";
+      }
 
       // Create a promise for loading sa-dimensions.json
-      var dimensionsPromise = $.get('sa-metadata.json').then(function(data) {
+      var dimensionsPromise = $.get(settings.metadataURL).then(function(data) {
         dimensions = data.dimensions;
         datasetURL = data.dataset;
         return data;
