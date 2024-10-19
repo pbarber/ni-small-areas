@@ -1,5 +1,6 @@
 {
       "dataset": "sa-stats.json",
+      "title": "Small Area",
       "dimensions" : {
             "name" : {"type": "None"},
             "Multiple Deprivation Measure Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},

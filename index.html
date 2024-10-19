@@ -67,7 +67,7 @@
       var dimensions = null;
       var metbrewer = null;
       var datasetURL = null;
-      // TODO: move the dataset settings to a JSON file (sa-metadata.json)
+      var datasetTitle = null;
       // TODO: use a better data format (smaller sile, e.g. CSV)
       // TODO: new URL parameter to set/hide the title
       // TODO: new URL parameter to prevent setting the parameters
@@ -91,6 +91,7 @@
       var dimensionsPromise = $.get(settings.metadataURL).then(function(data) {
         dimensions = data.dimensions;
         datasetURL = data.dataset;
+        datasetTitle = data.title;
         return data;
       });
 
@@ -102,6 +103,11 @@
 
       // Use Promise.all to wait for both promises to resolve
       Promise.all([dimensionsPromise, metbrewerPromise]).then(function() {
+        if (params.get("chartTitle")) {
+          settings.chartTitle = params.get("chartTitle");
+        } else {
+          settings.chartTitle = "NI " + datasetTitle + " statistics explorer";
+        }
         if (metbrewer.hasOwnProperty(params.get("palette"))) {
           settings.palette = params.get("palette");
         } else {
@@ -579,7 +585,7 @@
             });
           }
         }
-        titles.push({text: 'NI Small Area statistics explorer'});
+        titles.push({text: settings.chartTitle});
         chartSeries = series.length;
         chartAxes = yAxis.length;
         var legendData = [];
