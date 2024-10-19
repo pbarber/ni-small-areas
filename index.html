@@ -66,13 +66,14 @@
       var store = null;
       var dimensions = null;
       var metbrewer = null;
+      var datasetURL = null;
       // TODO: move the dataset settings to a JSON file (sa-metadata.json)
       // TODO: use a better data format (smaller sile, e.g. CSV)
       // TODO: new URL parameter to set/hide the title
       // TODO: new URL parameter to prevent setting the parameters
       // TODO: new URL parameter to choose the medatadata and stats JSON files
       // TODO: add field descriptions to metadata file and display
-      var settings = null;
+      var settings = {};
       var categories = [];
       var isSmallMultiple = false;
       var chartAxes = 0;
@@ -80,19 +81,122 @@
       var bottomSheet = document.querySelector('.bottom-sheet');
       var bottomSheetInstance = M.Modal.init(bottomSheet);
 
-      $.get('sa-dimensions.json').done(function(data) {
-        dimensions = data;
-        settings = {
-          palette: "Signac",
-          x: Object.entries(dimensions).filter(a => a[1].type=='Metric')[0][0],
-          y: Object.entries(dimensions).filter(a => a[1].type=='Metric')[1][0],
-          colour: Object.entries(dimensions).filter(a => a[1].type=='Category')[0][0],
-          smallMultiple: 'None'
-        };
+      // Create a promise for loading sa-dimensions.json
+      var dimensionsPromise = $.get('sa-metadata.json').then(function(data) {
+        dimensions = data.dimensions;
+        datasetURL = data.dataset;
+        return data;
       });
 
-      $.get('metbrewer.json').done(function(data) {
+      // Create a promise for loading metbrewer.json
+      var metbrewerPromise = $.get('metbrewer.json').then(function(data) {
         metbrewer = data;
+        return data;
+      });
+
+      // Use Promise.all to wait for both promises to resolve
+      Promise.all([dimensionsPromise, metbrewerPromise]).then(function() {
+        // Now that we have the dimensions data, we can construct the URL for sa-stats.json
+        var statsUrl = dimensions.dataset;
+        
+        // Load sa-stats.json with the dynamically constructed URL
+        $.get(datasetURL).done(function(data) {
+          store = data.sort((a, b) => b.SA2011 - a.SA2011);
+          Object.entries(dimensions).filter(v => v[1].bins).forEach((d, idx) => {
+            const binSize = store.length / d[1].bins[0];
+            const suffix = (d[1].bins[0]==10) ? ' decile' : (d[1].bins[0]==100) ? ' centile' : ' binned';
+            // Calculate the binned variables
+            store.map((a, idx) =>
+            {
+              return({
+                index: idx,
+                value: a[d[0]]
+              });
+            }).sort((a,b) => (a.value - b.value)).map((e, i) =>
+            {
+              const value = parseInt(i/binSize)+1;
+              store[e.index][d[0] + suffix] = value;
+            });
+            dimensions[d[0] + suffix] = {
+              type: 'Binned'
+            };
+            if (d[1].hasOwnProperty('extremes')) {
+              dimensions[d[0] + suffix].extremes = d[1].extremes;
+            }
+            if (d[1].title) {
+              dimensions[d[0] + suffix].title = d[1].title + suffix;
+            }
+          });
+          const params = new URLSearchParams(location.search);
+          if (metbrewer.hasOwnProperty(params.get("palette"))) {
+            settings.palette = params.get("palette");
+          } else {
+            settings.palette = "Signac";
+          }
+          if (dimensions.hasOwnProperty(params.get("x"))) {
+            settings.x = params.get("x");
+          } else {
+            settings.x = Object.entries(dimensions).filter(a => a[1].type=='Metric')[0][0];
+          }
+          if (dimensions.hasOwnProperty(params.get("y"))) {
+            settings.y = params.get("y");
+          } else {
+            settings.y = Object.entries(dimensions).filter(a => a[1].type=='Metric')[1][0];
+          }
+          if (dimensions.hasOwnProperty(params.get("colour"))) {
+            settings.colour = params.get("colour");
+          } else {
+            settings.colour = Object.entries(dimensions).filter(a => a[1].type=='Category')[0][0];
+          }
+          if (dimensions.hasOwnProperty(params.get("smallMultiple"))) {
+            settings.smallMultiple = params.get("smallMultiple");
+          } else {
+            settings.smallMultiple = 'None';
+          }
+          updateChart();
+          var elems = document.querySelectorAll('select');
+          var instances = M.FormSelect.init(elems);
+
+          // Fill out the options in the selectors based on the dimensions of the dataset
+          // Hide x options when selected for y and vice versa
+          var ogxm = createOptGroup('Metrics');
+          var ogxb = createOptGroup('Binned metrics');
+          var ogym = createOptGroup('Metrics');
+          var ogmc = createOptGroup('Categories');
+          var ogmb = createOptGroup('Binned metrics');
+          var ogcc = createOptGroup('Categories');
+          var ogcb = createOptGroup('Binned metrics');
+          for (const [key, value] of Object.entries(dimensions)) {
+            if (value.type == 'Metric') {
+              ogxm.append(createOption(useTitleIfExists(key), key, (key == settings.x), (key == settings.y)));
+              ogym.append(createOption(useTitleIfExists(key), key, (key == settings.y), (key == settings.x)));
+            } else if (value.type == 'Category') {
+              ogmc.append(createOption(useTitleIfExists(key), key, false, false));
+              ogcc.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
+            } else if (value.type == 'Binned') {
+              ogxb.append(createOption(useTitleIfExists(key), key, (key == settings.x), false));
+              ogmb.append(createOption(useTitleIfExists(key), key, false, false));
+              ogcb.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
+            }
+          }
+          ogym.append(createOption('Count of SAs', 'Count of SAs', false, true));
+          document.getElementById("x-select").append(ogxm, ogxb);
+          document.getElementById("y-select").append(ogym);
+          ogmc.append(createOption('None', 'None', true, false));
+          document.getElementById("multiple-select").append(ogmc, ogmb);
+          document.getElementById("colour-select").append(ogcc, ogcb);
+
+          for (const key of Object.keys(metbrewer)) {
+            document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
+          }
+          hideSelected("y-select", settings.x, settings.y, (dimensions[settings.x].type == 'Binned'));
+          hideSelected("x-select", settings.y, settings.x);
+          $('#x-select').formSelect();
+          $('#y-select').formSelect();
+          $('#multiple-select').formSelect();
+          $('#colour-select').formSelect();
+          $('#palette-select').formSelect();
+        });
       });
 
       function tooltipCallback(args) {
@@ -505,94 +609,6 @@
         });
       }
 
-      $.get('sa-stats.json').done(function(data) {
-        store = data.sort((a, b) => b.SA2011 - a.SA2011);
-        Object.entries(dimensions).filter(v => v[1].bins).forEach((d, idx) => {
-          const binSize = store.length / d[1].bins[0];
-          const suffix = (d[1].bins[0]==10) ? ' decile' : (d[1].bins[0]==100) ? ' centile' : ' binned';
-          // Calculate the binned variables
-          store.map((a, idx) =>
-          {
-            return({
-              index: idx,
-              value: a[d[0]]
-            });
-          }).sort((a,b) => (a.value - b.value)).map((e, i) =>
-          {
-            const value = parseInt(i/binSize)+1;
-            store[e.index][d[0] + suffix] = value;
-          });
-          dimensions[d[0] + suffix] = {
-            type: 'Binned'
-          };
-          if (d[1].hasOwnProperty('extremes')) {
-            dimensions[d[0] + suffix].extremes = d[1].extremes;
-          }
-          if (d[1].title) {
-            dimensions[d[0] + suffix].title = d[1].title + suffix;
-          }
-        });
-        const params = new URLSearchParams(location.search);
-        if (metbrewer.hasOwnProperty(params.get("palette"))) {
-          settings.palette = params.get("palette");
-        }
-        if (dimensions.hasOwnProperty(params.get("x"))) {
-          settings.x = params.get("x");
-        }
-        if (dimensions.hasOwnProperty(params.get("y"))) {
-          settings.y = params.get("y");
-        }
-        if (dimensions.hasOwnProperty(params.get("colour"))) {
-          settings.colour = params.get("colour");
-        }
-        if (dimensions.hasOwnProperty(params.get("smallMultiple"))) {
-          settings.smallMultiple = params.get("smallMultiple");
-        }
-        updateChart();
-        var elems = document.querySelectorAll('select');
-        var instances = M.FormSelect.init(elems);
-
-        // Fill out the options in the selectors based on the dimensions of the dataset
-        // Hide x options when selected for y and vice versa
-        var ogxm = createOptGroup('Metrics');
-        var ogxb = createOptGroup('Binned metrics');
-        var ogym = createOptGroup('Metrics');
-        var ogmc = createOptGroup('Categories');
-        var ogmb = createOptGroup('Binned metrics');
-        var ogcc = createOptGroup('Categories');
-        var ogcb = createOptGroup('Binned metrics');
-        for (const [key, value] of Object.entries(dimensions)) {
-          if (value.type == 'Metric') {
-            ogxm.append(createOption(useTitleIfExists(key), key, (key == settings.x), (key == settings.y)));
-            ogym.append(createOption(useTitleIfExists(key), key, (key == settings.y), (key == settings.x)));
-          } else if (value.type == 'Category') {
-            ogmc.append(createOption(useTitleIfExists(key), key, false, false));
-            ogcc.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
-          } else if (value.type == 'Binned') {
-            ogxb.append(createOption(useTitleIfExists(key), key, (key == settings.x), false));
-            ogmb.append(createOption(useTitleIfExists(key), key, false, false));
-            ogcb.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
-          }
-        }
-        ogym.append(createOption('Count of SAs', 'Count of SAs', false, true));
-        document.getElementById("x-select").append(ogxm, ogxb);
-        document.getElementById("y-select").append(ogym);
-        ogmc.append(createOption('None', 'None', true, false));
-        document.getElementById("multiple-select").append(ogmc, ogmb);
-        document.getElementById("colour-select").append(ogcc, ogcb);
-
-        for (const key of Object.keys(metbrewer)) {
-          document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
-        }
-        hideSelected("y-select", settings.x, settings.y, (dimensions[settings.x].type == 'Binned'));
-        hideSelected("x-select", settings.y, settings.x);
-        $('#x-select').formSelect();
-        $('#y-select').formSelect();
-        $('#multiple-select').formSelect();
-        $('#colour-select').formSelect();
-        $('#palette-select').formSelect();
-      });
-
       // When the selectors change, update the chart options
       function updateSelect(name, target) {
         if (target == 'x') {
@@ -643,4 +659,3 @@
     </script>
   </body>
 </html>
-

@@ -1,0 +1,31 @@
+{
+      "dataset": "sa-stats.json",
+      "dimensions" : {
+            "name" : {"type": "None"},
+            "Multiple Deprivation Measure Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
+            "Income Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
+            "Employment Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
+            "Health Deprivation and Disability Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
+            "Education, Skills and Training Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
+            "Access to Services Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
+            "Living Environment Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
+            "Crime and Disorder Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
+            "Proportion of the population living in households whose equivalised income is below 60 per cent of the NI median" : {"type": "Metric", "title": "Proportion living in households where income under 60% of NI median", "bins": [10], "extremes": ["Least Deprived", "Most Deprived"]},
+            "Proportion of the working age population who are employment deprived" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
+            "Religion: Catholic (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least Catholic", "Most Catholic"]},
+            "Religion: Presbyterian Church in Ireland (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least Presbyterian", "Most Presbyterian"]},
+            "Religion: Church of Ireland (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least Church of Ireland", "Most Church of Ireland"]},
+            "Religion: Methodist Church in Ireland (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least Methodist", "Most Methodist"]},
+            "Religion: Other Christian (including Christian related) (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least Other Christian", "Most Other Christian"]},
+            "Religion: Other religions (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least Other religions", "Most Other religions"]},
+            "Religion: No religion (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least No religion", "Most No religion"]},
+            "Religion: Religion not stated (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least not stated", "Most not stated"]},
+            "centre_x" : {"type": "Metric", "title": "Longitude", "dataMin": true},
+            "centre_y" : {"type": "Metric", "title": "Latitude", "dataMin": true},
+            "2015 Default Urban/Rural" : {"type": "Category", "title": "Urban/Rural", "order": ["Urban","Mixed urban/rural","Rural"]},
+            "LGD2014NAME": {"type": "Category", "title": "Local Government District"},
+            "MYE": {"type": "Metric", "bins": [10], "title": "Population", "extremes": ["Least populous","Most populous"]},
+            "SAs_to_30": {"type": "Metric", "bins": [10], "title": "Small Areas accessible within 30 minutes", "extremes": ["Least connected","Most connected"]},
+            "MYE_to_30": {"type": "Metric", "bins": [10], "title": "Population accessible within 30 minutes", "extremes": ["Least connected","Most connected"]}
+      }
+}
