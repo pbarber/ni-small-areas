@@ -1,5 +1,5 @@
 {
-      "dataset": "sa-stats.json",
+      "dataset": "sa-stats.csv",
       "title": "Small Area",
       "dimensions" : {
             "name" : {"type": "None"},

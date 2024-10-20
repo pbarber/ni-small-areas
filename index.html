@@ -5,6 +5,7 @@
     <script src="https://unpkg.com/echarts@5.4.3/dist/echarts.js"></script>
     <script src="https://unpkg.com/jquery@3.7.1/dist/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghZ+ZmzWT06R5v6NSk3ZUfsH6FNEDepLx9hPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <style>
       .bottom-sheet {
@@ -68,7 +69,6 @@
       var metbrewer = null;
       var datasetURL = null;
       var datasetTitle = null;
-      // TODO: use a better data format (smaller size, e.g. CSV)
       // TODO: add field descriptions and data sources to metadata file and display
       // TODO: fix colour ordering
       // TODO: add extra dataset
@@ -142,76 +142,90 @@
           settings.smallMultiple = 'None';
         }
         // Load sa-stats.json with the dynamically constructed URL
-        $.get(datasetURL).done(function(data) {
-          store = data.sort((a, b) => b.SA2011 - a.SA2011);
-          Object.entries(dimensions).filter(v => v[1].bins).forEach((d, idx) => {
-            const binSize = store.length / d[1].bins[0];
-            const suffix = (d[1].bins[0]==10) ? ' decile' : (d[1].bins[0]==100) ? ' centile' : ' binned';
-            // Calculate the binned variables
-            store.map((a, idx) =>
-            {
-              return({
-                index: idx,
-                value: a[d[0]]
+        Papa.parse(datasetURL, {
+          download: true,
+          header: true,
+          dynamicTyping: true,
+          skipEmptyLines: true,
+          complete: function(results) {
+            store = results.data.map(row => {
+              // Convert each row to an object
+              return Object.fromEntries(
+                Object.entries(row).map(([key, value]) => {
+                  // Convert empty strings to null
+                  return [key, value === "" ? null : value];
+                })
+              );
+            }).sort((a, b) => b.SA2011 - a.SA2011);
+            Object.entries(dimensions).filter(v => v[1].bins).forEach((d, idx) => {
+              const binSize = store.length / d[1].bins[0];
+              const suffix = (d[1].bins[0]==10) ? ' decile' : (d[1].bins[0]==100) ? ' centile' : ' binned';
+              // Calculate the binned variables
+              store.map((a, idx) =>
+              {
+                return({
+                  index: idx,
+                  value: a[d[0]]
+                });
+              }).sort((a,b) => (a.value - b.value)).map((e, i) =>
+              {
+                const value = parseInt(i/binSize)+1;
+                store[e.index][d[0] + suffix] = value;
               });
-            }).sort((a,b) => (a.value - b.value)).map((e, i) =>
-            {
-              const value = parseInt(i/binSize)+1;
-              store[e.index][d[0] + suffix] = value;
+              dimensions[d[0] + suffix] = {
+                type: 'Binned'
+              };
+              if (d[1].hasOwnProperty('extremes')) {
+                dimensions[d[0] + suffix].extremes = d[1].extremes;
+              }
+              if (d[1].title) {
+                dimensions[d[0] + suffix].title = d[1].title + suffix;
+              }
             });
-            dimensions[d[0] + suffix] = {
-              type: 'Binned'
-            };
-            if (d[1].hasOwnProperty('extremes')) {
-              dimensions[d[0] + suffix].extremes = d[1].extremes;
-            }
-            if (d[1].title) {
-              dimensions[d[0] + suffix].title = d[1].title + suffix;
-            }
-          });
-          updateChart();
-          var elems = document.querySelectorAll('select');
-          var instances = M.FormSelect.init(elems);
+            updateChart();
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
 
-          // Fill out the options in the selectors based on the dimensions of the dataset
-          // Hide x options when selected for y and vice versa
-          var ogxm = createOptGroup('Metrics');
-          var ogxb = createOptGroup('Binned metrics');
-          var ogym = createOptGroup('Metrics');
-          var ogmc = createOptGroup('Categories');
-          var ogmb = createOptGroup('Binned metrics');
-          var ogcc = createOptGroup('Categories');
-          var ogcb = createOptGroup('Binned metrics');
-          for (const [key, value] of Object.entries(dimensions)) {
-            if (value.type == 'Metric') {
-              ogxm.append(createOption(useTitleIfExists(key), key, (key == settings.x), (key == settings.y)));
-              ogym.append(createOption(useTitleIfExists(key), key, (key == settings.y), (key == settings.x)));
-            } else if (value.type == 'Category') {
-              ogmc.append(createOption(useTitleIfExists(key), key, false, false));
-              ogcc.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
-            } else if (value.type == 'Binned') {
-              ogxb.append(createOption(useTitleIfExists(key), key, (key == settings.x), false));
-              ogmb.append(createOption(useTitleIfExists(key), key, false, false));
-              ogcb.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
+            // Fill out the options in the selectors based on the dimensions of the dataset
+            // Hide x options when selected for y and vice versa
+            var ogxm = createOptGroup('Metrics');
+            var ogxb = createOptGroup('Binned metrics');
+            var ogym = createOptGroup('Metrics');
+            var ogmc = createOptGroup('Categories');
+            var ogmb = createOptGroup('Binned metrics');
+            var ogcc = createOptGroup('Categories');
+            var ogcb = createOptGroup('Binned metrics');
+            for (const [key, value] of Object.entries(dimensions)) {
+              if (value.type == 'Metric') {
+                ogxm.append(createOption(useTitleIfExists(key), key, (key == settings.x), (key == settings.y)));
+                ogym.append(createOption(useTitleIfExists(key), key, (key == settings.y), (key == settings.x)));
+              } else if (value.type == 'Category') {
+                ogmc.append(createOption(useTitleIfExists(key), key, false, false));
+                ogcc.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
+              } else if (value.type == 'Binned') {
+                ogxb.append(createOption(useTitleIfExists(key), key, (key == settings.x), false));
+                ogmb.append(createOption(useTitleIfExists(key), key, false, false));
+                ogcb.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
+              }
             }
-          }
-          ogym.append(createOption('Count of SAs', 'Count of SAs', false, true));
-          document.getElementById("x-select").append(ogxm, ogxb);
-          document.getElementById("y-select").append(ogym);
-          ogmc.append(createOption('None', 'None', true, false));
-          document.getElementById("multiple-select").append(ogmc, ogmb);
-          document.getElementById("colour-select").append(ogcc, ogcb);
+            ogym.append(createOption('Count of SAs', 'Count of SAs', false, true));
+            document.getElementById("x-select").append(ogxm, ogxb);
+            document.getElementById("y-select").append(ogym);
+            ogmc.append(createOption('None', 'None', true, false));
+            document.getElementById("multiple-select").append(ogmc, ogmb);
+            document.getElementById("colour-select").append(ogcc, ogcb);
 
-          for (const key of Object.keys(metbrewer)) {
-            document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
+            for (const key of Object.keys(metbrewer)) {
+              document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
+            }
+            hideSelected("y-select", settings.x, settings.y, (dimensions[settings.x].type == 'Binned'));
+            hideSelected("x-select", settings.y, settings.x);
+            $('#x-select').formSelect();
+            $('#y-select').formSelect();
+            $('#multiple-select').formSelect();
+            $('#colour-select').formSelect();
+            $('#palette-select').formSelect();
           }
-          hideSelected("y-select", settings.x, settings.y, (dimensions[settings.x].type == 'Binned'));
-          hideSelected("x-select", settings.y, settings.x);
-          $('#x-select').formSelect();
-          $('#y-select').formSelect();
-          $('#multiple-select').formSelect();
-          $('#colour-select').formSelect();
-          $('#palette-select').formSelect();
         });
       });
 

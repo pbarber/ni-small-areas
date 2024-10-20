@@ -69,3 +69,6 @@ sa_stats = sa_stats.merge(conn, how='left', left_on='SA2011', right_on='SA2011')
 sa_stats.to_json('sa-stats.json', orient='records')
 
 # %%
+sa_stats.to_csv('sa-stats.csv', index=False)
+
+# %%
