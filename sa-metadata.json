@@ -1,6 +1,7 @@
 {
       "dataset": "sa-stats.csv",
       "title": "Small Area",
+      "index": "SA2011",
       "dimensions" : {
             "name" : {"type": "None"},
             "Multiple Deprivation Measure Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
