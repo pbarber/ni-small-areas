@@ -4,6 +4,26 @@
 
 If you like the app and can afford it, please [donate to Action Cancer](https://actioncancer.org/donate-to-action-cancer/) or [buy me a coffee](https://www.buymeacoffee.com/pbarber).
 
+## Settings
+
+The user can use the pencil icon top-right to choose which data to show in the interactive chart. The options are structured as follows:
+
+* x (horizontal) axis:
+    * metrics (i.e. numerical values)
+    * binned metrics (i.e. numerical values grouped into bins, usually deciles)
+* y (vertical) axis:
+    * metrics (when x is not showing a binned metric)
+    * count of SAs (when x is showing a binned metric)
+* small multiples:
+    * none (single chart shown)
+    * binned metrics (multiple subcharts, one for each bin)
+    * categories (multiple subcharts, one for each categories)
+* colours:
+    * binned metrics
+    * categories
+* colour scheme:
+    * metbrewer schemes
+
 ## Privacy
 
 The app uses Google Analytics to measure usage.
@@ -13,6 +33,10 @@ The app uses Google Analytics to measure usage.
 The app makes use of a single dataset which is built from the following open datasets:
 
 * [UK Travel Area Isochrones (Nov/Dec 2022) by Public Transport and Walking for Northern Ireland - Generalised to 10m](https://geoportal.statistics.gov.uk/datasets/7f1c281b2561483891cd797b0f6fd463/explore): the boundaries of the areas that can be reached using public transport from each Small Area in NI
+* [NISRA 2020 mid-year population estimates for small areas](https://www.nisra.gov.uk/publications/2020-mid-year-population-estimates-small-areas)
+* [NI Small Area Multiple Index of Deprivation results](https://www.nisra.gov.uk/publications/nimdm17-sa-level-results)
+* [NI Small Area boundaries](https://www.nisra.gov.uk/publications/small-area-boundaries-gis-format)
+* [NI Census 2021 Religion results](https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-ethnicity-identity-language-and-religion)
 
 ## Examples
 
