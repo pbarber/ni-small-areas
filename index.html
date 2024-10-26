@@ -61,6 +61,67 @@
       </div>
     </div>
   
+    <div id="info-modal" class="modal">
+      <div id='info-modal-content' class="modal-content">
+        <h4>Chart Information</h4>
+        <div class="row">
+          <div class="col s2">
+            <p>X Axis</p>
+          </div>
+          <div class="col s8">
+            <p id="x-axis-info"></p>
+          </div>
+          <div class="col s2">
+            <p id="x-axis-url"></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s2">
+            <p>Y Axis</p>
+          </div>
+          <div class="col s8">
+            <p id="y-axis-info"></p>
+          </div>
+          <div class="col s2">
+            <p id="y-axis-url"></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s2">
+            <p>Small Multiples</p>
+          </div>
+          <div class="col s8">
+            <p id="small-multiples-info"></p>
+          </div>
+          <div class="col s2">
+            <p id="small-multiples-url"></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s2">
+            <p>Colours</p>
+          </div>
+          <div class="col s8">
+            <p id="colours-info"></p>
+          </div>
+          <div class="col s2">
+            <p id="colours-url"></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s2">
+            <p>Colour Scheme</p>
+          </div>
+          <div class="col s8">
+            <p id="colour-scheme-info"></p>
+          </div>
+          <div class="col s2">
+            <p id="colour-scheme-url"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="text/javascript">
       // Initialize the echarts instance based on the prepared dom
       var myChart = echarts.init(document.getElementById('main'));
@@ -70,10 +131,10 @@
       var datasetURL = null;
       var datasetTitle = null;
       var datasetIndex = null;
-      // TODO: add field descriptions and data sources to metadata file and display
       // TODO: fix colour ordering
       // TODO: add extra dataset
       // TODO: add dataset selector
+      // TODO: add hex map
       // TODO: add GA tags
       // TODO: add BMAC link and README link
       var settings = {};
@@ -83,6 +144,7 @@
       var chartSeries = 0;
       var bottomSheet = document.querySelector('.bottom-sheet');
       var bottomSheetInstance = M.Modal.init(bottomSheet);
+      var infoModalInstance = M.Modal.init(document.getElementById('info-modal'));
       const params = new URLSearchParams(location.search);
       if (params.get("metadataURL")) {
         settings.metadataURL = params.get("metadataURL");
@@ -175,6 +237,15 @@
               dimensions[d[0] + suffix] = {
                 type: 'Binned'
               };
+              if (d[1].hasOwnProperty('description')) {
+                dimensions[d[0] + suffix].description = d[1].description + suffix;
+              }
+              if (d[1].hasOwnProperty('URL')) {
+                dimensions[d[0] + suffix].URL = d[1].URL;
+              }
+              if (d[1].hasOwnProperty('date')) {
+                dimensions[d[0] + suffix].date = d[1].date;
+              }
               if (d[1].hasOwnProperty('extremes')) {
                 dimensions[d[0] + suffix].extremes = d[1].extremes;
               }
@@ -301,6 +372,16 @@
         $(this).formSelect();
       });
 
+      function showInfo(item, variable) {
+        if (dimensions.hasOwnProperty(variable)) {
+          document.getElementById(item + '-info').innerHTML = dimensions[variable].description;
+          document.getElementById(item + '-url').innerHTML = '<a href="' + dimensions[variable].URL + '" target="_blank">' + dimensions[variable].date + '</a>';
+        } else {
+          document.getElementById(item + '-info').innerHTML = variable;
+          document.getElementById(item + '-url').innerHTML = '';
+        }
+      }
+
       // Specify the configuration items and data for the chart
       myChart.setOption({
         toolbox: {feature: {
@@ -320,6 +401,19 @@
             onclick: function (){
               const url = location.protocol + '//' + location.host + location.pathname + '?' + (new URLSearchParams(settings).toString());
               navigator.clipboard.writeText(url);
+            }
+          },
+          myTool3: {
+            show: true,
+            title: 'Show information',
+            icon: 'path://M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z',
+            onclick: function (){
+              showInfo('x-axis', settings.x);
+              showInfo('y-axis', (dimensions[settings.x].type == 'Binned') ? 'Count of ' + datasetTitle + 's' : settings.y);
+              showInfo('small-multiples', settings.smallMultiple);
+              showInfo('colours', settings.colour);
+              showInfo('colour-scheme', settings.palette);
+              infoModalInstance.open();
             }
           }
         }},
