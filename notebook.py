@@ -88,8 +88,6 @@ osrm.to_csv('sa-travel.csv', index=False)
 hosps = osrm[osrm['to'].isin([1147,103,1820,2300,3739,2401,2983])]
 hosps['from'] = 'N' + hosps['from'].astype(str).str.pad(8, fillchar='0')
 hosps['to'] = 'N' + hosps['to'].astype(str).str.pad(8, fillchar='0')
-
-# %%
 hosps.to_csv('sa-hosps.csv', index=False)
 
 # %%
