@@ -183,26 +183,6 @@
         } else {
           settings.palette = "Signac";
         }
-        if (dimensions.hasOwnProperty(params.get("x"))) {
-          settings.x = params.get("x");
-        } else {
-          settings.x = Object.entries(dimensions).filter(a => a[1].type=='Metric')[0][0];
-        }
-        if (dimensions.hasOwnProperty(params.get("y"))) {
-          settings.y = params.get("y");
-        } else {
-          settings.y = Object.entries(dimensions).filter(a => a[1].type=='Metric')[1][0];
-        }
-        if (dimensions.hasOwnProperty(params.get("colour"))) {
-          settings.colour = params.get("colour");
-        } else {
-          settings.colour = Object.entries(dimensions).filter(a => a[1].type=='Category')[0][0];
-        }
-        if (dimensions.hasOwnProperty(params.get("smallMultiple"))) {
-          settings.smallMultiple = params.get("smallMultiple");
-        } else {
-          settings.smallMultiple = 'None';
-        }
         // Load sa-stats.json with the dynamically constructed URL
         Papa.parse(datasetURL, {
           download: true,
@@ -253,6 +233,26 @@
                 dimensions[d[0] + suffix].title = d[1].title + suffix;
               }
             });
+            if (dimensions.hasOwnProperty(params.get("x"))) {
+              settings.x = params.get("x");
+            } else {
+              settings.x = Object.entries(dimensions).filter(a => a[1].type=='Metric')[0][0];
+            } 
+            if (dimensions.hasOwnProperty(params.get("y"))) {
+              settings.y = params.get("y");
+            } else {
+              settings.y = Object.entries(dimensions).filter(a => a[1].type=='Metric')[1][0];
+            }
+            if (dimensions.hasOwnProperty(params.get("colour"))) {
+              settings.colour = params.get("colour");
+            } else {
+              settings.colour = Object.entries(dimensions).filter(a => a[1].type=='Category')[0][0];
+            }
+            if (dimensions.hasOwnProperty(params.get("smallMultiple"))) {
+              settings.smallMultiple = params.get("smallMultiple");
+            } else {
+              settings.smallMultiple = 'None';
+            }
             updateChart();
             var elems = document.querySelectorAll('select');
             var instances = M.FormSelect.init(elems);
