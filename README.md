@@ -31,6 +31,10 @@ Key JavaScript libraries used are:
 
 * 
 
+Other libraries used are:
+
+* Metbrewer
+
 ### Python setup
 
 To create the map file, use the following.
@@ -47,3 +51,21 @@ Key Python libraries used are:
 
 * [Pandas](https://pandas.pydata.org/) - for general data manipulation
 * [Requests](https://requests.readthedocs.io/en/latest/) - for getting data from URLs
+
+### OSRM setup
+
+The following commands [based on this walkthrough](https://gist.github.com/AlexandraKapp/e0eee2beacc93e765113aff43ec77789) allowed me to set up an OSRM Docker image using [this Ireland and NI file](http://download.geofabrik.de/europe/ireland-and-northern-ireland.html):
+
+```bash
+docker pull osrm/osrm-backend
+docker run -t -v .:/data osrm/osrm-backend osrm-extract -p /opt/car.lua /data/ireland-and-northern-ireland-latest.osm.pbf
+docker run -t -v .:/data osrm/osrm-backend osrm-partition /data/ireland-and-northern-ireland-latest.osm
+docker run -t -v .:/data osrm/osrm-backend osrm-customize /data/ireland-and-northern-ireland-latest.osm
+docker run --name osrm -t -i -p 5500:5000 -v .:/data osrm/osrm-backend osrm-routed --algorithm mld --max-table-size 5000 /data/ireland-and-northern-ireland-latest.orm
+```
+
+The Python [notebook](notebook.py) outputs the centre points of the Small Areas in a OSRM-friendly format, which can then be fed in to OSRM using:
+
+```bash
+curl "http://localhost:5500/table/v1/driving/$(cat ../ni-small-areas/sa-centres.txt)" > sa-travel.json
+```

@@ -71,4 +71,25 @@ sa_stats.to_json('sa-stats.json', orient='records')
 # %%
 sa_stats.to_csv('sa-stats.csv', index=False)
 
+# %% Write file to be used by OSRM
+buf = sa_stats.sort_values(by='SA2011')[['centre_x','centre_y']].to_csv(lineterminator=';', header=False, index=False)
+with open('sa-centres.txt', 'w') as fo:
+    fo.write(buf[:-1])
+
+# %% Read back in the OSRM output and convert to a dataframe
+osrm = pandas.read_json('sa-travel.json')['durations'].explode()
+osrm = osrm.reset_index().rename(columns={'index' : 'from'})
+osrm['to'] = osrm.groupby('from').cumcount()
+
+# %% Write out the entire lookup for NI
+osrm.to_csv('sa-travel.csv', index=False)
+
+# %%C reate a hospital specific CSV
+hosps = osrm[osrm['to'].isin([1147,1551,1820,2300,3739])]
+hosps['from'] = 'N' + hosps['from'].astype(str).str.pad(8, fillchar='0')
+hosps['to'] = 'N' + hosps['to'].astype(str).str.pad(8, fillchar='0')
+
+# %%
+hosps.to_csv('sa-hosps.csv', index=False)
+
 # %%
