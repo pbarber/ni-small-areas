@@ -131,7 +131,8 @@
       var datasetURL = null;
       var datasetTitle = null;
       var datasetIndex = null;
-      // TODO: fix colour ordering
+      // TODO: add area name field
+      // TODO: split to app.js
       // TODO: add extra dataset
       // TODO: add dataset selector
       // TODO: add hex map
@@ -158,6 +159,7 @@
         datasetURL = data.dataset;
         datasetTitle = data.title;
         datasetIndex = data.index;
+        datasetName = data.name;
         return data;
       });
 
@@ -302,7 +304,7 @@
 
       function tooltipCallback(args) {
         return (
-          ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (args.data[3] + '<br />') : '') +
+          ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (args.data[3] + ': ' + args.data[5] + '<br />') : '') +
           (dimensions[settings.x] ? useTitleIfExists(settings.x) : settings.x) + ': ' + args.data[0] + '<br />' +
           ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (useTitleIfExists(settings.y) + ': ') : ('Count of ' + datasetTitle + 's: ')) + args.data[1] + '<br />' +
           args.marker + ' ' + useTitleIfExists(settings.colour) + ': ' + args.data[4]
@@ -395,7 +397,6 @@
             }
           },
           myTool2: {
-            show: true,
             show: params.get("noconfig") ? false: true,
             icon: 'path://M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z',
             onclick: function (){
@@ -459,11 +460,29 @@
               )).sort(
                 (a, b) => a[0] - b[0]
               ).map(
-                e => Object.entries(e[1]).map(d => [e[0], d[1],  metbrewer[settings.palette].colours[categories.indexOf(colourBinned ? parseInt(d[0]) : d[0])], 'Count of ' + datasetTitle + 's', colourBinned ? parseInt(d[0]) : d[0]])
+                e => Object.entries(e[1]).map(
+                  d => [
+                    e[0], 
+                    d[1],
+                    metbrewer[settings.palette].colours[categories.indexOf(colourBinned ? parseInt(d[0]) : d[0])], 
+                    'Count of ' + datasetTitle + 's', 
+                    colourBinned ? parseInt(d[0]) : d[0],
+                    null
+                  ]
+                )
               ).flat(1);
               data[cat] = subset;
             } else {
-              data[cat] = store.filter(d => d[settings.smallMultiple] == cat).map(d => [d[settings.x], d[settings.y], metbrewer[settings.palette].colours[categories.indexOf(d[settings.colour])], d[datasetIndex], labelExtremes(settings.colour, categories.indexOf(d[settings.colour]), categories.length-1, d[settings.colour])]);
+              data[cat] = store.filter(d => d[settings.smallMultiple] == cat).map(
+                d => [
+                  d[settings.x], 
+                  d[settings.y], 
+                  metbrewer[settings.palette].colours[categories.indexOf(d[settings.colour])], 
+                  d[datasetIndex], 
+                  labelExtremes(settings.colour, categories.indexOf(d[settings.colour]), categories.length-1, d[settings.colour]), 
+                  d[datasetName]
+                ]
+              );
             }
           });
           // Get the y/x axis min/max after the data calculations
@@ -602,11 +621,29 @@
                 Object.fromEntries([...new Set(store.map(a => a[settings.x]))].sort().map(a => [a, 0])) // This is necessary for ordering of x axis
               )).sort(
                 (a, b) => a[0] - b[0]
-              ).map(e => [e[0], e[1], metbrewer[settings.palette].colours[categories.indexOf(cat)], 'Count of ' + datasetTitle + 's', cat]));
+              ).map(
+                e => [
+                  e[0], 
+                  e[1], 
+                  metbrewer[settings.palette].colours[categories.indexOf(cat)], 
+                  'Count of ' + datasetTitle + 's', 
+                  cat,
+                  null
+                ]
+              ));
             });
           } else {
             categories.forEach(function(cat, idx) {
-              data.push(store.filter(d => d[settings.colour] == cat).map(d => [d[settings.x], d[settings.y], metbrewer[settings.palette].colours[categories.indexOf(d[settings.colour])], d[datasetIndex], d[settings.colour]]));
+              data.push(store.filter(d => d[settings.colour] == cat).map(
+                d => [
+                  d[settings.x], 
+                  d[settings.y], 
+                  metbrewer[settings.palette].colours[categories.indexOf(d[settings.colour])], 
+                  d[datasetIndex], 
+                  d[settings.colour],
+                  d[datasetName]
+                ]
+              ));
             });
           }
           categories.forEach(function(cat, idx) {
