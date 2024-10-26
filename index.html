@@ -605,18 +605,17 @@
             }
           });
           categories.forEach(function(cat, idx) {
-            const newidx = xBinned ? (categories.length-idx-1) : idx;
             series.push({
               type: xBinned ? 'bar': 'scatter',
-              name: labelExtremes(settings.colour, newidx, categories.length-1, String(categories[newidx])),
-              id: newidx,
+              name: labelExtremes(settings.colour, idx, categories.length-1, String(cat)),
+              id: idx,
               yAxisIndex: 0,
               xAxisIndex: 0,
               coordinateSystem: 'cartesian2d',
-              data: data[newidx],
+              data: data[idx],
               stack: xBinned ? 'x': null,
               itemStyle : {
-                color: metbrewer[settings.palette].colours[newidx]
+                color: metbrewer[settings.palette].colours[idx]
               },
             });
           });
@@ -737,30 +736,27 @@
       function updateSelect(name, target) {
         if (target == 'x') {
           settings.x = name;
-          updateChart();
           // Hide relevant y options
           hideSelected("y-select", settings.x, settings.y, (dimensions[settings.x].type == 'Binned'));
           $('#y-select').formSelect();
         } else if (target == 'y') {
           settings.y = name;
-          updateChart();
           // Hide relevant x options
           hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? settings.y : 'Count of ' + datasetTitle + 's', settings.x);
           $('#x-select').formSelect();
         } else if (target == 'multiple') {
           settings.smallMultiple = name;
-          updateChart();
         } else if (target == 'colour') {
           settings.colour = name;
-          updateChart();
+          const numCats = orderCategories(settings.colour).length;
           // Handle the case where the palette doesn't hold enough colours by hiding options and selecting an alternative
           var change = false;
-          if (categories.length > metbrewer[settings.palette].colours.length) {
+          if (numCats > metbrewer[settings.palette].colours.length) {
             change = true;
           }
           var pselect = document.getElementById("palette-select");
           for (var i=0; i<pselect.length; i++) {
-            if (categories.length > metbrewer[pselect[i].value].colours.length) {
+            if (numCats > metbrewer[pselect[i].value].colours.length) {
               pselect[i].disabled = true;
               pselect[i].selected = false;
             } else {
@@ -769,15 +765,16 @@
                 settings.palette = pselect[i].value;
                 pselect[i].selected = true;
                 change = false;
-                updateChart();
               }
             }
           }
           $('#palette-select').formSelect();
         } else if (target == 'palette') {
           settings.palette = name;
-          updateChart();
+        } else {
+          console.log('Unknown target');
         }
+        updateChart();
       }
 
     </script>
