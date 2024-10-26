@@ -1,7 +1,7 @@
 // TODO: add extra dataset
 // TODO: add dataset selector
 // TODO: add hex map
-// TODO: add GA tags
+// TODO: add data field categories and searchability
 
 // Initialize the echarts instance based on the prepared dom
 var myChart = echarts.init(document.getElementById('main'));
