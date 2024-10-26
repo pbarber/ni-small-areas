@@ -290,7 +290,7 @@
               document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
             }
             hideSelected("y-select", settings.x, settings.y, (dimensions[settings.x].type == 'Binned'));
-            hideSelected("x-select", settings.y, settings.x);
+            hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? settings.y : 'Count of ' + datasetTitle + 's', settings.x);
             $('#x-select').formSelect();
             $('#y-select').formSelect();
             $('#multiple-select').formSelect();
@@ -745,7 +745,7 @@
           settings.y = name;
           updateChart();
           // Hide relevant x options
-          hideSelected("x-select", settings.y, settings.x);
+          hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? settings.y : 'Count of ' + datasetTitle + 's', settings.x);
           $('#x-select').formSelect();
         } else if (target == 'multiple') {
           settings.smallMultiple = name;
