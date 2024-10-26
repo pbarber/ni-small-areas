@@ -482,6 +482,7 @@
           }
           // Set up the plots
           yCategories.forEach(function(cat, idx) {
+            // Small multiples not based on colour where x is binned
             if ((settings.smallMultiple!=settings.colour) && (xBinned)) {
               categories.slice().reverse().forEach(function(col, cidx) {
                 const subset = data[cat].filter(a => a[4]==col);
@@ -502,6 +503,7 @@
                 });
               });
             } else {
+              // Small multiples based on colour  or where x is not binned
               series.push({
                 type: xBinned ? 'bar' : 'scatter',
                 name: ((settings.smallMultiple==settings.colour) ? labelExtremes(settings.smallMultiple, idx, yCategories.length-1, cat) : ''),
@@ -587,6 +589,7 @@
             });
           }
         } else {
+          // Not small multiples
           myChart.resize({height: window.innerHeight});
           var data = {};
           categories.forEach(function(cat, idx) {
@@ -604,7 +607,7 @@
               data[idx] = store.filter(d => d[settings.colour] == cat).map(d => [d[settings.x], d[settings.y], d[settings.colour], d[datasetIndex], d[settings.colour]]);
             }
           });
-          categories.forEach(function(cat, idx) {
+          categories.slice().reverse().forEach(function(cat, idx) {
             series.push({
               type: xBinned ? 'bar': 'scatter',
               name: labelExtremes(settings.colour, idx, categories.length-1, String(cat)),
@@ -621,9 +624,9 @@
           });
           yAxis.push({
             id: 0,
-            type: isSmallMultiple ? 'category' : 'value',
+            type: 'value',
             name: xBinned ? 'Count of ' + datasetTitle + 's' : useTitleIfExists(settings.y),
-            show: !isSmallMultiple,
+            show: true,
             min: yHasDataMin ? 'dataMin': null,
             max: yHasDataMin ? 'dataMax': null,
             axisLabel: {
@@ -705,15 +708,10 @@
         chartAxes = yAxis.length;
         var legendData = [];
         categories.forEach(function(cat, idx) {
-          const name = labelExtremes(settings.colour, idx, categories.length-1, String(cat));
-          if ((settings.smallMultiple == settings.colour) || (!isSmallMultiple & xBinned)) {
-            legendData.push({
-              name: name,
-              itemStyle: {color: metbrewer[settings.palette].colours[idx]},
-            });
-          } else {
-            legendData.push(name);
-          }
+          legendData.push({
+            name: labelExtremes(settings.colour, idx, categories.length-1, String(cat)),
+            itemStyle: {color: metbrewer[settings.palette].colours[idx]},
+          });
         });
         myChart.setOption({
           title: titles,
