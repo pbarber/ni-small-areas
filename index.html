@@ -591,10 +591,10 @@
         } else {
           // Not small multiples
           myChart.resize({height: window.innerHeight});
-          var data = {};
-          categories.forEach(function(cat, idx) {
-            if (xBinned) {
-              data[idx] = Object.entries(store.filter(d => d[settings.colour] == cat).reduce(
+          var data = [];
+          if (xBinned) {
+            categories.slice().reverse().forEach(function(cat, idx) {
+              data.push(Object.entries(store.filter(d => d[settings.colour] == cat).reduce(
                 function (acc, item) {
                   acc[item[settings.x]]++;
                   return(acc)
@@ -602,12 +602,14 @@
                 Object.fromEntries([...new Set(store.map(a => a[settings.x]))].sort().map(a => [a, 0])) // This is necessary for ordering of x axis
               )).sort(
                 (a, b) => a[0] - b[0]
-              ).map(e => [e[0], e[1], cat, 'Count of ' + datasetTitle + 's', cat]);
-            } else {
-              data[idx] = store.filter(d => d[settings.colour] == cat).map(d => [d[settings.x], d[settings.y], d[settings.colour], d[datasetIndex], d[settings.colour]]);
-            }
-          });
-          categories.slice().reverse().forEach(function(cat, idx) {
+              ).map(e => [e[0], e[1], metbrewer[settings.palette].colours[categories.indexOf(cat)], 'Count of ' + datasetTitle + 's', cat]));
+            });
+          } else {
+            categories.forEach(function(cat, idx) {
+              data.push(store.filter(d => d[settings.colour] == cat).map(d => [d[settings.x], d[settings.y], metbrewer[settings.palette].colours[categories.indexOf(d[settings.colour])], d[datasetIndex], d[settings.colour]]));
+            });
+          }
+          categories.forEach(function(cat, idx) {
             series.push({
               type: xBinned ? 'bar': 'scatter',
               name: labelExtremes(settings.colour, idx, categories.length-1, String(cat)),
@@ -618,7 +620,9 @@
               data: data[idx],
               stack: xBinned ? 'x': null,
               itemStyle : {
-                color: metbrewer[settings.palette].colours[idx]
+                color: function(data) {
+                  return data.value[2];
+                }
               },
             });
           });
