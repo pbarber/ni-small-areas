@@ -2,32 +2,321 @@
       "dataset": "sa-stats.csv",
       "title": "Small Area",
       "index": "SA2011",
-      "dimensions" : {
-            "name" : {"type": "None"},
-            "Multiple Deprivation Measure Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
-            "Income Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
-            "Employment Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
-            "Health Deprivation and Disability Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
-            "Education, Skills and Training Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
-            "Access to Services Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
-            "Living Environment Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
-            "Crime and Disorder Domain Rank" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
-            "Proportion of the population living in households whose equivalised income is below 60 per cent of the NI median" : {"type": "Metric", "title": "Proportion living in households where income under 60% of NI median", "bins": [10], "extremes": ["Least Deprived", "Most Deprived"]},
-            "Proportion of the working age population who are employment deprived" : {"type": "Metric", "bins": [10], "extremes": ["Most Deprived", "Least Deprived"]},
-            "Religion: Catholic (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least Catholic", "Most Catholic"]},
-            "Religion: Presbyterian Church in Ireland (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least Presbyterian", "Most Presbyterian"]},
-            "Religion: Church of Ireland (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least Church of Ireland", "Most Church of Ireland"]},
-            "Religion: Methodist Church in Ireland (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least Methodist", "Most Methodist"]},
-            "Religion: Other Christian (including Christian related) (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least Other Christian", "Most Other Christian"]},
-            "Religion: Other religions (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least Other religions", "Most Other religions"]},
-            "Religion: No religion (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least No religion", "Most No religion"]},
-            "Religion: Religion not stated (%)" : {"type": "Metric", "bins": [10], "extremes": ["Least not stated", "Most not stated"]},
-            "centre_x" : {"type": "Metric", "title": "Longitude", "dataMin": true},
-            "centre_y" : {"type": "Metric", "title": "Latitude", "dataMin": true},
-            "2015 Default Urban/Rural" : {"type": "Category", "title": "Urban/Rural", "order": ["Urban","Mixed urban/rural","Rural"]},
-            "LGD2014NAME": {"type": "Category", "title": "Local Government District"},
-            "MYE": {"type": "Metric", "bins": [10], "title": "Population", "extremes": ["Least populous","Most populous"]},
-            "SAs_to_30": {"type": "Metric", "bins": [10], "title": "Small Areas accessible within 30 minutes", "extremes": ["Least connected","Most connected"]},
-            "MYE_to_30": {"type": "Metric", "bins": [10], "title": "Population accessible within 30 minutes", "extremes": ["Least connected","Most connected"]}
+      "dimensions": {
+            "name": {
+                  "type": "None"
+            },
+            "Multiple Deprivation Measure Rank": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Most Deprived",
+                        "Least Deprived"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
+                  "date": "2018-04-12",
+                  "description": "Multiple Deprivation Measure Rank (where 1 is most deprived) for Small Areas, this is a combination of the different Domain Ranks"
+            },
+            "Income Domain Rank": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Most Deprived",
+                        "Least Deprived"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
+                  "date": "2018-04-12",
+                  "description": "Income Domain Rank (where 1 is most deprived) for Small Areas"
+            },
+            "Employment Domain Rank": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Most Deprived",
+                        "Least Deprived"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
+                  "date": "2018-04-12",
+                  "description": "Employment Domain Rank (where 1 is most deprived) for Small Areas"
+            },
+            "Health Deprivation and Disability Domain Rank": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Most Deprived",
+                        "Least Deprived"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
+                  "date": "2018-04-12",
+                  "description": "Health Deprivation and Disability Domain Rank (where 1 is most deprived) for Small Areas"
+            },
+            "Education, Skills and Training Domain Rank": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Most Deprived",
+                        "Least Deprived"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
+                  "date": "2018-04-12",
+                  "description": "Education, Skills and Training Domain Rank (where 1 is most deprived) for Small Areas"
+            },
+            "Access to Services Domain Rank": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Most Deprived",
+                        "Least Deprived"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
+                  "date": "2018-04-12",
+                  "description": "Access to Services Domain Rank (where 1 is most deprived) for Small Areas"
+            },
+            "Living Environment Domain Rank": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Most Deprived",
+                        "Least Deprived"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
+                  "date": "2018-04-12",
+                  "description": "Living Environment Domain Rank (where 1 is most deprived) for Small Areas"
+            },
+            "Crime and Disorder Domain Rank": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Most Deprived",
+                        "Least Deprived"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
+                  "date": "2018-04-12",
+                  "description": "Crime and Disorder Domain Rank (where 1 is most deprived) for Small Areas"
+            },
+            "Proportion of the population living in households whose equivalised income is below 60 per cent of the NI median": {
+                  "type": "Metric",
+                  "title": "Proportion living in households where income under 60% of NI median",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Least Deprived",
+                        "Most Deprived"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
+                  "date": "2018-04-12",
+                  "description": "Proportion of the population living in households whose equivalised income is below 60 per cent of the NI median (%) for Small Areas"
+            },
+            "Proportion of the working age population who are employment deprived": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Most Deprived",
+                        "Least Deprived"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
+                  "date": "2018-04-12",
+                  "description": "Proportion of the working age population who are employment deprived (%) for Small Areas"
+            },
+            "Religion: Catholic (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Least Catholic",
+                        "Most Catholic"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-ethnicity-identity-language-and-religion",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population stating their religion as Catholic"
+            },
+            "Religion: Presbyterian Church in Ireland (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Least Presbyterian",
+                        "Most Presbyterian"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-ethnicity-identity-language-and-religion",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population stating their religion as Presbyterian Church in Ireland"
+            },
+            "Religion: Church of Ireland (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Least Church of Ireland",
+                        "Most Church of Ireland"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-ethnicity-identity-language-and-religion",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population stating their religion as Church of Ireland"
+            },
+            "Religion: Methodist Church in Ireland (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Least Methodist",
+                        "Most Methodist"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-ethnicity-identity-language-and-religion",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population stating their religion as Methodist Church in Ireland"
+            },
+            "Religion: Other Christian (including Christian related) (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Least Other Christian",
+                        "Most Other Christian"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-ethnicity-identity-language-and-religion",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population stating their religion as Other Christian (including Christian related)"
+            },
+            "Religion: Other religions (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Least Other religions",
+                        "Most Other religions"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-ethnicity-identity-language-and-religion",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population stating their religion as Other religions"
+            },
+            "Religion: No religion (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Least No religion",
+                        "Most No religion"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-ethnicity-identity-language-and-religion",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population stating their religion as No religion"
+            },
+            "Religion: Religion not stated (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Least not stated",
+                        "Most not stated"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-ethnicity-identity-language-and-religion",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population who did not state their religion"
+            },
+            "centre_x": {
+                  "type": "Metric",
+                  "title": "Longitude",
+                  "dataMin": true,
+                  "URL": "https://www.nisra.gov.uk/publications/small-area-boundaries-gis-format",
+                  "date": "2013-01-01",
+                  "description": "Longitude (west-east) of the centre point of the Small Area in EPSG:4326"
+            },
+            "centre_y": {
+                  "type": "Metric",
+                  "title": "Latitude",
+                  "dataMin": true,
+                  "URL": "https://www.nisra.gov.uk/publications/small-area-boundaries-gis-format",
+                  "date": "2013-01-01",
+                  "description": "Latitude (south-north) of the centre point of the Small Area in EPSG:4326"
+            },
+            "2015 Default Urban/Rural": {
+                  "type": "Category",
+                  "title": "Urban/Rural",
+                  "order": [
+                        "Urban",
+                        "Mixed urban/rural",
+                        "Rural"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
+                  "date": "2018-04-12",
+                  "description": "Urban/rural categorisation of Small Areas"
+            },
+            "LGD2014NAME": {
+                  "type": "Category",
+                  "title": "Local Government District",
+                  "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
+                  "date": "2018-04-12",
+                  "description": "Local Government District (2014) of Small Areas"
+            },
+            "MYE": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "title": "Population",
+                  "extremes": [
+                        "Least populous",
+                        "Most populous"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2020-mid-year-population-estimates-small-areas",
+                  "date": "2021-11-25",
+                  "description": "Proportion of the population living in households whose equivalised income is below 60 per cent of the NI median (%) for Small Areas"
+            },
+            "SAs_to_30": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "title": "Small Areas accessible within 30 minutes",
+                  "extremes": [
+                        "Least connected",
+                        "Most connected"
+                  ],
+                  "URL": "https://geoportal.statistics.gov.uk/datasets/ons::uk-travel-area-isochrones-nov-dec-2022-by-public-transport-and-walking-for-northern-ireland-generalised-to-10m/about",
+                  "date": "2023-02-03",
+                  "description": "Number of Small Areas that can be reached in 30 minutes via public transport and walking"
+            },
+            "MYE_to_30": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "title": "Population accessible within 30 minutes",
+                  "extremes": [
+                        "Least connected",
+                        "Most connected"
+                  ],
+                  "URL": "https://geoportal.statistics.gov.uk/datasets/ons::uk-travel-area-isochrones-nov-dec-2022-by-public-transport-and-walking-for-northern-ireland-generalised-to-10m/about",
+                  "date": "2023-02-03",
+                  "description": "Population of Small Areas that can be reached in 30 minutes via public transport and walking (uses NISRA 2020 mid-year estimates)"
+            }
       }
 }
