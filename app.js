@@ -652,11 +652,13 @@ function updateChart() {
         if (params.componentType === 'series' && params.seriesType === 'scatter') {
             document.getElementById('area-details-modal-header').innerHTML = params.data[3] + ': ' + params.data[5];
             var content = `
-                <strong>${params.seriesName}</strong><br>
+                <strong>${params.data[4]}</strong><br>
                 ${settings.x}: ${params.data[0]}<br>
                 ${settings.y}: ${params.data[1]}
             `;
             document.getElementById('area-details-modal-point').innerHTML = content;
+            const fullDetails = store.filter(e => e[datasetIndex] == params.data[3])[0];
+            console.log(fullDetails);
             areaDetailsModalInstance.open();
         }
     });
