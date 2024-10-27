@@ -297,7 +297,7 @@ myChart.setOption({
     tooltip: { trigger: "item", formatter: tooltipCallback },
 });
 
-var scatterModalInstance = M.Modal.init(document.querySelector('#scatter-modal'));
+var areaDetailsModalInstance = M.Modal.init(document.getElementById('area-details-modal'));
 
 function updateChart() {
     categories = orderCategories(settings.colour);
@@ -649,15 +649,15 @@ function updateChart() {
     // Add click event listener to the chart
     myChart.off('click'); // Remove any existing click listeners
     myChart.on('click', function(params) {
-        console.log('clicked');
         if (params.componentType === 'series' && params.seriesType === 'scatter') {
+            document.getElementById('area-details-modal-header').innerHTML = params.data[3] + ': ' + params.data[5];
             var content = `
                 <strong>${params.seriesName}</strong><br>
                 ${settings.x}: ${params.data[0]}<br>
                 ${settings.y}: ${params.data[1]}
             `;
-            document.getElementById('scatter-modal-content').innerHTML = content;
-            scatterModalInstance.open();
+            document.getElementById('area-details-modal-point').innerHTML = content;
+            areaDetailsModalInstance.open();
         }
     });
 }
