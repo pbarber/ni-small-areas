@@ -4,3 +4,4 @@
 *.csv
 *.txt
 *.geojson
+.DS_Store
