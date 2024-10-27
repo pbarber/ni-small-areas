@@ -315,6 +315,162 @@
                   "URL": "https://geoportal.statistics.gov.uk/datasets/ons::uk-travel-area-isochrones-nov-dec-2022-by-public-transport-and-walking-for-northern-ireland-generalised-to-10m/about",
                   "date": "2023-02-03",
                   "description": "Population of Small Areas that can be reached in 30 minutes via public transport and walking (uses NISRA 2020 mid-year estimates)"
+            },
+            "Type of long-term condition: Deafness or partial hearing loss (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Lowest prevalence",
+                        "Highest prevalence"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population with deafness or partial hearing loss"
+            },
+            "Type of long-term condition: Blindness or partial sight loss (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Lowest prevalence",
+                        "Highest prevalence"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population with blindness or partial sight loss"
+            },
+            "Type of long-term condition: Communication difficulty (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Lowest prevalence",
+                        "Highest prevalence"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population with communication difficulty"
+            },
+            "Type of long-term condition: A mobility or dexterity difficulty (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Lowest prevalence",
+                        "Highest prevalence"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population with a mobility or dexterity difficulty"
+            },
+            "Type of long-term condition: A learning, intellectual, social or behavioural difficulty (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Lowest prevalence",
+                        "Highest prevalence"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population with a learning, intellectual, social or behavioural difficulty"
+            },
+            "Type of long-term condition: An emotional, psychological or mental health condition (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Lowest prevalence",
+                        "Highest prevalence"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population with an emotional, psychological or mental health condition"
+            },
+            "Type of long-term condition: Long-term pain or discomfort (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Lowest prevalence",
+                        "Highest prevalence"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population with long-term pain or discomfort"
+            },
+            "Type of long-term condition: Shortness of breath or difficulty breathing (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Lowest prevalence",
+                        "Highest prevalence"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population with no condition"
+            },
+            "Type of long-term condition: Frequent periods of confusion or memory loss (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Lowest prevalence",
+                        "Highest prevalence"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population with frequent periods of confusion or memory loss"
+            },
+            "Type of long-term condition: A chronic illness (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Lowest prevalence",
+                        "Highest prevalence"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population with a chronic illness"
+            },
+            "Type of long-term condition: Other condition (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Lowest prevalence",
+                        "Highest prevalence"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population with other condition"
+            },
+            "Type of long-term condition: No condition (%)": {
+                  "type": "Metric",
+                  "bins": [
+                        10
+                  ],
+                  "extremes": [
+                        "Most affected",
+                        "Least affected"
+                  ],
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
+                  "date": "2012-12-11",
+                  "description": "Percentage of the population with no condition"
             }
       }
 }
