@@ -657,8 +657,22 @@ function updateChart() {
                 ${settings.y}: ${params.data[1]}
             `;
             document.getElementById('area-details-modal-point').innerHTML = content;
+
             const fullDetails = store.filter(e => e[datasetIndex] == params.data[3])[0];
-            console.log(fullDetails);
+
+            let orderedFields = Object.keys(dimensions)
+                .filter(key => dimensions[key].summaryOrder !== undefined)
+                .sort((a, b) => dimensions[a].summaryOrder - dimensions[b].summaryOrder);
+            
+            var summaryTable = '<table class="striped"><thead><tr><th>Name</th><th>Value</th></tr></thead><tbody>';
+            orderedFields.forEach(field => {
+                if (fullDetails.hasOwnProperty(field)) {
+                    summaryTable += `<tr><td>${dimensions[field].title || field}</td><td>${fullDetails[field]}</td></tr>`;
+                }
+            });
+            summaryTable += '</tbody></table>';
+            document.getElementById('area-details-modal-summary').innerHTML = summaryTable;
+
             areaDetailsModalInstance.open();
         }
     });
