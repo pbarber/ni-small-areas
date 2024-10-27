@@ -1,4 +1,4 @@
-# %% Load and manipulate the raw dataframe
+# %% Imports and definitions
 import pandas
 import geopandas
 from pyproj import Transformer
@@ -18,6 +18,189 @@ def download_file_if_not_exists(url, fname=None):
                 for chunk in stream.iter_content(chunk_size=8192):
                     f.write(chunk)
 
+censusindex = {
+    'KS101NI Usual Resident Population': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks101ni.xlsx',
+        'skip': 4
+    },
+    'KS102NI Age Structure': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks102ni.xlsx',
+        'skip': 5
+    },
+    'KS103NI Marital and Civil Partnership Status': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks103ni.xlsx',
+        'skip': 4
+    },
+    'KS104NI Living Arrangements': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks104ni.xlsx',
+        'skip': 5
+    },
+    'KS105NI Household Composition' : {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks105ni.xlsx',
+        'skip': 5
+    },
+    'KS106NI All Households with: Adults not in Employment; Dependent Children; and Persons with Long-Term Health Problem or Disability': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks106ni.xlsx',
+        'skip': 5
+    },
+    'KS107NI Lone Parent Households with Dependent Children': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks107ni.xlsx',
+        'skip': 5
+    },
+    'KS201NI Ethnic Group': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks201ni.xlsx',
+        'skip': 4
+    },
+    'KS202NI National Identity (Classification 1)': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks202ni.xlsx',
+        'skip': 4
+    },
+    'KS203NI National Identity (Classification 2)': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks203ni.xlsx',
+        'skip': 4
+    },
+    'KS204NI Country of Birth': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks204ni.xlsx',
+        'skip': 5
+    },
+    'KS205NI Passports Held (Classification 1)': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks205ni.xlsx',
+        'skip': 5
+    },
+    'KS206NI Passports Held (Classification 2)': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks206ni.xlsx',
+        'skip': 5
+    },
+    'KS207NI Main Language': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks207ni.xlsx',
+        'skip': 5
+    },
+    'KS208NI Household Language': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks208ni.xlsx',
+        'skip': 4
+    },
+    'KS209NI Knowledge of Irish': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks209ni.xlsx',
+        'skip': 5
+    },
+    'KS210NI Knowledge of Ulster-Scots': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks210ni.xlsx',
+        'skip': 5
+    },
+    'KS211NI Religion': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks211ni.xlsx',
+        'skip': 5
+    },
+    'KS212NI Religion or Religion Brought Up In': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks212ni.xlsx',
+        'skip': 5
+    },
+    'KS301NI Health and Provision of Unpaid Care': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks301ni.xlsx',
+        'skip': 5
+    },
+    'KS302NI Type of Long-Term Condition': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks302ni.xlsx',
+        'skip': 5
+    },
+    'KS401NI Dwellings, Household Spaces and Accommodation Type': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks401ni.xlsx',
+        'skip': 5
+    },
+    'KS402NI Tenure and Landlord': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks402ni.xlsx',
+        'skip': 5
+    },
+    'KS403NI Household Size': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks403ni.xlsx',
+        'skip': 4
+    },
+    'KS404NI Central Heating': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks404ni.xlsx',
+        'skip': 4
+    },
+    'KS405NI Car or Van Availability': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks405ni.xlsx',
+        'skip': 5
+    },
+    'KS406NI Adaptation to Accommodation': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks406ni.xlsx',
+        'skip': 4
+    },
+    'KS407NI Communal Establishment Residents and Long-Term Health Problem or Disability': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks407ni.xlsx',
+        'skip': 5
+    },
+    'KS501NI Qualifications and Students': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks501ni.xlsx',
+        'skip': 5
+    },
+    'KS601NI Economic Activity': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks601ni.xlsx',
+        'skip': 5
+    },
+    'KS602NI Economic Activity - Males': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks602ni.xlsx',
+        'skip': 5
+    },
+    'KS603NI Economic Activity - Females': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks603ni.xlsx',
+        'skip': 5
+    },
+    'KS604NI Hours Worked': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks604ni.xlsx',
+        'skip': 5
+    },
+    'KS605NI Industry of Employment': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks605ni.xlsx',
+        'skip': 5
+    },
+    'KS606NI Industry of Employment - Males': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks606ni.xlsx',
+        'skip': 5
+    },
+    'KS607NI Industry of Employment - Females': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks607ni.xlsx',
+        'skip': 5
+    },
+    'KS608NI Occupation Groups': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks608ni.xlsx',
+        'skip': 5
+    },
+    'KS609NI Occupation Groups - Males': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks609ni.xlsx',
+        'skip': 5
+    },
+    'KS610NI Occupation Groups - Females': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks610ni.xlsx',
+        'skip': 5
+    },
+    'KS611NI National Statistics Socio-economic Classification (NS-SeC)': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks611ni.xlsx',
+        'skip': 5
+    },
+    'KS612NI National Statistics Socio-economic Classification (NS-SeC) - Males': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks611ni.xlsx',
+        'skip': 5
+    },
+    'KS613NI National Statistics Socio-economic Classification (NS-SeC) - Females': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks613ni.xlsx',
+        'skip': 5
+    },
+    'KS701NI Method of Travel to Work (Resident Population)': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks701ni.xlsx',
+        'skip': 5
+    },
+    'KS702NI Method of Travel to Work or Place of Study (Resident Population)': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks702ni.xlsx',
+        'skip': 5
+    },
+    'KS801NI Usual Residents Born in Northern Ireland Who Have Resided Elsewhere, and Short-Term Residents': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks801ni.xlsx',
+        'skip': 5
+    }
+}
+
 # %% Get Small Area statistics
 # Load the Small Areas boundaries, preconverted to match geometries
 sa2011 = geopandas.read_file('sa2011_epsg4326_simplified15.json')
@@ -30,26 +213,20 @@ pops = pops[(pops['Area']=='Small Areas') & (pops['Year']==2020)][['Area_Code','
 # Load SA NI Multiple Index Of Deprivation data
 download_file_if_not_exists('https://www.nisra.gov.uk/sites/nisra.gov.uk/files/publications/NIMDM17_SA%20-%20for%20publication.xls', 'NIMDM17_SA%20-%20for%20publication.xls')
 nimdm = pandas.read_excel('NIMDM17_SA%20-%20for%20publication.xls', sheet_name='MDM')
-nimdm.columns = nimdm.columns.str.replace(re.compile('\(.+'), '', regex=True).str.replace('\n','').str.strip()
+nimdm.columns = nimdm.columns.str.replace(re.compile(r'\(.+'), '', regex=True).str.replace('\n','').str.strip()
 
 # Load SA NI Multiple Index Of Deprivation income details
 nimdm_income = pandas.read_excel('NIMDM17_SA%20-%20for%20publication.xls', sheet_name='Income')
-nimdm_income.columns = nimdm_income.columns.str.replace(re.compile('\(.+'), '', regex=True).str.replace('\n','').str.strip()
+nimdm_income.columns = nimdm_income.columns.str.replace(re.compile(r'\(.+'), '', regex=True).str.replace('\n','').str.strip()
 nimdm = nimdm.merge(nimdm_income[['SA2011','Proportion of the population living in households whose equivalised income is below 60 per cent of the NI median']], how='left', left_on='SA2011', right_on='SA2011')
 
 # Load SA NI Multiple Index Of Deprivation employment details
 nimdm_employment = pandas.read_excel('NIMDM17_SA%20-%20for%20publication.xls', sheet_name='Employment')
-nimdm_employment.columns = nimdm_employment.columns.str.replace(re.compile('\(.+'), '', regex=True).str.replace('\n','').str.strip()
+nimdm_employment.columns = nimdm_employment.columns.str.replace(re.compile(r'\(.+'), '', regex=True).str.replace('\n','').str.strip()
 nimdm = nimdm.merge(nimdm_employment[['SA2011','Proportion of the working age population who are employment deprived']], how='left', left_on='SA2011', right_on='SA2011')
 
-# Load SA NI 2011 Census religion data
-download_file_if_not_exists('https://www.nisra.gov.uk/system/files/statistics/census-2011-ks211ni.xlsx', 'census-2011-ks211ni.xlsx')
-census = pandas.read_excel('census-2011-ks211ni.xlsx', sheet_name='SA', skiprows=5)
-census.drop(columns=['SA','All usual residents'], inplace=True)
-sa_stats = nimdm.merge(census, how='left', left_on='SA2011', right_on='SA Code')
-
 # Include area populations
-sa_stats = sa_stats.merge(pops, how='left', left_on='SA2011', right_on='Area_Code')
+sa_stats = nimdm.merge(pops, how='left', left_on='SA2011', right_on='Area_Code')
 
 # Add centre points of each SA
 trans = Transformer.from_crs("EPSG:29902", "EPSG:4326", always_xy=True)
@@ -58,13 +235,14 @@ coords['centre_x'],coords['centre_y'] = trans.transform(coords['X_COORD'].values
 coords.drop(columns=['X_COORD','Y_COORD'], inplace=True)
 sa_stats = sa_stats.merge(coords, how='left', left_on='SA2011', right_on='SA2011')
 
-# Load SA NI 2011 Census long-term condition data
-download_file_if_not_exists('https://www.nisra.gov.uk/system/files/statistics/census-2011-ks302ni.xlsx', 'census-2011-ks302ni.xlsx')
-census = pandas.read_excel('census-2011-ks302ni.xlsx', sheet_name='SA', skiprows=5)
-census.set_index('SA Code', inplace=True)
-census = census.filter(regex=r'\(%\)').reset_index()
-sa_stats = sa_stats.merge(census, how='left', left_on='SA2011', right_on='SA Code')
-sa_stats.drop(columns=['SA Code_x', 'SA Code_y'], inplace=True)
+# Load SA NI 2011 Census data
+for k, v in censusindex.items():
+    download_file_if_not_exists(v.get('url'), os.path.basename(v.get('url')))
+    census = pandas.read_excel(os.path.basename(v.get('url')), sheet_name='SA', skiprows=v.get('skip'))
+    census.set_index('SA Code', inplace=True)
+    census = census.filter(regex=r'\(%\)').reset_index()
+    sa_stats = sa_stats.merge(census, how='left', left_on='SA2011', right_on='SA Code')
+    sa_stats.drop(columns=['SA Code_y', 'SA Code_x', 'SA Code'], inplace=True, errors='ignore')
 
 # %%
 conn = pandas.read_csv('sa-connectivity.csv', index_col=0)
