@@ -1,7 +1,10 @@
+// TODO: add long term conditions data
 // TODO: add extra dataset
 // TODO: add dataset selector
+// TODO: add choropleth map
 // TODO: add hex map
 // TODO: add data field categories and searchability
+// TODO: add area information modal
 
 // Initialize the echarts instance based on the prepared dom
 var myChart = echarts.init(document.getElementById('main'));
@@ -293,6 +296,8 @@ myChart.setOption({
     },
     tooltip: { trigger: "item", formatter: tooltipCallback },
 });
+
+var scatterModalInstance = M.Modal.init(document.querySelector('#scatter-modal'));
 
 function updateChart() {
     categories = orderCategories(settings.colour);
@@ -639,6 +644,21 @@ function updateChart() {
             icon: 'roundRect',
             data: legendData,
         },
+    });
+
+    // Add click event listener to the chart
+    myChart.off('click'); // Remove any existing click listeners
+    myChart.on('click', function(params) {
+        console.log('clicked');
+        if (params.componentType === 'series' && params.seriesType === 'scatter') {
+            var content = `
+                <strong>${params.seriesName}</strong><br>
+                ${settings.x}: ${params.data[0]}<br>
+                ${settings.y}: ${params.data[1]}
+            `;
+            document.getElementById('scatter-modal-content').innerHTML = content;
+            scatterModalInstance.open();
+        }
     });
 }
 
