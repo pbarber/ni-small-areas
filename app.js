@@ -22,6 +22,7 @@ var chartSeries = 0;
 var bottomSheet = document.querySelector('.bottom-sheet');
 var bottomSheetInstance = M.Modal.init(bottomSheet);
 var infoModalInstance = M.Modal.init(document.getElementById('info-modal'));
+var geoJSONPromise = null;
 const params = new URLSearchParams(location.search);
 if (params.get("metadataURL")) {
     settings.metadataURL = params.get("metadataURL");
@@ -36,10 +37,10 @@ var dimensionsPromise = $.get(settings.metadataURL).then(function (data) {
     datasetTitle = data.title;
     datasetIndex = data.index;
     datasetName = data.name;
+    datasetGeoJSON = data.geojson;
     return data;
 });
 
-// Create a promise for loading metbrewer.json
 var metbrewerPromise = $.get('metbrewer.json').then(function (data) {
     metbrewer = data;
     return data;
@@ -61,6 +62,13 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
     } else {
         settings.palette = "Signac";
     }
+
+    // Create a promise for loading the GeoJSON file
+    geoJSONPromise = $.getJSON(datasetGeoJSON).then(function(data) {
+        geoJSONData = data;
+        return data;
+    });
+
     // Load sa-stats.json with the dynamically constructed URL
     Papa.parse(datasetURL, {
         download: true,
@@ -672,6 +680,37 @@ function updateChart() {
             });
             summaryTable += '</tbody></table>';
             document.getElementById('area-details-modal-summary').innerHTML = summaryTable;
+            // Get the relevant row from the geoJSON promise
+            geoJSONPromise.then(function(geoJSONData) {
+                const relevantFeature = geoJSONData.features.find(feature => feature.properties[datasetIndex] === params.data[3]);
+                
+                if (relevantFeature) {
+                    // Create a Leaflet map
+                    const mapContainer = document.getElementById('area-details-modal-map');
+                    mapContainer.style.height = '300px';
+                    mapContainer.innerHTML = '';
+                    
+                    const map = L.map(mapContainer).setView([54.7877, -6.4923], 7); // Center on Northern Ireland
+                    
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+                    
+                    // Add the GeoJSON feature to the map
+                    const geoJSONLayer = L.geoJSON(relevantFeature, {
+                        style: {
+                            color: "#ff7800",
+                            weight: 2,
+                            opacity: 0.65
+                        }
+                    }).addTo(map);
+                    
+                    // Fit the map to the bounds of the feature
+                    map.fitBounds(geoJSONLayer.getBounds());
+                } else {
+                    document.getElementById('area-details-modal-map').innerHTML = 'Map data not available for this area.';
+                }
+            });
 
             areaDetailsModalInstance.open();
         }

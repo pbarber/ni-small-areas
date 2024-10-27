@@ -3,6 +3,7 @@
       "title": "Small Area",
       "index": "SA2011",
       "name": "SOA2001_name",
+      "geojson": "sa2011_epsg4326_simplified15.geojson",
       "dimensions": {
             "Multiple Deprivation Measure Rank": {
                   "type": "Metric",
