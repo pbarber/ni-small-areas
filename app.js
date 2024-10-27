@@ -711,6 +711,8 @@ function updateChart() {
             });
 
             areaDetailsModalInstance.open();
+
+            document.getElementById('area-details-modal').scrollTop = 0;
         }
     });
 }
