@@ -313,7 +313,7 @@ myChart.setOption({
             }
         }
     },
-    tooltip: { trigger: "item", formatter: tooltipCallback },
+    tooltip: { trigger: "item", formatter: tooltipCallback, alwaysShowContent: false },
 });
 
 var areaDetailsModalInstance = M.Modal.init(document.getElementById('area-details-modal'));
@@ -669,6 +669,10 @@ function updateChart() {
     myChart.off('click'); // Remove any existing click listeners
     myChart.on('click', function(params) {
         if (params.componentType === 'series' && params.seriesType === 'scatter') {
+            myChart.dispatchAction({
+                type: 'hideTip'
+            });
+
             document.getElementById('area-details-modal-header').innerHTML = params.data[3] + ': ' + params.data[5];
             var content = `
                 <strong>${params.data[4]}</strong><br>
