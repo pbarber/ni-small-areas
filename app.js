@@ -30,6 +30,17 @@ if (params.get("metadataURL")) {
     settings.metadataURL = "sa-metadata.json";
 }
 
+const mapContainer = document.getElementById('area-details-modal-map');
+mapContainer.style.height = '300px';
+mapContainer.innerHTML = '';
+
+const map = L.map(mapContainer); // Center on Northern Ireland
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var geoJSONLayer = L.geoJSON(null).addTo(map);
+
 // Create a promise for loading sa-dimensions.json
 var dimensionsPromise = $.get(settings.metadataURL).then(function (data) {
     dimensions = data.dimensions;
@@ -685,27 +696,14 @@ function updateChart() {
                 const relevantFeature = geoJSONData.features.find(feature => feature.properties[datasetIndex] === params.data[3]);
                 
                 if (relevantFeature) {
-                    // Create a Leaflet map
-                    const mapContainer = document.getElementById('area-details-modal-map');
-                    mapContainer.style.height = '300px';
-                    mapContainer.innerHTML = '';
-                    
-                    const map = L.map(mapContainer).setView([54.7877, -6.4923], 7); // Center on Northern Ireland
-                    
-                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    }).addTo(map);
-                    
-                    // Add the GeoJSON feature to the map
-                    const geoJSONLayer = L.geoJSON(relevantFeature, {
+                    map.removeLayer(geoJSONLayer);
+                    geoJSONLayer = L.geoJSON(relevantFeature, {
                         style: {
                             color: "#ff7800",
                             weight: 2,
                             opacity: 0.65
                         }
                     }).addTo(map);
-                    
-                    // Fit the map to the bounds of the feature
                     map.fitBounds(geoJSONLayer.getBounds());
                 } else {
                     document.getElementById('area-details-modal-map').innerHTML = 'Map data not available for this area.';
