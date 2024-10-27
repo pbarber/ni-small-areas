@@ -1,10 +1,8 @@
-// TODO: add long term conditions data
 // TODO: add extra dataset
 // TODO: add dataset selector
 // TODO: add choropleth map
 // TODO: add hex map
 // TODO: add data field categories and searchability
-// TODO: add area information modal
 
 // Initialize the echarts instance based on the prepared dom
 var myChart = echarts.init(document.getElementById('main'));
@@ -687,10 +685,10 @@ function updateChart() {
                 .filter(key => dimensions[key].summaryOrder !== undefined)
                 .sort((a, b) => dimensions[a].summaryOrder - dimensions[b].summaryOrder);
             
-            var summaryTable = '<table class="striped"><thead><tr><th>Name</th><th>Value</th></tr></thead><tbody>';
+            var summaryTable = '<table class="striped"><tbody>';
             orderedFields.forEach(field => {
                 if (fullDetails.hasOwnProperty(field)) {
-                    summaryTable += `<tr><td>${dimensions[field].title || field}</td><td>${fullDetails[field]}</td></tr>`;
+                    summaryTable += `<tr><td>${dimensions[field].title || field} (<a href=${dimensions[field].URL}>${dimensions[field].date}</a>)</td><td>${fullDetails[field]}</td><td></td></tr>`;
                 }
             });
             summaryTable += '</tbody></table>';
