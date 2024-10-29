@@ -26,6 +26,22 @@
         overflow-y: auto;
         overflow: visible;
       }
+      .binned-option {
+        margin-top: 8px;
+      }
+
+      .binned-option label {
+        color: rgba(0,0,0,0.87) !important;
+      }
+
+      /* Style for disabled checkbox */
+      [type="checkbox"].filled-in:disabled:not(:checked) + span:not(.lever):after {
+        border-color: rgba(0,0,0,0.26);
+      }
+      [type="checkbox"].filled-in:disabled:checked + span:not(.lever):after {
+        background-color: rgba(0,0,0,0.26);
+        border-color: rgba(0,0,0,0.26);
+      }
     </style>
     </head>
   <body>
@@ -39,13 +55,19 @@
           <form class="col s12">
             <div class="row">
               <div class="input-field col s6">
-                <select id="x-select" onchange="updateSelect(this.value, 'x')" class="material-select"></select>
-                <label>X axis</label>
+                <select id="x-select"></select>
+                <label>X Axis</label>
+                <div class="binned-option">
+                  <label>
+                    <input type="checkbox" id="x-binned" class="filled-in" />
+                    <span>Binned</span>
+                  </label>
+                </div>
               </div>
 
               <div class="input-field col s6">
-                <select id="y-select" onchange="updateSelect(this.value, 'y')" class="material-select"></select>
-                <label>Y axis</label>
+                <select id="y-select"></select>
+                <label>Y Axis</label>
               </div>
             </div>
   

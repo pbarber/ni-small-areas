@@ -153,7 +153,6 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
             // Fill out the options in the selectors based on the dimensions of the dataset
             // Hide x options when selected for y and vice versa
             var ogxm = createOptGroup('Metrics');
-            var ogxb = createOptGroup('Binned metrics');
             var ogym = createOptGroup('Metrics');
             var ogmc = createOptGroup('Categories');
             var ogmb = createOptGroup('Binned metrics');
@@ -167,13 +166,12 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
                     ogmc.append(createOption(useTitleIfExists(key), key, false, false));
                     ogcc.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
                 } else if (value.type == 'Binned') {
-                    ogxb.append(createOption(useTitleIfExists(key), key, (key == settings.x), false));
                     ogmb.append(createOption(useTitleIfExists(key), key, false, false));
                     ogcb.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
                 }
             }
             ogym.append(createOption('Count of ' + datasetTitle + 's', 'Count of ' + datasetTitle + 's', false, true));
-            document.getElementById("x-select").append(ogxm, ogxb);
+            document.getElementById("x-select").append(ogxm);
             document.getElementById("y-select").append(ogym);
             ogmc.append(createOption('None', 'None', true, false));
             document.getElementById("multiple-select").append(ogmc, ogmb);
@@ -183,7 +181,7 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
                 document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
             }
             hideSelected("y-select", settings.x, settings.y, (dimensions[settings.x].type == 'Binned'));
-            hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? settings.y : 'Count of ' + datasetTitle + 's', settings.x);
+            hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? 'Count of ' + datasetTitle + 's' : settings.y, settings.x);
             $('#x-select').formSelect();
             $('#y-select').formSelect();
             $('#multiple-select').formSelect();
@@ -721,17 +719,7 @@ function updateChart() {
 
 // When the selectors change, update the chart options
 function updateSelect(name, target) {
-    if (target == 'x') {
-        settings.x = name;
-        // Hide relevant y options
-        hideSelected("y-select", settings.x, settings.y, (dimensions[settings.x].type == 'Binned'));
-        $('#y-select').formSelect();
-    } else if (target == 'y') {
-        settings.y = name;
-        // Hide relevant x options
-        hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? settings.y : 'Count of ' + datasetTitle + 's', settings.x);
-        $('#x-select').formSelect();
-    } else if (target == 'multiple') {
+    if (target == 'multiple') {
         settings.smallMultiple = name;
     } else if (target == 'colour') {
         settings.colour = name;
@@ -763,3 +751,48 @@ function updateSelect(name, target) {
     }
     updateChart();
 }
+
+function handleXVariableChange(selected, binned) {
+    const dim = dimensions[selected];
+    if (binned) {
+        if (dim && dim.hasOwnProperty('bins')) {
+            const suffix = binned ? ((dim.bins[0] == 10) ? ' decile' : (dim.bins[0] == 100) ? ' centile' : ' binned') : '';
+            settings.x = selected + suffix;
+            document.getElementById('x-binned').disabled = false;
+        } else {
+            settings.x = selected;
+            document.getElementById('x-binned').checked = false;
+            document.getElementById('x-binned').disabled = true;
+        }
+    } else {
+        settings.x = selected;
+        if (dim && dim.hasOwnProperty('bins')) {
+            document.getElementById('x-binned').disabled = false;
+        } else {
+            document.getElementById('x-binned').disabled = true;
+        }
+    }
+    hideSelected("y-select", selected, settings.y, binned);
+    hideSelected("x-select", binned ? 'Count of ' + datasetTitle + 's' : settings.y, selected);
+    $('#y-select').formSelect();
+    $('#x-select').formSelect();
+}
+
+// Add event listeners for the checkboxes
+document.getElementById('x-binned').addEventListener('change', function(e) {
+    handleXVariableChange(document.getElementById('x-select').value, e.target.checked);
+    updateChart();
+});
+
+// Update the existing axis change handlers
+document.getElementById('x-select').addEventListener('change', function(e) {
+    handleXVariableChange(e.target.value, document.getElementById('x-binned').checked);
+    updateChart();
+});
+
+document.getElementById('y-select').addEventListener('change', function(e) {
+    settings.y = e.target.value;
+    hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? 'Count of ' + datasetTitle + 's' : settings.y, settings.x);
+    $('#x-select').formSelect();
+    updateChart();
+});
