@@ -180,7 +180,7 @@ censusindex = {
         'skip': 5
     },
     'KS612NI National Statistics Socio-economic Classification (NS-SeC) - Males': {
-        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks611ni.xlsx',
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2011-ks612ni.xlsx',
         'skip': 5
     },
     'KS613NI National Statistics Socio-economic Classification (NS-SeC) - Females': {
