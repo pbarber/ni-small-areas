@@ -40,7 +40,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var geoJSONLayer = L.geoJSON(null).addTo(map);
 
 // Create a promise for loading sa-dimensions.json
-var dimensionsPromise = $.get(settings.metadataURL).then(function (data) {
+var dimensionsPromise = fetch(settings.metadataURL).then(response => response.json()).then(function (data) {
     dimensions = data.dimensions;
     datasetURL = data.dataset;
     datasetTitle = data.title;
@@ -50,7 +50,7 @@ var dimensionsPromise = $.get(settings.metadataURL).then(function (data) {
     return data;
 });
 
-var metbrewerPromise = $.get('metbrewer.json').then(function (data) {
+var metbrewerPromise = fetch('metbrewer.json').then(response => response.json()).then(function (data) {
     metbrewer = data;
     return data;
 });
@@ -73,7 +73,7 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
     }
 
     // Create a promise for loading the GeoJSON file
-    geoJSONPromise = $.getJSON(datasetGeoJSON).then(function(data) {
+    geoJSONPromise = fetch(datasetGeoJSON).then(response => response.json()).then(function(data) {
         geoJSONData = data;
         return data;
     });
@@ -256,10 +256,6 @@ function orderCategories(column) {
     }
     return (cats);
 }
-
-$('.material-select').on('contentChanged', function () {
-    $(this).formSelect();
-});
 
 function showInfo(item, variable) {
     if (dimensions.hasOwnProperty(variable)) {
