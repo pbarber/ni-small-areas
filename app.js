@@ -73,7 +73,7 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
     }
 
     // Create a promise for loading the GeoJSON file
-    geoJSONPromise = fetch(datasetGeoJSON).then(response => response.json()).then(function(data) {
+    geoJSONPromise = fetch(datasetGeoJSON).then(response => response.json()).then(function (data) {
         geoJSONData = data;
         return data;
     });
@@ -181,7 +181,11 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
             }
             handleXVariableChange((dimensions[settings.x].type == 'Binned') ? dimensions[settings.x].binSource : settings.x, (dimensions[settings.x].type == 'Binned'));
 
-            $('.select2-selector').select2({width: '100%'});
+            $('#x-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
+            $('#y-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
+            $('#colour-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
+            $('#multiple-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
+            $('#palette-select').select2({ width: '100%', dropdownParent: $("#bottom-sheet") });
 
             // When the selectors change, update the chart options
             $('#multiple-select').on('select2:select', function (e) {
@@ -224,17 +228,51 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
                 handleXVariableChange(e.target.value, document.getElementById('x-binned').checked);
                 updateChart();
             });
-            
+
             $('#y-select').on('select2:select', function (e) {
                 settings.y = e.target.value;
                 hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? 'Count of ' + datasetTitle + 's' : settings.y, settings.x);
                 $('#x-select').trigger('change');
                 updateChart();
             });
-            
+
         }
     });
 });
+
+function matchWithOptGroups(params, data) {
+    // If there are no search terms, return all of the data
+    if ($.trim(params.term) === '') {
+        return data;
+    }
+
+    // Skip if there is no 'children' property
+    if (typeof data.children === 'undefined') {
+        return null;
+    }
+
+    // `data.children` contains the actual options that we are matching against
+    var filteredChildren = [];
+    $.each(data.children, function (idx, child) {
+        if (child.text.toUpperCase().indexOf(params.term.toUpperCase()) == 0) {
+            filteredChildren.push(child);
+        }
+    });
+
+    // If we matched any of the timezone group's children, then set the matched children on the group
+    // and return the group object
+    if (filteredChildren.length) {
+        var modifiedData = $.extend({}, data, true);
+        modifiedData.children = filteredChildren;
+
+        // You can return modified objects from here
+        // This includes matching the `children` how you want in nested data sets
+        return modifiedData;
+    }
+
+    // Return `null` if the term should not be displayed
+    return null;
+}
 
 function tooltipCallback(args) {
     return (
@@ -704,7 +742,7 @@ function updateChart() {
 
     // Add click event listener to the chart
     myChart.off('click'); // Remove any existing click listeners
-    myChart.on('click', function(params) {
+    myChart.on('click', function (params) {
         if (params.componentType === 'series' && params.seriesType === 'scatter') {
             myChart.dispatchAction({
                 type: 'hideTip'
@@ -723,7 +761,7 @@ function updateChart() {
             let orderedFields = Object.keys(dimensions)
                 .filter(key => dimensions[key].summaryOrder !== undefined)
                 .sort((a, b) => dimensions[a].summaryOrder - dimensions[b].summaryOrder);
-            
+
             var summaryTable = '<table class="striped"><tbody>';
             orderedFields.forEach(field => {
                 if (fullDetails.hasOwnProperty(field)) {
@@ -733,9 +771,9 @@ function updateChart() {
             summaryTable += '</tbody></table>';
             document.getElementById('area-details-modal-summary').innerHTML = summaryTable;
             // Get the relevant row from the geoJSON promise
-            geoJSONPromise.then(function(geoJSONData) {
+            geoJSONPromise.then(function (geoJSONData) {
                 const relevantFeature = geoJSONData.features.find(feature => feature.properties[datasetIndex] === params.data[3]);
-                
+
                 if (relevantFeature) {
                     map.removeLayer(geoJSONLayer);
                     geoJSONLayer = L.geoJSON(relevantFeature, {
@@ -787,7 +825,7 @@ function handleXVariableChange(selected, binned) {
 }
 
 // Add event listeners for the checkboxes
-document.getElementById('x-binned').addEventListener('change', function(e) {
+document.getElementById('x-binned').addEventListener('change', function (e) {
     handleXVariableChange(document.getElementById('x-select').value, e.target.checked);
     updateChart();
 });
