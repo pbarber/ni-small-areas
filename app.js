@@ -108,7 +108,8 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
                     store[e.index][d[0] + suffix] = value;
                 });
                 dimensions[d[0] + suffix] = {
-                    type: 'Binned'
+                    type: 'Binned',
+                    binSource: d[0]
                 };
                 if (d[1].hasOwnProperty('description')) {
                     dimensions[d[0] + suffix].description = d[1].description + suffix;
@@ -180,13 +181,10 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
             for (const key of Object.keys(metbrewer)) {
                 document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
             }
-            hideSelected("y-select", settings.x, settings.y, (dimensions[settings.x].type == 'Binned'));
-            hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? 'Count of ' + datasetTitle + 's' : settings.y, settings.x);
-            $('#x-select').formSelect();
-            $('#y-select').formSelect();
-            $('#multiple-select').formSelect();
-            $('#colour-select').formSelect();
-            $('#palette-select').formSelect();
+            handleXVariableChange((dimensions[settings.x].type == 'Binned') ? dimensions[settings.x].binSource : settings.x, (dimensions[settings.x].type == 'Binned'));
+            M.FormSelect.init(document.getElementById('multiple-select'));
+            M.FormSelect.init(document.getElementById('colour-select'));
+            M.FormSelect.init(document.getElementById('palette-select'));
         }
     });
 });
@@ -743,7 +741,7 @@ function updateSelect(name, target) {
                 }
             }
         }
-        $('#palette-select').formSelect();
+        M.FormSelect.init(document.getElementById('palette-select'));
     } else if (target == 'palette') {
         settings.palette = name;
     } else {
@@ -758,6 +756,7 @@ function handleXVariableChange(selected, binned) {
         if (dim && dim.hasOwnProperty('bins')) {
             const suffix = binned ? ((dim.bins[0] == 10) ? ' decile' : (dim.bins[0] == 100) ? ' centile' : ' binned') : '';
             settings.x = selected + suffix;
+            document.getElementById('x-binned').checked = true;
             document.getElementById('x-binned').disabled = false;
         } else {
             settings.x = selected;
@@ -766,6 +765,7 @@ function handleXVariableChange(selected, binned) {
         }
     } else {
         settings.x = selected;
+        document.getElementById('x-binned').checked = false;
         if (dim && dim.hasOwnProperty('bins')) {
             document.getElementById('x-binned').disabled = false;
         } else {
@@ -774,8 +774,8 @@ function handleXVariableChange(selected, binned) {
     }
     hideSelected("y-select", selected, settings.y, binned);
     hideSelected("x-select", binned ? 'Count of ' + datasetTitle + 's' : settings.y, selected);
-    $('#y-select').formSelect();
-    $('#x-select').formSelect();
+    M.FormSelect.init(document.getElementById('y-select'));
+    M.FormSelect.init(document.getElementById('x-select'));
 }
 
 // Add event listeners for the checkboxes
@@ -793,6 +793,6 @@ document.getElementById('x-select').addEventListener('change', function(e) {
 document.getElementById('y-select').addEventListener('change', function(e) {
     settings.y = e.target.value;
     hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? 'Count of ' + datasetTitle + 's' : settings.y, settings.x);
-    $('#x-select').formSelect();
+    M.FormSelect.init(document.getElementById('x-select'));
     updateChart();
 });
