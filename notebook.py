@@ -254,7 +254,7 @@ sa_stats = sa_stats.merge(conn, how='left', left_on='SA2011', right_on='SA2011')
 # SEISA dataset
 download_file_if_not_exists('https://www.hesa.ac.uk/files/SEISA-dataset.xlsx', 'SEISA-dataset.xlsx')
 seisa = pandas.read_excel('SEISA-dataset.xlsx', sheet_name='SEISA dataset')
-seisa = seisa[~seisa['SEISA_decile_Northern_Ireland'].isna()][['Output/Small area code','SEISA proportion','SEISA_decile_UK','SEISA_decile_Northern_Ireland']]
+seisa = seisa[~seisa['SEISA_decile_Northern_Ireland'].isna()][['Output/Small area code','SEISA proportion','SEISA_decile_UK']]
 sa_stats = sa_stats.merge(seisa, how='left', left_on='SA2011', right_on='Output/Small area code').drop(columns=['Output/Small area code'])
 
 # %%

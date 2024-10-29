@@ -5976,8 +5976,8 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least deprived",
+                        "Most deprived"
                   ],
                   "URL": "https://www.hesa.ac.uk/insight/08-11-2022/new-area-based-measure-deprivation-summary",
                   "date": "2022-11-08",
@@ -5987,13 +5987,24 @@
                   "type": "Category",
                   "URL": "https://www.hesa.ac.uk/insight/08-11-2022/new-area-based-measure-deprivation-summary",
                   "date": "2022-11-08",
-                  "description": ""
-            },
-            "SEISA_decile_Northern_Ireland": {
-                  "type": "Category",
-                  "URL": "https://www.hesa.ac.uk/insight/08-11-2022/new-area-based-measure-deprivation-summary",
-                  "date": "2022-11-08",
-                  "description": ""
+                  "description": "",
+                  "extremes": [
+                        "Least deprived",
+                        "Most deprived"
+                  ],
+                  "title": "SEISA decile (all UK)",
+                  "order": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10
+                  ]
             }
       }
 }
