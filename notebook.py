@@ -244,18 +244,35 @@ for k, v in censusindex.items():
     sa_stats = sa_stats.merge(census, how='left', left_on='SA2011', right_on='SA Code')
     sa_stats.drop(columns=['SA Code_y', 'SA Code_x', 'SA Code'], inplace=True, errors='ignore')
 
-# %%
+# Connectivity
 conn = pandas.read_csv('sa-connectivity.csv', index_col=0)
 SAfrom = conn[conn['Travel Minutes']==30].groupby('SA2011_from').agg(SAs_to_30=('SA2011_to', 'count'), MYE_to_30=('MYE_to', 'sum')).reset_index()
 SAto = conn[conn['Travel Minutes']==30].groupby('SA2011_to').agg(SAs_from_30=('SA2011_from', 'count'), MYE_from_30=('MYE_from', 'sum')).reset_index()
 conn = SAfrom.merge(SAto, how='left', left_on='SA2011_from', right_on='SA2011_to').rename(columns={'SA2011':'SA2011_from'}).rename(columns={'SA2011_from': 'SA2011'}).drop(columns=['SA2011_to'])
 sa_stats = sa_stats.merge(conn, how='left', left_on='SA2011', right_on='SA2011')
 
+# SEISA dataset
+download_file_if_not_exists('https://www.hesa.ac.uk/files/SEISA-dataset.xlsx', 'SEISA-dataset.xlsx')
+seisa = pandas.read_excel('SEISA-dataset.xlsx', sheet_name='SEISA dataset')
+seisa = seisa[~seisa['SEISA_decile_Northern_Ireland'].isna()][['Output/Small area code','SEISA proportion','SEISA_decile_UK','SEISA_decile_Northern_Ireland']]
+sa_stats = sa_stats.merge(seisa, how='left', left_on='SA2011', right_on='Output/Small area code').drop(columns=['Output/Small area code'])
+
 # %%
 sa_stats.to_json('sa-stats.json', orient='records')
 
 # %%
 sa_stats.to_csv('sa-stats.csv', index=False)
+
+# %%
+import json
+with open('sa-metadata.json') as fd:
+    meta = json.load(fd)
+meta = pandas.DataFrame.from_dict(meta['dimensions'], orient='index')
+sa_stats.columns
+meta.index[~meta.index.isin(sa_stats.columns)]
+missing = sa_stats.columns[~sa_stats.columns.isin(meta.index)].to_list()
+with open('missing.json', 'w') as fd:
+    json.dump(missing, fd)
 
 # %% Write file to be used by OSRM
 buf = sa_stats.sort_values(by='SA2011')[['centre_x','centre_y']].to_csv(lineterminator=';', header=False, index=False)
