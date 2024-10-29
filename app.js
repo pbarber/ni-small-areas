@@ -148,8 +148,6 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
                 settings.smallMultiple = 'None';
             }
             updateChart();
-            var elems = document.querySelectorAll('select');
-            var instances = M.FormSelect.init(elems);
 
             // Fill out the options in the selectors based on the dimensions of the dataset
             // Hide x options when selected for y and vice versa
@@ -182,9 +180,58 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
                 document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
             }
             handleXVariableChange((dimensions[settings.x].type == 'Binned') ? dimensions[settings.x].binSource : settings.x, (dimensions[settings.x].type == 'Binned'));
-            M.FormSelect.init(document.getElementById('multiple-select'));
-            M.FormSelect.init(document.getElementById('colour-select'));
-            M.FormSelect.init(document.getElementById('palette-select'));
+
+            $('.select2-selector').select2({width: '100%'});
+
+            // When the selectors change, update the chart options
+            $('#multiple-select').on('select2:select', function (e) {
+                settings.smallMultiple = e.target.value;
+                updateChart();
+            });
+
+            $('#colour-select').on('select2:select', function (e) {
+                settings.colour = e.target.value;
+                const numCats = orderCategories(settings.colour).length;
+                // Handle the case where the palette doesn't hold enough colours by hiding options and selecting an alternative
+                var change = false;
+                if (numCats > metbrewer[settings.palette].colours.length) {
+                    change = true;
+                }
+                var pselect = document.getElementById("palette-select");
+                for (var i = 0; i < pselect.length; i++) {
+                    if (numCats > metbrewer[pselect[i].value].colours.length) {
+                        pselect[i].disabled = true;
+                        pselect[i].selected = false;
+                    } else {
+                        pselect[i].disabled = false;
+                        if (change) {
+                            settings.palette = pselect[i].value;
+                            pselect[i].selected = true;
+                            change = false;
+                        }
+                    }
+                }
+                $('#palette-select').trigger('change');
+                updateChart();
+            });
+
+            $('#palette-select').on('select2:select', function (e) {
+                settings.palette = e.target.value;
+                updateChart();
+            });
+
+            $('#x-select').on('select2:select', function (e) {
+                handleXVariableChange(e.target.value, document.getElementById('x-binned').checked);
+                updateChart();
+            });
+            
+            $('#y-select').on('select2:select', function (e) {
+                settings.y = e.target.value;
+                hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? 'Count of ' + datasetTitle + 's' : settings.y, settings.x);
+                $('#x-select').trigger('change');
+                updateChart();
+            });
+            
         }
     });
 });
@@ -711,41 +758,6 @@ function updateChart() {
     });
 }
 
-// When the selectors change, update the chart options
-function updateSelect(name, target) {
-    if (target == 'multiple') {
-        settings.smallMultiple = name;
-    } else if (target == 'colour') {
-        settings.colour = name;
-        const numCats = orderCategories(settings.colour).length;
-        // Handle the case where the palette doesn't hold enough colours by hiding options and selecting an alternative
-        var change = false;
-        if (numCats > metbrewer[settings.palette].colours.length) {
-            change = true;
-        }
-        var pselect = document.getElementById("palette-select");
-        for (var i = 0; i < pselect.length; i++) {
-            if (numCats > metbrewer[pselect[i].value].colours.length) {
-                pselect[i].disabled = true;
-                pselect[i].selected = false;
-            } else {
-                pselect[i].disabled = false;
-                if (change) {
-                    settings.palette = pselect[i].value;
-                    pselect[i].selected = true;
-                    change = false;
-                }
-            }
-        }
-        M.FormSelect.init(document.getElementById('palette-select'));
-    } else if (target == 'palette') {
-        settings.palette = name;
-    } else {
-        console.log('Unknown target');
-    }
-    updateChart();
-}
-
 function handleXVariableChange(selected, binned) {
     const dim = dimensions[selected];
     if (binned) {
@@ -770,25 +782,12 @@ function handleXVariableChange(selected, binned) {
     }
     hideSelected("y-select", selected, settings.y, binned);
     hideSelected("x-select", binned ? 'Count of ' + datasetTitle + 's' : settings.y, selected);
-    M.FormSelect.init(document.getElementById('y-select'));
-    M.FormSelect.init(document.getElementById('x-select'));
+    $('#y-select').trigger('change');
+    $('#x-select').trigger('change');
 }
 
 // Add event listeners for the checkboxes
 document.getElementById('x-binned').addEventListener('change', function(e) {
     handleXVariableChange(document.getElementById('x-select').value, e.target.checked);
-    updateChart();
-});
-
-// Update the existing axis change handlers
-document.getElementById('x-select').addEventListener('change', function(e) {
-    handleXVariableChange(e.target.value, document.getElementById('x-binned').checked);
-    updateChart();
-});
-
-document.getElementById('y-select').addEventListener('change', function(e) {
-    settings.y = e.target.value;
-    hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? 'Count of ' + datasetTitle + 's' : settings.y, settings.x);
-    M.FormSelect.init(document.getElementById('x-select'));
     updateChart();
 });

@@ -6,6 +6,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js" integrity="sha512-dfX5uYVXzyU8+KHqj8bjo7UkOdg18PaOtpa48djpNbZHwExddghZ+ZmzWT06R5v6NSk3ZUfsH6FNEDepLx9hPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWYJKLQSXV"></script>
     <script>
@@ -17,6 +19,7 @@
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       .bottom-sheet {
         min-height: auto;
@@ -24,9 +27,6 @@
         padding: 24px;
         overflow-y: auto;
         overflow: visible;
-      }
-      .binned-option {
-        margin-top: 8px;
       }
 
       .binned-option label {
@@ -50,46 +50,57 @@
     <div id="bottom-sheet" class="modal bottom-sheet">
       <div class="modal-content">
         <h4>Settings</h4>
-        <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                <select id="x-select"></select>
-                <label>X Axis</label>
-                <div class="binned-option">
-                  <label>
-                    <input type="checkbox" id="x-binned" class="filled-in" />
-                    <span>Binned</span>
-                  </label>
-                </div>
-              </div>
-
-              <div class="input-field col s6">
-                <select id="y-select"></select>
-                <label>Y Axis</label>
-              </div>
-            </div>
-  
-            <div class="row">
-              <div class="input-field col s6">
-                <select id="colour-select" onchange="updateSelect(this.value, 'colour')" class="material-select"></select>
-                <label>Colour</label>
-              </div>
-
-              <div class="input-field col s6">
-                <select id="multiple-select" onchange="updateSelect(this.value, 'multiple')" class="material-select"></select>
-                <label>Small multiples</label>
-              </div>
+        <form>
+          <div class="row">
+            <div class="col s6">
+              <label for="x-select">
+                X Axis
+                <select id="x-select" class="select2-selector"></select>
+              </label>
             </div>
 
-            <div class="row">
-              <div class="input-field col s6">
-                <select id="palette-select" onchange="updateSelect(this.value, 'palette')" class="material-select"></select>
-                <label>Palette</label>
-              </div>
+            <div class="col s6">
+              <label for="y-select">
+                Y Axis
+                <select id="y-select" class="select2-selector"></select>
+              </label>
             </div>
-          </form>
-        </div>
+          </div>
+
+          <div class="row">
+            <div class="binned-option col s6">
+              <label>
+                <input type="checkbox" id="x-binned" class="filled-in" />
+                <span>Binned</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s6">
+              <label for="colour-select">
+                Colour
+                <select id="colour-select" class="select2-selector"></select>
+              </label>
+            </div>
+
+            <div class="col s6">
+              <label for="multiple-select">
+                Small multiples
+                <select id="multiple-select" class="select2-selector"></select>
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s6">
+              <label for="palette-select">
+                Palette
+                <select id="palette-select" class="select2-selector"></select>
+              </label>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   
