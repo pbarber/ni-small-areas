@@ -88,6 +88,8 @@ var metbrewerPromise = fetch('metbrewer.json').then(response => response.json())
     return data;
 });
 
+myChart.showLoading();
+
 // Use Promise.all to wait for both promises to resolve
 Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
     if (params.get("chartTitle") == "") {
@@ -788,6 +790,7 @@ function updateChart() {
             itemStyle: { color: metbrewer[settings.palette].colours[idx] },
         });
     });
+    myChart.hideLoading();
     myChart.setOption({
         title: titles,
         grid: grid,
@@ -901,4 +904,9 @@ function handleXVariableChange(selected, binned) {
 document.getElementById('x-binned').addEventListener('change', function (e) {
     handleXVariableChange(document.getElementById('x-select').value, e.target.checked);
     updateChart();
+});
+
+document.getElementById('bottom-sheet').addEventListener('submit', function(event) {
+    event.preventDefault();
+    M.Modal.getInstance(document.getElementById('bottom-sheet')).close();
 });
