@@ -5981,18 +5981,19 @@
                   ],
                   "URL": "https://www.hesa.ac.uk/insight/08-11-2022/new-area-based-measure-deprivation-summary",
                   "date": "2022-11-08",
-                  "description": ""
+                  "description": "Socioeconomic Index for Small Areas (SEISA) proportion for small areas",
+                  "title": "Socioeconomic Index for Small Areas (SEISA) proportion"
             },
             "SEISA_decile_UK": {
                   "type": "Category",
                   "URL": "https://www.hesa.ac.uk/insight/08-11-2022/new-area-based-measure-deprivation-summary",
                   "date": "2022-11-08",
-                  "description": "",
+                  "description": "Socioeconomic Index for Small Areas (SEISA) decile for all of UK, 1 is least deprived, 10 is most deprived",
                   "extremes": [
                         "Least deprived",
                         "Most deprived"
                   ],
-                  "title": "SEISA decile (all UK)",
+                  "title": "Socioeconomic Index for Small Areas (SEISA) decile (all UK)",
                   "order": [
                         1,
                         2,
