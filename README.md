@@ -53,7 +53,11 @@ To run the app, clone the github repo and open [index.html](index.html) in a web
 
 Key JavaScript libraries used are:
 
-* 
+* [Materialize](https://materializecss.com/) - for the styling
+* [Apache ECharts](https://echarts.apache.org/) - for the charting
+* [Leaflet](https://leafletjs.com/) - for area maps
+* [Select2](https://select2.org/) - for the dropdown selectors
+* [jQuery](https://jquery.com/) - to support Select2
 
 Other libraries used are:
 
