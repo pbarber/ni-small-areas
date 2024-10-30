@@ -2469,12 +2469,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least limited",
+                        "Most limited"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population where day-to-day activities are limited a lot by long-term health problems or disabilities"
             },
             "Long-term health problem or disability: Day-to-day activities limited a little (%)": {
                   "type": "Metric",
@@ -2482,12 +2482,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least limited",
+                        "Most limited"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population where day-to-day activities are limited a little by long-term health problems or disabilities"
             },
             "Long-term health problem or disability: Day-to-day activities not limited (%)": {
                   "type": "Metric",
@@ -2495,12 +2495,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Most limited",
+                        "Least limited"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population where day-to-day activities are not limited by long-term health problems or disabilities"
             },
             "Long-term health problem or disability: Day-to-day activities limited a lot: Aged 16-64 years (%)": {
                   "type": "Metric",
@@ -2508,12 +2508,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Most limited",
+                        "Least limited"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the 16-64 population where day-to-day activities are limited a lot by long-term health problems or disabilities"
             },
             "Long-term health problem or disability: Day-to-day activities limited a little: Aged 16-64 years (%)": {
                   "type": "Metric",
@@ -2521,12 +2521,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Most limited",
+                        "Least limited"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the 16-64 population where day-to-day activities are limited a little by long-term health problems or disabilities"
             },
             "Long-term health problem or disability: Day-to-day activities not limited: Aged 16-64 years (%)": {
                   "type": "Metric",
@@ -2534,12 +2534,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Most limited",
+                        "Least limited"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the 16-64 population where day-to-day activities are not limited by long-term health problems or disabilities"
             },
             "General health: Very good health (%)": {
                   "type": "Metric",
@@ -2547,12 +2547,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least in very good health",
+                        "Most in very good health"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population who are in very good health"
             },
             "General health: Good health (%)": {
                   "type": "Metric",
@@ -2560,12 +2560,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least in good health",
+                        "Most in good health"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population who are in good health"
             },
             "General health: Fair health (%)": {
                   "type": "Metric",
@@ -2573,12 +2573,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least in fair health",
+                        "Most in fair health"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population who are in fair health"
             },
             "General health: Bad health (%)": {
                   "type": "Metric",
@@ -2586,12 +2586,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least in bad health",
+                        "Most in bad health"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population who are in bad health"
             },
             "General health: Very bad health (%)": {
                   "type": "Metric",
@@ -2599,12 +2599,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least in very bad health",
+                        "Most in very bad health"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population who are in very bad health"
             },
             "Provision of unpaid care: Provides no unpaid care (%)": {
                   "type": "Metric",
@@ -2612,12 +2612,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Most unpaid care provided",
+                        "Least unpaid care provided"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which provides no unpaid care"
             },
             "Provision of unpaid care: Provides 1-19 hours unpaid care per week (%)": {
                   "type": "Metric",
@@ -2625,12 +2625,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least unpaid care provided",
+                        "Most unpaid care provided"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which provides 1-19 hours unpaid care per week"
             },
             "Provision of unpaid care: Provides 20-49 hours unpaid care per week (%)": {
                   "type": "Metric",
@@ -2638,12 +2638,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least unpaid care provided",
+                        "Most unpaid care provided"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which provides 20-49 hours unpaid care per week"
             },
             "Provision of unpaid care: Provides 50+ hours unpaid care per week (%)": {
                   "type": "Metric",
@@ -2651,12 +2651,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least unpaid care provided",
+                        "Most unpaid care provided"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which provides 50+ hours unpaid care per week"
             },
             "Whole house or bungalow: Detached (%)": {
                   "type": "Metric",
@@ -2664,12 +2664,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least detached",
+                        "Most detached"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a detached house or bungalow"
             },
             "Whole house or bungalow: Semi-detached (%)": {
                   "type": "Metric",
@@ -2677,12 +2677,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least semi-detached",
+                        "Most semi-detached"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a semi-detached house or bungalow"
             },
             "Whole house or bungalow: Terraced (including end-terrace) (%)": {
                   "type": "Metric",
@@ -2690,12 +2690,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least terraced",
+                        "Most terraced"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a terraced house or bungalow"
             },
             "Flat, maisonette or apartment: Purpose-built block of flats or tenement (%)": {
                   "type": "Metric",
@@ -2703,12 +2703,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least purpose-built",
+                        "Most purpose-built"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a purpose-built block of flats or tenement"
             },
             "Flat, maisonette or apartment: Part of a converted or shared house (including bed-sits) (%)": {
                   "type": "Metric",
@@ -2716,12 +2716,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least shared house",
+                        "Most shared house"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a part of a converted or shared house (including bed-sits)"
             },
             "Flat, maisonette or apartment: In a commercial building (%)": {
                   "type": "Metric",
@@ -2729,12 +2729,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least commercial building",
+                        "Most commercial building"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a commercial building"
             },
             "Caravan or other mobile or temporary structure (%)": {
                   "type": "Metric",
@@ -2742,12 +2742,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least caravan",
+                        "Most caravan"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a caravan or other mobile or temporary structure"
             },
             "Owner occupied: Owns outright (%)": {
                   "type": "Metric",
@@ -2755,12 +2755,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least outright",
+                        "Most outright"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which owns outright"
             },
             "Owner occupied: Owns with a mortgage or loan (%)": {
                   "type": "Metric",
@@ -2768,12 +2768,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least mortgage",
+                        "Most mortgage"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which owns with a mortgage or loan"
             },
             "Shared ownership (%)": {
                   "type": "Metric",
@@ -2781,12 +2781,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least shared ownership",
+                        "Most shared ownership"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which is shared ownership"
             },
             "Rented from: Northern Ireland Housing Executive (%)": {
                   "type": "Metric",
@@ -2794,12 +2794,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least NIHE",
+                        "Most NIHE"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a Northern Ireland Housing Executive property"
             },
             "Rented from: Housing association or charitable trust (%)": {
                   "type": "Metric",
@@ -2807,12 +2807,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least housing association",
+                        "Most housing association"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a housing association or charitable trust property"
             },
             "Rented from: Private landlord or letting agency (%)": {
                   "type": "Metric",
@@ -2820,12 +2820,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least private landlord",
+                        "Most private landlord"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a private landlord or letting agency property"
             },
             "Rented from: Other (%)": {
                   "type": "Metric",
@@ -2833,12 +2833,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least other",
+                        "Most other"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a property rented from other sources"
             },
             "Lives rent free (%)": {
                   "type": "Metric",
@@ -2846,12 +2846,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least rent free",
+                        "Most rent free"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives rent free"
             },
             "1 person in household (%)": {
                   "type": "Metric",
@@ -2859,12 +2859,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least 1 person households",
+                        "Most 1 person households"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a 1 person household"
             },
             "2 people in household (%)": {
                   "type": "Metric",
@@ -2872,12 +2872,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least 2 person households",
+                        "Most 2 person households"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a 2 person household"
             },
             "3 people in household (%)": {
                   "type": "Metric",
@@ -2885,12 +2885,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least 3 person households",
+                        "Most 3 person households"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a 3 person household"
             },
             "4 people in household (%)": {
                   "type": "Metric",
@@ -2898,12 +2898,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least 4 person households",
+                        "Most 4 person households"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a 4 person household"
             },
             "5 people in household (%)": {
                   "type": "Metric",
@@ -2911,12 +2911,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least 5 person households",
+                        "Most 5 person households"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a 5 person household"
             },
             "6 people in household (%)": {
                   "type": "Metric",
@@ -2924,12 +2924,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least 6 person households",
+                        "Most 6 person households"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a 6 person household"
             },
             "7 people in household (%)": {
                   "type": "Metric",
@@ -2937,12 +2937,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least 7 person households",
+                        "Most 7 person households"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a 7 person household"
             },
             "8 or more people in household (%)": {
                   "type": "Metric",
@@ -2950,12 +2950,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least 8 person households",
+                        "Most 8 person households"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a 8 or more person household"
             },
             "Households: No central heating (%)": {
                   "type": "Metric",
@@ -2963,12 +2963,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Most central heating",
+                        "Least central heating"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with no central heating"
             },
             "Households: Gas central heating (%)": {
                   "type": "Metric",
@@ -2976,12 +2976,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least gas central heating",
+                        "Most gas central heating"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with gas central heating"
             },
             "Households: Electric (including storage heaters) central heating (%)": {
                   "type": "Metric",
@@ -2989,12 +2989,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least electric central heating",
+                        "Most electric central heating"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with electric (including storage heaters) central heating"
             },
             "Households: Oil central heating (%)": {
                   "type": "Metric",
@@ -3002,12 +3002,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least oil central heating",
+                        "Most oil central heating"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with oil central heating"
             },
             "Households: Solid fuel (for example wood, coal) central heating (%)": {
                   "type": "Metric",
@@ -3015,12 +3015,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least solid fuel central heating",
+                        "Most solid fuel central heating"
                   ],
                   "URL": "",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with solid fuel (for example wood, coal) central heating"
             },
             "Households: Other central heating (%)": {
                   "type": "Metric",
@@ -3028,12 +3028,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least other central heating",
+                        "Most other central heating"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with other central heating"
             },
             "Households: Two or more types of central heating (%)": {
                   "type": "Metric",
@@ -3041,12 +3041,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least 2+ types of central heating",
+                        "Most 2+ types of central heating"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with two or more types of central heating"
             },
             "No cars or vans in household (%)": {
                   "type": "Metric",
@@ -3054,12 +3054,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Most cars or vans",
+                        "Least cars or vans"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with no cars or vans"
             },
             "1 car or van in household (%)": {
                   "type": "Metric",
@@ -3067,12 +3067,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least 1 car or van",
+                        "Most 1 car or van"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with 1 car or van"
             },
             "2 cars or vans in household (%)": {
                   "type": "Metric",
@@ -3080,12 +3080,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least 2 cars or vans",
+                        "Most 2 cars or vans"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with 2 cars or vans"
             },
             "3 cars or vans in household (%)": {
                   "type": "Metric",
@@ -3093,12 +3093,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least 3 cars or vans",
+                        "Most 3 cars or vans"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with 3 cars or vans"
             },
             "4 or more cars or vans in household (%)": {
                   "type": "Metric",
@@ -3106,12 +3106,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least 4+ cars or vans",
+                        "Most 4+ cars or vans"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with 4 or more cars or vans"
             },
             "Adapted accommodation: Wheelchair usage (%)": {
                   "type": "Metric",
@@ -3119,12 +3119,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least adapted",
+                        "Most adapted"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with wheelchair usage"
             },
             "Adapted accommodation: Other physical or mobility difficulties (%)": {
                   "type": "Metric",
@@ -3132,12 +3132,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least adapted",
+                        "Most adapted"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with other physical or mobility difficulties"
             },
             "Adapted accommodation: Visual difficulties (%)": {
                   "type": "Metric",
@@ -3145,12 +3145,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least adapted",
+                        "Most adapted"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with visual difficulties"
             },
             "Adapted accommodation: Hearing difficulties (%)": {
                   "type": "Metric",
@@ -3158,12 +3158,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least adapted",
+                        "Most adapted"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with hearing difficulties"
             },
             "Adapted accommodation: Other (%)": {
                   "type": "Metric",
@@ -3171,12 +3171,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least adapted",
+                        "Most adapted"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with other difficulties"
             },
             "No adaptation to accommodation (%)": {
                   "type": "Metric",
@@ -3184,12 +3184,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least adapted",
+                        "Most adapted"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with no adaptation to accommodation"
             },
             "Communal establishment usual residents living in: Medical and care establishments: HSCT: General hospital (%)": {
                   "type": "Metric",
@@ -3197,12 +3197,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least living in general hospital",
+                        "Most living in general hospital"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with medical and care establishments: HSCT: General hospital"
             },
             "Communal establishment usual residents living in: Medical and care establishments: HSCT: Mental health hospital/ unit (including secure units) (%)": {
                   "type": "Metric",
@@ -3210,12 +3210,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least living in mental health hospital",
+                        "Most living in mental health hospital"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with medical and care establishments: HSCT: Mental health hospital/ unit (including secure units)"
             },
             "Communal establishment usual residents living in: Medical and care establishments: HSCT: Other establishment (%)": {
                   "type": "Metric",
@@ -3223,12 +3223,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least living in other establishment",
+                        "Most living in other establishment"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with medical and care establishments: HSCT: Other establishment"
             },
             "Communal establishment usual residents living in: Medical and care establishments: Housing Association (%)": {
                   "type": "Metric",
@@ -3236,8 +3236,8 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least living in Housing Association",
+                        "Most living in Housing Association"
                   ],
                   "URL": "",
                   "date": "2012-12-11",
@@ -3249,12 +3249,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least living in care home with nursing",
+                        "Most living in care home with nursing"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with medical and care establishments: Other management type: Care home with nursing"
             },
             "Communal establishment usual residents living in: Medical and care establishments: Other management type: Care home without nursing (%)": {
                   "type": "Metric",
@@ -3262,12 +3262,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least living in care home without nursing",
+                        "Most living in care home without nursing"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with medical and care establishments: Other management type: Care home without nursing"
             },
             "Communal establishment usual residents living in: Medical and care establishments: Other management type: Children's home (including secure units) (%)": {
                   "type": "Metric",
@@ -3275,12 +3275,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least living in children's home",
+                        "Most living in children's home"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with medical and care establishments: Other management type: Children's home (including secure units)"
             },
             "Communal establishment usual residents living in: Medical and care establishments: Other management type: Other (%)": {
                   "type": "Metric",
@@ -3288,12 +3288,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least living in other establishment",
+                        "Most living in other establishment"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with medical and care establishments: Other management type: Other"
             },
             "Communal establishment usual residents living in: Education establishments (%)": {
                   "type": "Metric",
@@ -3301,12 +3301,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least living in education establishment",
+                        "Most living in education establishment"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with education establishments"
             },
             "Communal establishment usual residents living in: Other establishments (%)": {
                   "type": "Metric",
@@ -3314,12 +3314,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least living in other establishment",
+                        "Most living in other establishment"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with other establishments     "
             },
             "Communal establishment usual residents living in: Medical and care establishments: Day-to-day activities limited a lot (%)": {
                   "type": "Metric",
@@ -3327,12 +3327,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least limited a lot",
+                        "Most limited a lot"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with medical and care establishments: Day-to-day activities limited a lot"
             },
             "Communal establishment usual residents living in: Medical and care establishments: Day-to-day activities limited a little (%)": {
                   "type": "Metric",
@@ -3340,12 +3340,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least limited a little",
+                        "Most limited a little"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with medical and care establishments: Day-to-day activities limited a little"
             },
             "Communal establishment usual residents living in: Other establishments (including education establishments): Day-to-day activities limited a lot (%)": {
                   "type": "Metric",
@@ -3353,12 +3353,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least limited a lot",
+                        "Most limited a lot"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with other establishments (including education establishments): Day-to-day activities limited a lot"
             },
             "Communal establishment usual residents living in: Other establishments (including education establishments): Day-to-day activities limited a little (%)": {
                   "type": "Metric",
@@ -3366,12 +3366,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least limited a little",
+                        "Most limited a little"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-housing-and-accommodation",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population which lives in a household with other establishments (including education establishments): Day-to-day activities limited a little"
             },
             "No qualifications: Aged 16+ years (%)": {
                   "type": "Metric",
