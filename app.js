@@ -18,13 +18,20 @@ var categories = [];
 var isSmallMultiple = false;
 var chartAxes = 0;
 var chartSeries = 0;
-var bottomSheetInstance = M.Modal.init(document.querySelector('.bottom-sheet'), {
+var bottomSheetInstance = M.Modal.init(document.getElementById('bottom-sheet'), {
     dismissible: true,
     inDuration: 250,
     outDuration: 200,
     preventScrolling: true,
     onOpenStart: function() {
-        document.body.style.overflow = 'hidden';
+        // Add a small delay to ensure proper modal positioning
+        setTimeout(() => {
+            document.body.style.overflow = 'hidden';
+        }, 100);
+    },
+    onOpenEnd: function() {
+        // Ensure modal is properly positioned
+        bottomSheetInstance.el.style.transform = 'translateY(0)';
     },
     onCloseEnd: function() {
         document.body.style.overflow = 'auto';
@@ -35,8 +42,16 @@ var infoModalInstance = M.Modal.init(document.getElementById('info-modal'), {
     inDuration: 250,
     outDuration: 200,
     preventScrolling: true,
-    startingTop: '10%',
-    endingTop: '10%'
+    onOpenStart: function() {
+        document.body.style.overflow = 'hidden';
+        // Prevent touch events from bubbling through
+        document.getElementById('info-modal').addEventListener('touchmove', function(e) {
+            e.stopPropagation();
+        }, { passive: false });
+    },
+    onCloseEnd: function() {
+        document.body.style.overflow = 'auto';
+    }
 });
 var geoJSONPromise = null;
 const params = new URLSearchParams(location.search);
@@ -416,6 +431,28 @@ myChart.setOption({
     },
     touchMoveStopPropagation: true,
     animation: true
+});
+
+// Add a global click handler for the chart
+myChart.getZr().on('click', function(params) {
+    // Get click coordinates relative to canvas
+    const pointInPixel = [params.offsetX, params.offsetY];
+    
+    // Convert pixel coordinates to logical coordinates
+    const pointInGrid = myChart.convertFromPixel({seriesIndex: 0}, pointInPixel);
+    
+    // Check if click is in toolbox area
+    if (myChart.containPixel('grid', pointInPixel)) {
+        // Click was in main chart area
+        return;
+    }
+    
+    // If we get here, click was outside main chart area (potentially toolbox)
+    // Prevent default behavior
+    if (params.event) {
+        params.event.preventDefault();
+        params.event.stopPropagation();
+    }
 });
 
 var areaDetailsModalInstance = M.Modal.init(document.getElementById('area-details-modal'));
