@@ -347,7 +347,7 @@ function hideSelected(selectorId, hide, selected, showCount = false) {
 }
 
 function useTitleIfExists(column) {
-    if (dimensions[column].hasOwnProperty('title')) {
+    if (dimensions[column] && dimensions[column].hasOwnProperty('title')) {
         return (dimensions[column].title);
     } else {
         return (column);
