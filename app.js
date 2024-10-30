@@ -287,7 +287,7 @@ function matchWithOptGroups(params, data) {
     // `data.children` contains the actual options that we are matching against
     var filteredChildren = [];
     $.each(data.children, function (idx, child) {
-        if (child.text.toUpperCase().indexOf(params.term.toUpperCase()) == 0) {
+        if (child.text.toUpperCase().indexOf(params.term.toUpperCase()) > -1) {
             filteredChildren.push(child);
         }
     });
