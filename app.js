@@ -406,7 +406,16 @@ myChart.setOption({
             }
         }
     },
-    tooltip: { trigger: "item", formatter: tooltipCallback, alwaysShowContent: false },
+    tooltip: { 
+        trigger: "item", 
+        formatter: tooltipCallback, 
+        alwaysShowContent: false,
+        triggerOn: 'click',
+        enterable: true,
+        confine: true
+    },
+    touchMoveStopPropagation: true,
+    animation: true
 });
 
 var areaDetailsModalInstance = M.Modal.init(document.getElementById('area-details-modal'));

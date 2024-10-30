@@ -26,6 +26,7 @@
         max-height: 90vh !important;
         padding: 2px;
         overflow-y: auto;
+        height: auto !important;
       }
 
       .binned-option label {
@@ -39,6 +40,30 @@
       [type="checkbox"].filled-in:disabled:checked + span:not(.lever):after {
         background-color: rgba(0,0,0,0.26);
         border-color: rgba(0,0,0,0.26);
+      }
+
+      .modal {
+        max-height: 90%;
+        height: auto;
+        overflow-y: auto;
+      }
+
+      @media only screen and (max-width: 750px) {
+          .modal {
+              width: 95%;
+              max-height: 85%;
+          }
+
+          .bottom-sheet {
+              max-height: 65% !important;
+          }
+      }
+
+      /* Prevent scroll-through on modal open */
+      body.modal-open {
+          overflow: hidden;
+          position: fixed;
+          width: 100%;
       }
     </style>
     </head>
