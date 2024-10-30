@@ -23,10 +23,9 @@
     <style>
       .bottom-sheet {
         min-height: auto;
-        max-height: 80vh;
-        padding: 24px;
+        max-height: 90vh !important;
+        padding: 2px;
         overflow-y: auto;
-        overflow: visible;
       }
 
       .binned-option label {
@@ -44,8 +43,7 @@
     </style>
     </head>
   <body>
-    <!-- Prepare a DOM with a defined width and height for ECharts -->
-    <div id="main" style="width:90vw;height:100vh;"></div>
+    <div id="main" style="width: 100%; min-height: 400px;"></div>
 
     <div id="bottom-sheet" class="modal bottom-sheet">
       <div class="modal-content">
