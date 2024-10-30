@@ -2,7 +2,8 @@
 // TODO: add dataset selector
 // TODO: add choropleth map
 // TODO: add hex map
-// TODO: add data field categories and searchability
+// TODO: add data field categories
+// TODO: non ranked binning
 
 // Initialize the echarts instance based on the prepared dom
 var myChart = echarts.init(document.getElementById('main'));
@@ -17,9 +18,26 @@ var categories = [];
 var isSmallMultiple = false;
 var chartAxes = 0;
 var chartSeries = 0;
-var bottomSheet = document.querySelector('.bottom-sheet');
-var bottomSheetInstance = M.Modal.init(bottomSheet);
-var infoModalInstance = M.Modal.init(document.getElementById('info-modal'));
+var bottomSheetInstance = M.Modal.init(document.querySelector('.bottom-sheet'), {
+    dismissible: true,
+    inDuration: 250,
+    outDuration: 200,
+    preventScrolling: true,
+    onOpenStart: function() {
+        document.body.style.overflow = 'hidden';
+    },
+    onCloseEnd: function() {
+        document.body.style.overflow = 'auto';
+    }
+});
+var infoModalInstance = M.Modal.init(document.getElementById('info-modal'), {
+    dismissible: true,
+    inDuration: 250,
+    outDuration: 200,
+    preventScrolling: true,
+    startingTop: '10%',
+    endingTop: '10%'
+});
 var geoJSONPromise = null;
 const params = new URLSearchParams(location.search);
 if (params.get("metadataURL")) {
@@ -744,9 +762,18 @@ function updateChart() {
     myChart.off('click'); // Remove any existing click listeners
     myChart.on('click', function (params) {
         if (params.componentType === 'series' && params.seriesType === 'scatter') {
-            myChart.dispatchAction({
-                type: 'hideTip'
-            });
+            // Prevent immediate tooltip hide/show cycle
+            setTimeout(() => {
+                myChart.dispatchAction({
+                    type: 'hideTip'
+                });
+            }, 0);
+
+            // Add touch event handling
+            if (params.event && params.event.event) {
+                params.event.event.preventDefault();
+                params.event.event.stopPropagation();
+            }
 
             document.getElementById('area-details-modal-header').innerHTML = params.data[3] + ': ' + params.data[5];
             var content = `
