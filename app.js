@@ -838,7 +838,7 @@ function updateChart() {
             var summaryTable = '<table class="striped"><tbody>';
             orderedFields.forEach(field => {
                 if (fullDetails.hasOwnProperty(field)) {
-                    summaryTable += `<tr><td>${dimensions[field].title || field} (<a href=${dimensions[field].URL}>${dimensions[field].date}</a>)</td><td>${fullDetails[field]}</td><td></td></tr>`;
+                    summaryTable += `<tr><td>${useTitleIfExists(field)} (<a href=${dimensions[field].URL}>${dimensions[field].date}</a>)</td><td>${fullDetails[field]}</td><td></td></tr>`;
                 }
             });
             summaryTable += '</tbody></table>';
