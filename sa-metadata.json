@@ -3379,12 +3379,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Most qualifications",
+                        "Least qualifications"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-qualifications",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16+ with no qualifications",
+                  "title": "No qualifications (%)"
             },
             "Highest level of qualification: Level 1 qualifications: Aged 16+ years (%)": {
                   "type": "Metric",
@@ -3392,12 +3393,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least qualifications",
+                        "Most qualifications"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-qualifications",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16+ with Level 1 qualifications",
+                  "title": "Highest level of qualification: Level 1 (%)"
             },
             "Highest level of qualification: Level 2 qualifications: Aged 16+ years (%)": {
                   "type": "Metric",
@@ -3405,12 +3407,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least qualifications",
+                        "Most qualifications"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-qualifications",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16+ with Level 2 qualifications",
+                  "title": "Highest level of qualification: Level 2 (%)"
             },
             "Highest level of qualification: Apprenticeship: Aged 16+ years (%)": {
                   "type": "Metric",
@@ -3418,12 +3421,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least qualifications",
+                        "Most qualifications"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-qualifications",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16+ with Apprenticeship qualifications",
+                  "title": "Highest level of qualification: Apprenticeship (%)"
             },
             "Highest level of qualification: Level 3 qualifications: Aged 16+ years (%)": {
                   "type": "Metric",
@@ -3431,12 +3435,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least qualifications",
+                        "Most qualifications"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-qualifications",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16+ with Level 3 qualifications",
+                  "title": "Highest level of qualification: Level 3 (%)"
             },
             "Highest level of qualification: Level 4 qualifications and above: Aged 16+ years (%)": {
                   "type": "Metric",
@@ -3444,12 +3449,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least qualifications",
+                        "Most qualifications"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-qualifications",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16+ with Level 4 qualifications and above",
+                  "title": "Highest level of qualification: Level 4 and above (%)"
             },
             "Highest level of qualification: Other qualifications: Aged 16+ years (%)": {
                   "type": "Metric",
@@ -3457,12 +3463,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least qualifications",
+                        "Most qualifications"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-qualifications",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16+ with other qualifications",
+                  "title": "Highest level of qualification: Other (%)"
             },
             "Full-time students: Aged 18-74 years: Economically active: In employment (%)": {
                   "type": "Metric",
@@ -3470,12 +3477,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least employed",
+                        "Most employed"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-qualifications",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 18-74 who are full-time students and economically active: In employment",
+                  "title": "Full-time students: In employment (%)"
             },
             "Full-time students: Aged 18-74 years: Economically active: Unemployed (%)": {
                   "type": "Metric",
@@ -3483,12 +3491,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least unemployed",
+                        "Most unemployed"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-qualifications",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 18-74 who are full-time students and economically active: Unemployed",
+                  "title": "Full-time students: Unemployed (%)"
             },
             "Full-time students: Aged 18-74 years: Economically Inactive (%)": {
                   "type": "Metric",
@@ -3496,12 +3505,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least inactive",
+                        "Most inactive"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 18-74 who are full-time students and economically inactive",
+                  "title": "Full-time students: Economically inactive (%)"
             },
             "Economically active: Employee: Part-time: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -3509,12 +3519,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least part-time",
+                        "Most part-time"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Employee: Part-time",
+                  "title": "Economically active: Employee: Part-time (%)"
             },
             "Economically active: Employee: Full-time: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -3522,12 +3533,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least full-time",
+                        "Most full-time"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Employee: Full-time",
+                  "title": "Economically active: Employee: Full-time (%)"
             },
             "Economically active: Self-employed: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -3535,12 +3547,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least self-employed",
+                        "Most self-employed"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Self-employed",
+                  "title": "Economically active: Self-employed (%)"
             },
             "Economically active: Unemployed: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -3548,12 +3561,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least unemployed",
+                        "Most unemployed"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Unemployed",
+                  "title": "Economically active: Unemployed (%)"
             },
             "Economically active: Full-time student: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -3561,12 +3575,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least full-time student",
+                        "Most full-time student"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Full-time student",
+                  "title": "Economically active: Full-time student (%)"
             },
             "Economically inactive: Retired: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -3574,12 +3589,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least retired",
+                        "Most retired"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically inactive: Retired",
+                  "title": "Economically inactive: Retired (%)"
             },
             "Economically inactive: Student (including full-time students): Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -3587,12 +3603,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least student",
+                        "Most student"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically inactive: Student (including full-time students)",
+                  "title": "Economically inactive: Student (including full-time students) (%)"
             },
             "Economically inactive: Looking after home or family: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -3600,12 +3617,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least looking after home or family",
+                        "Most looking after home or family"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically inactive: Looking after home or family",
+                  "title": "Economically inactive: Looking after home or family (%)"
             },
             "Economically inactive: Long-term sick or disabled: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -3613,12 +3631,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least long-term sick or disabled",
+                        "Most long-term sick or disabled"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically inactive: Long-term sick or disabled",
+                  "title": "Economically inactive: Long-term sick or disabled (%)"
             },
             "Economically inactive: Other: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -3626,12 +3645,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least other",
+                        "Most other"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically inactive: Other",
+                  "title": "Economically inactive: Other (%)"
             },
             "Carried out voluntary work: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -3639,12 +3659,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least voluntary work",
+                        "Most voluntary work"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who carried out voluntary work",
+                  "title": "Carried out voluntary work (%)"
             },
             "Unemployed: Aged 16-24 years (%)": {
                   "type": "Metric",
@@ -3652,12 +3673,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least unemployed 16-24",
+                        "Most unemployed 16-24"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-24 who are unemployed",
+                  "title": "Unemployed: Aged 16-24 years (%)"
             },
             "Unemployed: Aged 50-74 years (%)": {
                   "type": "Metric",
@@ -3665,12 +3687,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least unemployed 50-74",
+                        "Most unemployed 50-74"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 50-74 who are unemployed",
+                  "title": "Unemployed: Aged 50-74 years (%)"
             },
             "Unemployed: Never worked: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -3678,12 +3701,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least never worked",
+                        "Most never worked"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are unemployed and have never worked",
+                  "title": "Unemployed: Never worked (%)"
             },
             "Long-term unemployed: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -3691,12 +3715,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least long-term unemployed",
+                        "Most long-term unemployed"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are long-term unemployed",
+                  "title": "Long-term unemployed (%)"
             },
             "Economically active: Employee: Part-time: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3704,12 +3729,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least part-time",
+                        "Most part-time"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Employee: Part-time (males)",
+                  "title": "Economically active: Part-time employee (Males) (%)"
             },
             "Economically active: Employee: Full-time: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3717,12 +3743,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least full-time",
+                        "Most full-time"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Employee: Full-time (males)",
+                  "title": "Economically active: Full-time employee (Males) (%)"
             },
             "Economically active: Self-employed: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3730,12 +3757,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least self-employed",
+                        "Most self-employed"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Self-employed (males)",
+                  "title": "Economically active: Self-employed (Males) (%)"
             },
             "Economically active: Unemployed: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3743,12 +3771,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least unemployed",
+                        "Most unemployed"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Unemployed (males)",
+                  "title": "Economically active: Unemployed (Males) (%)"
             },
             "Economically active: Full-time student: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3756,12 +3785,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least full-time student",
+                        "Most full-time student"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Full-time student (males)",
+                  "title": "Economically active: Full-time student (Males) (%)"
             },
             "Economically inactive: Retired: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3769,12 +3799,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least retired",
+                        "Most retired"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically inactive: Retired (males)",
+                  "title": "Economically inactive: Retired (Males) (%)"
             },
             "Economically inactive: Student (including full-time students): Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3782,12 +3813,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least student",
+                        "Most student"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically inactive: Student (including full-time students) (males)",
+                  "title": "Economically inactive: Student (including full-time students) (Males) (%)"
             },
             "Economically inactive: Looking after home or family: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3795,12 +3827,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least looking after home or family",
+                        "Most looking after home or family"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically inactive: Looking after home or family (males)",
+                  "title": "Economically inactive: Looking after home or family (Males) (%)"
             },
             "Economically inactive: Long-term sick or disabled: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3808,12 +3841,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least long-term sick or disabled",
+                        "Most long-term sick or disabled"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically inactive: Long-term sick or disabled (males)",
+                  "title": "Economically inactive: Long-term sick or disabled (Males) (%)"
             },
             "Economically inactive: Other: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3821,12 +3855,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least economically inactive other",
+                        "Most economically inactive other"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically inactive: Other (males)",
+                  "title": "Economically inactive: Other (Males) (%)"
             },
             "Carried out voluntary work: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3834,12 +3869,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least voluntary work",
+                        "Most voluntary work"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who carried out voluntary work (males)"
             },
             "Unemployed: Aged 16-24 years (Males) (%)": {
                   "type": "Metric",
@@ -3847,12 +3882,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least unemployed 16-24",
+                        "Most unemployed 16-24"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-24 who are unemployed (males)"
             },
             "Unemployed: Aged 50-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3860,12 +3895,12 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least unemployed 50-74",
+                        "Most unemployed 50-74"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 50-74 who are unemployed (males)"
             },
             "Unemployed: Never worked: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3873,12 +3908,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least never worked",
+                        "Most never worked"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are unemployed and have never worked (males)",
+                  "title": "Unemployed: Never worked (Males) (%)"
             },
             "Long-term unemployed: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -3886,12 +3922,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least long-term unemployed",
+                        "Most long-term unemployed"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are long-term unemployed (males)",
+                  "title": "Long-term unemployed (Males) (%)"
             },
             "Economically active: Employee: Part-time: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -3899,12 +3936,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least part-time",
+                        "Most part-time"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Employee: Part-time (females)",
+                  "title": "Economically active: Part-time employee (Females) (%)"
             },
             "Economically active: Employee: Full-time: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -3912,12 +3950,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least full-time",
+                        "Most full-time"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Employee: Full-time (females)",
+                  "title": "Economically active: Full-time employee (Females) (%)"
             },
             "Economically active: Self-employed: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -3925,12 +3964,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least self-employed",
+                        "Most self-employed"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Self-employed (females)",
+                  "title": "Economically active: Self-employed (Females) (%)"
             },
             "Economically active: Unemployed: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -3938,12 +3978,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least unemployed",
+                        "Most unemployed"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Unemployed (females)",
+                  "title": "Economically active: Unemployed (Females) (%)"
             },
             "Economically active: Full-time student: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -3951,12 +3992,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least full-time student",
+                        "Most full-time student"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically active: Full-time student (females)",
+                  "title": "Economically active: Full-time student (Females) (%)"
             },
             "Economically inactive: Retired: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -3964,12 +4006,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least retired",
+                        "Most retired"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who are economically inactive: Retired (females)",
+                  "title": "Economically inactive: Retired (Females) (%)"
             },
             "Economically inactive: Student (including full-time students): Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
