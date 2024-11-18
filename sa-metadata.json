@@ -4020,12 +4020,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least student",
+                        "Most student"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the female population aged 16-74 who are economically inactive: Student (including full-time students)",
+                  "title": "Economically inactive: Student (Females) (%)"
             },
             "Economically inactive: Looking after home or family: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4033,12 +4034,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least looking after",
+                        "Most looking after"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the female population aged 16-74 who are economically inactive: Looking after home or family",
+                  "title": "Economically inactive: Looking after home or family (Females) (%)"
             },
             "Economically inactive: Long-term sick or disabled: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4046,12 +4048,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least long-term sick or disabled",
+                        "Most long-term sick or disabled"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the female population aged 16-74 who are economically inactive: Long-term sick or disabled",
+                  "title": "Economically inactive: Long-term sick or disabled (Females) (%)"
             },
             "Economically inactive: Other: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4059,12 +4062,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least economically inactive other",
+                        "Most economically inactive other"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the female population aged 16-74 who are economically inactive: Other",
+                  "title": "Economically inactive: Other (Females) (%)"
             },
             "Carried out voluntary work: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4072,12 +4076,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least voluntary work",
+                        "Most voluntary work"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the female population aged 16-74 who carried out voluntary work",
+                  "title": "Carried out voluntary work (Females) (%)"
             },
             "Unemployed: Aged 16-24 years (Females) (%)": {
                   "type": "Metric",
@@ -4085,12 +4090,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least unemployed 16-24",
+                        "Most unemployed 16-24"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the female population aged 16-24 who are unemployed",
+                  "title": "Unemployed: 16-24 (Females) (%)"
             },
             "Unemployed: Aged 50-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4098,12 +4104,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least unemployed 50-74",
+                        "Most unemployed 50-74"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the female population aged 50-74 who are unemployed",
+                  "title": "Unemployed: 50-74 (Females) (%)"
             },
             "Unemployed: Never worked: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4111,12 +4118,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least never worked",
+                        "Most never worked"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the female population aged 16-74 who are unemployed and have never worked",
+                  "title": "Unemployed: Never worked (Females) (%)"
             },
             "Long-term unemployed: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4124,12 +4132,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least long-term unemployed",
+                        "Most long-term unemployed"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the female population aged 16-74 who are long-term unemployed",
+                  "title": "Long-term unemployed (Females) (%)"
             },
             "Part-time: <=15 hours worked per week: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4137,12 +4146,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least part-time <=15",
+                        "Most part-time <=15"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked part-time for <=15 hours per week",
+                  "title": "Part-time: <=15 hours worked per week (%)"
             },
             "Part-time: 16-30 hours worked per week: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4150,12 +4160,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least part-time 16-30",
+                        "Most part-time 16-30"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked part-time for 16-30 hours per week",
+                  "title": "Part-time: 16-30 hours worked per week (%)"
             },
             "Full-time: 31-48 hours worked per week: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4163,12 +4174,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least full-time 31-48",
+                        "Most full-time 31-48"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked full-time for 31-48 hours per week",
+                  "title": "Full-time: 31-48 hours worked per week (%)"
             },
             "Full-time: 49+ hours worked per week: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4176,12 +4188,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least full-time 49+",
+                        "Most full-time 49+"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked full-time for 49+ hours per week",
+                  "title": "Full-time: 49+ hours worked per week (%)"
             },
             "Part-time: <=15 hours worked per week: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4189,12 +4202,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least part-time <=15",
+                        "Most part-time <=15"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the male population aged 16-74 who worked part-time for <=15 hours per week",
+                  "title": "Part-time: <=15 hours worked per week (Males) (%)"
             },
             "Part-time: 16-30 hours worked per week: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4202,12 +4216,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least part-time 16-30",
+                        "Most part-time 16-30   "
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the male population aged 16-74 who worked part-time for 16-30 hours per week",
+                  "title": "Part-time: 16-30 hours worked per week (Males) (%)"
             },
             "Full-time: 31-48 hours worked per week: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4215,12 +4230,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least full-time 31-48",
+                        "Most full-time 31-48"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the male population aged 16-74 who worked full-time for 31-48 hours per week",
+                  "title": "Full-time: 31-48 hours worked per week (Males) (%)"
             },
             "Full-time: 49+ hours worked per week: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4228,12 +4244,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least full-time 49+",
+                        "Most full-time 49+"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the male population aged 16-74 who worked full-time for 49+ hours per week",
+                  "title": "Full-time: 49+ hours worked per week (Males) (%)"
             },
             "Part-time: <=15 hours worked per week: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4241,12 +4258,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least part-time <=15",
+                        "Most part-time <=15"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the female population aged 16-74 who worked part-time for <=15 hours per week",
+                  "title": "Part-time: <=15 hours worked per week (Females) (%)"
             },
             "Part-time: 16-30 hours worked per week: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4254,12 +4272,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least part-time 16-30",
+                        "Most part-time 16-30"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the female population aged 16-74 who worked part-time for 16-30 hours per week",
+                  "title": "Part-time: 16-30 hours worked per week (Females) (%)"
             },
             "Full-time: 31-48 hours worked per week: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4267,12 +4286,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least full-time 31-48",
+                        "Most full-time 31-48"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the female population aged 16-74 who worked full-time for 31-48 hours per week",
+                  "title": "Full-time: 31-48 hours worked per week (Females) (%)"
             },
             "Full-time: 49+ hours worked per week: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4280,12 +4300,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least full-time 49+",
+                        "Most full-time 49+"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the female population aged 16-74 who worked full-time for 49+ hours per week",
+                  "title": "Full-time: 49+ hours worked per week (Females) (%)"
             },
             "Industry of employment: Agriculture, forestry and fishing: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4293,12 +4314,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least agriculture",
+                        "Most agriculture"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in agriculture, forestry and fishing",
+                  "title": "Industry of employment: Agriculture, forestry and fishing (%)"
             },
             "Industry of employment: Mining and quarrying: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4306,12 +4328,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least mining and quarrying",
+                        "Most mining and quarrying"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in mining and quarrying",
+                  "title": "Industry of employment: Mining and quarrying (%)"
             },
             "Industry of employment: Manufacturing: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4319,12 +4342,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least manufacturing",
+                        "Most manufacturing"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in manufacturing",
+                  "title": "Industry of employment: Manufacturing (%)"
             },
             "Industry of employment: Electricity, gas, steam and air conditioning supply: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4332,12 +4356,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least electricity, gas, steam and air conditioning supply",
+                        "Most electricity, gas, steam and air conditioning supply"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in electricity, gas, steam and air conditioning supply",
+                  "title": "Industry of employment: Electricity, gas, steam and air conditioning supply (%)"
             },
             "Industry of employment: Water supply; sewerage, waste management and remediation activities: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4345,12 +4370,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least water supply",
+                        "Most water supply"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in water supply; sewerage, waste management and remediation activities",
+                  "title": "Industry of employment: Water supply; sewerage, waste management and remediation activities (%)"
             },
             "Industry of employment: Construction: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4358,12 +4384,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least construction",
+                        "Most construction"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in construction",
+                  "title": "Industry of employment: Construction (%)"
             },
             "Industry of employment: Wholesale and retail trade; repair of motor vehicles and motor cycles: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4371,12 +4398,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least wholesale and retail trade",
+                        "Most wholesale and retail trade"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in wholesale and retail trade; repair of motor vehicles and motor cycles",
+                  "title": "Industry of employment: Wholesale and retail trade; repair of motor vehicles and motor cycles (%)"
             },
             "Industry of employment: Transport and storage: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4384,12 +4412,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least transport and storage",
+                        "Most transport and storage"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in transport and storage",
+                  "title": "Industry of employment: Transport and storage (%)"
             },
             "Industry of employment: Accommodation and food service activities: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4397,12 +4426,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least accommodation and food service activities",
+                        "Most accommodation and food service activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in accommodation and food service activities",
+                  "title": "Industry of employment: Accommodation and food service activities (%)"
             },
             "Industry of employment: Information and communication: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4410,12 +4440,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least information and communication",
+                        "Most information and communication"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in information and communication",
+                  "title": "Industry of employment: Information and communication (%)"
             },
             "Industry of employment: Financial and insurance activities: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4423,12 +4454,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least financial and insurance activities",
+                        "Most financial and insurance activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in financial and insurance activities",
+                  "title": "Industry of employment: Financial and insurance activities (%)"
             },
             "Industry of employment: Real estate activities: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4436,12 +4468,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least real estate activities",
+                        "Most real estate activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in real estate activities",
+                  "title": "Industry of employment: Real estate activities (%)"
             },
             "Industry of employment: Professional, scientific and technical activities: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4449,12 +4482,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least professional, scientific and technical activities",
+                        "Most professional, scientific and technical activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in professional, scientific and technical activities",
+                  "title": "Industry of employment: Professional, scientific and technical activities (%)"
             },
             "Industry of employment: Administrative and support service activities: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4462,12 +4496,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least administrative and support service activities",
+                        "Most administrative and support service activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in administrative and support service activities",
+                  "title": "Industry of employment: Administrative and support service activities (%)"
             },
             "Industry of employment: Public administration and defence; compulsory social security: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4475,12 +4510,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least public administration and defence",
+                        "Most public administration and defence"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in public administration and defence; compulsory social security",
+                  "title": "Industry of employment: Public administration and defence; compulsory social security (%)"
             },
             "Industry of employment: Education: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4488,12 +4524,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least education",
+                        "Most education"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in education",
+                  "title": "Industry of employment: Education (%)"
             },
             "Industry of employment: Human health and social work activities: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4501,12 +4538,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least human health and social work activities",
+                        "Most human health and social work activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in human health and social work activities",
+                  "title": "Industry of employment: Human health and social work activities (%)"
             },
             "Industry of employment: Other: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4514,12 +4552,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least other",
+                        "Most other"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked in other",
+                  "title": "Industry of employment: Other (%)"
             },
             "Industry of employment: Agriculture, forestry and fishing: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4527,12 +4566,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least agriculture",
+                        "Most agriculture"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in agriculture, forestry and fishing",
+                  "title": "Industry of employment: Agriculture, forestry and fishing (Males) (%)"
             },
             "Industry of employment: Mining and quarrying: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4540,12 +4580,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least mining and quarrying",
+                        "Most mining and quarrying"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in mining and quarrying",
+                  "title": "Industry of employment: Mining and quarrying (Males) (%)"     
             },
             "Industry of employment: Manufacturing: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4553,12 +4594,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least manufacturing",
+                        "Most manufacturing"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in manufacturing",
+                  "title": "Industry of employment: Manufacturing (Males) (%)"
             },
             "Industry of employment: Electricity, gas, steam and air conditioning supply: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4566,12 +4608,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least electricity, gas, steam and air conditioning supply",
+                        "Most electricity, gas, steam and air conditioning supply"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in electricity, gas, steam and air conditioning supply",
+                  "title": "Industry of employment: Electricity, gas, steam and air conditioning supply (Males) (%)"
             },
             "Industry of employment: Water supply; sewerage, waste management and remediation activities: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4579,12 +4622,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least water supply",
+                        "Most water supply"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in water supply; sewerage, waste management and remediation activities",
+                  "title": "Industry of employment: Water supply; sewerage, waste management and remediation activities (Males) (%)"
             },
             "Industry of employment: Construction: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4592,12 +4636,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least construction",
+                        "Most construction"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in construction",
+                  "title": "Industry of employment: Construction (Males) (%)"
             },
             "Industry of employment: Wholesale and retail trade; repair of motor vehicles and motor cycles: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4605,12 +4650,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least wholesale and retail trade",
+                        "Most wholesale and retail trade"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in wholesale and retail trade; repair of motor vehicles and motor cycles",
+                  "title": "Industry of employment: Wholesale and retail trade; repair of motor vehicles and motor cycles (Males) (%)"
             },
             "Industry of employment: Transport and storage: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4618,12 +4664,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least transport and storage",
+                        "Most transport and storage"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in transport and storage",
+                  "title": "Industry of employment: Transport and storage (Males) (%)"
             },
             "Industry of employment: Accommodation and food service activities: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4631,12 +4678,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least accommodation and food service activities",
+                        "Most accommodation and food service activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in accommodation and food service activities",
+                  "title": "Industry of employment: Accommodation and food service activities (Males) (%)"
             },
             "Industry of employment: Information and communication: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4644,12 +4692,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least information and communication",
+                        "Most information and communication"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in information and communication",
+                  "title": "Industry of employment: Information and communication (Males) (%)"
             },
             "Industry of employment: Financial and insurance activities: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4657,12 +4706,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least financial and insurance activities",
+                        "Most financial and insurance activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in financial and insurance activities",
+                  "title": "Industry of employment: Financial and insurance activities (Males) (%)"
             },
             "Industry of employment: Real estate activities: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4670,12 +4720,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least real estate activities",
+                        "Most real estate activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in real estate activities",
+                  "title": "Industry of employment: Real estate activities (Males) (%)"
             },
             "Industry of employment: Professional, scientific and technical activities: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4683,12 +4734,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least professional, scientific and technical activities",
+                        "Most professional, scientific and technical activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in professional, scientific and technical activities",
+                  "title": "Industry of employment: Professional, scientific and technical activities (Males) (%)"
             },
             "Industry of employment: Administrative and support service activities: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4696,12 +4748,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least administrative and support service activities",
+                        "Most administrative and support service activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in administrative and support service activities",
+                  "title": "Industry of employment: Administrative and support service activities (Males) (%)"
             },
             "Industry of employment: Public administration and defence; compulsory social security: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4709,12 +4762,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least public administration and defence",
+                        "Most public administration and defence"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in public administration and defence; compulsory social security",
+                  "title": "Industry of employment: Public administration and defence; compulsory social security (Males) (%)"
             },
             "Industry of employment: Education: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4722,12 +4776,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least education",
+                        "Most education"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in education",
+                  "title": "Industry of employment: Education (Males) (%)"
             },
             "Industry of employment: Human health and social work activities: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4735,12 +4790,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least human health and social work activities",
+                        "Most human health and social work activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in human health and social work activities",
+                  "title": "Industry of employment: Human health and social work activities (Males) (%)"
             },
             "Industry of employment: Other: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -4748,12 +4804,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least other",
+                        "Most other"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked in other",
+                  "title": "Industry of employment: Other (Males) (%)"
             },
             "Industry of employment: Agriculture, forestry and fishing: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4761,12 +4818,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least agriculture",
+                        "Most agriculture"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in agriculture, forestry and fishing",
+                  "title": "Industry of employment: Agriculture, forestry and fishing (Females) (%)"
             },
             "Industry of employment: Mining and quarrying: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4774,12 +4832,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least mining and quarrying",
+                        "Most mining and quarrying"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in mining and quarrying",
+                  "title": "Industry of employment: Mining and quarrying (Females) (%)"
             },
             "Industry of employment: Manufacturing: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4787,12 +4846,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least manufacturing",
+                        "Most manufacturing"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in manufacturing",
+                  "title": "Industry of employment: Manufacturing (Females) (%)"
             },
             "Industry of employment: Electricity, gas, steam and air conditioning supply: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4803,9 +4863,10 @@
                         "",
                         ""
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in electricity, gas, steam and air conditioning supply",
+                  "title": "Industry of employment: Electricity, gas, steam and air conditioning supply (Females) (%)"
             },
             "Industry of employment: Water supply; sewerage, waste management and remediation activities: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4813,12 +4874,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least water supply",
+                        "Most water supply"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in water supply; sewerage, waste management and remediation activities",
+                  "title": "Industry of employment: Water supply; sewerage, waste management and remediation activities (Females) (%)"
             },
             "Industry of employment: Construction: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4826,12 +4888,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least construction",
+                        "Most construction"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in construction",
+                  "title": "Industry of employment: Construction (Females) (%)"
             },
             "Industry of employment: Wholesale and retail trade; repair of motor vehicles and motor cycles: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4839,12 +4902,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least wholesale and retail trade",
+                        "Most wholesale and retail trade"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in wholesale and retail trade; repair of motor vehicles and motor cycles",
+                  "title": "Industry of employment: Wholesale and retail trade; repair of motor vehicles and motor cycles (Females) (%)"
             },
             "Industry of employment: Transport and storage: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4852,12 +4916,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least transport and storage",
+                        "Most transport and storage"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in transport and storage",
+                  "title": "Industry of employment: Transport and storage (Females) (%)"
             },
             "Industry of employment: Accommodation and food service activities: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4865,12 +4930,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least accommodation and food service activities",
+                        "Most accommodation and food service activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in accommodation and food service activities",
+                  "title": "Industry of employment: Accommodation and food service activities (Females) (%)"
             },
             "Industry of employment: Information and communication: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4878,12 +4944,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least information and communication",
+                        "Most information and communication"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in information and communication",
+                  "title": "Industry of employment: Information and communication (Females) (%)"
             },
             "Industry of employment: Financial and insurance activities: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4891,12 +4958,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least financial and insurance activities",
+                        "Most financial and insurance activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in financial and insurance activities",
+                  "title": "Industry of employment: Financial and insurance activities (Females) (%)"
             },
             "Industry of employment: Real estate activities: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4904,12 +4972,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least real estate activities",
+                        "Most real estate activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in real estate activities",
+                  "title": "Industry of employment: Real estate activities (Females) (%)"
             },
             "Industry of employment: Professional, scientific and technical activities: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4917,12 +4986,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least professional, scientific and technical activities",
+                        "Most professional, scientific and technical activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in professional, scientific and technical activities",
+                  "title": "Industry of employment: Professional, scientific and technical activities (Females) (%)"
             },
             "Industry of employment: Administrative and support service activities: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4930,12 +5000,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least administrative and support service activities",
+                        "Most administrative and support service activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in administrative and support service activities",
+                  "title": "Industry of employment: Administrative and support service activities (Females) (%)"
             },
             "Industry of employment: Public administration and defence; compulsory social security: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4943,12 +5014,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least public administration and defence",
+                        "Most public administration and defence"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in public administration and defence; compulsory social security",
+                  "title": "Industry of employment: Public administration and defence; compulsory social security (Females) (%)"
             },
             "Industry of employment: Education: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4956,12 +5028,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least education",
+                        "Most education"
                   ],
                   "URL": "",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in education",
+                  "title": "Industry of employment: Education (Females) (%)"
             },
             "Industry of employment: Human health and social work activities: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4969,12 +5042,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least human health and social work activities",
+                        "Most human health and social work activities"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in human health and social work activities",
+                  "title": "Industry of employment: Human health and social work activities (Females) (%)"
             },
             "Industry of employment: Other: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -4982,12 +5056,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least other",
+                        "Most other"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked in other",
+                  "title": "Industry of employment: Other (Females) (%)"
             },
             "Occupation: Managers, directors and senior officials: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -4995,12 +5070,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least managers, directors and senior officials",
+                        "Most managers, directors and senior officials"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as managers, directors and senior officials",
+                  "title": "Occupation: Managers, directors and senior officials (%)"
             },
             "Occupation: Professional occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5008,12 +5084,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least professional occupations",
+                        "Most professional occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as professional occupations",
+                  "title": "Occupation: Professional occupations (%)"
             },
             "Occupation: Associate professional and technical occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5021,12 +5098,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least associate professional and technical occupations",
+                        "Most associate professional and technical occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as associate professional and technical occupations",
+                  "title": "Occupation: Associate professional and technical occupations (%)"
             },
             "Occupation: Administrative and secretarial occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5034,12 +5112,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least administrative and secretarial occupations",
+                        "Most administrative and secretarial occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as administrative and secretarial occupations",
+                  "title": "Occupation: Administrative and secretarial occupations (%)"
             },
             "Occupation: Skilled trades occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5047,12 +5126,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least skilled trades occupations",
+                        "Most skilled trades occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as skilled trades occupations",
+                  "title": "Occupation: Skilled trades occupations (%)"
             },
             "Occupation: Caring, leisure and other service occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5060,12 +5140,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least caring, leisure and other service occupations",
+                        "Most caring, leisure and other service occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as caring, leisure and other service occupations",
+                  "title": "Occupation: Caring, leisure and other service occupations (%)"
             },
             "Occupation: Sales and customer service occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5073,12 +5154,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least sales and customer service occupations",
+                        "Most sales and customer service occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as sales and customer service occupations",
+                  "title": "Occupation: Sales and customer service occupations (%)"
             },
             "Occupation: Process, plant and machine operatives: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5086,12 +5168,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least skilled trades occupations",
+                        "Most skilled trades occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as skilled trades occupations",
+                  "title": "Occupation: Skilled trades occupations (%)"
             },
             "Occupation: Elementary occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5099,12 +5182,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least elementary occupations ",
+                        "Most elementary occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as elementary occupations",
+                  "title": "Occupation: Elementary occupations (%)"
             },
             "Occupation: Managers, directors and senior officials: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -5112,12 +5196,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least managers, directors and senior officials",
+                        "Most managers, directors and senior officials"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked as managers, directors and senior officials",
+                  "title": "Occupation: Managers, directors and senior officials (Males) (%)"
             },
             "Occupation: Professional occupations: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -5138,12 +5223,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least associate professional and technical occupations",
+                        "Most associate professional and technical occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked as associate professional and technical occupations",
+                  "title": "Occupation: Associate professional and technical occupations (Males) (%)"
             },
             "Occupation: Administrative and secretarial occupations: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -5151,12 +5237,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least administrative and secretarial occupations",
+                        "Most administrative and secretarial occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked as administrative and secretarial occupations",
+                  "title": "Occupation: Administrative and secretarial occupations (Males) (%)"
             },
             "Occupation: Skilled trades occupations: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -5164,12 +5251,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least skilled trades occupations",
+                        "Most skilled trades occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked as skilled trades occupations",
+                  "title": "Occupation: Skilled trades occupations (Males) (%)"
             },
             "Occupation: Caring, leisure and other service occupations: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -5177,12 +5265,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least caring, leisure and other service occupations",
+                        "Most caring, leisure and other service occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked as caring, leisure and other service occupations",
+                  "title": "Occupation: Caring, leisure and other service occupations (Males) (%)"
             },
             "Occupation: Sales and customer service occupations: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -5190,12 +5279,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least sales and customer service occupations",
+                        "Most sales and customer service occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked as sales and customer service occupations",
+                  "title": "Occupation: Sales and customer service occupations (Males) (%)"     
             },
             "Occupation: Process, plant and machine operatives: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -5203,12 +5293,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least process, plant and machine operatives",
+                        "Most process, plant and machine operatives"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked as process, plant and machine operatives",
+                  "title": "Occupation: Process, plant and machine operatives (Males) (%)"
             },
             "Occupation: Elementary occupations: Aged 16-74 years (Males) (%)": {
                   "type": "Metric",
@@ -5216,12 +5307,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least elementary occupations",
+                        "Most elementary occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of males aged 16-74 who worked as elementary occupations",
+                  "title": "Occupation: Elementary occupations (Males) (%)"
             },
             "Occupation: Managers, directors and senior officials: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5229,12 +5321,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least managers, directors and senior officials",
+                        "Most managers, directors and senior officials"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as managers, directors and senior officials",
+                  "title": "Occupation: Managers, directors and senior officials (Females) (%)"
             },
             "Occupation: Professional occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5242,12 +5335,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least professional occupations",
+                        "Most professional occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as professional occupations",
+                  "title": "Occupation: Professional occupations (Females) (%)"
             },
             "Occupation: Associate professional and technical occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5255,12 +5349,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least associate professional and technical occupations",
+                        "Most associate professional and technical occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as associate professional and technical occupations",
+                  "title": "Occupation: Associate professional and technical occupations (Females) (%)"
             },
             "Occupation: Administrative and secretarial occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5268,12 +5363,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least administrative and secretarial occupations",
+                        "Most administrative and secretarial occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as administrative and secretarial occupations",
+                  "title": "Occupation: Administrative and secretarial occupations (Females) (%)"
             },
             "Occupation: Skilled trades occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5281,12 +5377,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least skilled trades occupations",
+                        "Most skilled trades occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as skilled trades occupations",
+                  "title": "Occupation: Skilled trades occupations (Females) (%)"
             },
             "Occupation: Caring, leisure and other service occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5294,12 +5391,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least caring, leisure and other service occupations",
+                        "Most caring, leisure and other service occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as caring, leisure and other service occupations",
+                  "title": "Occupation: Caring, leisure and other service occupations (Females) (%)"
             },
             "Occupation: Sales and customer service occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5307,12 +5405,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least sales and customer service occupations",
+                        "Most sales and customer service occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as sales and customer service occupations",
+                  "title": "Occupation: Sales and customer service occupations (Females) (%)"
             },
             "Occupation: Process, plant and machine operatives: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5320,12 +5419,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least process, plant and machine operatives",
+                        "Most process, plant and machine operatives"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as process, plant and machine operatives",
+                  "title": "Occupation: Process, plant and machine operatives (Females) (%)"
             },
             "Occupation: Elementary occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5333,12 +5433,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least elementary occupations",
+                        "Most elementary occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as elementary occupations",
+                  "title": "Occupation: Elementary occupations (Females) (%)"
             },
             "NS-SeC: 1.1\u00a0Large employers and higher managerial and administrative occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5346,12 +5447,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least large employers and higher managerial and administrative occupations",
+                        "Most large employers and higher managerial and administrative occupations"
                   ],
                   "URL": "",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as large employers and higher managerial and administrative occupations",
+                  "title": "NS-Sec 1.1: Large employers and higher managerial and administrative occupations (%)"
             },
             "NS-SeC: 1.2\u00a0Higher professional occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5359,12 +5461,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least higher professional occupations",
+                        "Most higher professional occupations"
                   ],
                   "URL": "",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as higher professional occupations",
+                  "title": "NS-Sec 1.2: Higher professional occupations (%)"
             },
             "NS-SeC: 2. Lower managerial, administrative and professional occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5372,12 +5475,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least lower managerial, administrative and professional occupations",
+                        "Most lower managerial, administrative and professional occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as lower managerial, administrative and professional occupations",
+                  "title": "NS-Sec 2: Lower managerial, administrative and professional occupations (%)"
             },
             "NS-SeC: 3. Intermediate occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5385,12 +5489,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least intermediate occupations",
+                        "Most intermediate occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as intermediate occupations",
+                  "title": "NS-Sec 3: Intermediate occupations (%)"
             },
             "NS-SeC: 4. Small employers and own account workers: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5398,12 +5503,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least small employers and own account workers",
+                        "Most small employers and own account workers"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as small employers and own account workers",
+                  "title": "NS-Sec 4: Small employers and own account workers (%)"
             },
             "NS-SeC: 5. Lower supervisory and technical occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5411,12 +5517,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least lower supervisory and technical occupations",
+                        "Most lower supervisory and technical occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as lower supervisory and technical occupations",
+                  "title": "NS-Sec 5: Lower supervisory and technical occupations (%)"
             },
             "NS-SeC: 6. Semi-routine occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5424,12 +5531,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least semi-routine occupations",
+                        "Most semi-routine occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as semi-routine occupations",
+                  "title": "NS-Sec 6: Semi-routine occupations (%)"
             },
             "NS-SeC: 7. Routine occupations: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5437,12 +5545,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least routine occupations",
+                        "Most routine occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked as routine occupations",
+                  "title": "NS-Sec 7: Routine occupations (%)"
             },
             "NS-SeC: L14.1 Never worked: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5450,12 +5559,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least never worked",
+                        "Most never worked"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who never worked",
+                  "title": "NS-Sec L14.1: Never worked (%)"
             },
             "NS-SeC: L14.2 Long-term unemployed: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5463,12 +5573,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least long-term unemployed",
+                        "Most long-term unemployed"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who were long-term unemployed",
+                  "title": "NS-Sec L14.2: Long-term unemployed (%)"
             },
             "NS-SeC: Not classified: L15 Full-time students: Aged 16-74 years (%)": {
                   "type": "Metric",
@@ -5476,12 +5587,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least not classified as full-time students",
+                        "Most not classified as full-time students"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who were not classified as full-time students",
+                  "title": "NS-Sec Not classified: L15 Full-time students (%)"
             },
             "NS-SeC: 1.1\u00a0Large employers and higher managerial and administrative occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5489,12 +5601,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least large employers and higher managerial and administrative occupations",
+                        "Most large employers and higher managerial and administrative occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as large employers and higher managerial and administrative occupations",
+                  "title": "NS-Sec 1.1: Large employers and higher managerial and administrative occupations (Females) (%)"
             },
             "NS-SeC: 1.2\u00a0Higher professional occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5502,12 +5615,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least higher professional occupations",
+                        "Most higher professional occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as higher professional occupations",
+                  "title": "NS-Sec 1.2: Higher professional occupations (Females) (%)"
             },
             "NS-SeC: 2. Lower managerial, administrative and professional occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5515,12 +5629,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least lower managerial, administrative and professional occupations",
+                        "Most lower managerial, administrative and professional occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as lower managerial, administrative and professional occupations",
+                  "title": "NS-Sec 2: Lower managerial, administrative and professional occupations (Females) (%)"
             },
             "NS-SeC: 3. Intermediate occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5528,12 +5643,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least intermediate occupations",
+                        "Most intermediate occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as intermediate occupations",
+                  "title": "NS-Sec 3: Intermediate occupations (Females) (%)"
             },
             "NS-SeC: 4. Small employers and own account workers: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5541,12 +5657,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least small employers and own account workers",
+                        "Most small employers and own account workers"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as small employers and own account workers",
+                  "title": "NS-Sec 4: Small employers and own account workers (Females) (%)"
             },
             "NS-SeC: 5. Lower supervisory and technical occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5554,12 +5671,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least lower supervisory and technical occupations",
+                        "Most lower supervisory and technical occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as lower supervisory and technical occupations",
+                  "title": "NS-Sec 5: Lower supervisory and technical occupations (Females) (%)"
             },
             "NS-SeC: 6. Semi-routine occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5567,12 +5685,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least semi-routine occupations",
+                        "Most semi-routine occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as semi-routine occupations",
+                  "title": "NS-Sec 6: Semi-routine occupations (Females) (%)"
             },
             "NS-SeC: 7. Routine occupations: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5580,12 +5699,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least routine occupations",
+                        "Most routine occupations"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who worked as routine occupations",
+                  "title": "NS-Sec 7: Routine occupations (Females) (%)"
             },
             "NS-SeC: L14.1 Never worked: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5593,12 +5713,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least never worked",
+                        "Most never worked"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who never worked",
+                  "title": "NS-Sec L14.1: Never worked (Females) (%)"
             },
             "NS-SeC: L14.2 Long-term unemployed: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5606,12 +5727,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least long-term unemployed",
+                        "Most long-term unemployed"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who were long-term unemployed",
+                  "title": "NS-Sec L14.2: Long-term unemployed (Females) (%)"
             },
             "NS-SeC: Not classified: L15 Full-time students: Aged 16-74 years (Females) (%)": {
                   "type": "Metric",
@@ -5619,12 +5741,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least not classified as full-time students",
+                        "Most not classified as full-time students"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-labour-market",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of females aged 16-74 who were not classified as full-time students",
+                  "title": "NS-Sec Not classified: L15 Full-time students (Females) (%)"
             },
             "All usual residents: Work mainly at or from home: Aged 16-74 years (excluding students) in employment and currently working (%)": {
                   "type": "Metric",
@@ -5632,12 +5755,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least work mainly at or from home",
+                        "Most work mainly at or from home"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked mainly at or from home",
+                  "title": "All usual residents: Work mainly at or from home"
             },
             "Method of travel to work: Train: Aged 16-74 years (excluding students) in employment and currently working (%)": {
                   "type": "Metric",
@@ -5645,12 +5769,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least train",
+                        "Most train"
                   ],
                   "URL": "",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work by train",
+                  "title": "Method of travel to work: Train"
             },
             "Method of travel to work: Bus, minibus or coach: Aged 16-74 years (excluding students) in employment and currently working (%)": {
                   "type": "Metric",
@@ -5658,12 +5783,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least bus, minibus or coach",
+                        "Most bus, minibus or coach"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work by bus, minibus or coach",
+                  "title": "Method of travel to work: Bus, minibus or coach"
             },
             "Method of travel to work: Motorcycle, scooter or moped: Aged 16-74 years (excluding students) in employment and currently working (%)": {
                   "type": "Metric",
@@ -5671,12 +5797,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least motorcycle, scooter or moped",
+                        "Most motorcycle, scooter or moped"
                   ],
                   "URL": "",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work by motorcycle, scooter or moped",
+                  "title": "Method of travel to work: Motorcycle, scooter or moped"
             },
             "Method of travel to work: Driving a car or van: Aged 16-74 years (excluding students) in employment and currently working (%)": {
                   "type": "Metric",
@@ -5684,12 +5811,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least driving a car or van",
+                        "Most driving a car or van"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work by driving a car or van",
+                  "title": "Method of travel to work: Driving a car or van"
             },
             "Method of travel to work: Passenger in a car or van: Aged 16-74 years (excluding students) in employment and currently working (%)": {
                   "type": "Metric",
@@ -5697,12 +5825,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least passenger in a car or van",
+                        "Most passenger in a car or van"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work by passenger in a car or van",
+                  "title": "Method of travel to work: Passenger in a car or van"
             },
             "Method of travel to work: Car or van pool, shared driving: Aged 16-74 years (excluding students) in employment and currently working (%)": {
                   "type": "Metric",
@@ -5710,12 +5839,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least car or van pool, shared driving",
+                        "Most car or van pool, shared driving"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work by car or van pool, shared driving",
+                  "title": "Method of travel to work: Car or van pool, shared driving"
             },
             "Method of travel to work: Taxi: Aged 16-74 years (excluding students) in employment and currently working (%)": {
                   "type": "Metric",
@@ -5723,12 +5853,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least taxi",
+                        "Most taxi"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work by taxi",
+                  "title": "Method of travel to work: Taxi"
             },
             "Method of travel to work: Bicycle: Aged 16-74 years (excluding students) in employment and currently working (%)": {
                   "type": "Metric",
@@ -5736,12 +5867,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least bicycle",
+                        "Most bicycle"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work by bicycle",
+                  "title": "Method of travel to work: Bicycle"
             },
             "Method of travel to work: On foot: Aged 16-74 years (excluding students) in employment and currently working (%)": {
                   "type": "Metric",
@@ -5749,12 +5881,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least on foot",
+                        "Most on foot"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work by on foot",
+                  "title": "Method of travel to work: On foot"
             },
             "Method of travel to work: Other method: Aged 16-74 years (excluding students) in employment and currently working (%)": {
                   "type": "Metric",
@@ -5762,12 +5895,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least other method",
+                        "Most other method"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work by other method",
+                  "title": "Method of travel to work: Other method"
             },
             "Usual residents in households with access to a car or van: Use public transport to travel to work: Aged 16-74 years (excluding students) in employment and currently working (%)": {
                   "type": "Metric",
@@ -5775,12 +5909,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least use public transport to travel to work",
+                        "Most use public transport to travel to work"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who used public transport to travel to work",
+                  "title": "Usual residents in households with access to a car or van: Use public transport to travel to work"
             },
             "Usual residents in households without access to a car or van: Use public transport to travel to work: Aged 16-74 years (excluding students) in employment and currently working (%)": {
                   "type": "Metric",
@@ -5788,12 +5923,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least use public transport to travel to work",
+                        "Most use public transport to travel to work"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who used public transport to travel to work",
+                  "title": "Usual residents in households without access to a car or van: Use public transport to travel to work"
             },
             "All usual residents: Work or study mainly at or from home: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
                   "type": "Metric",
@@ -5801,12 +5937,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least work or study mainly at or from home",
+                        "Most work or study mainly at or from home"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who worked or studied mainly at or from home",
+                  "title": "All usual residents: Work or study mainly at or from home"
             },
             "Method of travel to work or place of study: Train: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
                   "type": "Metric",
@@ -5814,12 +5951,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least train",
+                        "Most train"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work or study by train",
+                  "title": "Method of travel to work or place of study: Train"
             },
             "Method of travel to work or place of study: Bus, minibus or coach: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
                   "type": "Metric",
@@ -5827,12 +5965,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least bus, minibus or coach",
+                        "Most bus, minibus or coach"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work or study by bus, minibus or coach",
+                  "title": "Method of travel to work or place of study: Bus, minibus or coach"
             },
             "Method of travel to work or place of study: Motorcycle, scooter or moped: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
                   "type": "Metric",
@@ -5840,12 +5979,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least motorcycle, scooter or moped",
+                        "Most motorcycle, scooter or moped"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work or study by motorcycle, scooter or moped",
+                  "title": "Method of travel to work or place of study: Motorcycle, scooter or moped"
             },
             "Method of travel to work or place of study: Driving a car or van: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
                   "type": "Metric",
@@ -5853,12 +5993,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least driving a car or van",
+                        "Most driving a car or van"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work or study by driving a car or van",
+                  "title": "Method of travel to work or place of study: Driving a car or van"
             },
             "Method of travel to work or place of study: Passenger in a car or van: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
                   "type": "Metric",
@@ -5866,12 +6007,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least passenger in a car or van",
+                        "Most passenger in a car or van"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work or study by passenger in a car or van",
+                  "title": "Method of travel to work or place of study: Passenger in a car or van"
             },
             "Method of travel to work or place of study: Car or van pool, shared driving: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
                   "type": "Metric",
@@ -5879,12 +6021,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least car or van pool, shared driving",
+                        "Most car or van pool, shared driving"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work or study by car or van pool, shared driving",
+                  "title": "Method of travel to work or place of study: Car or van pool, shared driving"
             },
             "Method of travel to work or place of study: Taxi: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
                   "type": "Metric",
@@ -5892,12 +6035,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least taxi",
+                        "Most taxi"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work or study by taxi",
+                  "title": "Method of travel to work or place of study: Taxi"
             },
             "Method of travel to work or place of study: Bicycle: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
                   "type": "Metric",
@@ -5905,12 +6049,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least bicycle",
+                        "Most bicycle"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work or study by bicycle",
+                  "title": "Method of travel to work or place of study: Bicycle"
             },
             "Method of travel to work or place of study: On foot: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
                   "type": "Metric",
@@ -5918,12 +6063,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least on foot",
+                        "Most on foot"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work or study by on foot",
+                  "title": "Method of travel to work or place of study: On foot"
             },
             "Method of travel to work or place of study: Other method: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
                   "type": "Metric",
@@ -5931,12 +6077,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least other method",
+                        "Most other method"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who travelled to work or study by other method",
+                  "title": "Method of travel to work or place of study: Other method"
             },
             "Usual residents in households with access to a car or van: Use public transport to travel to work or place of study: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
                   "type": "Metric",
@@ -5944,12 +6091,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least use public transport to travel to work or place of study",
+                        "Most use public transport to travel to work or place of study    "
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who used public transport to travel to work or study",
+                  "title": "Usual residents in households with access to a car or van: Use public transport to travel to work or place of study"
             },
             "Usual residents in households without access to a car or van: Use public transport to travel to work or place of study: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
                   "type": "Metric",
@@ -5957,12 +6105,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least use public transport to travel to work or place of study",
+                        "Most use public transport to travel to work or place of study"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-travel-to-work-or-study",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population aged 16-74 who used public transport to travel to work or study",
+                  "title": "Usual residents in households without access to a car or van: Use public transport to travel to work or place of study"
             },
             "Born in Northern Ireland: Never resided elsewhere (%)": {
                   "type": "Metric",
@@ -5970,12 +6119,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least never resided elsewhere",
+                        "Most never resided elsewhere"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-migration",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population born in Northern Ireland who never resided elsewhere",
+                  "title": "Born in Northern Ireland: Never resided elsewhere"
             },
             "Born in Northern Ireland: Who have resided elsewhere and: Returned between 2007 and Census day (%)": {
                   "type": "Metric",
@@ -5983,12 +6133,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least returned between 2007 and Census day",
+                        "Most returned between 2007 and Census day"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-migration",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population born in Northern Ireland who returned between 2007 and Census day",
+                  "title": "Born in Northern Ireland: Who have resided elsewhere and: Returned between 2007 and Census day"
             },
             "Born in Northern Ireland: Who have resided elsewhere and: Returned between 2001 and 2006 (%)": {
                   "type": "Metric",
@@ -5996,12 +6147,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least returned between 2001 and 2006",
+                        "Most returned between 2001 and 2006"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-migration",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population born in Northern Ireland who returned between 2001 and 2006",
+                  "title": "Born in Northern Ireland: Who have resided elsewhere and: Returned between 2001 and 2006"
             },
             "Born in Northern Ireland: Who have resided elsewhere and: Returned prior to 2001 (%)": {
                   "type": "Metric",
@@ -6009,12 +6161,13 @@
                         10
                   ],
                   "extremes": [
-                        "",
-                        ""
+                        "Least returned prior to 2001",
+                        "Most returned prior to 2001"
                   ],
-                  "URL": "",
+                  "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-migration",
                   "date": "2012-12-11",
-                  "description": ""
+                  "description": "Percentage of the population born in Northern Ireland who returned prior to 2001",
+                  "title": "Born in Northern Ireland: Who have resided elsewhere and: Returned prior to 2001"
             },
             "SEISA proportion": {
                   "type": "Metric",
