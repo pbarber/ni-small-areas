@@ -1,9 +1,11 @@
-// TODO: add extra dataset
+// TODO: add Data Zones dataset
 // TODO: add dataset selector
 // TODO: add choropleth map
 // TODO: add hex map
 // TODO: add data field categories
 // TODO: non ranked binning
+// TODO: load a column at a time from S3
+// TODO: Add NIMDM travel data for small areas
 
 // Initialize the echarts instance based on the prepared dom
 var myChart = echarts.init(document.getElementById('main'));
@@ -89,6 +91,22 @@ var metbrewerPromise = fetch('metbrewer.json').then(response => response.json())
 });
 
 myChart.showLoading();
+
+const geographyOptions = [
+    {
+        value: 'Data Zone',
+        URL: 'dz-metadata.json'
+    },
+    {
+        value: 'Small Area',
+        URL: 'sa-metadata.json'
+    }
+];
+
+for (const geo of geographyOptions) {
+    console.log(geo);
+    document.getElementById("geography-select").append(createOption(geo.value, geo.value, (geo.URL == settings.metadataURL)));
+}
 
 // Use Promise.all to wait for both promises to resolve
 Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
@@ -221,6 +239,7 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
             $('#colour-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
             $('#multiple-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
             $('#palette-select').select2({ width: '100%', dropdownParent: $("#bottom-sheet") });
+            $('#geography-select').select2({ width: '100%', dropdownParent: $("#bottom-sheet") });
 
             // When the selectors change, update the chart options
             $('#multiple-select').on('select2:select', function (e) {
@@ -269,6 +288,11 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
                 hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? 'Count of ' + datasetTitle + 's' : settings.y, settings.x);
                 $('#x-select').trigger('change');
                 updateChart();
+            });
+
+            $('#geography-select').on('select2:select', function (e) {
+                settings.metadataURL = geographyOptions.find(a => a.value == e.target.value).URL;
+                console.log('Geography selected: ' + settings.metadataURL);
             });
 
         }
