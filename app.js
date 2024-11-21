@@ -62,6 +62,11 @@ if (params.get("metadataURL")) {
 } else {
     settings.metadataURL = "sa-metadata.json";
 }
+if (params.get("chartTitle") == "") {
+    settings.chartTitle = "";
+} else if (params.get("chartTitle")) {
+    settings.chartTitle = params.get("chartTitle");
+}
 
 const mapContainer = document.getElementById('area-details-modal-map');
 mapContainer.style.height = '300px';
@@ -74,16 +79,23 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 var geoJSONLayer = L.geoJSON(null).addTo(map);
 
+function updateMetadata(metadata) {
+    dimensions = metadata.dimensions;
+    datasetURL = metadata.dataset;
+    datasetTitle = metadata.title;
+    datasetIndex = metadata.index;
+    datasetName = metadata.name;
+    datasetGeoJSON = metadata.geojson;
+    settings.chartTitle = "NI " + datasetTitle + " statistics explorer";
+    return metadata;
+}
+
 // Create a promise for loading sa-dimensions.json
-var dimensionsPromise = fetch(settings.metadataURL).then(response => response.json()).then(function (data) {
-    dimensions = data.dimensions;
-    datasetURL = data.dataset;
-    datasetTitle = data.title;
-    datasetIndex = data.index;
-    datasetName = data.name;
-    datasetGeoJSON = data.geojson;
-    return data;
-});
+var dimensionsPromise = fetch(settings.metadataURL).then(
+    response => response.json()
+).then(
+    d => updateMetadata(d)
+);
 
 var metbrewerPromise = fetch('metbrewer.json').then(response => response.json()).then(function (data) {
     metbrewer = data;
@@ -104,200 +116,206 @@ const geographyOptions = [
 ];
 
 for (const geo of geographyOptions) {
-    console.log(geo);
     document.getElementById("geography-select").append(createOption(geo.value, geo.value, (geo.URL == settings.metadataURL)));
 }
 
 // Use Promise.all to wait for both promises to resolve
 Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
-    if (params.get("chartTitle") == "") {
-        settings.chartTitle = "";
-    } else {
-        if (params.get("chartTitle")) {
-            settings.chartTitle = params.get("chartTitle");
-        } else {
-            settings.chartTitle = "NI " + datasetTitle + " statistics explorer";
-        }
-    }
     if (metbrewer.hasOwnProperty(params.get("palette"))) {
         settings.palette = params.get("palette");
     } else {
         settings.palette = "Signac";
     }
-
-    // Create a promise for loading the GeoJSON file
-    geoJSONPromise = fetch(datasetGeoJSON).then(response => response.json()).then(function (data) {
-        geoJSONData = data;
-        return data;
-    });
-
     // Load sa-stats.json with the dynamically constructed URL
     Papa.parse(datasetURL, {
         download: true,
         header: true,
         dynamicTyping: true,
         skipEmptyLines: true,
-        complete: function (results) {
-            store = results.data.map(row => {
-                // Convert each row to an object
-                return Object.fromEntries(
-                    Object.entries(row).map(([key, value]) => {
-                        // Convert empty strings to null
-                        return [key, value === "" ? null : value];
-                    })
-                );
-            }).sort((a, b) => b[datasetIndex] - a[datasetIndex]);
-            Object.entries(dimensions).filter(v => v[1].bins).forEach((d, idx) => {
-                const binSize = store.length / d[1].bins[0];
-                const suffix = (d[1].bins[0] == 10) ? ' decile' : (d[1].bins[0] == 100) ? ' centile' : ' binned';
-                // Calculate the binned variables
-                store.map((a, idx) => {
-                    return ({
-                        index: idx,
-                        value: a[d[0]]
-                    });
-                }).sort((a, b) => (a.value - b.value)).map((e, i) => {
-                    const value = parseInt(i / binSize) + 1;
-                    store[e.index][d[0] + suffix] = value;
-                });
-                dimensions[d[0] + suffix] = {
-                    type: 'Binned',
-                    binSource: d[0]
-                };
-                if (d[1].hasOwnProperty('description')) {
-                    dimensions[d[0] + suffix].description = d[1].description + suffix;
-                }
-                if (d[1].hasOwnProperty('URL')) {
-                    dimensions[d[0] + suffix].URL = d[1].URL;
-                }
-                if (d[1].hasOwnProperty('date')) {
-                    dimensions[d[0] + suffix].date = d[1].date;
-                }
-                if (d[1].hasOwnProperty('extremes')) {
-                    dimensions[d[0] + suffix].extremes = d[1].extremes;
-                }
-                if (d[1].title) {
-                    dimensions[d[0] + suffix].title = d[1].title + suffix;
-                }
-            });
-            if (dimensions.hasOwnProperty(params.get("x"))) {
-                settings.x = params.get("x");
-            } else {
-                settings.x = Object.entries(dimensions).filter(a => a[1].type == 'Metric')[0][0];
-            }
-            if (dimensions.hasOwnProperty(params.get("y"))) {
-                settings.y = params.get("y");
-            } else {
-                settings.y = Object.entries(dimensions).filter(a => a[1].type == 'Metric')[1][0];
-            }
-            if (dimensions.hasOwnProperty(params.get("colour"))) {
-                settings.colour = params.get("colour");
-            } else {
-                settings.colour = Object.entries(dimensions).filter(a => a[1].type == 'Category')[0][0];
-            }
-            if (dimensions.hasOwnProperty(params.get("smallMultiple"))) {
-                settings.smallMultiple = params.get("smallMultiple");
-            } else {
-                settings.smallMultiple = 'None';
-            }
-            updateChart();
-
-            // Fill out the options in the selectors based on the dimensions of the dataset
-            // Hide x options when selected for y and vice versa
-            var ogxm = createOptGroup('Metrics');
-            var ogym = createOptGroup('Metrics');
-            var ogmc = createOptGroup('Categories');
-            var ogmb = createOptGroup('Binned metrics');
-            var ogcc = createOptGroup('Categories');
-            var ogcb = createOptGroup('Binned metrics');
-            for (const [key, value] of Object.entries(dimensions)) {
-                if (value.type == 'Metric') {
-                    ogxm.append(createOption(useTitleIfExists(key), key, (key == settings.x), (key == settings.y)));
-                    ogym.append(createOption(useTitleIfExists(key), key, (key == settings.y), (key == settings.x)));
-                } else if (value.type == 'Category') {
-                    ogmc.append(createOption(useTitleIfExists(key), key, false, false));
-                    ogcc.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
-                } else if (value.type == 'Binned') {
-                    ogmb.append(createOption(useTitleIfExists(key), key, false, false));
-                    ogcb.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
-                }
-            }
-            ogym.append(createOption('Count of ' + datasetTitle + 's', 'Count of ' + datasetTitle + 's', false, true));
-            document.getElementById("x-select").append(ogxm);
-            document.getElementById("y-select").append(ogym);
-            ogmc.append(createOption('None', 'None', true, false));
-            document.getElementById("multiple-select").append(ogmc, ogmb);
-            document.getElementById("colour-select").append(ogcc, ogcb);
-
-            for (const key of Object.keys(metbrewer)) {
-                document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
-            }
-            handleXVariableChange((dimensions[settings.x].type == 'Binned') ? dimensions[settings.x].binSource : settings.x, (dimensions[settings.x].type == 'Binned'));
-
-            $('#x-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
-            $('#y-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
-            $('#colour-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
-            $('#multiple-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
-            $('#palette-select').select2({ width: '100%', dropdownParent: $("#bottom-sheet") });
-            $('#geography-select').select2({ width: '100%', dropdownParent: $("#bottom-sheet") });
-
-            // When the selectors change, update the chart options
-            $('#multiple-select').on('select2:select', function (e) {
-                settings.smallMultiple = e.target.value;
-                updateChart();
-            });
-
-            $('#colour-select').on('select2:select', function (e) {
-                settings.colour = e.target.value;
-                const numCats = orderCategories(settings.colour).length;
-                // Handle the case where the palette doesn't hold enough colours by hiding options and selecting an alternative
-                var change = false;
-                if (numCats > metbrewer[settings.palette].colours.length) {
-                    change = true;
-                }
-                var pselect = document.getElementById("palette-select");
-                for (var i = 0; i < pselect.length; i++) {
-                    if (numCats > metbrewer[pselect[i].value].colours.length) {
-                        pselect[i].disabled = true;
-                        pselect[i].selected = false;
-                    } else {
-                        pselect[i].disabled = false;
-                        if (change) {
-                            settings.palette = pselect[i].value;
-                            pselect[i].selected = true;
-                            change = false;
-                        }
-                    }
-                }
-                $('#palette-select').trigger('change');
-                updateChart();
-            });
-
-            $('#palette-select').on('select2:select', function (e) {
-                settings.palette = e.target.value;
-                updateChart();
-            });
-
-            $('#x-select').on('select2:select', function (e) {
-                handleXVariableChange(e.target.value, document.getElementById('x-binned').checked);
-                updateChart();
-            });
-
-            $('#y-select').on('select2:select', function (e) {
-                settings.y = e.target.value;
-                hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? 'Count of ' + datasetTitle + 's' : settings.y, settings.x);
-                $('#x-select').trigger('change');
-                updateChart();
-            });
-
-            $('#geography-select').on('select2:select', function (e) {
-                settings.metadataURL = geographyOptions.find(a => a.value == e.target.value).URL;
-                console.log('Geography selected: ' + settings.metadataURL);
-            });
-
-        }
+        complete: d => onDataLoad(d)
     });
 });
+
+function onDataLoad(results) {
+    // Create a promise for loading the GeoJSON file
+    geoJSONPromise = fetch(datasetGeoJSON).then(response => response.json()).then(function (data) {
+        geoJSONData = data;
+        return data;
+    });
+
+    store = results.data.map(row => {
+        // Convert each row to an object
+        return Object.fromEntries(
+            Object.entries(row).map(([key, value]) => {
+                // Convert empty strings to null
+                return [key, value === "" ? null : value];
+            })
+        );
+    }).sort((a, b) => b[datasetIndex] - a[datasetIndex]);
+    Object.entries(dimensions).filter(v => v[1].bins).forEach((d, idx) => {
+        const binSize = store.length / d[1].bins[0];
+        const suffix = (d[1].bins[0] == 10) ? ' decile' : (d[1].bins[0] == 100) ? ' centile' : ' binned';
+        // Calculate the binned variables
+        store.map((a, idx) => {
+            return ({
+                index: idx,
+                value: a[d[0]]
+            });
+        }).sort((a, b) => (a.value - b.value)).map((e, i) => {
+            const value = parseInt(i / binSize) + 1;
+            store[e.index][d[0] + suffix] = value;
+        });
+        dimensions[d[0] + suffix] = {
+            type: 'Binned',
+            binSource: d[0]
+        };
+        if (d[1].hasOwnProperty('description')) {
+            dimensions[d[0] + suffix].description = d[1].description + suffix;
+        }
+        if (d[1].hasOwnProperty('URL')) {
+            dimensions[d[0] + suffix].URL = d[1].URL;
+        }
+        if (d[1].hasOwnProperty('date')) {
+            dimensions[d[0] + suffix].date = d[1].date;
+        }
+        if (d[1].hasOwnProperty('extremes')) {
+            dimensions[d[0] + suffix].extremes = d[1].extremes;
+        }
+        if (d[1].title) {
+            dimensions[d[0] + suffix].title = d[1].title + suffix;
+        }
+    });
+    if (dimensions.hasOwnProperty(params.get("x"))) {
+        settings.x = params.get("x");
+    } else {
+        settings.x = Object.entries(dimensions).filter(a => a[1].type == 'Metric')[0][0];
+    }
+    if (dimensions.hasOwnProperty(params.get("y"))) {
+        settings.y = params.get("y");
+    } else {
+        settings.y = Object.entries(dimensions).filter(a => a[1].type == 'Metric')[1][0];
+    }
+    if (dimensions.hasOwnProperty(params.get("colour"))) {
+        settings.colour = params.get("colour");
+    } else {
+        settings.colour = Object.entries(dimensions).filter(a => a[1].type == 'Category')[0][0];
+    }
+    if (dimensions.hasOwnProperty(params.get("smallMultiple"))) {
+        settings.smallMultiple = params.get("smallMultiple");
+    } else {
+        settings.smallMultiple = 'None';
+    }
+    updateChart();
+
+    // Fill out the options in the selectors based on the dimensions of the dataset
+    // Hide x options when selected for y and vice versa
+    var ogxm = createOptGroup('Metrics');
+    var ogym = createOptGroup('Metrics');
+    var ogmc = createOptGroup('Categories');
+    var ogmb = createOptGroup('Binned metrics');
+    var ogcc = createOptGroup('Categories');
+    var ogcb = createOptGroup('Binned metrics');
+    for (const [key, value] of Object.entries(dimensions)) {
+        if (value.type == 'Metric') {
+            ogxm.append(createOption(useTitleIfExists(key), key, (key == settings.x), (key == settings.y)));
+            ogym.append(createOption(useTitleIfExists(key), key, (key == settings.y), (key == settings.x)));
+        } else if (value.type == 'Category') {
+            ogmc.append(createOption(useTitleIfExists(key), key, false, false));
+            ogcc.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
+        } else if (value.type == 'Binned') {
+            ogmb.append(createOption(useTitleIfExists(key), key, false, false));
+            ogcb.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
+        }
+    }
+    ogym.append(createOption('Count of ' + datasetTitle + 's', 'Count of ' + datasetTitle + 's', false, true));
+    document.getElementById("x-select").append(ogxm);
+    document.getElementById("y-select").append(ogym);
+    ogmc.append(createOption('None', 'None', true, false));
+    document.getElementById("multiple-select").append(ogmc, ogmb);
+    document.getElementById("colour-select").append(ogcc, ogcb);
+
+    for (const key of Object.keys(metbrewer)) {
+        document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
+    }
+    handleXVariableChange((dimensions[settings.x].type == 'Binned') ? dimensions[settings.x].binSource : settings.x, (dimensions[settings.x].type == 'Binned'));
+
+    $('#x-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
+    $('#y-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
+    $('#colour-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
+    $('#multiple-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
+    $('#palette-select').select2({ width: '100%', dropdownParent: $("#bottom-sheet") });
+    $('#geography-select').select2({ width: '100%', dropdownParent: $("#bottom-sheet") });
+
+    // When the selectors change, update the chart options
+    $('#multiple-select').on('select2:select', function (e) {
+        settings.smallMultiple = e.target.value;
+        updateChart();
+    });
+
+    $('#colour-select').on('select2:select', function (e) {
+        settings.colour = e.target.value;
+        const numCats = orderCategories(settings.colour).length;
+        // Handle the case where the palette doesn't hold enough colours by hiding options and selecting an alternative
+        var change = false;
+        if (numCats > metbrewer[settings.palette].colours.length) {
+            change = true;
+        }
+        var pselect = document.getElementById("palette-select");
+        for (var i = 0; i < pselect.length; i++) {
+            if (numCats > metbrewer[pselect[i].value].colours.length) {
+                pselect[i].disabled = true;
+                pselect[i].selected = false;
+            } else {
+                pselect[i].disabled = false;
+                if (change) {
+                    settings.palette = pselect[i].value;
+                    pselect[i].selected = true;
+                    change = false;
+                }
+            }
+        }
+        $('#palette-select').trigger('change');
+        updateChart();
+    });
+
+    $('#palette-select').on('select2:select', function (e) {
+        settings.palette = e.target.value;
+        updateChart();
+    });
+
+    $('#x-select').on('select2:select', function (e) {
+        handleXVariableChange(e.target.value, document.getElementById('x-binned').checked);
+        updateChart();
+    });
+
+    $('#y-select').on('select2:select', function (e) {
+        settings.y = e.target.value;
+        hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? 'Count of ' + datasetTitle + 's' : settings.y, settings.x);
+        $('#x-select').trigger('change');
+        updateChart();
+    });
+
+    $('#geography-select').on('select2:select', function (e) {
+        settings.metadataURL = geographyOptions.find(a => a.value == e.target.value).URL;
+        console.log('Geography selected: ' + settings.metadataURL);
+        // First load the metadata
+        $.get(settings.metadataURL)
+            .done(function(metadataData) {
+                updateMetadata(metadataData);
+                // Load sa-stats.json with the dynamically constructed URL
+                Papa.parse(datasetURL, {
+                    download: true,
+                    header: true,
+                    dynamicTyping: true,
+                    skipEmptyLines: true,
+                    complete: d => onDataLoad(d)
+                });
+            })
+            .fail(function(error) {
+                console.error('Error loading data:', error);
+            });
+    });
+}
 
 function matchWithOptGroups(params, data) {
     // If there are no search terms, return all of the data
