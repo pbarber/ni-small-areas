@@ -339,7 +339,19 @@ for k, v in census21index.items():
         dz_stats = dz_stats.merge(census, how='left', left_on='Geography Code', right_on='Geography Code')
 #    sa_stats.drop(columns=['SA Code_y', 'SA Code_x', 'SA Code'], inplace=True, errors='ignore')
 
+download_file_if_not_exists('https://www.nisra.gov.uk/system/files/statistics/geography-census-2021-population-weighted-centroids-for-data-zones-and-super-data-zones.xlsx', 'geography-census-2021-population-weighted-centroids-for-data-zones-and-super-data-zones.xlsx')
+centroids = pandas.read_excel('geography-census-2021-population-weighted-centroids-for-data-zones-and-super-data-zones.xlsx')
+trans = Transformer.from_crs("EPSG:29902", "EPSG:4326", always_xy=True)
+coords = centroids[['DZ2021_code','X','Y']]
+coords['centroid_x'],coords['centroid_y'] = trans.transform(coords['X'].values, coords['Y'].values)
+coords.drop(columns=['X','Y'], inplace=True)
+dz_stats = dz_stats.merge(coords, how='left', left_on='Geography Code', right_on='DZ2021_code')
+dz_stats.drop(columns=['DZ2021_code'], inplace=True)
+
 # %%
 dz_stats.to_csv('dz-stats.csv', index=False)
+
+# %%
+
 
 # %%

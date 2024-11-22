@@ -66,6 +66,22 @@
             "date": "2023-02-21",
             "description": "Perimeter (kilometers)",
             "title": "Perimeter (kilometers)"
+        },
+        "centroid_x": {
+            "type": "Metric",
+            "title": "Longitude",
+            "dataMin": true,
+            "URL": "https://www.nisra.gov.uk/publications/census-2021-population-weighted-centroids-data-zones-and-super-data-zones",
+            "date": "2023-10-06",
+            "description": "Longitude (west-east) of the population-weighted centroid of the Data Zone in EPSG:4326"
+        },
+        "centroid_y": {
+            "type": "Metric",
+            "title": "Latitude",
+            "dataMin": true,
+            "URL": "https://www.nisra.gov.uk/publications/census-2021-population-weighted-centroids-data-zones-and-super-data-zones",
+            "date": "2023-10-06",
+            "description": "Latitude (south-north) of the population-weighted centroid of the Data Zone in EPSG:4326"
         }
     }
 }
