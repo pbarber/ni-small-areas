@@ -321,23 +321,22 @@ dz2021[['DZ2021_cd','LGD2014_nm','Area_ha','Perim_km']]
 
 # Load DZ NI 2021 Census data
 dz_stats = pandas.DataFrame(dz2021[['DZ2021_cd','LGD2014_nm','Area_ha','Perim_km']])
-dz_stats.rename(columns={'DZ2021_cd':'Geography Code'}, inplace=True)
 for k, v in census21index.items():
     download_file_if_not_exists(v.get('url'), os.path.basename(v.get('url')))
     census = pandas.read_excel(os.path.basename(v.get('url')), sheet_name='DZ', skiprows=v.get('skip'))
     if 'Geography code' in census:
         census.set_index('Geography code', inplace=True)
-        census.rename_axis('Geography Code', inplace=True)
     else:
         census.set_index('Geography Code', inplace=True)
+    census.rename_axis('DZ2021_cd', inplace=True)
     if not v.get('allcols', False):
         census = census.filter(regex=r'\(%\)').reset_index()
     census.drop(columns=['Access census area explorer'], inplace=True, errors='ignore')
     if len(dz_stats)==0:
         dz_stats = census.reset_index()
     else:
-        dz_stats = dz_stats.merge(census, how='left', left_on='Geography Code', right_on='Geography Code')
-#    sa_stats.drop(columns=['SA Code_y', 'SA Code_x', 'SA Code'], inplace=True, errors='ignore')
+        dz_stats = dz_stats.merge(census, how='left', left_on='DZ2021_cd', right_on='DZ2021_cd', suffixes=('','.y'))
+    dz_stats.drop(columns=['DZ2021_cd.y'], inplace=True, errors='ignore')
 
 download_file_if_not_exists('https://www.nisra.gov.uk/system/files/statistics/geography-census-2021-population-weighted-centroids-for-data-zones-and-super-data-zones.xlsx', 'geography-census-2021-population-weighted-centroids-for-data-zones-and-super-data-zones.xlsx')
 centroids = pandas.read_excel('geography-census-2021-population-weighted-centroids-for-data-zones-and-super-data-zones.xlsx')
@@ -345,7 +344,7 @@ trans = Transformer.from_crs("EPSG:29902", "EPSG:4326", always_xy=True)
 coords = centroids[['DZ2021_code','X','Y']]
 coords['centroid_x'],coords['centroid_y'] = trans.transform(coords['X'].values, coords['Y'].values)
 coords.drop(columns=['X','Y'], inplace=True)
-dz_stats = dz_stats.merge(coords, how='left', left_on='Geography Code', right_on='DZ2021_code')
+dz_stats = dz_stats.merge(coords, how='left', left_on='DZ2021_cd', right_on='DZ2021_code', suffixes=('','.y'))
 dz_stats.drop(columns=['DZ2021_code'], inplace=True)
 
 # %%

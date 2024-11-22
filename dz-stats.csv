@@ -1,4 +1,4 @@
-Geography Code,LGD2014_nm,Area_ha,Perim_km,Geography,All usual residents,"Area (hectares)
+DZ2021_cd,LGD2014_nm,Area_ha,Perim_km,Geography,All usual residents,"Area (hectares)
 [note 1, 2]",Population density (number of usual residents per hectare),centroid_x,centroid_y
 N20000001,Antrim and Newtownabbey,2070.68,22.93,Dunsilly_A1,738,2070.68,0.3564053890092005,-6.183137710463847,54.786816888212705
 N20000002,Antrim and Newtownabbey,1253.69,19.14,Dunsilly_B1,331,1253.69,0.264020328862373,-6.039263058917461,54.788592277031405

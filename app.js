@@ -6,6 +6,7 @@
 // TODO: allow non-ranked binning for Metrics
 // TODO: load a column at a time from S3
 // TODO: Add NIMDM travel data for small areas
+// TODO: add links to the NISRA data zone pages
 
 // Initialize the echarts instance based on the prepared dom
 var myChart = echarts.init(document.getElementById('main'));
@@ -891,6 +892,7 @@ function updateChart() {
             // Get the relevant row from the geoJSON promise
             geoJSONPromise.then(function (geoJSONData) {
                 const relevantFeature = geoJSONData.features.find(feature => feature.properties[datasetIndex] === params.data[3]);
+                console.log(geoJSONData);
 
                 if (relevantFeature) {
                     map.removeLayer(geoJSONLayer);
