@@ -1,9 +1,9 @@
-// TODO: add Data Zones dataset
-// TODO: add dataset selector
+// TODO: fill out Data Zones dataset
 // TODO: add choropleth map
 // TODO: add hex map
-// TODO: add data field categories
-// TODO: non ranked binning
+// TODO: split Metrics into Metrics and Ranks
+// TODO: allow ranking of Metrics
+// TODO: allow non-ranked binning for Metrics
 // TODO: load a column at a time from S3
 // TODO: Add NIMDM travel data for small areas
 
