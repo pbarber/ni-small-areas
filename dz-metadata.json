@@ -1,0 +1,71 @@
+{
+    "dataset": "dz-stats.csv",
+    "title": "Data Zone",
+    "index": "Geography Code",
+    "name": "Geography",
+    "geojson": "dz2021_epsg4326_simplified15.geojson",
+    "dimensions": {
+        "All usual residents": {
+            "type": "Metric",
+            "bins": [
+                  10
+            ],
+            "extremes": [
+                "Least Populated",
+                "Most Populated"
+            ],
+            "summaryOrder": 1,
+            "URL": "https://www.nisra.gov.uk/publications/census-2021-person-and-household-estimates-for-data-zones-in-northern-ireland",
+            "date": "2023-02-21",
+            "description": "Population of all usual residents"
+        },
+        "Population density (number of usual residents per hectare)": {
+            "type": "Metric",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Densely Populated",
+                "Most Densely Populated"
+            ],
+            "URL": "https://www.nisra.gov.uk/publications/census-2021-person-and-household-estimates-for-data-zones-in-northern-ireland",
+            "date": "2023-02-21",
+            "description": "Population density (number of usual residents per hectare)"
+        },
+        "LGD2014_nm": {
+            "type": "Category",
+            "URL": "https://www.nisra.gov.uk/publications/geography-data-zone-boundaries-gis-format",
+            "date": "2023-02-21",
+            "description": "Local Government District",
+            "title": "Local Government District"
+        },
+        "Area_ha": {
+            "type": "Metric",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Smallest area",
+                "Largest area"
+            ],
+            "URL": "https://www.nisra.gov.uk/publications/geography-data-zone-boundaries-gis-format",
+            "date": "2023-02-21",
+            "description": "Area (hectares)",
+            "title": "Area (hectares)"
+        },
+        "Perim_km": {
+            "type": "Metric",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Shortest perimeter",
+                "Longest perimeter"
+            ],
+            "URL": "https://www.nisra.gov.uk/publications/geography-data-zone-boundaries-gis-format",
+            "date": "2023-02-21",
+            "description": "Perimeter (kilometers)",
+            "title": "Perimeter (kilometers)"
+        }
+    }
+}

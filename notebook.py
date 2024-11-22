@@ -5,7 +5,7 @@ from pyproj import Transformer
 import re
 import os
 import requests
-import numpy
+import io
 
 def download_file_if_not_exists(url, fname=None):
     if fname is None:
@@ -17,6 +17,14 @@ def download_file_if_not_exists(url, fname=None):
             with open(fname, 'wb') as f:
                 for chunk in stream.iter_content(chunk_size=8192):
                     f.write(chunk)
+
+census21index = {
+    'MS-A14 Population density': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2021-ms-a14.xlsx',
+        'skip': 5,
+        'allcols': True
+    }
+}
 
 censusindex = {
     'KS101NI Usual Resident Population': {
@@ -292,5 +300,46 @@ hosps = osrm[osrm['to'].isin([1147,103,1820,2300,3739,2401,2983])]
 hosps['from'] = 'N' + hosps['from'].astype(str).str.pad(8, fillchar='0')
 hosps['to'] = 'N' + hosps['to'].astype(str).str.pad(8, fillchar='0')
 hosps.to_csv('sa-hosps.csv', index=False)
+
+# %%
+download_file_if_not_exists('https://explore.nisra.gov.uk/postcode-search/CPD_LIGHT_JULY_2024.csv')
+with open('CPD_LIGHT_JULY_2024.csv', 'r') as fd:
+    content = re.sub(r'NEWRY,\s+MOURNE', r'NEWRY\, MOURNE', fd.read())
+    content = re.sub(r'Newry,\s+Mourne', r'Newry\, Mourne', content)
+    n = 1
+    for line in content.splitlines():
+        if (n==12383):
+            print(line)
+            break
+        n += 1
+    postcodes = pandas.read_csv(io.StringIO(content), escapechar="\\")
+
+# %%
+# Load the Small Areas boundaries, preconverted to match geometries
+dz2021 = geopandas.read_file('dz2021_epsg4326_simplified15.geojson')
+dz2021[['DZ2021_cd','LGD2014_nm','Area_ha','Perim_km']]
+
+# Load DZ NI 2021 Census data
+dz_stats = pandas.DataFrame(dz2021[['DZ2021_cd','LGD2014_nm','Area_ha','Perim_km']])
+dz_stats.rename(columns={'DZ2021_cd':'Geography Code'}, inplace=True)
+for k, v in census21index.items():
+    download_file_if_not_exists(v.get('url'), os.path.basename(v.get('url')))
+    census = pandas.read_excel(os.path.basename(v.get('url')), sheet_name='DZ', skiprows=v.get('skip'))
+    if 'Geography code' in census:
+        census.set_index('Geography code', inplace=True)
+        census.rename_axis('Geography Code', inplace=True)
+    else:
+        census.set_index('Geography Code', inplace=True)
+    if not v.get('allcols', False):
+        census = census.filter(regex=r'\(%\)').reset_index()
+    census.drop(columns=['Access census area explorer'], inplace=True, errors='ignore')
+    if len(dz_stats)==0:
+        dz_stats = census.reset_index()
+    else:
+        dz_stats = dz_stats.merge(census, how='left', left_on='Geography Code', right_on='Geography Code')
+#    sa_stats.drop(columns=['SA Code_y', 'SA Code_x', 'SA Code'], inplace=True, errors='ignore')
+
+# %%
+dz_stats.to_csv('dz-stats.csv', index=False)
 
 # %%
