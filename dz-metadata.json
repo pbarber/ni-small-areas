@@ -82,6 +82,123 @@
             "URL": "https://www.nisra.gov.uk/publications/census-2021-population-weighted-centroids-data-zones-and-super-data-zones",
             "date": "2023-10-06",
             "description": "Latitude (south-north) of the population-weighted centroid of the Data Zone in EPSG:4326"
+        },
+        "Attendance Allowance": {
+            "type": "Metric",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Support",
+                "Most Support"
+            ],
+            "URL": "https://data.nisra.gov.uk/table/BSDZ",
+            "date": "2024-09-24",
+            "description": "Number of people claiming Attendance Allowance"
+        }, 
+        "Carer's Allowance": {
+            "type": "Metric",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Support",
+                "Most Support"
+            ],
+            "URL": "https://data.nisra.gov.uk/table/BSDZ",
+            "date": "2024-09-24",
+            "description": "Number of people claiming Carer's Allowance"
+        },
+        "Disability Living Allowance": {
+            "type": "Metric",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Support",
+                "Most Support"
+            ],
+            "URL": "https://data.nisra.gov.uk/table/BSDZ",
+            "date": "2024-09-24",
+            "description": "Number of people claiming Disability Living Allowance"
+        }, 
+        "Employment & Support Allowance": {
+            "type": "Metric",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Support",
+                "Most Support"
+            ],
+            "URL": "https://data.nisra.gov.uk/table/BSDZ",
+            "date": "2024-09-24",
+            "description": "Number of people claiming Employment & Support Allowance"
+        },
+        "Income Support": {
+            "type": "Metric",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Support",
+                "Most Support"
+            ],
+            "URL": "https://data.nisra.gov.uk/table/BSDZ",
+            "date": "2024-09-24",
+            "description": "Number of people claiming Income Support"
+        }, 
+        "Jobseekers Allowance": {
+            "type": "Metric",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Support",
+                "Most Support"
+            ],
+            "URL": "https://data.nisra.gov.uk/table/BSDZ",
+            "date": "2024-09-24",
+            "description": "Number of people claiming Jobseekers Allowance"
+        }, 
+        "Pension Credit": {
+            "type": "Metric",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Support",
+                "Most Support"
+            ],
+            "URL": "https://data.nisra.gov.uk/table/BSDZ",
+            "date": "2024-09-24",
+            "description": "Number of people claiming Pension Credit"
+        }, 
+        "Personal Independence Payment": {
+            "type": "Metric",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Support",
+                "Most Support"
+            ],
+            "URL": "https://data.nisra.gov.uk/table/BSDZ",
+            "date": "2024-09-24",
+            "description": "Number of people claiming Personal Independence Payment"
+        }, 
+        "Retirement Pension": {
+            "type": "Metric",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Support",
+                "Most Support"
+            ],
+            "URL": "https://data.nisra.gov.uk/table/BSDZ",
+            "date": "2024-09-24",
+            "description": "Number of people claiming Retirement Pension"
         }
     }
 }

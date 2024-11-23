@@ -3,3 +3,4 @@ pandas
 geopandas
 openpyxl
 xlrd
+pyjstat

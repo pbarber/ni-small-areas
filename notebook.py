@@ -6,17 +6,26 @@ import re
 import os
 import requests
 import io
+import json
+from pyjstat import pyjstat
 
-def download_file_if_not_exists(url, fname=None):
+def download_file_if_not_exists(url, fname=None, jsonkey=None):
     if fname is None:
         fname = os.path.basename(url)
     if not os.path.isfile(fname):
         session = requests.Session()
-        with session.get(url, stream=True) as stream:
-            stream.raise_for_status()
-            with open(fname, 'wb') as f:
-                for chunk in stream.iter_content(chunk_size=8192):
-                    f.write(chunk)
+        if jsonkey is None:
+            with session.get(url, stream=True) as stream:
+                stream.raise_for_status()
+                with open(fname, 'wb') as f:
+                    for chunk in stream.iter_content(chunk_size=8192):
+                        f.write(chunk)
+        else:
+            resp = session.get(url)
+            resp.raise_for_status()
+            print(resp.json())
+            with open(fname, 'w') as f:
+                json.dump(resp.json().get(jsonkey), f)
 
 census21index = {
     'MS-A14 Population density': {
@@ -348,9 +357,12 @@ dz_stats = dz_stats.merge(coords, how='left', left_on='DZ2021_cd', right_on='DZ2
 dz_stats.drop(columns=['DZ2021_code'], inplace=True)
 
 # %%
-dz_stats.to_csv('dz-stats.csv', index=False)
+dataset = pyjstat.Dataset.read('https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/BSDZ/JSON-stat/1.0/en')
+benefits = dataset.write('dataframe')
+benefits = benefits[benefits['Year']=='2024'].drop(columns='Year').pivot(index='Data Zones', columns='Statistic', values='value').rename_axis('Geography')
+dz_stats.merge(benefits, how='left', on='Geography')
 
 # %%
-
+dz_stats.to_csv('dz-stats.csv', index=False)
 
 # %%
