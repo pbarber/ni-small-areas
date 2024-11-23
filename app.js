@@ -298,7 +298,6 @@ function onDataLoad(results) {
 
     $('#geography-select').on('select2:select', function (e) {
         settings.metadataURL = geographyOptions.find(a => a.value == e.target.value).URL;
-        console.log('Geography selected: ' + settings.metadataURL);
         // First load the metadata
         $.get(settings.metadataURL)
             .done(function(metadataData) {
@@ -892,7 +891,6 @@ function updateChart() {
             // Get the relevant row from the geoJSON promise
             geoJSONPromise.then(function (geoJSONData) {
                 const relevantFeature = geoJSONData.features.find(feature => feature.properties[datasetIndex] === params.data[3]);
-                console.log(geoJSONData);
 
                 if (relevantFeature) {
                     map.removeLayer(geoJSONLayer);
