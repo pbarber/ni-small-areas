@@ -8,6 +8,8 @@ import requests
 import io
 import json
 from pyjstat import pyjstat
+from bs4 import BeautifulSoup
+import logging
 
 def download_file_if_not_exists(url, fname=None, jsonkey=None):
     if fname is None:
@@ -360,7 +362,40 @@ dz_stats.drop(columns=['DZ2021_code'], inplace=True)
 dataset = pyjstat.Dataset.read('https://ws-data.nisra.gov.uk/public/api.restful/PxStat.Data.Cube_API.ReadDataset/BSDZ/JSON-stat/1.0/en')
 benefits = dataset.write('dataframe')
 benefits = benefits[benefits['Year']=='2024'].drop(columns='Year').pivot(index='Data Zones', columns='Statistic', values='value').rename_axis('Geography')
-dz_stats.merge(benefits, how='left', on='Geography')
+dz_stats = dz_stats.merge(benefits, how='left', on='Geography')
+
+# %%
+def get_stats_from_nisra_builder(population, variables, columns, group, values='Count', index='Census 2021 Data Zone Code'):
+    query = ''.join(f'&v={v}' for v in variables)
+    resp = requests.get(f'https://build.nisra.gov.uk/en/custom/table.csv?d={population}{query}')
+    resp.raise_for_status()
+    df = pandas.read_csv(io.StringIO(resp.text))
+    df = df.pivot(index=index, columns=columns, values=values).rename_axis('DZ2021_cd')
+    return(df.add_prefix(f'{group}: ', axis='columns'))
+
+# %%
+session = requests.Session()
+base_url = 'https://build.nisra.gov.uk'
+tables = []
+for pop in ['PEOPLE', 'HOUSEHOLD']:
+    resp = session.get(base_url + f'/en/custom/variables?d={pop}&v=DZ21&st=')
+    resp.raise_for_status()
+    html = BeautifulSoup(resp.text)
+    for a in html.find_all('a', class_='choice__target', href=True):
+        sub = session.get(base_url + a['href'])
+        sub.raise_for_status()
+        subhtml = BeautifulSoup(sub.text)
+        labels = subhtml.find_all('label', class_='radio__label')
+        [tables.append({'population': pop, 'variables': [l.get('for')],'name': l.text.strip('\n')}) for l in labels]
+
+# %%
+for t in tables:
+    try:
+        table = get_stats_from_nisra_builder(t['population'], ['DZ21'] + t['variables'], t['name'] + ' Label', t['name'])
+    except Exception as e:
+        logging.exception(f'Caught error accessing {t['name']}')
+    else:
+        dz_stats = dz_stats.merge(table, how='left', on='DZ2021_cd')
 
 # %%
 dz_stats.to_csv('dz-stats.csv', index=False)

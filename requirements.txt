@@ -4,3 +4,4 @@ geopandas
 openpyxl
 xlrd
 pyjstat
+beautifulsoup4
