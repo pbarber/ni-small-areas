@@ -6,7 +6,6 @@
 // TODO: allow non-ranked binning for Metrics
 // TODO: load a column at a time from S3
 // TODO: Add NIMDM travel data for small areas
-// TODO: add links to the NISRA data zone pages
 
 // Initialize the echarts instance based on the prepared dom
 var myChart = echarts.init(document.getElementById('main'));
@@ -87,6 +86,8 @@ function updateMetadata(metadata) {
     datasetIndex = metadata.index;
     datasetName = metadata.name;
     datasetGeoJSON = metadata.geojson;
+    datasetExploreURL = metadata.exploreURL;
+    datasetExplorerName = metadata.explorerName;
     settings.chartTitle = "NI " + datasetTitle + " statistics explorer";
     return metadata;
 }
@@ -873,6 +874,12 @@ function updateChart() {
                 ${useTitleIfExists(settings.y)}: ${params.data[1]}
             `;
             document.getElementById('area-details-modal-point').innerHTML = content;
+
+            if (datasetExplorerName) {
+                document.getElementById('area-details-explorer-link').innerHTML = `More details on <a target="_blank" href="${datasetExploreURL.replace('{code}', params.data[3])}">${datasetExplorerName} for ${params.data[5]}&nbsp;<i class="material-icons tiny" style="vertical-align: middle;">open_in_new</i></a> `;
+            } else {
+                document.getElementById('area-details-explorer-link').innerHTML = '';
+            }
 
             const fullDetails = store.filter(e => e[datasetIndex] == params.data[3])[0];
 

@@ -4,6 +4,8 @@
     "index": "DZ2021_cd",
     "name": "Geography",
     "geojson": "dz2021_epsg4326_simplified15.geojson",
+    "exploreURL": "https://explore.nisra.gov.uk/area-explorer-2021/{code}",
+    "explorerName": "NISRA Area Explorer",
     "dimensions": {
         "All usual residents": {
             "type": "Metric",
