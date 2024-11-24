@@ -283,14 +283,15 @@ sa_stats.to_json('sa-stats.json', orient='records')
 sa_stats.to_csv('sa-stats.csv', index=False)
 
 # %%
-import json
-with open('sa-metadata.json') as fd:
-    meta = json.load(fd)
-meta = pandas.DataFrame.from_dict(meta['dimensions'], orient='index')
-sa_stats.columns
-meta.index[~meta.index.isin(sa_stats.columns)]
-missing = sa_stats.columns[~sa_stats.columns.isin(meta.index)].to_list()
-with open('missing.json', 'w') as fd:
+def identify_missing(metadatafile, df):
+    with open(metadatafile) as fd:
+        meta = json.load(fd)
+    meta = pandas.DataFrame.from_dict(meta['dimensions'], orient='index')
+    missing = df.columns[~df.columns.isin(meta.index)].to_list()
+    return missing
+
+missing = identify_missing('sa-metadata.json', sa_stats)
+with open('sa-missing.json', 'w') as fd:
     json.dump(missing, fd)
 
 # %% Write file to be used by OSRM
@@ -365,12 +366,11 @@ benefits = benefits[benefits['Year']=='2024'].drop(columns='Year').pivot(index='
 dz_stats = dz_stats.merge(benefits, how='left', on='Geography')
 
 # %%
-def get_stats_from_nisra_builder(population, variables, columns, group, values='Count', index='Census 2021 Data Zone Code'):
-    query = ''.join(f'&v={v}' for v in variables)
-    resp = requests.get(f'https://build.nisra.gov.uk/en/custom/table.csv?d={population}{query}')
+def get_stats_from_nisra_builder(url, group, values='Count', index='Census 2021 Data Zone Code'):
+    resp = requests.get(url)
     resp.raise_for_status()
     df = pandas.read_csv(io.StringIO(resp.text))
-    df = df.pivot(index=index, columns=columns, values=values).rename_axis('DZ2021_cd')
+    df = df.pivot(index=index, columns=(group + ' Label'), values=values).rename_axis('DZ2021_cd')
     return(df.add_prefix(f'{group}: ', axis='columns'))
 
 # %%
@@ -386,18 +386,37 @@ for pop in ['PEOPLE', 'HOUSEHOLD']:
         sub.raise_for_status()
         subhtml = BeautifulSoup(sub.text)
         labels = subhtml.find_all('label', class_='radio__label')
-        [tables.append({'population': pop, 'variables': [l.get('for')],'name': l.text.strip('\n')}) for l in labels]
+        for l in labels:
+            query = '?d=' + pop + (''.join(f'&v={v}' for v in ['DZ21', l.get('for')]))
+            tables.append(
+                {
+                    'name': l.text.strip('\n'),
+                    'pageurl': f'{base_url}/en/custom/data{query}',
+                    'csvurl': f'{base_url}/en/custom/table.csv{query}'
+                }
+            )
 
 # %%
+fields = {}
 for t in tables:
     try:
-        table = get_stats_from_nisra_builder(t['population'], ['DZ21'] + t['variables'], t['name'] + ' Label', t['name'])
+        table = get_stats_from_nisra_builder(t['csvurl'], t['name'])
     except Exception as e:
         logging.exception(f'Caught error accessing {t['name']}')
     else:
         dz_stats = dz_stats.merge(table, how='left', on='DZ2021_cd')
+        [fields.update({c: {'url': t['pageurl'], 'type': 'Metric'}}) for c in table.columns.to_list()]
 
 # %%
 dz_stats.to_csv('dz-stats.csv', index=False)
+
+# %%
+missing = identify_missing('dz-metadata.json', dz_stats)
+with open('dz-missing.json', 'w') as fd:
+    json.dump(missing, fd)
+
+# %%
+with open('table-builder.json', 'w') as fd:
+    json.dump(tables, fd)
 
 # %%
