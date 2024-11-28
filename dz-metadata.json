@@ -208,7 +208,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Stable", "Most Stable"],
             "date": "2024-04-03",
             "description": "Classifies people according to their place of residence 12 months before Census Day (21 March 2021). It provides an indicator of the movement of people within Northern Ireland and from outside Northern Ireland, in the one-year period before the census. This variable is applicable to people aged 1 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -218,7 +218,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Immigrants", "Most Immigrants"],
             "date": "2024-04-03",
             "description": "Classifies people according to their place of residence 12 months before Census Day (21 March 2021). It provides an indicator of the movement of people within Northern Ireland and from outside Northern Ireland, in the one-year period before the census. This variable is applicable to people aged 1 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -228,17 +228,13 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Internal Movement", "Most Internal Movement"],
             "date": "2024-04-03",
             "description": "Classifies people according to their place of residence 12 months before Census Day (21 March 2021). It provides an indicator of the movement of people within Northern Ireland and from outside Northern Ireland, in the one-year period before the census. This variable is applicable to people aged 1 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
-        "Address One Year Ago - 4 Categories: No code required": {
+        "Address One Year Ago - 4 Categories: "Most  {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADDRESS_ONE_YEAR_AGO_NI_AGG4",
             "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
             "date": "2024-04-03",
             "description": "Classifies people according to their place of residence 12 months before Census Day (21 March 2021). It provides an indicator of the movement of people within Northern Ireland and from outside Northern Ireland, in the one-year period before the census. This variable is applicable to people aged 1 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -248,7 +244,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Stable Residents", "Most Stable Residents"],
             "date": "2024-04-03",
             "description": "Classifies people according to their place of residence 12 months before Census Day (21 March 2021). It provides an indicator of the movement of people within Northern Ireland and from outside Northern Ireland, in the one-year period before the census. This variable is applicable to people aged 1 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -258,7 +254,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Immigrants", "Most Immigrants"],
             "date": "2024-04-03",
             "description": "Classifies people according to their place of residence 12 months before Census Day (21 March 2021). It provides an indicator of the movement of people within Northern Ireland and from outside Northern Ireland, in the one-year period before the census. This variable is applicable to people aged 1 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -268,7 +264,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Immigrants", "Most Immigrants"],
             "date": "2024-04-03",
             "description": "Classifies people according to their place of residence 12 months before Census Day (21 March 2021). It provides an indicator of the movement of people within Northern Ireland and from outside Northern Ireland, in the one-year period before the census. This variable is applicable to people aged 1 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -278,7 +274,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Immigrants", "Most Immigrants"],
             "date": "2024-04-03",
             "description": "Classifies people according to their place of residence 12 months before Census Day (21 March 2021). It provides an indicator of the movement of people within Northern Ireland and from outside Northern Ireland, in the one-year period before the census. This variable is applicable to people aged 1 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -288,17 +284,13 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Internal Movement", "Most Internal Movement"],
             "date": "2024-04-03",
             "description": "Classifies people according to their place of residence 12 months before Census Day (21 March 2021). It provides an indicator of the movement of people within Northern Ireland and from outside Northern Ireland, in the one-year period before the census. This variable is applicable to people aged 1 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
-        "Address One Year Ago: No code required": {
+        "Address One Year Ago: "Most  {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADDRESS_ONE_YEAR_AGO_AGG6",
             "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
             "date": "2024-04-03",
             "description": "Classifies people according to their place of residence 12 months before Census Day (21 March 2021). It provides an indicator of the movement of people within Northern Ireland and from outside Northern Ireland, in the one-year period before the census. This variable is applicable to people aged 1 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -308,7 +300,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Young Parents", "Most Young Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -318,7 +310,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Young Adults", "Most Young Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -328,7 +320,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Mid-age Parents", "Most Mid-age Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -338,7 +330,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Mid-age Adults", "Most Mid-age Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -348,17 +340,13 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Senior Adults", "Most Senior Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
-        "Adult Lifestage - 6 Categories: No code required": {
+        "Adult Lifestage - 6 Categories: "Most  {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADULT_LIFESTAGE_AGG6",
             "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -368,7 +356,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Young Parents", "Most Young Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -378,7 +366,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Young Adults", "Most Young Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -388,7 +376,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Mid-age Parents", "Most Mid-age Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -398,7 +386,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Mid-age Adults", "Most Mid-age Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -408,7 +396,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Senior Parents", "Most Senior Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -418,7 +406,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Senior Adults", "Most Senior Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -428,17 +416,13 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Elderly Adults", "Most Elderly Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
-        "Adult Lifestage - 8 Categories: No code required": {
+        "Adult Lifestage - 8 Categories: "Most  {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADULT_LIFESTAGE_AGG8",
             "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -448,7 +432,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Young Parents", "Most Young Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -458,7 +442,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Young Adults", "Most Young Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -468,7 +452,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Mid-age Parents", "Most Mid-age Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -478,7 +462,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Mid-age Adults", "Most Mid-age Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -488,7 +472,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Mid-age Parents", "Most Mid-age Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -498,7 +482,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Mid-age Adults", "Most Mid-age Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -508,7 +492,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Senior Parents", "Most Senior Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -518,7 +502,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Senior Adults", "Most Senior Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -528,7 +512,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Senior Parents", "Most Senior Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -538,17 +522,13 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Senior Adults", "Most Senior Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
-        "Adult Lifestage - 11 Categories: No code required": {
+        "Adult Lifestage - 11 Categories: "Most  {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADULT_LIFESTAGE_AGG11",
             "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -558,7 +538,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Young Parents", "Most Young Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -568,7 +548,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Young Adults", "Most Young Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -578,7 +558,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least New Parents", "Most New Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -588,7 +568,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Teen Parents", "Most Teen Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -598,7 +578,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Primary Parents", "Most Primary Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -608,7 +588,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Mid-age Adults", "Most Mid-age Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -618,7 +598,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Solo Pre-retired", "Most Solo Pre-retired"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -628,7 +608,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Older Parents", "Most Older Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -638,7 +618,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Empty Nesters", "Most Empty Nesters"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -648,7 +628,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Solo Elderly", "Most Solo Elderly"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -658,7 +638,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Senior Parents", "Most Senior Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -668,17 +648,13 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Retired Couples", "Most Retired Couples"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
-        "Adult Lifestage - 13 Categories: No code required": {
+        "Adult Lifestage - 13 Categories: "Most  {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADULT_LIFESTAGE_AGG13",
             "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -688,7 +664,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Young Parents", "Most Young Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -698,37 +674,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
-        },
-        "Adult Lifestage: Age 25-34 years: Dependent children in household: Youngest dependent child in household aged 0-4 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADULT_LIFESTAGE_AGG20",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
-        },
-        "Adult Lifestage: Age 25-34 years: Dependent children in household: Youngest dependent child in household aged 12-18 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADULT_LIFESTAGE_AGG20",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
-        },
-        "Adult Lifestage: Age 25-34 years: Dependent children in household: Youngest dependent child in household aged 5-11 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADULT_LIFESTAGE_AGG20",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
+            "extremes": ["Least Young Adults", "Most Young Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -738,7 +684,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Young Adults", "Most Young Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -748,7 +694,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least New Parents", "Most New Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -758,7 +704,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Teen Parents", "Most Teen Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -768,7 +714,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Primary Parents", "Most Primary Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -778,7 +724,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Mid-age Adults", "Most Mid-age Adults"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -788,7 +734,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Solo Pre-retired", "Most Solo Pre-retired"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -798,7 +744,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Older Parents", "Most Older Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -808,7 +754,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Empty Nesters", "Most Empty Nesters"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -818,7 +764,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Solo Retired", "Most Solo Retired"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -828,7 +774,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Senior Parents", "Most Senior Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -838,7 +784,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Retired Couples", "Most Retired Couples"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -848,7 +794,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Elderly Solo", "Most Elderly Solo"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -858,7 +804,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Elderly Parents", "Most Elderly Parents"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -868,7 +814,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Empty Nesters", "Most Empty Nesters"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
@@ -881,2804 +827,10 @@
             "extremes": [],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
-        },
-        "Age - 2 Categories A: 0-15 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG2A",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 2 Categories A: 16+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG2A",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 2 Categories B: 0-17 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG2B",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 2 Categories B: 18+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG2B",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 2 Categories C: 0-20 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG2C",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 2 Categories C: 21+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG2C",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 2 Categories D: 0-65 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG2D",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 2 Categories D: 66+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG2D",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 3 Categories A: 0-15 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG3A",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 3 Categories A: 16-65 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG3A",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 3 Categories A: 66+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG3A",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 3 Categories B: 0-15 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG3B",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 3 Categories B: 16-74 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG3B",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 3 Categories B: 75+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG3B",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 4 Categories: 0-15 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_BROAD",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 4 Categories: 16-39 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_BROAD",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 4 Categories: 40-64 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_BROAD",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 4 Categories: 65+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_BROAD",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories A: 0-15 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_A",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories A: 16-24 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_A",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories A: 25-34 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_A",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories A: 35-44 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_A",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories A: 45-54 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_A",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories A: 55-64 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_A",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories A: 65+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_A",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories B: 0-15 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_B",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories B: 16-17 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_B",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories B: 18-19 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_B",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories B: 20-24 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_B",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories B: 25-39 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_B",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories B: 40-64 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_B",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 7 Categories B: 65+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG7_B",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 8 Categories: 0-15 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG8",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 8 Categories: 16-24 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG8",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 8 Categories: 25-34 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG8",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 8 Categories: 35-44 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG8",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 8 Categories: 45-54 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG8",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 8 Categories: 55-64 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG8",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 8 Categories: 65-74 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG8",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 8 Categories: 75+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG8",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 10 Categories: 0-9 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_10YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 10 Categories: 10-19 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_10YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 10 Categories: 20-29 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_10YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 10 Categories: 30-39 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_10YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 10 Categories: 40-49 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_10YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 10 Categories: 50-59 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_10YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 10 Categories: 60-69 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_10YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 10 Categories: 70-79 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_10YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 10 Categories: 80-89 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_10YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 10 Categories: 90+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_10YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 11 Categories: 0-15 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG11",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 11 Categories: 16-24 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG11",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 11 Categories: 25-29 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG11",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 11 Categories: 30-34 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG11",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 11 Categories: 35-39 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG11",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 11 Categories: 40-44 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG11",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 11 Categories: 45-49 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG11",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 11 Categories: 50-54 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG11",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 11 Categories: 55-59 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG11",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 11 Categories: 60-64 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG11",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 11 Categories: 65+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG11",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 12 Categories: 0-15 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG12",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 12 Categories: 16-24 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG12",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 12 Categories: 25-29 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG12",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 12 Categories: 30-34 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG12",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 12 Categories: 35-39 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG12",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 12 Categories: 40-44 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG12",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 12 Categories: 45-49 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG12",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 12 Categories: 50-54 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG12",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 12 Categories: 55-59 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG12",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 12 Categories: 60-64 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG12",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 12 Categories: 65-74 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG12",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 12 Categories: 75+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_AGG12",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 0-4 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 10-14 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 15-19 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 20-24 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 25-29 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 30-34 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 35-39 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 40-44 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 45-49 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 5-9 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 50-54 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 55-59 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 60-64 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 65-69 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 70-74 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 75-79 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 80-84 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 85-89 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 19 Categories: 90+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_BAND_5YR",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 0 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 1 year": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 10 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 11 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 12 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 13 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 14 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 15 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 16 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 17 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 18 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 19 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 2 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 20 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 21 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 22 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 23 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 24 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 25 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 26 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 27 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 28 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 29 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 3 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 30 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 31 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 32 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 33 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 34 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 35 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 36 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 37 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 38 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 39 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 4 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 40 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 41 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 42 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 43 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 44 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 45 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 46 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 47 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 48 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 49 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 5 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 50 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 51 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 52 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 53 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 54 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 55 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 56 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 57 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 58 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 59 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 6 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 60 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 61 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 62 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 63 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 64 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 65 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 66 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 67 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 68 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 69 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 7 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 70 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 71 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 72 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 73 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 74 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 75 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 76 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 77 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 78 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 79 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 8 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 80 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 81 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 82 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 83 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 84 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 85+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age - 86 Categories: 9 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA_85",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 0 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 1 year": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 10 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 100+ years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 11 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 12 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 13 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 14 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 15 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 16 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 17 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 18 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 19 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 2 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 20 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 21 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 22 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 23 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 24 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 25 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 26 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 27 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 28 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 29 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 3 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 30 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 31 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 32 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 33 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 34 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 35 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 36 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 37 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 38 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 39 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 4 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 40 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 41 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 42 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 43 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 44 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 45 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 46 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 47 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 48 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 49 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 5 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 50 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 51 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 52 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 53 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 54 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 55 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 56 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 57 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 58 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 59 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 6 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 60 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 61 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 62 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 63 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 64 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 65 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 66 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 67 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 68 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 69 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 7 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 70 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 71 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 72 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 73 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 74 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 75 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 76 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 77 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 78 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 79 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 8 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 80 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 81 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 82 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 83 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 84 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 85 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 86 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 87 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 88 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 89 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 9 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 90 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 91 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 92 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 93 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 94 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 95 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 96 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 97 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 98 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
-        "Age: 99 years": {
-            "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=AGE_SYOA",
-            "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
-            "date": "2024-04-03",
-            "description": "A person's age on Census Day (21 March 2021). Infants less than one year old are classified as 0 years of age."
-        },
+        }
         "Approximated Social Grade: AB: Higher and intermediate managerial, administrative and professional occupations": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=SOCIAL_GRADE",
             "type": "Metric",
-            "bins": [
-                10
-            ],
-            "extremes": [],
             "date": "2024-04-03",
             "description": "The Approximated Social Grade of usual residents living in households with Household Reference Persons aged 16 to 64 years. Census data uses a combined four-way classification for Social Grade:\n\nAB: Higher and intermediate managerial, administrative and professional occupations\nC1: Supervisory, clerical, and junior managerial, administrative and professional occupations\nC2: Skilled manual occupations\nDE: Semi-skilled and unskilled manual occupations; unemployed and lowest grade occupations\n\nSocial Grade is a socio-economic classification approximated from information collected in Census 2021 using a method defined by the Market Research Society. For Census 2021 only the person deemed Household Reference Person (HRP) receives their own Social Grade, and all other members of the household are assigned this grade. Social Grade estimates from census data are more precise for HRPs of working age than for other age groups. Therefore, an Approximated Social Grade for all usual residents in households using the grade of the HRP aged 16 to 64 years is provided. 'No code required' is reported for the subset of the population where no response was expected."
         },
