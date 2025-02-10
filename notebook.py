@@ -313,21 +313,18 @@ hosps['from'] = 'N' + hosps['from'].astype(str).str.pad(8, fillchar='0')
 hosps['to'] = 'N' + hosps['to'].astype(str).str.pad(8, fillchar='0')
 hosps.to_csv('sa-hosps.csv', index=False)
 
-# %%
+# %% Load NISRA CPD
 download_file_if_not_exists('https://explore.nisra.gov.uk/postcode-search/CPD_LIGHT_JULY_2024.csv')
 with open('CPD_LIGHT_JULY_2024.csv', 'r') as fd:
     content = re.sub(r'NEWRY,\s+MOURNE', r'NEWRY\, MOURNE', fd.read())
     content = re.sub(r'Newry,\s+Mourne', r'Newry\, Mourne', content)
-    n = 1
-    for line in content.splitlines():
-        if (n==12383):
-            print(line)
-            break
-        n += 1
+    content = re.sub(r'ARMAGH CITY,\s+BANBRIDGE', r'ARMAGH CITY\, BANBRIDGE', content)
+    content = re.sub(r'Armagh City,\s+Banbridge', r'Armagh City\, Banbridge', content)
+    content = re.sub(r'Armagh,\s+Banbridge', r'Armagh\, Banbridge', content)
+    content = re.sub(r'Boho,Cleenish', r'Boho\,Cleenish', content)
     postcodes = pandas.read_csv(io.StringIO(content), escapechar="\\")
 
-# %%
-# Load the Small Areas boundaries, preconverted to match geometries
+# %% Load the Small Areas boundaries, preconverted to match geometries
 dz2021 = geopandas.read_file('dz2021_epsg4326_simplified15.geojson')
 dz2021[['DZ2021_cd','LGD2014_nm','Area_ha','Perim_km']]
 
@@ -405,7 +402,7 @@ for t in tables:
         logging.exception(f'Caught error accessing {t['name']}')
     else:
         dz_stats = dz_stats.merge(table, how='left', on='DZ2021_cd')
-        [fields.update({c: {'url': t['pageurl'], 'type': 'Metric'}}) for c in table.columns.to_list()]
+        [fields.update({c: {'URL': t['pageurl'], 'type': 'Metric'}}) for c in table.columns.to_list()]
 
 # %%
 dz_stats.to_csv('dz-stats.csv', index=False)
@@ -417,6 +414,23 @@ with open('dz-missing.json', 'w') as fd:
 
 # %%
 with open('table-builder.json', 'w') as fd:
-    json.dump(tables, fd)
+    json.dump(fields, fd)
+
+# %%
+session = requests.Session()
+with open('dz-metadata.json') as fd:
+    fields = json.load(fd)
+    for k, field in fields['dimensions'].items():
+        if field.get('description') is None:
+            m = re.search(r'\?d\=(\w+)\&v\=(\w+)\&v\=(\w+)', field.get('URL'))
+            url = f'https://build.nisra.gov.uk/en/metadata/variable?d={m.group(1)}&v={m.group(3)}'
+            resp = session.get(url)
+            resp.raise_for_status()
+            html = BeautifulSoup(resp.text)
+            fields['dimensions'][k]['description'] = html.find('div', class_='page-section-inner').text
+
+# %%
+with open('dz-metadata.json', 'w') as fd:
+    json.dump(fields, fd)
 
 # %%
