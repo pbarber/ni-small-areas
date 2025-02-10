@@ -5,3 +5,4 @@
 *.txt
 *.geojson
 .DS_Store
+*.zip
