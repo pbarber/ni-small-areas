@@ -232,7 +232,7 @@
             "date": "2024-04-03",
             "description": "Classifies people according to their place of residence 12 months before Census Day (21 March 2021). It provides an indicator of the movement of people within Northern Ireland and from outside Northern Ireland, in the one-year period before the census. This variable is applicable to people aged 1 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
-        "Address One Year Ago - 4 Categories: "Most  {
+        "Address One Year Ago - 4 Categories: No code required": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADDRESS_ONE_YEAR_AGO_NI_AGG4",
             "type": "Metric",
             "date": "2024-04-03",
@@ -288,7 +288,7 @@
             "date": "2024-04-03",
             "description": "Classifies people according to their place of residence 12 months before Census Day (21 March 2021). It provides an indicator of the movement of people within Northern Ireland and from outside Northern Ireland, in the one-year period before the census. This variable is applicable to people aged 1 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
-        "Address One Year Ago: "Most  {
+        "Address One Year Ago: No code required": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADDRESS_ONE_YEAR_AGO_AGG6",
             "type": "Metric",
             "date": "2024-04-03",
@@ -344,7 +344,7 @@
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
-        "Adult Lifestage - 6 Categories: "Most  {
+        "Adult Lifestage - 6 Categories: No code required": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADULT_LIFESTAGE_AGG6",
             "type": "Metric",
             "date": "2024-04-03",
@@ -420,7 +420,7 @@
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
-        "Adult Lifestage - 8 Categories: "Most  {
+        "Adult Lifestage - 8 Categories: No code required": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADULT_LIFESTAGE_AGG8",
             "type": "Metric",
             "date": "2024-04-03",
@@ -526,7 +526,7 @@
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
-        "Adult Lifestage - 11 Categories: "Most  {
+        "Adult Lifestage - 11 Categories: No code required": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADULT_LIFESTAGE_AGG11",
             "type": "Metric",
             "date": "2024-04-03",
@@ -652,7 +652,7 @@
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
         },
-        "Adult Lifestage - 13 Categories: "Most  {
+        "Adult Lifestage - 13 Categories: No code required": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=ADULT_LIFESTAGE_AGG13",
             "type": "Metric",
             "date": "2024-04-03",
@@ -824,13 +824,17 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Most Response Expected", "Least Request Expected"],
             "date": "2024-04-03",
             "description": "Adult Lifestage classifies adults in households by age, whether they live in a one or two-or-more-person household, and whether they share a household with any dependent children. Adult Lifestage applies to all people aged 16 and over living in households. As such, this variable reports 'No code required' for the subset of the population where no response was expected. An adult is defined as anyone aged 16 and over. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s)."
-        }
+        },
         "Approximated Social Grade: AB: Higher and intermediate managerial, administrative and professional occupations": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DZ21&v=SOCIAL_GRADE",
             "type": "Metric",
+            "bins": [
+                10
+            ],
+            "extremes": ["Least AB", "Most AB"],
             "date": "2024-04-03",
             "description": "The Approximated Social Grade of usual residents living in households with Household Reference Persons aged 16 to 64 years. Census data uses a combined four-way classification for Social Grade:\n\nAB: Higher and intermediate managerial, administrative and professional occupations\nC1: Supervisory, clerical, and junior managerial, administrative and professional occupations\nC2: Skilled manual occupations\nDE: Semi-skilled and unskilled manual occupations; unemployed and lowest grade occupations\n\nSocial Grade is a socio-economic classification approximated from information collected in Census 2021 using a method defined by the Market Research Society. For Census 2021 only the person deemed Household Reference Person (HRP) receives their own Social Grade, and all other members of the household are assigned this grade. Social Grade estimates from census data are more precise for HRPs of working age than for other age groups. Therefore, an Approximated Social Grade for all usual residents in households using the grade of the HRP aged 16 to 64 years is provided. 'No code required' is reported for the subset of the population where no response was expected."
         },
@@ -840,7 +844,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least C1", "Most C1"],
             "date": "2024-04-03",
             "description": "The Approximated Social Grade of usual residents living in households with Household Reference Persons aged 16 to 64 years. Census data uses a combined four-way classification for Social Grade:\n\nAB: Higher and intermediate managerial, administrative and professional occupations\nC1: Supervisory, clerical, and junior managerial, administrative and professional occupations\nC2: Skilled manual occupations\nDE: Semi-skilled and unskilled manual occupations; unemployed and lowest grade occupations\n\nSocial Grade is a socio-economic classification approximated from information collected in Census 2021 using a method defined by the Market Research Society. For Census 2021 only the person deemed Household Reference Person (HRP) receives their own Social Grade, and all other members of the household are assigned this grade. Social Grade estimates from census data are more precise for HRPs of working age than for other age groups. Therefore, an Approximated Social Grade for all usual residents in households using the grade of the HRP aged 16 to 64 years is provided. 'No code required' is reported for the subset of the population where no response was expected."
         },
@@ -850,7 +854,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least C2", "Most C2"],
             "date": "2024-04-03",
             "description": "The Approximated Social Grade of usual residents living in households with Household Reference Persons aged 16 to 64 years. Census data uses a combined four-way classification for Social Grade:\n\nAB: Higher and intermediate managerial, administrative and professional occupations\nC1: Supervisory, clerical, and junior managerial, administrative and professional occupations\nC2: Skilled manual occupations\nDE: Semi-skilled and unskilled manual occupations; unemployed and lowest grade occupations\n\nSocial Grade is a socio-economic classification approximated from information collected in Census 2021 using a method defined by the Market Research Society. For Census 2021 only the person deemed Household Reference Person (HRP) receives their own Social Grade, and all other members of the household are assigned this grade. Social Grade estimates from census data are more precise for HRPs of working age than for other age groups. Therefore, an Approximated Social Grade for all usual residents in households using the grade of the HRP aged 16 to 64 years is provided. 'No code required' is reported for the subset of the population where no response was expected."
         },
@@ -860,7 +864,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Most Response Expected", "Least Request Expected"],
             "date": "2024-04-03",
             "description": "The Approximated Social Grade of usual residents living in households with Household Reference Persons aged 16 to 64 years. Census data uses a combined four-way classification for Social Grade:\n\nAB: Higher and intermediate managerial, administrative and professional occupations\nC1: Supervisory, clerical, and junior managerial, administrative and professional occupations\nC2: Skilled manual occupations\nDE: Semi-skilled and unskilled manual occupations; unemployed and lowest grade occupations\n\nSocial Grade is a socio-economic classification approximated from information collected in Census 2021 using a method defined by the Market Research Society. For Census 2021 only the person deemed Household Reference Person (HRP) receives their own Social Grade, and all other members of the household are assigned this grade. Social Grade estimates from census data are more precise for HRPs of working age than for other age groups. Therefore, an Approximated Social Grade for all usual residents in households using the grade of the HRP aged 16 to 64 years is provided. 'No code required' is reported for the subset of the population where no response was expected."
         },
@@ -870,7 +874,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least DE", "Most DE"],
             "date": "2024-04-03",
             "description": "The Approximated Social Grade of usual residents living in households with Household Reference Persons aged 16 to 64 years. Census data uses a combined four-way classification for Social Grade:\n\nAB: Higher and intermediate managerial, administrative and professional occupations\nC1: Supervisory, clerical, and junior managerial, administrative and professional occupations\nC2: Skilled manual occupations\nDE: Semi-skilled and unskilled manual occupations; unemployed and lowest grade occupations\n\nSocial Grade is a socio-economic classification approximated from information collected in Census 2021 using a method defined by the Market Research Society. For Census 2021 only the person deemed Household Reference Person (HRP) receives their own Social Grade, and all other members of the household are assigned this grade. Social Grade estimates from census data are more precise for HRPs of working age than for other age groups. Therefore, an Approximated Social Grade for all usual residents in households using the grade of the HRP aged 16 to 64 years is provided. 'No code required' is reported for the subset of the population where no response was expected."
         },
@@ -880,7 +884,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Above School Age", "Most Above School Age"],
             "date": "2024-04-03",
             "description": "A person's age on 1 July 2020. Compulsory School Age indicates whether an individual is below compulsory school age (i.e. pre-primary school age), compulsory school age (i.e. primary or post-primary school age) or above compulsory school age (i.e. aged 16 or over on 1 July 2020)."
         },
@@ -890,7 +894,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Below School Age", "Most Below School Age"],
             "date": "2024-04-03",
             "description": "A person's age on 1 July 2020. Compulsory School Age indicates whether an individual is below compulsory school age (i.e. pre-primary school age), compulsory school age (i.e. primary or post-primary school age) or above compulsory school age (i.e. aged 16 or over on 1 July 2020)."
         },
@@ -900,7 +904,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Most School Age", "Least School Age"],
             "date": "2024-04-03",
             "description": "A person's age on 1 July 2020. Compulsory School Age indicates whether an individual is below compulsory school age (i.e. pre-primary school age), compulsory school age (i.e. primary or post-primary school age) or above compulsory school age (i.e. aged 16 or over on 1 July 2020)."
         },
@@ -910,7 +914,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Above School Age", "Most Above School Age"],
             "date": "2024-04-03",
             "description": "A person's age on 1 July 2020. Compulsory School Age indicates whether an individual is below compulsory school age (i.e. pre-primary school age), compulsory school age (i.e. primary or post-primary school age) or above compulsory school age (i.e. aged 16 or over on 1 July 2020)."
         },
@@ -920,7 +924,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Below School Age", "Most Below School Age"],
             "date": "2024-04-03",
             "description": "A person's age on 1 July 2020. Compulsory School Age indicates whether an individual is below compulsory school age (i.e. pre-primary school age), compulsory school age (i.e. primary or post-primary school age) or above compulsory school age (i.e. aged 16 or over on 1 July 2020)."
         },
@@ -930,7 +934,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Post-Primary", "Most Post-Primary"],
             "date": "2024-04-03",
             "description": "A person's age on 1 July 2020. Compulsory School Age indicates whether an individual is below compulsory school age (i.e. pre-primary school age), compulsory school age (i.e. primary or post-primary school age) or above compulsory school age (i.e. aged 16 or over on 1 July 2020)."
         },
@@ -940,7 +944,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Primary", "Most Primary"],
             "date": "2024-04-03",
             "description": "A person's age on 1 July 2020. Compulsory School Age indicates whether an individual is below compulsory school age (i.e. pre-primary school age), compulsory school age (i.e. primary or post-primary school age) or above compulsory school age (i.e. aged 16 or over on 1 July 2020)."
         },
@@ -950,7 +954,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Born in NI", "Most Born in NI"],
             "date": "2024-04-03",
             "description": "The country in which a person was born."
         },
@@ -960,7 +964,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Born Outside NI", "Most Born Outside NI"],
             "date": "2024-04-03",
             "description": "The country in which a person was born."
         },
@@ -970,7 +974,7 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": ["Least Born in NI", "Most Born in NI"],
             "date": "2024-04-03",
             "description": "The country in which a person was born."
         },
