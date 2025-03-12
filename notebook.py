@@ -434,3 +434,49 @@ with open('dz-metadata.json', 'w') as fd:
     json.dump(fields, fd)
 
 # %%
+dz_stats = pandas.read_csv('dz-stats.csv')
+
+# %%
+dz_stats
+
+# %%
+# Find columns containing 'No code required'
+no_code_cols = [col for col in dz_stats.columns if 'No code required' in col]
+
+# Drop the columns
+dz_stats = dz_stats.drop(columns=no_code_cols)
+
+# %%
+# Find columns that are equivalent (have the same values)
+equivalent_cols = []
+cols = dz_stats.columns
+for i in range(len(cols)):
+    for j in range(i+1, len(cols)):
+        if dz_stats[cols[i]].equals(dz_stats[cols[j]]):
+            equivalent_cols.append((cols[i], cols[j]))
+
+# Print equivalent column pairs
+for col1, col2 in equivalent_cols:
+    print(f"Equivalent columns: '{col1}' and '{col2}'")
+
+equivalent_cols = pandas.DataFrame(equivalent_cols)
+equivalent_cols.to_csv('dz_equivalent.csv', index=False)
+
+# %%
+dz_stats = dz_stats.drop(columns=equivalent_cols[0].drop_duplicates())
+
+# %%
+with open('dz-metadata.json') as fd:
+    fields = json.load(fd)
+    missing_dimensions = [k for k, field in fields['dimensions'].items() 
+                         if k not in dz_stats.columns]
+# Drop dimensions that are missing from dz_stats
+fields['dimensions'] = {k: v for k, v in fields['dimensions'].items() if k not in missing_dimensions}
+with open('dz-metadata.json', 'w') as fd:
+    json.dump(fields, fd)
+
+
+# %%
+dz_stats.to_csv('dz-stats.csv', index=False)
+
+# %%
