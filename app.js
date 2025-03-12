@@ -1,9 +1,11 @@
-// TODO: fill out Data Zones dataset
+// TODO: remove duplicate metrics from Data Zones dataset
+// TODO: fill out Data Zones dataset - document the new variables
 // TODO: add choropleth map
 // TODO: add hex map
-// TODO: split Metrics into Metrics and Ranks
-// TODO: allow ranking of Metrics
-// TODO: allow non-ranked binning for Metrics
+// TODO: split Metrics into Counts, Percentages and Ranks
+// TODO: allow ranking of Counts and Percentages
+// TODO: allow non-ranked binning for Counts and Percentages
+// TODO: add denominator for counts
 // TODO: load a column at a time from S3
 // TODO: Add NIMDM travel data for small areas
 
@@ -230,12 +232,15 @@ function onDataLoad(results) {
         }
     }
     ogym.append(createOption('Count of ' + datasetTitle + 's', 'Count of ' + datasetTitle + 's', false, true));
-    document.getElementById("x-select").append(ogxm);
-    document.getElementById("y-select").append(ogym);
+    document.getElementById("x-select").replaceChildren(ogxm);
+    document.getElementById("y-select").replaceChildren(ogym);
+    
     ogmc.append(createOption('None', 'None', true, false));
-    document.getElementById("multiple-select").append(ogmc, ogmb);
-    document.getElementById("colour-select").append(ogcc, ogcb);
+    
+    document.getElementById("multiple-select").replaceChildren(ogmc, ogmb);
+    document.getElementById("colour-select").replaceChildren(ogcc, ogcb);
 
+    document.getElementById("palette-select").replaceChildren();
     for (const key of Object.keys(metbrewer)) {
         document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
     }
