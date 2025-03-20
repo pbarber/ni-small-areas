@@ -16,7 +16,7 @@
                 "Least Populated",
                 "Most Populated"
             ],
-            "summaryOrder": 1,
+            "summaryOrder": 0,
             "URL": "https://www.nisra.gov.uk/publications/census-2021-person-and-household-estimates-for-data-zones-in-northern-ireland",
             "date": "2023-02-21",
             "description": "Population of all usual residents"
@@ -39,7 +39,8 @@
             "URL": "https://www.nisra.gov.uk/publications/geography-data-zone-boundaries-gis-format",
             "date": "2023-02-21",
             "description": "Local Government District",
-            "title": "Local Government District"
+            "title": "Local Government District",
+            "summaryOrder": 2
         },
         "Area_ha": {
             "type": "Metric",
@@ -2106,6 +2107,7 @@
             "bins": [
                 10
             ],
+            "summaryOrder": 4,
             "extremes": [],
             "date": "2024-04-03",
             "description": "The number of long-term health conditions reported by a person. A long-term health condition is one which has lasted, or is expected to last, at least 12 months. In census, this is a self-assessment question."
@@ -6896,6 +6898,7 @@
             "bins": [
                 10
             ],
+            "summaryOrder": 5,
             "extremes": [],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
@@ -6906,6 +6909,7 @@
             "bins": [
                 10
             ],
+            "summaryOrder": 7,
             "extremes": [],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
@@ -6926,6 +6930,7 @@
             "bins": [
                 10
             ],
+            "summaryOrder": 8,
             "extremes": [],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
@@ -6956,6 +6961,7 @@
             "bins": [
                 10
             ],
+            "summaryOrder": 6,
             "extremes": [],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
