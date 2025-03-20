@@ -1,5 +1,5 @@
-// TODO: remove duplicate metrics from Data Zones dataset
 // TODO: fill out Data Zones dataset - document the new variables
+// TODO: add more summaryOrder values for Data Zones
 // TODO: add choropleth map
 // TODO: add hex map
 // TODO: split Metrics into Counts, Percentages and Ranks
@@ -136,6 +136,8 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
         header: true,
         dynamicTyping: true,
         skipEmptyLines: true,
+        quoteChar: '"',        // Explicitly set quote character
+        escapeChar: '"',       // Handle escaped quotes
         complete: d => onDataLoad(d)
     });
 });
@@ -151,42 +153,48 @@ function onDataLoad(results) {
         // Convert each row to an object
         return Object.fromEntries(
             Object.entries(row).map(([key, value]) => {
-                // Convert empty strings to null
-                return [key, value === "" ? null : value];
+                // Convert empty strings to null and fix column headers that Papa Parse has mangled
+                return [key.replaceAll(/_\d+(?=,)/g, ''), value === "" ? null : value];
             })
         );
     }).sort((a, b) => b[datasetIndex] - a[datasetIndex]);
+    // TODO: fix the way that store is overwritten
     Object.entries(dimensions).filter(v => v[1].bins).forEach((d, idx) => {
-        const binSize = store.length / d[1].bins[0];
-        const suffix = (d[1].bins[0] == 10) ? ' decile' : (d[1].bins[0] == 100) ? ' centile' : ' binned';
-        // Calculate the binned variables
-        store.map((a, idx) => {
-            return ({
-                index: idx,
-                value: a[d[0]]
-            });
-        }).sort((a, b) => (a.value - b.value)).map((e, i) => {
+        const name = d[0];
+        const config = d[1];
+        const binSize = store.length / config.bins[0];
+        const suffix = (config.bins[0] == 10) ? ' decile' : (config.bins[0] == 100) ? ' centile' : ' binned';
+
+        // Create a temporary array for sorting without modifying original data
+        const tempArray = store.map((a, idx) => ({
+            index: idx,
+            value: a[name]
+        })).sort((a, b) => (a.value - b.value));
+
+        // Sort the temporary array and calculate bins
+        tempArray.forEach((e, i) => {
             const value = parseInt(i / binSize) + 1;
-            store[e.index][d[0] + suffix] = value;
+            store[e.index][name + suffix] = value;
         });
-        dimensions[d[0] + suffix] = {
+
+        dimensions[name + suffix] = {
             type: 'Binned',
-            binSource: d[0]
+            binSource: name
         };
-        if (d[1].hasOwnProperty('description')) {
-            dimensions[d[0] + suffix].description = d[1].description + suffix;
+        if (config.hasOwnProperty('description')) {
+            dimensions[name + suffix].description = config.description + suffix;
         }
-        if (d[1].hasOwnProperty('URL')) {
-            dimensions[d[0] + suffix].URL = d[1].URL;
+        if (config.hasOwnProperty('URL')) {
+            dimensions[name + suffix].URL = config.URL;
         }
-        if (d[1].hasOwnProperty('date')) {
-            dimensions[d[0] + suffix].date = d[1].date;
+        if (config.hasOwnProperty('date')) {
+            dimensions[name + suffix].date = config.date;
         }
-        if (d[1].hasOwnProperty('extremes')) {
-            dimensions[d[0] + suffix].extremes = d[1].extremes;
+        if (config.hasOwnProperty('extremes')) {
+            dimensions[name + suffix].extremes = config.extremes;
         }
-        if (d[1].title) {
-            dimensions[d[0] + suffix].title = d[1].title + suffix;
+        if (config.title) {
+            dimensions[name + suffix].title = config.title + suffix;
         }
     });
     if (dimensions.hasOwnProperty(params.get("x"))) {
@@ -234,9 +242,9 @@ function onDataLoad(results) {
     ogym.append(createOption('Count of ' + datasetTitle + 's', 'Count of ' + datasetTitle + 's', false, true));
     document.getElementById("x-select").replaceChildren(ogxm);
     document.getElementById("y-select").replaceChildren(ogym);
-    
+
     ogmc.append(createOption('None', 'None', true, false));
-    
+
     document.getElementById("multiple-select").replaceChildren(ogmc, ogmb);
     document.getElementById("colour-select").replaceChildren(ogcc, ogcb);
 
@@ -314,6 +322,8 @@ function onDataLoad(results) {
                     header: true,
                     dynamicTyping: true,
                     skipEmptyLines: true,
+                    quoteChar: '"',        // Explicitly set quote character
+                    escapeChar: '"',       // Handle escaped quotes
                     complete: d => onDataLoad(d)
                 });
             })
@@ -471,9 +481,9 @@ myChart.setOption({
             }
         }
     },
-    tooltip: { 
-        trigger: "item", 
-        formatter: tooltipCallback, 
+    tooltip: {
+        trigger: "item",
+        formatter: tooltipCallback,
         alwaysShowContent: false,
         triggerOn: 'click',
         enterable: true,
@@ -487,16 +497,16 @@ myChart.setOption({
 myChart.getZr().on('click', function(params) {
     // Get click coordinates relative to canvas
     const pointInPixel = [params.offsetX, params.offsetY];
-    
+
     // Convert pixel coordinates to logical coordinates
     const pointInGrid = myChart.convertFromPixel({seriesIndex: 0}, pointInPixel);
-    
+
     // Check if click is in toolbox area
     if (myChart.containPixel('grid', pointInPixel)) {
         // Click was in main chart area
         return;
     }
-    
+
     // If we get here, click was outside main chart area (potentially toolbox)
     // Prevent default behavior
     if (params.event) {
