@@ -6,7 +6,7 @@
       "geojson": "sa2011_epsg4326_simplified15.geojson",
       "dimensions": {
             "Multiple Deprivation Measure Rank": {
-                  "type": "Metric",
+                  "type": "Rank",
                   "bins": [
                         10
                   ],
@@ -20,7 +20,7 @@
                   "description": "Multiple Deprivation Measure Rank (where 1 is most deprived) for Small Areas, this is a combination of the different Domain Ranks"
             },
             "Income Domain Rank": {
-                  "type": "Metric",
+                  "type": "Rank",
                   "bins": [
                         10
                   ],
@@ -33,7 +33,7 @@
                   "description": "Income Domain Rank (where 1 is most deprived) for Small Areas"
             },
             "Employment Domain Rank": {
-                  "type": "Metric",
+                  "type": "Rank",
                   "bins": [
                         10
                   ],
@@ -46,7 +46,7 @@
                   "description": "Employment Domain Rank (where 1 is most deprived) for Small Areas"
             },
             "Health Deprivation and Disability Domain Rank": {
-                  "type": "Metric",
+                  "type": "Rank",
                   "bins": [
                         10
                   ],
@@ -59,7 +59,7 @@
                   "description": "Health Deprivation and Disability Domain Rank (where 1 is most deprived) for Small Areas"
             },
             "Education, Skills and Training Domain Rank": {
-                  "type": "Metric",
+                  "type": "Rank",
                   "bins": [
                         10
                   ],
@@ -72,7 +72,7 @@
                   "description": "Education, Skills and Training Domain Rank (where 1 is most deprived) for Small Areas"
             },
             "Access to Services Domain Rank": {
-                  "type": "Metric",
+                  "type": "Rank",
                   "bins": [
                         10
                   ],
@@ -85,7 +85,7 @@
                   "description": "Access to Services Domain Rank (where 1 is most deprived) for Small Areas"
             },
             "Living Environment Domain Rank": {
-                  "type": "Metric",
+                  "type": "Rank",
                   "bins": [
                         10
                   ],
@@ -98,7 +98,7 @@
                   "description": "Living Environment Domain Rank (where 1 is most deprived) for Small Areas"
             },
             "Crime and Disorder Domain Rank": {
-                  "type": "Metric",
+                  "type": "Rank",
                   "bins": [
                         10
                   ],
@@ -111,7 +111,7 @@
                   "description": "Crime and Disorder Domain Rank (where 1 is most deprived) for Small Areas"
             },
             "Proportion of the population living in households whose equivalised income is below 60 per cent of the NI median": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "title": "Proportion living in households where income under 60% of NI median",
                   "bins": [
                         10
@@ -125,7 +125,7 @@
                   "description": "Proportion of the population living in households whose equivalised income is below 60 per cent of the NI median (%) for Small Areas"
             },
             "Proportion of the working age population who are employment deprived": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -138,7 +138,7 @@
                   "description": "Proportion of the working age population who are employment deprived (%) for Small Areas"
             },
             "Religion: Catholic (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -152,7 +152,7 @@
                   "description": "Percentage of the population stating their religion as Catholic"
             },
             "Religion: Presbyterian Church in Ireland (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -166,7 +166,7 @@
                   "description": "Percentage of the population stating their religion as Presbyterian Church in Ireland"
             },
             "Religion: Church of Ireland (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -180,7 +180,7 @@
                   "description": "Percentage of the population stating their religion as Church of Ireland"
             },
             "Religion: Methodist Church in Ireland (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -193,7 +193,7 @@
                   "description": "Percentage of the population stating their religion as Methodist Church in Ireland"
             },
             "Religion: Other Christian (including Christian related) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -206,7 +206,7 @@
                   "description": "Percentage of the population stating their religion as Other Christian (including Christian related)"
             },
             "Religion: Other religions (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -219,7 +219,7 @@
                   "description": "Percentage of the population stating their religion as Other religions"
             },
             "Religion: No religion (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -233,7 +233,7 @@
                   "description": "Percentage of the population stating their religion as No religion"
             },
             "Religion: Religion not stated (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -246,7 +246,7 @@
                   "description": "Percentage of the population who did not state their religion"
             },
             "centre_x": {
-                  "type": "Metric",
+                  "type": "Geographic",
                   "title": "Longitude",
                   "dataMin": true,
                   "URL": "https://www.nisra.gov.uk/publications/small-area-boundaries-gis-format",
@@ -254,7 +254,7 @@
                   "description": "Longitude (west-east) of the centre point of the Small Area in EPSG:4326"
             },
             "centre_y": {
-                  "type": "Metric",
+                  "type": "Geographic",
                   "title": "Latitude",
                   "dataMin": true,
                   "URL": "https://www.nisra.gov.uk/publications/small-area-boundaries-gis-format",
@@ -283,7 +283,7 @@
                   "summaryOrder": 2
             },
             "MYE": {
-                  "type": "Metric",
+                  "type": "Number",
                   "bins": [
                         10
                   ],
@@ -295,10 +295,10 @@
                   "summaryOrder": 0,
                   "URL": "https://www.nisra.gov.uk/publications/2020-mid-year-population-estimates-small-areas",
                   "date": "2021-11-25",
-                  "description": "Proportion of the population living in households whose equivalised income is below 60 per cent of the NI median (%) for Small Areas"
+                  "description": "Mid-year population estimate"
             },
             "SAs_to_30": {
-                  "type": "Metric",
+                  "type": "Number",
                   "bins": [
                         10
                   ],
@@ -312,7 +312,7 @@
                   "description": "Number of Small Areas that can be reached in 30 minutes via public transport and walking"
             },
             "MYE_to_30": {
-                  "type": "Metric",
+                  "type": "Number",
                   "bins": [
                         10
                   ],
@@ -326,7 +326,7 @@
                   "description": "Population of Small Areas that can be reached in 30 minutes via public transport and walking (uses NISRA 2020 mid-year estimates)"
             },
             "Type of long-term condition: Deafness or partial hearing loss (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -339,7 +339,7 @@
                   "description": "Percentage of the population with deafness or partial hearing loss"
             },
             "Type of long-term condition: Blindness or partial sight loss (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -352,7 +352,7 @@
                   "description": "Percentage of the population with blindness or partial sight loss"
             },
             "Type of long-term condition: Communication difficulty (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -365,7 +365,7 @@
                   "description": "Percentage of the population with communication difficulty"
             },
             "Type of long-term condition: A mobility or dexterity difficulty (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -378,7 +378,7 @@
                   "description": "Percentage of the population with a mobility or dexterity difficulty"
             },
             "Type of long-term condition: A learning, intellectual, social or behavioural difficulty (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -391,7 +391,7 @@
                   "description": "Percentage of the population with a learning, intellectual, social or behavioural difficulty"
             },
             "Type of long-term condition: An emotional, psychological or mental health condition (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -404,7 +404,7 @@
                   "description": "Percentage of the population with an emotional, psychological or mental health condition"
             },
             "Type of long-term condition: Long-term pain or discomfort (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -417,7 +417,7 @@
                   "description": "Percentage of the population with long-term pain or discomfort"
             },
             "Type of long-term condition: Shortness of breath or difficulty breathing (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -430,7 +430,7 @@
                   "description": "Percentage of the population with no condition"
             },
             "Type of long-term condition: Frequent periods of confusion or memory loss (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -443,7 +443,7 @@
                   "description": "Percentage of the population with frequent periods of confusion or memory loss"
             },
             "Type of long-term condition: A chronic illness (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -456,7 +456,7 @@
                   "description": "Percentage of the population with a chronic illness"
             },
             "Type of long-term condition: Other condition (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -469,7 +469,7 @@
                   "description": "Percentage of the population with other condition"
             },
             "Type of long-term condition: No condition (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -483,7 +483,7 @@
                   "description": "Percentage of the population with no condition"
             },
             "Usual residents: Males (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -497,7 +497,7 @@
                   "description": "Percentage of the population who are male"
             },
             "Usual residents: Females (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -511,7 +511,7 @@
                   "description": "Percentage of the population who are female"
             },
             "Usual residents: Lives in a household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -524,7 +524,7 @@
                   "description": "Percentage of the population who live in a household"
             },
             "Usual residents: Lives in a communal establishment (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -537,7 +537,7 @@
                   "description": "Percentage of the population who live in a communal establishment"
             },
             "Age 0-4 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -550,7 +550,7 @@
                   "description": "Percentage of the population aged 0-4 years"
             },
             "Age 5-7 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -563,7 +563,7 @@
                   "description": "Percentage of the population aged 5-7 years"
             },
             "Age 8-9 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -576,7 +576,7 @@
                   "description": "Percentage of the population aged 8-9 years"
             },
             "Age 10-14 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -589,7 +589,7 @@
                   "description": "Percentage of the population aged 10-14 years"
             },
             "Age 15 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -602,7 +602,7 @@
                   "description": "Percentage of the population aged 15 years"
             },
             "Age 16-17 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -615,7 +615,7 @@
                   "description": "Percentage of the population aged 16-17 years"
             },
             "Age 18-19 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -628,7 +628,7 @@
                   "description": "Percentage of the population aged 18-19 years"
             },
             "Age 20-24 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -641,7 +641,7 @@
                   "description": "Percentage of the population aged 20-24 years"
             },
             "Age 25-29 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -654,7 +654,7 @@
                   "description": "Percentage of the population aged 25-29 years"
             },
             "Age 30-44 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -667,7 +667,7 @@
                   "description": "Percentage of the population aged 30-44 years"
             },
             "Age 45-59 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -680,7 +680,7 @@
                   "description": "Percentage of the population aged 45-59 years"
             },
             "Age 60-64 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -693,7 +693,7 @@
                   "description": "Percentage of the population aged 60-64 years"
             },
             "Age 65-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -706,7 +706,7 @@
                   "description": "Percentage of the population aged 65-74 years"
             },
             "Age 75-84 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -719,7 +719,7 @@
                   "description": "Percentage of the population aged 75-84 years"
             },
             "Age 85-89 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -732,7 +732,7 @@
                   "description": "Percentage of the population aged 85-89 years"
             },
             "Age 90+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -745,7 +745,7 @@
                   "description": "Percentage of the population aged 90+ years"
             },
             "Single (never married or never registered a same-sex civil partnership): Aged 16+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -758,7 +758,7 @@
                   "description": "Percentage of the population aged 16+ years who are single"
             },
             "Married: Aged 16+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -771,7 +771,7 @@
                   "description": "Percentage of the population aged 16+ years who are married"
             },
             "In a registered same-sex civil partnership: Aged 16+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -784,7 +784,7 @@
                   "description": "Percentage of the population aged 16+ years who are in a registered same-sex civil partnership"
             },
             "Separated (but still legally married or still legally in a same-sex civil partnership): Aged 16+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -797,7 +797,7 @@
                   "description": "Percentage of the population aged 16+ years who are separated"
             },
             "Divorced or formerly in a same-sex civil partnership which is now legally dissolved: Aged 16+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -810,7 +810,7 @@
                   "description": "Percentage of the population aged 16+ years who are divorced or formerly in a registered same-sex civil partnership which is now legally dissolved"
             },
             "Widowed or surviving partner from a same-sex civil partnership: Aged 16+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -823,7 +823,7 @@
                   "description": "Percentage of the population aged 16+ who are widowed or surviving partner from a same-sex civil partnership"
             },
             "Living in a couple: Married or in a registered same-sex civil partnership: Aged 16+ years in households (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -836,7 +836,7 @@
                   "description": "Percentage of the population aged 16+ who are married or in a registered same-sex civil partnership"
             },
             "Living in a couple: Cohabiting: Aged 16+ years in households (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -849,7 +849,7 @@
                   "description": "Percentage of the population aged 16+ who are cohabiting"
             },
             "Not living in a couple: Single (never married or never registered a same-sex civil partnership): Aged 16+ years in households (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -862,7 +862,7 @@
                   "description": "Percentage of the population aged 16+ who are single"
             },
             "Not living in a couple: Married or in a registered same-sex civil partnership: Aged 16+ years in households (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -875,7 +875,7 @@
                   "description": "Percentage of the population aged 16+ who are married or in a registered same-sex civil partnership"
             },
             "Not living in a couple: Separated (but still legally married or still legally in a same-sex civil partnership): Aged 16+ years in households (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -888,7 +888,7 @@
                   "description": "Percentage of the population aged 16+ who are separated"
             },
             "Not living in a couple: Divorced or formerly in a same-sex civil partnership which is now legally dissolved: Aged 16+ years in households (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -901,7 +901,7 @@
                   "description": "Percentage of the population aged 16+ who are divorced or partnership legally dissolved"
             },
             "Not living in a couple: Widowed or surviving partner from a same-sex civil partnership: Aged 16+ years in households (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -914,7 +914,7 @@
                   "description": "Percentage of the population aged 16+ who are widowed or surviving partner from a same-sex civil partnership"
             },
             "One person household: Aged 65+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -927,7 +927,7 @@
                   "description": "Percentage of the population aged 65+ who are living in a one person household"
             },
             "One person household: Other (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -940,7 +940,7 @@
                   "description": "Percentage of the population under 65 who are living in a one person household (other)"
             },
             "One family and no other people: All aged 65+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -953,7 +953,7 @@
                   "description": "Percentage of the population aged 65+ who are living in a one family household"
             },
             "One family and no other people: Married or in a registered same-sex civil partnership couple: No children (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -966,7 +966,7 @@
                   "description": "Percentage of the population who are married or in a registered same-sex civil partnership and have no children"
             },
             "One family and no other people: Married or in a registered same-sex civil partnership couple: Dependent children (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -979,7 +979,7 @@
                   "description": "Percentage of the population who are married or in a registered same-sex civil partnership and have dependent children"
             },
             "One family and no other people: Married or in a registered same-sex civil partnership couple: All children non-dependent (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -992,7 +992,7 @@
                   "description": "Percentage of the population who are married or in a registered same-sex civil partnership and have all children non-dependent"
             },
             "One family and no other people: Cohabiting couple: No children (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1005,7 +1005,7 @@
                   "description": "Percentage of the population who are cohabiting and have no children"
             },
             "One family and no other people: Cohabiting couple: Dependent children (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1018,7 +1018,7 @@
                   "description": "Percentage of the population who are cohabiting and have dependent children"
             },
             "One family and no other people: Cohabiting couple: All children non-dependent (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1031,7 +1031,7 @@
                   "description": "Percentage of the population who are cohabiting and have all children non-dependent"
             },
             "One family and no other people: Lone parent: Dependent children (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1044,7 +1044,7 @@
                   "description": "Percentage of the population who are a lone parent and have dependent children        "
             },
             "One family and no other people: Lone parent: All children non-dependent (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1057,7 +1057,7 @@
                   "description": "Percentage of the population who are a lone parent and have all children non-dependent"
             },
             "Other household types: With dependent children (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1070,7 +1070,7 @@
                   "description": "Percentage of the population who are living in other household types and have dependent children"
             },
             "Other household types: All full-time students (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1083,7 +1083,7 @@
                   "description": "Percentage of the population who are living in other household types and are all full-time students"
             },
             "Other household types: All aged 65+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1096,7 +1096,7 @@
                   "description": "Percentage of the population aged 65+ who are living in other household types"
             },
             "Other household types: Other (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1109,7 +1109,7 @@
                   "description": "Percentage of the population who are living in other household types (other)"
             },
             "No adults in employment in household: With dependent children (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1122,7 +1122,7 @@
                   "description": "Percentage of the population who are living in no adults in employment households and have dependent children"
             },
             "No adults in employment in household: Without dependent children (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1135,7 +1135,7 @@
                   "description": "Percentage of the population who are living in no adults in employment households and have no dependent children"
             },
             "Dependent children in household: All ages (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1148,7 +1148,7 @@
                   "description": "Percentage of the population who are living in households with dependent children"
             },
             "Dependent children in household: Aged 0-4 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1161,7 +1161,7 @@
                   "description": "Percentage of the population who are living in households with dependent children aged 0-4"
             },
             "One or more people in household with a long-term health problem or disability: With dependent children (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1174,7 +1174,7 @@
                   "description": "Percentage of the population who are living in households with dependent children and someone with a long-term health problem or disability"
             },
             "One or more people in household with a long-term health problem or disability: Without dependent children (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1187,7 +1187,7 @@
                   "description": "Percentage of the population who are living in households without dependent children and someone with a long-term health problem or disability"
             },
             "Lone parent households with dependent children: Lone parent aged 16-74 years in part-time employment (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1200,7 +1200,7 @@
                   "description": "Percentage of the population who are a lone parent and have dependent children and are aged 16-74 years in part-time employment"
             },
             "Lone parent households with dependent children: Lone parent aged 16-74 years in full-time employment (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1213,7 +1213,7 @@
                   "description": "Percentage of the population who are a lone parent and have dependent children and are aged 16-74 years in full-time employment"
             },
             "Lone parent households with dependent children: Lone parent aged 16-74 years not in employment (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1226,7 +1226,7 @@
                   "description": "Percentage of the population who are a lone parent and have dependent children and are not in employment"
             },
             "Lone parent households with dependent children: Lone parent aged 16-74 years in part-time employment (Male) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1239,7 +1239,7 @@
                   "description": "Percentage of the population who are a male lone parent and have dependent children and are in part-time employment"
             },
             "Lone parent households with dependent children: Lone parent aged 16-74 years in full-time employment (Male) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1252,7 +1252,7 @@
                   "description": "Percentage of the population who are a male lone parent and have dependent children and are in full-time employment"
             },
             "Lone parent households with dependent children: Lone parent aged 16-74 years not in employment (Male) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1265,7 +1265,7 @@
                   "description": "Percentage of the population who are a male lone parent and have dependent children and are not in employment"
             },
             "Lone parent households with dependent children: Lone parent aged 16-74 years in part-time employment (Female) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1278,7 +1278,7 @@
                   "description": "Percentage of the population who are a female lone parent and have dependent children and are in part-time employment"
             },
             "Lone parent households with dependent children: Lone parent aged 16-74 years in full-time employment (Female) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1291,7 +1291,7 @@
                   "description": "Percentage of the population who are a female lone parent and have dependent children and are in full-time employment"
             },
             "Lone parent households with dependent children: Lone parent aged 16-74 years not in employment (Female) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1304,7 +1304,7 @@
                   "description": "Percentage of the population who are a female lone parent and have dependent children and are not in employment"
             },
             "Ethnic group: White (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1317,7 +1317,7 @@
                   "description": "Percentage of the population who are white"
             },
             "Ethnic group: Chinese (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1330,7 +1330,7 @@
                   "description": "Percentage of the population who are Chinese"
             },
             "Ethnic group: Irish Traveller (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1343,7 +1343,7 @@
                   "description": "Percentage of the population who are Irish Traveller"
             },
             "Ethnic group: Indian (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1356,7 +1356,7 @@
                   "description": "Percentage of the population who are Indian"
             },
             "Ethnic group: Pakistani (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1369,7 +1369,7 @@
                   "description": "Percentage of the population who are Pakistani"
             },
             "Ethnic group: Bangladeshi (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1382,7 +1382,7 @@
                   "description": "Percentage of the population who are Bangladeshi"
             },
             "Ethnic group: Other Asian (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1395,7 +1395,7 @@
                   "description": "Percentage of the population who are Other Asian"
             },
             "Ethnic group: Black Caribbean (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1408,7 +1408,7 @@
                   "description": "Percentage of the population who are Black Caribbean"
             },
             "Ethnic group: Black African (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1421,7 +1421,7 @@
                   "description": "Percentage of the population who are Black African"
             },
             "Ethnic group: Black other (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1434,7 +1434,7 @@
                   "description": "Percentage of the population who are Black other"
             },
             "Ethnic group: Mixed (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1447,7 +1447,7 @@
                   "description": "Percentage of the population who are Mixed ethnic group"
             },
             "Ethnic group: Other (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1460,7 +1460,7 @@
                   "description": "Percentage of the population who are Other ethnic group"
             },
             "National identity: British only (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1473,7 +1473,7 @@
                   "description": "Percentage of the population who have British only national identity"
             },
             "National identity: Irish only (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1486,7 +1486,7 @@
                   "description": "Percentage of the population who have Irish only national identity"
             },
             "National identity: Northern Irish only (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1499,7 +1499,7 @@
                   "description": "Percentage of the population who have Northern Irish only national identity"
             },
             "National identity: British and Irish only (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1512,7 +1512,7 @@
                   "description": "Percentage of the population who have British and Irish only national identity"
             },
             "National identity: British and Northern Irish only (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1525,7 +1525,7 @@
                   "description": "Percentage of the population who have British and Northern Irish only national identity"
             },
             "National identity: Irish and Northern Irish only (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1538,7 +1538,7 @@
                   "description": "Percentage of the population who have Irish and Northern Irish only national identity"
             },
             "National identity: British, Irish and Northern Irish only (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1551,7 +1551,7 @@
                   "description": "Percentage of the population who have British, Irish and Northern Irish only national identity"
             },
             "National identity: Other (%)_x": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1565,7 +1565,7 @@
                   "title": "National identity: Other (%)"
             },
             "National identity: British (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1578,7 +1578,7 @@
                   "description": "Percentage of the population who have British national identity"
             },
             "National identity: Irish (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1591,7 +1591,7 @@
                   "description": "Percentage of the population who have Irish national identity"
             },
             "National identity: Northern Irish (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1604,7 +1604,7 @@
                   "description": "Percentage of the population who have Northern Irish national identity"
             },
             "National identity: English (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1617,7 +1617,7 @@
                   "description": "Percentage of the population who have English national identity"
             },
             "National identity: Scottish (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1630,7 +1630,7 @@
                   "description": "Percentage of the population who have Scottish national identity"
             },
             "National identity: Welsh (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1643,7 +1643,7 @@
                   "description": "Percentage of the population who have Welsh national identity"
             },
             "Country of birth: Northern Ireland (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1656,7 +1656,7 @@
                   "description": "Percentage of the population who were born in Northern Ireland"
             },
             "Country of birth: England (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1669,7 +1669,7 @@
                   "description": "Percentage of the population who were born in England"
             },
             "Country of birth: Scotland (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1682,7 +1682,7 @@
                   "description": "Percentage of the population who were born in Scotland"
             },
             "Country of birth: Wales (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1695,7 +1695,7 @@
                   "description": "Percentage of the population who were born in Wales"
             },
             "Country of birth: Republic of Ireland (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1708,7 +1708,7 @@
                   "description": "Percentage of the population who were born in the Republic of Ireland"
             },
             "Country of birth: Other EU: Member countries prior to 2004 expansion (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1721,7 +1721,7 @@
                   "description": "Percentage of the population who were born in other EU countries prior to 2004 expansion"
             },
             "Country of birth: Other EU: Accession countries 2004 onwards (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1734,7 +1734,7 @@
                   "description": ""
             },
             "Country of birth: Other (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1747,7 +1747,7 @@
                   "description": "Percentage of the population who were born in other countries"
             },
             "Passports held: No passport (%)_x": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1761,7 +1761,7 @@
                   "title": "Passports held: No passport (%)"
             },
             "Passports held: United Kingdom (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1774,7 +1774,7 @@
                   "description": "Percentage of the population who hold a UK passport"
             },
             "Passports held: Ireland (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1787,7 +1787,7 @@
                   "description": "Percentage of the population who hold an Irish passport"
             },
             "Passports held: Other Europe: EU countries (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1800,7 +1800,7 @@
                   "description": "Percentage of the population who hold a passport from other EU countries"
             },
             "Passports held: Other Europe: Non EU countries (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1813,7 +1813,7 @@
                   "description": "Percentage of the population who hold a passport from other non-EU countries"
             },
             "Passports held: Africa (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1826,7 +1826,7 @@
                   "description": "Percentage of the population who hold a passport from African countries"
             },
             "Passports held: Middle East and Asia (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1839,7 +1839,7 @@
                   "description": "Percentage of the population who hold a passport from Middle Eastern and Asian countries"
             },
             "Passports held: North America and the Caribbean (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1852,7 +1852,7 @@
                   "description": "Percentage of the population who hold a passport from North American and Caribbean countries"
             },
             "Passports held: Central America (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1865,7 +1865,7 @@
                   "description": "Percentage of the population who hold a passport from Central American countries"
             },
             "Passports held: South America (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1878,7 +1878,7 @@
                   "description": "Percentage of the population who hold a passport from South American countries"
             },
             "Passports held: Antarctica and Oceania (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1891,7 +1891,7 @@
                   "description": "Percentage of the population who hold a passport from Antarctica and Oceania countries"
             },
             "Passports held: United Kingdom only (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1904,7 +1904,7 @@
                   "description": "Percentage of the population who hold a UK passport only"
             },
             "Passports held: Ireland only (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1917,7 +1917,7 @@
                   "description": "Percentage of the population who hold an Irish passport only"
             },
             "Passports held: United Kingdom and Ireland only (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1930,7 +1930,7 @@
                   "description": "Percentage of the population who hold a UK and Irish passport"
             },
             "Passports held: United Kingdom and other (not Ireland) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1943,7 +1943,7 @@
                   "description": "Percentage of the population who hold a UK passport and another passport"
             },
             "Passports held: Ireland and other (not United Kingdom) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1956,7 +1956,7 @@
                   "description": "Percentage of the population who hold an Irish passport and another passport"
             },
             "Passports held: EU/EEA (not United Kingdom or Ireland) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1969,7 +1969,7 @@
                   "description": "Percentage of the population who hold a passport from EU/EEA countries (not United Kingdom or Ireland)"
             },
             "Passports held: Other (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1982,7 +1982,7 @@
                   "description": "Percentage of the population who hold a passport from other countries"
             },
             "Main language: English: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -1996,7 +1996,7 @@
                   "title": "Main language: English (%)"
             },
             "Main language: Polish: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2010,7 +2010,7 @@
                   "title": "Main language: Polish (%)"
             },
             "Main language: Lithuanian: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2024,7 +2024,7 @@
                   "title": "Main language: Lithuanian (%)"
             },
             "Main language: Irish (Gaelic): Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2038,7 +2038,7 @@
                   "title": "Main language: Irish (%)"
             },
             "Main language: Portuguese: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2052,7 +2052,7 @@
                   "title": "Main language: Portuguese (%)"
             },
             "Main language: Slovak: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2066,7 +2066,7 @@
                   "title": "Main language: Slovak (%)"
             },
             "Main language: Chinese: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2080,7 +2080,7 @@
                   "title": "Main language: Chinese (%)"
             },
             "Main language: Tagalog/Filipino: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2094,7 +2094,7 @@
                   "title": "Main language: Tagalog/Filipino (%)"
             },
             "Main language: Latvian: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2108,7 +2108,7 @@
                   "title": "Main language: Latvian (%)"
             },
             "Main language: Russian: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2122,7 +2122,7 @@
                   "title": "Main language: Russian (%)"
             },
             "Main language: Malayalam: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2136,7 +2136,7 @@
                   "title": "Main language: Malayalam (%)"
             },
             "Main language: Hungarian: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2150,7 +2150,7 @@
                   "title": "Main language: Hungarian (%)"
             },
             "Main language: Other: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2164,7 +2164,7 @@
                   "title": "Main language: Other (%)"
             },
             "All people aged 16+ years in household have English as a main language (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2177,7 +2177,7 @@
                   "description": "Percentage of the population where all people aged 16+ years in the household have English as their main language"
             },
             "At least one but not all people aged 16+ years in household have English as a main language (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2190,7 +2190,7 @@
                   "description": "Percentage of the population where at least one but not all people aged 16+ years in the household have English as their main language"
             },
             "No people aged 16+ years in household but at least one person aged 3-15 years has English as a main language (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2203,7 +2203,7 @@
                   "description": "Percentage of the population where no people aged 16+ years in the household but at least one person aged 3-15 years has English as their main language"
             },
             "No people in household have English as a main language (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2216,7 +2216,7 @@
                   "description": "Percentage of the population where no people in the household have English as their main language"
             },
             "Knowledge of Irish: Understand but cannot read, write or speak Irish: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2230,7 +2230,7 @@
                   "title": "Knowledge of Irish: Understand but cannot read, write or speak Irish (%)"
             },
             "Knowledge of Irish: Speak but do not read or write Irish: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2244,7 +2244,7 @@
                   "title": "Knowledge of Irish: Speak but do not read or write Irish (%)"
             },
             "Knowledge of Irish: Speak and read but do not write Irish: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2258,7 +2258,7 @@
                   "title": "Knowledge of Irish: Speak and read but do not write Irish (%)"
             },
             "Knowledge of Irish: Speak, read, write and understand Irish: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2272,7 +2272,7 @@
                   "title": "Knowledge of Irish: Speak, read, write and understand Irish (%)"
             },
             "Knowledge of Irish: Other combination of skills: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2286,7 +2286,7 @@
                   "title": "Knowledge of Irish: Other combination of skills (%)"
             },
             "Knowledge of Irish: Have some ability in Irish: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2300,7 +2300,7 @@
                   "title": "Knowledge of Irish: Have some ability in Irish (%)"
             },
             "Knowledge of Irish: Have no ability in Irish: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2314,7 +2314,7 @@
                   "title": "Knowledge of Irish: Have no ability in Irish (%)"
             },
             "Knowledge of Ulster-Scots: Understand but cannot read, write or speak Ulster-Scots: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2328,7 +2328,7 @@
                   "title": "Knowledge of Ulster-Scots: Understand but cannot read, write or speak Ulster-Scots (%)"
             },
             "Knowledge of Ulster-Scots: Speak but do not read or write Ulster-Scots: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2342,7 +2342,7 @@
                   "title": "Knowledge of Ulster-Scots: Speak but do not read or write Ulster-Scots (%)"
             },
             "Knowledge of Ulster-Scots: Speak and read but do not write Ulster-Scots: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2356,7 +2356,7 @@
                   "title": "Knowledge of Ulster-Scots: Speak and read but do not write Ulster-Scots (%)"
             },
             "Knowledge of Ulster-Scots: Speak, read, write and understand Ulster-Scots: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2370,7 +2370,7 @@
                   "title": "Knowledge of Ulster-Scots: Speak, read, write and understand Ulster-Scots (%)"
             },
             "Knowledge of Ulster-Scots: Other combination of skills: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2384,7 +2384,7 @@
                   "title": "Knowledge of Ulster-Scots: Other combination of skills (%)"
             },
             "Knowledge of Ulster-Scots: Have some ability in Ulster-Scots: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2398,7 +2398,7 @@
                   "title": "Knowledge of Ulster-Scots: Have some ability in Ulster-Scots (%)"
             },
             "Knowledge of Ulster-Scots: Have no ability in Ulster-Scots: Aged 3+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2412,7 +2412,7 @@
                   "title": "Knowledge of Ulster-Scots: Have no ability in Ulster-Scots (%)"
             },
             "Religion or religion brought up in: Catholic (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2425,7 +2425,7 @@
                   "description": "Percentage of the population who are/were brought up Catholic"
             },
             "Religion or religion brought up in: Protestant and Other Christian (including Christian related) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2438,7 +2438,7 @@
                   "description": "Percentage of the population who are/were brought up Protestant and Other Christian (including Christian related)"
             },
             "Religion or religion brought up in: Other religions (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2451,7 +2451,7 @@
                   "description": "Percentage of the population who are/were brought up in Other religions"
             },
             "Religion or religion brought up in: None (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2464,7 +2464,7 @@
                   "description": "Percentage of the population who have/were brought up with no religion"
             },
             "Long-term health problem or disability: Day-to-day activities limited a lot (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2477,7 +2477,7 @@
                   "description": "Percentage of the population where day-to-day activities are limited a lot by long-term health problems or disabilities"
             },
             "Long-term health problem or disability: Day-to-day activities limited a little (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2490,7 +2490,7 @@
                   "description": "Percentage of the population where day-to-day activities are limited a little by long-term health problems or disabilities"
             },
             "Long-term health problem or disability: Day-to-day activities not limited (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2503,7 +2503,7 @@
                   "description": "Percentage of the population where day-to-day activities are not limited by long-term health problems or disabilities"
             },
             "Long-term health problem or disability: Day-to-day activities limited a lot: Aged 16-64 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2516,7 +2516,7 @@
                   "description": "Percentage of the 16-64 population where day-to-day activities are limited a lot by long-term health problems or disabilities"
             },
             "Long-term health problem or disability: Day-to-day activities limited a little: Aged 16-64 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2529,7 +2529,7 @@
                   "description": "Percentage of the 16-64 population where day-to-day activities are limited a little by long-term health problems or disabilities"
             },
             "Long-term health problem or disability: Day-to-day activities not limited: Aged 16-64 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2542,7 +2542,7 @@
                   "description": "Percentage of the 16-64 population where day-to-day activities are not limited by long-term health problems or disabilities"
             },
             "General health: Very good health (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2555,7 +2555,7 @@
                   "description": "Percentage of the population who are in very good health"
             },
             "General health: Good health (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2568,7 +2568,7 @@
                   "description": "Percentage of the population who are in good health"
             },
             "General health: Fair health (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2581,7 +2581,7 @@
                   "description": "Percentage of the population who are in fair health"
             },
             "General health: Bad health (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2594,7 +2594,7 @@
                   "description": "Percentage of the population who are in bad health"
             },
             "General health: Very bad health (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2607,7 +2607,7 @@
                   "description": "Percentage of the population who are in very bad health"
             },
             "Provision of unpaid care: Provides no unpaid care (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2620,7 +2620,7 @@
                   "description": "Percentage of the population which provides no unpaid care"
             },
             "Provision of unpaid care: Provides 1-19 hours unpaid care per week (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2633,7 +2633,7 @@
                   "description": "Percentage of the population which provides 1-19 hours unpaid care per week"
             },
             "Provision of unpaid care: Provides 20-49 hours unpaid care per week (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2646,7 +2646,7 @@
                   "description": "Percentage of the population which provides 20-49 hours unpaid care per week"
             },
             "Provision of unpaid care: Provides 50+ hours unpaid care per week (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2659,7 +2659,7 @@
                   "description": "Percentage of the population which provides 50+ hours unpaid care per week"
             },
             "Whole house or bungalow: Detached (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2672,7 +2672,7 @@
                   "description": "Percentage of the population which lives in a detached house or bungalow"
             },
             "Whole house or bungalow: Semi-detached (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2685,7 +2685,7 @@
                   "description": "Percentage of the population which lives in a semi-detached house or bungalow"
             },
             "Whole house or bungalow: Terraced (including end-terrace) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2698,7 +2698,7 @@
                   "description": "Percentage of the population which lives in a terraced house or bungalow"
             },
             "Flat, maisonette or apartment: Purpose-built block of flats or tenement (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2711,7 +2711,7 @@
                   "description": "Percentage of the population which lives in a purpose-built block of flats or tenement"
             },
             "Flat, maisonette or apartment: Part of a converted or shared house (including bed-sits) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2724,7 +2724,7 @@
                   "description": "Percentage of the population which lives in a part of a converted or shared house (including bed-sits)"
             },
             "Flat, maisonette or apartment: In a commercial building (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2737,7 +2737,7 @@
                   "description": "Percentage of the population which lives in a commercial building"
             },
             "Caravan or other mobile or temporary structure (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2750,7 +2750,7 @@
                   "description": "Percentage of the population which lives in a caravan or other mobile or temporary structure"
             },
             "Owner occupied: Owns outright (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2763,7 +2763,7 @@
                   "description": "Percentage of the population which owns outright"
             },
             "Owner occupied: Owns with a mortgage or loan (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2776,7 +2776,7 @@
                   "description": "Percentage of the population which owns with a mortgage or loan"
             },
             "Shared ownership (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2789,7 +2789,7 @@
                   "description": "Percentage of the population which is shared ownership"
             },
             "Rented from: Northern Ireland Housing Executive (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2802,7 +2802,7 @@
                   "description": "Percentage of the population which lives in a Northern Ireland Housing Executive property"
             },
             "Rented from: Housing association or charitable trust (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2815,7 +2815,7 @@
                   "description": "Percentage of the population which lives in a housing association or charitable trust property"
             },
             "Rented from: Private landlord or letting agency (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2828,7 +2828,7 @@
                   "description": "Percentage of the population which lives in a private landlord or letting agency property"
             },
             "Rented from: Other (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2841,7 +2841,7 @@
                   "description": "Percentage of the population which lives in a property rented from other sources"
             },
             "Lives rent free (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2854,7 +2854,7 @@
                   "description": "Percentage of the population which lives rent free"
             },
             "1 person in household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2867,7 +2867,7 @@
                   "description": "Percentage of the population which lives in a 1 person household"
             },
             "2 people in household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2880,7 +2880,7 @@
                   "description": "Percentage of the population which lives in a 2 person household"
             },
             "3 people in household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2893,7 +2893,7 @@
                   "description": "Percentage of the population which lives in a 3 person household"
             },
             "4 people in household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2906,7 +2906,7 @@
                   "description": "Percentage of the population which lives in a 4 person household"
             },
             "5 people in household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2919,7 +2919,7 @@
                   "description": "Percentage of the population which lives in a 5 person household"
             },
             "6 people in household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2932,7 +2932,7 @@
                   "description": "Percentage of the population which lives in a 6 person household"
             },
             "7 people in household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2945,7 +2945,7 @@
                   "description": "Percentage of the population which lives in a 7 person household"
             },
             "8 or more people in household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2958,7 +2958,7 @@
                   "description": "Percentage of the population which lives in a 8 or more person household"
             },
             "Households: No central heating (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2971,7 +2971,7 @@
                   "description": "Percentage of the population which lives in a household with no central heating"
             },
             "Households: Gas central heating (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2984,7 +2984,7 @@
                   "description": "Percentage of the population which lives in a household with gas central heating"
             },
             "Households: Electric (including storage heaters) central heating (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -2997,7 +2997,7 @@
                   "description": "Percentage of the population which lives in a household with electric (including storage heaters) central heating"
             },
             "Households: Oil central heating (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3010,7 +3010,7 @@
                   "description": "Percentage of the population which lives in a household with oil central heating"
             },
             "Households: Solid fuel (for example wood, coal) central heating (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3023,7 +3023,7 @@
                   "description": "Percentage of the population which lives in a household with solid fuel (for example wood, coal) central heating"
             },
             "Households: Other central heating (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3036,7 +3036,7 @@
                   "description": "Percentage of the population which lives in a household with other central heating"
             },
             "Households: Two or more types of central heating (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3049,7 +3049,7 @@
                   "description": "Percentage of the population which lives in a household with two or more types of central heating"
             },
             "No cars or vans in household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3062,7 +3062,7 @@
                   "description": "Percentage of the population which lives in a household with no cars or vans"
             },
             "1 car or van in household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3075,7 +3075,7 @@
                   "description": "Percentage of the population which lives in a household with 1 car or van"
             },
             "2 cars or vans in household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3088,7 +3088,7 @@
                   "description": "Percentage of the population which lives in a household with 2 cars or vans"
             },
             "3 cars or vans in household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3101,7 +3101,7 @@
                   "description": "Percentage of the population which lives in a household with 3 cars or vans"
             },
             "4 or more cars or vans in household (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3114,7 +3114,7 @@
                   "description": "Percentage of the population which lives in a household with 4 or more cars or vans"
             },
             "Adapted accommodation: Wheelchair usage (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3127,7 +3127,7 @@
                   "description": "Percentage of the population which lives in a household with wheelchair usage"
             },
             "Adapted accommodation: Other physical or mobility difficulties (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3140,7 +3140,7 @@
                   "description": "Percentage of the population which lives in a household with other physical or mobility difficulties"
             },
             "Adapted accommodation: Visual difficulties (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3153,7 +3153,7 @@
                   "description": "Percentage of the population which lives in a household with visual difficulties"
             },
             "Adapted accommodation: Hearing difficulties (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3166,7 +3166,7 @@
                   "description": "Percentage of the population which lives in a household with hearing difficulties"
             },
             "Adapted accommodation: Other (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3179,7 +3179,7 @@
                   "description": "Percentage of the population which lives in a household with other difficulties"
             },
             "No adaptation to accommodation (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3192,7 +3192,7 @@
                   "description": "Percentage of the population which lives in a household with no adaptation to accommodation"
             },
             "Communal establishment usual residents living in: Medical and care establishments: HSCT: General hospital (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3205,7 +3205,7 @@
                   "description": "Percentage of the population which lives in a household with medical and care establishments: HSCT: General hospital"
             },
             "Communal establishment usual residents living in: Medical and care establishments: HSCT: Mental health hospital/ unit (including secure units) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3218,7 +3218,7 @@
                   "description": "Percentage of the population which lives in a household with medical and care establishments: HSCT: Mental health hospital/ unit (including secure units)"
             },
             "Communal establishment usual residents living in: Medical and care establishments: HSCT: Other establishment (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3231,7 +3231,7 @@
                   "description": "Percentage of the population which lives in a household with medical and care establishments: HSCT: Other establishment"
             },
             "Communal establishment usual residents living in: Medical and care establishments: Housing Association (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3244,7 +3244,7 @@
                   "description": ""
             },
             "Communal establishment usual residents living in: Medical and care establishments: Other management type: Care home with nursing (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3257,7 +3257,7 @@
                   "description": "Percentage of the population which lives in a household with medical and care establishments: Other management type: Care home with nursing"
             },
             "Communal establishment usual residents living in: Medical and care establishments: Other management type: Care home without nursing (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3270,7 +3270,7 @@
                   "description": "Percentage of the population which lives in a household with medical and care establishments: Other management type: Care home without nursing"
             },
             "Communal establishment usual residents living in: Medical and care establishments: Other management type: Children's home (including secure units) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3283,7 +3283,7 @@
                   "description": "Percentage of the population which lives in a household with medical and care establishments: Other management type: Children's home (including secure units)"
             },
             "Communal establishment usual residents living in: Medical and care establishments: Other management type: Other (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3296,7 +3296,7 @@
                   "description": "Percentage of the population which lives in a household with medical and care establishments: Other management type: Other"
             },
             "Communal establishment usual residents living in: Education establishments (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3309,7 +3309,7 @@
                   "description": "Percentage of the population which lives in a household with education establishments"
             },
             "Communal establishment usual residents living in: Other establishments (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3322,7 +3322,7 @@
                   "description": "Percentage of the population which lives in a household with other establishments     "
             },
             "Communal establishment usual residents living in: Medical and care establishments: Day-to-day activities limited a lot (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3335,7 +3335,7 @@
                   "description": "Percentage of the population which lives in a household with medical and care establishments: Day-to-day activities limited a lot"
             },
             "Communal establishment usual residents living in: Medical and care establishments: Day-to-day activities limited a little (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3348,7 +3348,7 @@
                   "description": "Percentage of the population which lives in a household with medical and care establishments: Day-to-day activities limited a little"
             },
             "Communal establishment usual residents living in: Other establishments (including education establishments): Day-to-day activities limited a lot (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3361,7 +3361,7 @@
                   "description": "Percentage of the population which lives in a household with other establishments (including education establishments): Day-to-day activities limited a lot"
             },
             "Communal establishment usual residents living in: Other establishments (including education establishments): Day-to-day activities limited a little (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3374,7 +3374,7 @@
                   "description": "Percentage of the population which lives in a household with other establishments (including education establishments): Day-to-day activities limited a little"
             },
             "No qualifications: Aged 16+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3388,7 +3388,7 @@
                   "title": "No qualifications (%)"
             },
             "Highest level of qualification: Level 1 qualifications: Aged 16+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3402,7 +3402,7 @@
                   "title": "Highest level of qualification: Level 1 (%)"
             },
             "Highest level of qualification: Level 2 qualifications: Aged 16+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3416,7 +3416,7 @@
                   "title": "Highest level of qualification: Level 2 (%)"
             },
             "Highest level of qualification: Apprenticeship: Aged 16+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3430,7 +3430,7 @@
                   "title": "Highest level of qualification: Apprenticeship (%)"
             },
             "Highest level of qualification: Level 3 qualifications: Aged 16+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3444,7 +3444,7 @@
                   "title": "Highest level of qualification: Level 3 (%)"
             },
             "Highest level of qualification: Level 4 qualifications and above: Aged 16+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3458,7 +3458,7 @@
                   "title": "Highest level of qualification: Level 4 and above (%)"
             },
             "Highest level of qualification: Other qualifications: Aged 16+ years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3472,7 +3472,7 @@
                   "title": "Highest level of qualification: Other (%)"
             },
             "Full-time students: Aged 18-74 years: Economically active: In employment (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3486,7 +3486,7 @@
                   "title": "Full-time students: In employment (%)"
             },
             "Full-time students: Aged 18-74 years: Economically active: Unemployed (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3500,7 +3500,7 @@
                   "title": "Full-time students: Unemployed (%)"
             },
             "Full-time students: Aged 18-74 years: Economically Inactive (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3514,7 +3514,7 @@
                   "title": "Full-time students: Economically inactive (%)"
             },
             "Economically active: Employee: Part-time: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3528,7 +3528,7 @@
                   "title": "Economically active: Employee: Part-time (%)"
             },
             "Economically active: Employee: Full-time: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3542,7 +3542,7 @@
                   "title": "Economically active: Employee: Full-time (%)"
             },
             "Economically active: Self-employed: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3556,7 +3556,7 @@
                   "title": "Economically active: Self-employed (%)"
             },
             "Economically active: Unemployed: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3570,7 +3570,7 @@
                   "title": "Economically active: Unemployed (%)"
             },
             "Economically active: Full-time student: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3584,7 +3584,7 @@
                   "title": "Economically active: Full-time student (%)"
             },
             "Economically inactive: Retired: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3598,7 +3598,7 @@
                   "title": "Economically inactive: Retired (%)"
             },
             "Economically inactive: Student (including full-time students): Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3612,7 +3612,7 @@
                   "title": "Economically inactive: Student (including full-time students) (%)"
             },
             "Economically inactive: Looking after home or family: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3626,7 +3626,7 @@
                   "title": "Economically inactive: Looking after home or family (%)"
             },
             "Economically inactive: Long-term sick or disabled: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3640,7 +3640,7 @@
                   "title": "Economically inactive: Long-term sick or disabled (%)"
             },
             "Economically inactive: Other: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3654,7 +3654,7 @@
                   "title": "Economically inactive: Other (%)"
             },
             "Carried out voluntary work: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3668,7 +3668,7 @@
                   "title": "Carried out voluntary work (%)"
             },
             "Unemployed: Aged 16-24 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3682,7 +3682,7 @@
                   "title": "Unemployed: Aged 16-24 years (%)"
             },
             "Unemployed: Aged 50-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3696,7 +3696,7 @@
                   "title": "Unemployed: Aged 50-74 years (%)"
             },
             "Unemployed: Never worked: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3710,7 +3710,7 @@
                   "title": "Unemployed: Never worked (%)"
             },
             "Long-term unemployed: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3724,7 +3724,7 @@
                   "title": "Long-term unemployed (%)"
             },
             "Economically active: Employee: Part-time: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3738,7 +3738,7 @@
                   "title": "Economically active: Part-time employee (Males) (%)"
             },
             "Economically active: Employee: Full-time: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3752,7 +3752,7 @@
                   "title": "Economically active: Full-time employee (Males) (%)"
             },
             "Economically active: Self-employed: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3766,7 +3766,7 @@
                   "title": "Economically active: Self-employed (Males) (%)"
             },
             "Economically active: Unemployed: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3780,7 +3780,7 @@
                   "title": "Economically active: Unemployed (Males) (%)"
             },
             "Economically active: Full-time student: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3794,7 +3794,7 @@
                   "title": "Economically active: Full-time student (Males) (%)"
             },
             "Economically inactive: Retired: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3808,7 +3808,7 @@
                   "title": "Economically inactive: Retired (Males) (%)"
             },
             "Economically inactive: Student (including full-time students): Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3822,7 +3822,7 @@
                   "title": "Economically inactive: Student (including full-time students) (Males) (%)"
             },
             "Economically inactive: Looking after home or family: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3836,7 +3836,7 @@
                   "title": "Economically inactive: Looking after home or family (Males) (%)"
             },
             "Economically inactive: Long-term sick or disabled: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3850,7 +3850,7 @@
                   "title": "Economically inactive: Long-term sick or disabled (Males) (%)"
             },
             "Economically inactive: Other: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3864,7 +3864,7 @@
                   "title": "Economically inactive: Other (Males) (%)"
             },
             "Carried out voluntary work: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3877,7 +3877,7 @@
                   "description": "Percentage of the population aged 16-74 who carried out voluntary work (males)"
             },
             "Unemployed: Aged 16-24 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3890,7 +3890,7 @@
                   "description": "Percentage of the population aged 16-24 who are unemployed (males)"
             },
             "Unemployed: Aged 50-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3903,7 +3903,7 @@
                   "description": "Percentage of the population aged 50-74 who are unemployed (males)"
             },
             "Unemployed: Never worked: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3917,7 +3917,7 @@
                   "title": "Unemployed: Never worked (Males) (%)"
             },
             "Long-term unemployed: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3931,7 +3931,7 @@
                   "title": "Long-term unemployed (Males) (%)"
             },
             "Economically active: Employee: Part-time: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3945,7 +3945,7 @@
                   "title": "Economically active: Part-time employee (Females) (%)"
             },
             "Economically active: Employee: Full-time: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3959,7 +3959,7 @@
                   "title": "Economically active: Full-time employee (Females) (%)"
             },
             "Economically active: Self-employed: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3973,7 +3973,7 @@
                   "title": "Economically active: Self-employed (Females) (%)"
             },
             "Economically active: Unemployed: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -3987,7 +3987,7 @@
                   "title": "Economically active: Unemployed (Females) (%)"
             },
             "Economically active: Full-time student: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4001,7 +4001,7 @@
                   "title": "Economically active: Full-time student (Females) (%)"
             },
             "Economically inactive: Retired: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4015,7 +4015,7 @@
                   "title": "Economically inactive: Retired (Females) (%)"
             },
             "Economically inactive: Student (including full-time students): Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4029,7 +4029,7 @@
                   "title": "Economically inactive: Student (Females) (%)"
             },
             "Economically inactive: Looking after home or family: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4043,7 +4043,7 @@
                   "title": "Economically inactive: Looking after home or family (Females) (%)"
             },
             "Economically inactive: Long-term sick or disabled: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4057,7 +4057,7 @@
                   "title": "Economically inactive: Long-term sick or disabled (Females) (%)"
             },
             "Economically inactive: Other: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4071,7 +4071,7 @@
                   "title": "Economically inactive: Other (Females) (%)"
             },
             "Carried out voluntary work: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4085,7 +4085,7 @@
                   "title": "Carried out voluntary work (Females) (%)"
             },
             "Unemployed: Aged 16-24 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4099,7 +4099,7 @@
                   "title": "Unemployed: 16-24 (Females) (%)"
             },
             "Unemployed: Aged 50-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4113,7 +4113,7 @@
                   "title": "Unemployed: 50-74 (Females) (%)"
             },
             "Unemployed: Never worked: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4127,7 +4127,7 @@
                   "title": "Unemployed: Never worked (Females) (%)"
             },
             "Long-term unemployed: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4141,7 +4141,7 @@
                   "title": "Long-term unemployed (Females) (%)"
             },
             "Part-time: <=15 hours worked per week: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4155,7 +4155,7 @@
                   "title": "Part-time: <=15 hours worked per week (%)"
             },
             "Part-time: 16-30 hours worked per week: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4169,7 +4169,7 @@
                   "title": "Part-time: 16-30 hours worked per week (%)"
             },
             "Full-time: 31-48 hours worked per week: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4183,7 +4183,7 @@
                   "title": "Full-time: 31-48 hours worked per week (%)"
             },
             "Full-time: 49+ hours worked per week: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4197,7 +4197,7 @@
                   "title": "Full-time: 49+ hours worked per week (%)"
             },
             "Part-time: <=15 hours worked per week: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4211,7 +4211,7 @@
                   "title": "Part-time: <=15 hours worked per week (Males) (%)"
             },
             "Part-time: 16-30 hours worked per week: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4225,7 +4225,7 @@
                   "title": "Part-time: 16-30 hours worked per week (Males) (%)"
             },
             "Full-time: 31-48 hours worked per week: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4239,7 +4239,7 @@
                   "title": "Full-time: 31-48 hours worked per week (Males) (%)"
             },
             "Full-time: 49+ hours worked per week: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4253,7 +4253,7 @@
                   "title": "Full-time: 49+ hours worked per week (Males) (%)"
             },
             "Part-time: <=15 hours worked per week: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4267,7 +4267,7 @@
                   "title": "Part-time: <=15 hours worked per week (Females) (%)"
             },
             "Part-time: 16-30 hours worked per week: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4281,7 +4281,7 @@
                   "title": "Part-time: 16-30 hours worked per week (Females) (%)"
             },
             "Full-time: 31-48 hours worked per week: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4295,7 +4295,7 @@
                   "title": "Full-time: 31-48 hours worked per week (Females) (%)"
             },
             "Full-time: 49+ hours worked per week: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4309,7 +4309,7 @@
                   "title": "Full-time: 49+ hours worked per week (Females) (%)"
             },
             "Industry of employment: Agriculture, forestry and fishing: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4323,7 +4323,7 @@
                   "title": "Industry of employment: Agriculture, forestry and fishing (%)"
             },
             "Industry of employment: Mining and quarrying: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4337,7 +4337,7 @@
                   "title": "Industry of employment: Mining and quarrying (%)"
             },
             "Industry of employment: Manufacturing: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4351,7 +4351,7 @@
                   "title": "Industry of employment: Manufacturing (%)"
             },
             "Industry of employment: Electricity, gas, steam and air conditioning supply: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4365,7 +4365,7 @@
                   "title": "Industry of employment: Electricity, gas, steam and air conditioning supply (%)"
             },
             "Industry of employment: Water supply; sewerage, waste management and remediation activities: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4379,7 +4379,7 @@
                   "title": "Industry of employment: Water supply; sewerage, waste management and remediation activities (%)"
             },
             "Industry of employment: Construction: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4393,7 +4393,7 @@
                   "title": "Industry of employment: Construction (%)"
             },
             "Industry of employment: Wholesale and retail trade; repair of motor vehicles and motor cycles: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4407,7 +4407,7 @@
                   "title": "Industry of employment: Wholesale and retail trade; repair of motor vehicles and motor cycles (%)"
             },
             "Industry of employment: Transport and storage: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4421,7 +4421,7 @@
                   "title": "Industry of employment: Transport and storage (%)"
             },
             "Industry of employment: Accommodation and food service activities: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4435,7 +4435,7 @@
                   "title": "Industry of employment: Accommodation and food service activities (%)"
             },
             "Industry of employment: Information and communication: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4449,7 +4449,7 @@
                   "title": "Industry of employment: Information and communication (%)"
             },
             "Industry of employment: Financial and insurance activities: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4463,7 +4463,7 @@
                   "title": "Industry of employment: Financial and insurance activities (%)"
             },
             "Industry of employment: Real estate activities: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4477,7 +4477,7 @@
                   "title": "Industry of employment: Real estate activities (%)"
             },
             "Industry of employment: Professional, scientific and technical activities: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4491,7 +4491,7 @@
                   "title": "Industry of employment: Professional, scientific and technical activities (%)"
             },
             "Industry of employment: Administrative and support service activities: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4505,7 +4505,7 @@
                   "title": "Industry of employment: Administrative and support service activities (%)"
             },
             "Industry of employment: Public administration and defence; compulsory social security: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4519,7 +4519,7 @@
                   "title": "Industry of employment: Public administration and defence; compulsory social security (%)"
             },
             "Industry of employment: Education: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4533,7 +4533,7 @@
                   "title": "Industry of employment: Education (%)"
             },
             "Industry of employment: Human health and social work activities: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4547,7 +4547,7 @@
                   "title": "Industry of employment: Human health and social work activities (%)"
             },
             "Industry of employment: Other: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4561,7 +4561,7 @@
                   "title": "Industry of employment: Other (%)"
             },
             "Industry of employment: Agriculture, forestry and fishing: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4575,7 +4575,7 @@
                   "title": "Industry of employment: Agriculture, forestry and fishing (Males) (%)"
             },
             "Industry of employment: Mining and quarrying: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4589,7 +4589,7 @@
                   "title": "Industry of employment: Mining and quarrying (Males) (%)"     
             },
             "Industry of employment: Manufacturing: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4603,7 +4603,7 @@
                   "title": "Industry of employment: Manufacturing (Males) (%)"
             },
             "Industry of employment: Electricity, gas, steam and air conditioning supply: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4617,7 +4617,7 @@
                   "title": "Industry of employment: Electricity, gas, steam and air conditioning supply (Males) (%)"
             },
             "Industry of employment: Water supply; sewerage, waste management and remediation activities: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4631,7 +4631,7 @@
                   "title": "Industry of employment: Water supply; sewerage, waste management and remediation activities (Males) (%)"
             },
             "Industry of employment: Construction: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4645,7 +4645,7 @@
                   "title": "Industry of employment: Construction (Males) (%)"
             },
             "Industry of employment: Wholesale and retail trade; repair of motor vehicles and motor cycles: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4659,7 +4659,7 @@
                   "title": "Industry of employment: Wholesale and retail trade; repair of motor vehicles and motor cycles (Males) (%)"
             },
             "Industry of employment: Transport and storage: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4673,7 +4673,7 @@
                   "title": "Industry of employment: Transport and storage (Males) (%)"
             },
             "Industry of employment: Accommodation and food service activities: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4687,7 +4687,7 @@
                   "title": "Industry of employment: Accommodation and food service activities (Males) (%)"
             },
             "Industry of employment: Information and communication: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4701,7 +4701,7 @@
                   "title": "Industry of employment: Information and communication (Males) (%)"
             },
             "Industry of employment: Financial and insurance activities: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4715,7 +4715,7 @@
                   "title": "Industry of employment: Financial and insurance activities (Males) (%)"
             },
             "Industry of employment: Real estate activities: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4729,7 +4729,7 @@
                   "title": "Industry of employment: Real estate activities (Males) (%)"
             },
             "Industry of employment: Professional, scientific and technical activities: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4743,7 +4743,7 @@
                   "title": "Industry of employment: Professional, scientific and technical activities (Males) (%)"
             },
             "Industry of employment: Administrative and support service activities: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4757,7 +4757,7 @@
                   "title": "Industry of employment: Administrative and support service activities (Males) (%)"
             },
             "Industry of employment: Public administration and defence; compulsory social security: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4771,7 +4771,7 @@
                   "title": "Industry of employment: Public administration and defence; compulsory social security (Males) (%)"
             },
             "Industry of employment: Education: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4785,7 +4785,7 @@
                   "title": "Industry of employment: Education (Males) (%)"
             },
             "Industry of employment: Human health and social work activities: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4799,7 +4799,7 @@
                   "title": "Industry of employment: Human health and social work activities (Males) (%)"
             },
             "Industry of employment: Other: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4813,7 +4813,7 @@
                   "title": "Industry of employment: Other (Males) (%)"
             },
             "Industry of employment: Agriculture, forestry and fishing: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4827,7 +4827,7 @@
                   "title": "Industry of employment: Agriculture, forestry and fishing (Females) (%)"
             },
             "Industry of employment: Mining and quarrying: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4841,7 +4841,7 @@
                   "title": "Industry of employment: Mining and quarrying (Females) (%)"
             },
             "Industry of employment: Manufacturing: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4855,7 +4855,7 @@
                   "title": "Industry of employment: Manufacturing (Females) (%)"
             },
             "Industry of employment: Electricity, gas, steam and air conditioning supply: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4869,7 +4869,7 @@
                   "title": "Industry of employment: Electricity, gas, steam and air conditioning supply (Females) (%)"
             },
             "Industry of employment: Water supply; sewerage, waste management and remediation activities: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4883,7 +4883,7 @@
                   "title": "Industry of employment: Water supply; sewerage, waste management and remediation activities (Females) (%)"
             },
             "Industry of employment: Construction: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4897,7 +4897,7 @@
                   "title": "Industry of employment: Construction (Females) (%)"
             },
             "Industry of employment: Wholesale and retail trade; repair of motor vehicles and motor cycles: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4911,7 +4911,7 @@
                   "title": "Industry of employment: Wholesale and retail trade; repair of motor vehicles and motor cycles (Females) (%)"
             },
             "Industry of employment: Transport and storage: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4925,7 +4925,7 @@
                   "title": "Industry of employment: Transport and storage (Females) (%)"
             },
             "Industry of employment: Accommodation and food service activities: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4939,7 +4939,7 @@
                   "title": "Industry of employment: Accommodation and food service activities (Females) (%)"
             },
             "Industry of employment: Information and communication: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4953,7 +4953,7 @@
                   "title": "Industry of employment: Information and communication (Females) (%)"
             },
             "Industry of employment: Financial and insurance activities: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4967,7 +4967,7 @@
                   "title": "Industry of employment: Financial and insurance activities (Females) (%)"
             },
             "Industry of employment: Real estate activities: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4981,7 +4981,7 @@
                   "title": "Industry of employment: Real estate activities (Females) (%)"
             },
             "Industry of employment: Professional, scientific and technical activities: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -4995,7 +4995,7 @@
                   "title": "Industry of employment: Professional, scientific and technical activities (Females) (%)"
             },
             "Industry of employment: Administrative and support service activities: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5009,7 +5009,7 @@
                   "title": "Industry of employment: Administrative and support service activities (Females) (%)"
             },
             "Industry of employment: Public administration and defence; compulsory social security: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5023,7 +5023,7 @@
                   "title": "Industry of employment: Public administration and defence; compulsory social security (Females) (%)"
             },
             "Industry of employment: Education: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5037,7 +5037,7 @@
                   "title": "Industry of employment: Education (Females) (%)"
             },
             "Industry of employment: Human health and social work activities: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5051,7 +5051,7 @@
                   "title": "Industry of employment: Human health and social work activities (Females) (%)"
             },
             "Industry of employment: Other: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5065,7 +5065,7 @@
                   "title": "Industry of employment: Other (Females) (%)"
             },
             "Occupation: Managers, directors and senior officials: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5079,7 +5079,7 @@
                   "title": "Occupation: Managers, directors and senior officials (%)"
             },
             "Occupation: Professional occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5093,7 +5093,7 @@
                   "title": "Occupation: Professional occupations (%)"
             },
             "Occupation: Associate professional and technical occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5107,7 +5107,7 @@
                   "title": "Occupation: Associate professional and technical occupations (%)"
             },
             "Occupation: Administrative and secretarial occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5121,7 +5121,7 @@
                   "title": "Occupation: Administrative and secretarial occupations (%)"
             },
             "Occupation: Skilled trades occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5135,7 +5135,7 @@
                   "title": "Occupation: Skilled trades occupations (%)"
             },
             "Occupation: Caring, leisure and other service occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5149,7 +5149,7 @@
                   "title": "Occupation: Caring, leisure and other service occupations (%)"
             },
             "Occupation: Sales and customer service occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5163,7 +5163,7 @@
                   "title": "Occupation: Sales and customer service occupations (%)"
             },
             "Occupation: Process, plant and machine operatives: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5177,7 +5177,7 @@
                   "title": "Occupation: Skilled trades occupations (%)"
             },
             "Occupation: Elementary occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5191,7 +5191,7 @@
                   "title": "Occupation: Elementary occupations (%)"
             },
             "Occupation: Managers, directors and senior officials: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5205,7 +5205,7 @@
                   "title": "Occupation: Managers, directors and senior officials (Males) (%)"
             },
             "Occupation: Professional occupations: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5218,7 +5218,7 @@
                   "description": ""
             },
             "Occupation: Associate professional and technical occupations: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5232,7 +5232,7 @@
                   "title": "Occupation: Associate professional and technical occupations (Males) (%)"
             },
             "Occupation: Administrative and secretarial occupations: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5246,7 +5246,7 @@
                   "title": "Occupation: Administrative and secretarial occupations (Males) (%)"
             },
             "Occupation: Skilled trades occupations: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5260,7 +5260,7 @@
                   "title": "Occupation: Skilled trades occupations (Males) (%)"
             },
             "Occupation: Caring, leisure and other service occupations: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5274,7 +5274,7 @@
                   "title": "Occupation: Caring, leisure and other service occupations (Males) (%)"
             },
             "Occupation: Sales and customer service occupations: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5288,7 +5288,7 @@
                   "title": "Occupation: Sales and customer service occupations (Males) (%)"     
             },
             "Occupation: Process, plant and machine operatives: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5302,7 +5302,7 @@
                   "title": "Occupation: Process, plant and machine operatives (Males) (%)"
             },
             "Occupation: Elementary occupations: Aged 16-74 years (Males) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5316,7 +5316,7 @@
                   "title": "Occupation: Elementary occupations (Males) (%)"
             },
             "Occupation: Managers, directors and senior officials: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5330,7 +5330,7 @@
                   "title": "Occupation: Managers, directors and senior officials (Females) (%)"
             },
             "Occupation: Professional occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5344,7 +5344,7 @@
                   "title": "Occupation: Professional occupations (Females) (%)"
             },
             "Occupation: Associate professional and technical occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5358,7 +5358,7 @@
                   "title": "Occupation: Associate professional and technical occupations (Females) (%)"
             },
             "Occupation: Administrative and secretarial occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5372,7 +5372,7 @@
                   "title": "Occupation: Administrative and secretarial occupations (Females) (%)"
             },
             "Occupation: Skilled trades occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5386,7 +5386,7 @@
                   "title": "Occupation: Skilled trades occupations (Females) (%)"
             },
             "Occupation: Caring, leisure and other service occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5400,7 +5400,7 @@
                   "title": "Occupation: Caring, leisure and other service occupations (Females) (%)"
             },
             "Occupation: Sales and customer service occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5414,7 +5414,7 @@
                   "title": "Occupation: Sales and customer service occupations (Females) (%)"
             },
             "Occupation: Process, plant and machine operatives: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5428,7 +5428,7 @@
                   "title": "Occupation: Process, plant and machine operatives (Females) (%)"
             },
             "Occupation: Elementary occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5442,7 +5442,7 @@
                   "title": "Occupation: Elementary occupations (Females) (%)"
             },
             "NS-SeC: 1.1\u00a0Large employers and higher managerial and administrative occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5456,7 +5456,7 @@
                   "title": "NS-Sec 1.1: Large employers and higher managerial and administrative occupations (%)"
             },
             "NS-SeC: 1.2\u00a0Higher professional occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5470,7 +5470,7 @@
                   "title": "NS-Sec 1.2: Higher professional occupations (%)"
             },
             "NS-SeC: 2. Lower managerial, administrative and professional occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5484,7 +5484,7 @@
                   "title": "NS-Sec 2: Lower managerial, administrative and professional occupations (%)"
             },
             "NS-SeC: 3. Intermediate occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5498,7 +5498,7 @@
                   "title": "NS-Sec 3: Intermediate occupations (%)"
             },
             "NS-SeC: 4. Small employers and own account workers: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5512,7 +5512,7 @@
                   "title": "NS-Sec 4: Small employers and own account workers (%)"
             },
             "NS-SeC: 5. Lower supervisory and technical occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5526,7 +5526,7 @@
                   "title": "NS-Sec 5: Lower supervisory and technical occupations (%)"
             },
             "NS-SeC: 6. Semi-routine occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5540,7 +5540,7 @@
                   "title": "NS-Sec 6: Semi-routine occupations (%)"
             },
             "NS-SeC: 7. Routine occupations: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5554,7 +5554,7 @@
                   "title": "NS-Sec 7: Routine occupations (%)"
             },
             "NS-SeC: L14.1 Never worked: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5568,7 +5568,7 @@
                   "title": "NS-Sec L14.1: Never worked (%)"
             },
             "NS-SeC: L14.2 Long-term unemployed: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5582,7 +5582,7 @@
                   "title": "NS-Sec L14.2: Long-term unemployed (%)"
             },
             "NS-SeC: Not classified: L15 Full-time students: Aged 16-74 years (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5596,7 +5596,7 @@
                   "title": "NS-Sec Not classified: L15 Full-time students (%)"
             },
             "NS-SeC: 1.1\u00a0Large employers and higher managerial and administrative occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5610,7 +5610,7 @@
                   "title": "NS-Sec 1.1: Large employers and higher managerial and administrative occupations (Females) (%)"
             },
             "NS-SeC: 1.2\u00a0Higher professional occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5624,7 +5624,7 @@
                   "title": "NS-Sec 1.2: Higher professional occupations (Females) (%)"
             },
             "NS-SeC: 2. Lower managerial, administrative and professional occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5638,7 +5638,7 @@
                   "title": "NS-Sec 2: Lower managerial, administrative and professional occupations (Females) (%)"
             },
             "NS-SeC: 3. Intermediate occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5652,7 +5652,7 @@
                   "title": "NS-Sec 3: Intermediate occupations (Females) (%)"
             },
             "NS-SeC: 4. Small employers and own account workers: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5666,7 +5666,7 @@
                   "title": "NS-Sec 4: Small employers and own account workers (Females) (%)"
             },
             "NS-SeC: 5. Lower supervisory and technical occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5680,7 +5680,7 @@
                   "title": "NS-Sec 5: Lower supervisory and technical occupations (Females) (%)"
             },
             "NS-SeC: 6. Semi-routine occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5694,7 +5694,7 @@
                   "title": "NS-Sec 6: Semi-routine occupations (Females) (%)"
             },
             "NS-SeC: 7. Routine occupations: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5708,7 +5708,7 @@
                   "title": "NS-Sec 7: Routine occupations (Females) (%)"
             },
             "NS-SeC: L14.1 Never worked: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5722,7 +5722,7 @@
                   "title": "NS-Sec L14.1: Never worked (Females) (%)"
             },
             "NS-SeC: L14.2 Long-term unemployed: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5736,7 +5736,7 @@
                   "title": "NS-Sec L14.2: Long-term unemployed (Females) (%)"
             },
             "NS-SeC: Not classified: L15 Full-time students: Aged 16-74 years (Females) (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5750,7 +5750,7 @@
                   "title": "NS-Sec Not classified: L15 Full-time students (Females) (%)"
             },
             "All usual residents: Work mainly at or from home: Aged 16-74 years (excluding students) in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5764,7 +5764,7 @@
                   "title": "All usual residents: Work mainly at or from home"
             },
             "Method of travel to work: Train: Aged 16-74 years (excluding students) in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5778,7 +5778,7 @@
                   "title": "Method of travel to work: Train"
             },
             "Method of travel to work: Bus, minibus or coach: Aged 16-74 years (excluding students) in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5792,7 +5792,7 @@
                   "title": "Method of travel to work: Bus, minibus or coach"
             },
             "Method of travel to work: Motorcycle, scooter or moped: Aged 16-74 years (excluding students) in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5806,7 +5806,7 @@
                   "title": "Method of travel to work: Motorcycle, scooter or moped"
             },
             "Method of travel to work: Driving a car or van: Aged 16-74 years (excluding students) in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5820,7 +5820,7 @@
                   "title": "Method of travel to work: Driving a car or van"
             },
             "Method of travel to work: Passenger in a car or van: Aged 16-74 years (excluding students) in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5834,7 +5834,7 @@
                   "title": "Method of travel to work: Passenger in a car or van"
             },
             "Method of travel to work: Car or van pool, shared driving: Aged 16-74 years (excluding students) in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5848,7 +5848,7 @@
                   "title": "Method of travel to work: Car or van pool, shared driving"
             },
             "Method of travel to work: Taxi: Aged 16-74 years (excluding students) in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5862,7 +5862,7 @@
                   "title": "Method of travel to work: Taxi"
             },
             "Method of travel to work: Bicycle: Aged 16-74 years (excluding students) in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5876,7 +5876,7 @@
                   "title": "Method of travel to work: Bicycle"
             },
             "Method of travel to work: On foot: Aged 16-74 years (excluding students) in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5890,7 +5890,7 @@
                   "title": "Method of travel to work: On foot"
             },
             "Method of travel to work: Other method: Aged 16-74 years (excluding students) in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5904,7 +5904,7 @@
                   "title": "Method of travel to work: Other method"
             },
             "Usual residents in households with access to a car or van: Use public transport to travel to work: Aged 16-74 years (excluding students) in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5918,7 +5918,7 @@
                   "title": "Usual residents in households with access to a car or van: Use public transport to travel to work"
             },
             "Usual residents in households without access to a car or van: Use public transport to travel to work: Aged 16-74 years (excluding students) in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5932,7 +5932,7 @@
                   "title": "Usual residents in households without access to a car or van: Use public transport to travel to work"
             },
             "All usual residents: Work or study mainly at or from home: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5946,7 +5946,7 @@
                   "title": "All usual residents: Work or study mainly at or from home"
             },
             "Method of travel to work or place of study: Train: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5960,7 +5960,7 @@
                   "title": "Method of travel to work or place of study: Train"
             },
             "Method of travel to work or place of study: Bus, minibus or coach: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5974,7 +5974,7 @@
                   "title": "Method of travel to work or place of study: Bus, minibus or coach"
             },
             "Method of travel to work or place of study: Motorcycle, scooter or moped: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -5988,7 +5988,7 @@
                   "title": "Method of travel to work or place of study: Motorcycle, scooter or moped"
             },
             "Method of travel to work or place of study: Driving a car or van: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -6002,7 +6002,7 @@
                   "title": "Method of travel to work or place of study: Driving a car or van"
             },
             "Method of travel to work or place of study: Passenger in a car or van: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -6016,7 +6016,7 @@
                   "title": "Method of travel to work or place of study: Passenger in a car or van"
             },
             "Method of travel to work or place of study: Car or van pool, shared driving: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -6030,7 +6030,7 @@
                   "title": "Method of travel to work or place of study: Car or van pool, shared driving"
             },
             "Method of travel to work or place of study: Taxi: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -6044,7 +6044,7 @@
                   "title": "Method of travel to work or place of study: Taxi"
             },
             "Method of travel to work or place of study: Bicycle: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -6058,7 +6058,7 @@
                   "title": "Method of travel to work or place of study: Bicycle"
             },
             "Method of travel to work or place of study: On foot: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -6072,7 +6072,7 @@
                   "title": "Method of travel to work or place of study: On foot"
             },
             "Method of travel to work or place of study: Other method: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -6086,7 +6086,7 @@
                   "title": "Method of travel to work or place of study: Other method"
             },
             "Usual residents in households with access to a car or van: Use public transport to travel to work or place of study: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -6100,7 +6100,7 @@
                   "title": "Usual residents in households with access to a car or van: Use public transport to travel to work or place of study"
             },
             "Usual residents in households without access to a car or van: Use public transport to travel to work or place of study: Primary school age and over in full-time education or aged 16-74 in employment and currently working (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -6114,7 +6114,7 @@
                   "title": "Usual residents in households without access to a car or van: Use public transport to travel to work or place of study"
             },
             "Born in Northern Ireland: Never resided elsewhere (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -6128,7 +6128,7 @@
                   "title": "Born in Northern Ireland: Never resided elsewhere"
             },
             "Born in Northern Ireland: Who have resided elsewhere and: Returned between 2007 and Census day (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -6142,7 +6142,7 @@
                   "title": "Born in Northern Ireland: Who have resided elsewhere and: Returned between 2007 and Census day"
             },
             "Born in Northern Ireland: Who have resided elsewhere and: Returned between 2001 and 2006 (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -6156,7 +6156,7 @@
                   "title": "Born in Northern Ireland: Who have resided elsewhere and: Returned between 2001 and 2006"
             },
             "Born in Northern Ireland: Who have resided elsewhere and: Returned prior to 2001 (%)": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],
@@ -6170,7 +6170,7 @@
                   "title": "Born in Northern Ireland: Who have resided elsewhere and: Returned prior to 2001"
             },
             "SEISA proportion": {
-                  "type": "Metric",
+                  "type": "Percentage",
                   "bins": [
                         10
                   ],

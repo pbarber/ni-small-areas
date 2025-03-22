@@ -1,13 +1,12 @@
 // TODO: fill out Data Zones dataset - document the new variables
-// TODO: add more summaryOrder values for Data Zones
 // TODO: add choropleth map
 // TODO: add hex map
-// TODO: split Metrics into Counts, Percentages and Ranks
 // TODO: allow ranking of Counts and Percentages
 // TODO: allow non-ranked binning for Counts and Percentages
-// TODO: add denominator for counts
+// TODO: add denominator for counts, add Raw option
 // TODO: load a column at a time from S3
 // TODO: Add NIMDM travel data for small areas
+// TODO: Update summary order for DZs to %s
 
 // Initialize the echarts instance based on the prepared dom
 var myChart = echarts.init(document.getElementById('main'));
@@ -200,12 +199,12 @@ function onDataLoad(results) {
     if (dimensions.hasOwnProperty(params.get("x"))) {
         settings.x = params.get("x");
     } else {
-        settings.x = Object.entries(dimensions).filter(a => a[1].type == 'Metric')[0][0];
+        settings.x = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number')[0][0];
     }
     if (dimensions.hasOwnProperty(params.get("y"))) {
         settings.y = params.get("y");
     } else {
-        settings.y = Object.entries(dimensions).filter(a => a[1].type == 'Metric')[1][0];
+        settings.y = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number')[1][0];
     }
     if (dimensions.hasOwnProperty(params.get("colour"))) {
         settings.colour = params.get("colour");
@@ -228,7 +227,7 @@ function onDataLoad(results) {
     var ogcc = createOptGroup('Categories');
     var ogcb = createOptGroup('Binned metrics');
     for (const [key, value] of Object.entries(dimensions)) {
-        if (value.type == 'Metric') {
+        if (value.type == 'Rank' || value.type == 'Percentage' || value.type == 'Geographic' || value.type == 'Number') {
             ogxm.append(createOption(useTitleIfExists(key), key, (key == settings.x), (key == settings.y)));
             ogym.append(createOption(useTitleIfExists(key), key, (key == settings.y), (key == settings.x)));
         } else if (value.type == 'Category') {
