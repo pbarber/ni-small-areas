@@ -1,8 +1,7 @@
 // TODO: fill out Data Zones dataset - document the new variables
 // TODO: add choropleth map
 // TODO: add hex map
-// TODO: allow ranking of Counts and Percentages
-// TODO: allow non-ranked binning for Counts and Percentages
+// TODO: fix multi-select of Quantiles etc
 // TODO: add denominator for counts, add Raw option
 // TODO: load a column at a time from S3
 // TODO: Add NIMDM travel data for small areas
@@ -185,9 +184,10 @@ function calculateQuantileBins(name, config) {
     const dimension = {
         ...config,
         type: 'Quantile',
-        binSource: name
+        calcSource: name
     };
     delete dimension.summaryOrder;
+    delete dimension.bins;
     if (config.description) {
         dimension.description = config.description + suffix;
     }
@@ -205,17 +205,18 @@ function calculateIntervalBins(name, config) {
     const binWidth = (max - min) / config.bins[0];
 
     store.forEach((item, idx) => {
-        const value = Math.min(config.bins[0], Math.ceil((item[name] - min) / binWidth));
-        store[idx][name + ' interval'] = value;
+        const value = Math.min(config.bins[0]-1, Math.floor((item[name] - min) / binWidth));
+        store[idx][name + ' interval'] = value+1;
     });
 
     const dimension = {
         ...config,
         type: 'Interval',
-        binSource: name,
+        calcSource: name,
         binRange: [min, max]
     };
     delete dimension.summaryOrder;
+    delete dimension.bins;
     if (config.description) {
         dimension.description = config.description + ' interval';
     }
@@ -239,9 +240,10 @@ function calculateRanks(name, config) {
     const dimension = {
         ...config,
         type: 'Calculated Rank',
-        binSource: name
+        calcSource: name
     };
     delete dimension.summaryOrder;
+    delete dimension.bins;
     if (config.description) {
         dimension.description = config.description + ' rank';
     }
@@ -320,8 +322,7 @@ function onDataLoad(results) {
     for (const key of Object.keys(metbrewer)) {
         document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
     }
-    const xBinned = dimensions[settings.x].type == 'Quantile' || dimensions[settings.x].type == 'Interval';
-    handleXVariableChange(xBinned ? dimensions[settings.x].binSource : settings.x, xBinned);
+    handleXVariableChange(dimensions[settings.x].hasOwnProperty('calcSource') ? dimensions[settings.x].calcSource : settings.x, dimensions[settings.x].type == 'Quantile'), dimensions[settings.x].type == 'Interval', dimensions[settings.x].type == 'Calculated Rank';
 
     $('#x-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
     $('#y-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
@@ -368,7 +369,7 @@ function onDataLoad(results) {
     });
 
     $('#x-select').on('select2:select', function (e) {
-        handleXVariableChange(e.target.value, document.getElementById('x-quantile').checked);
+        handleXVariableChange(e.target.value, document.getElementById('x-quantile').checked, document.getElementById('x-interval').checked, document.getElementById('x-rank').checked);
         updateChart();
     });
 
@@ -1009,38 +1010,66 @@ function updateChart() {
     });
 }
 
-function handleXVariableChange(selected, binned) {
-    const dim = dimensions[selected];
-    if (binned) {
-        if (dim && dim.hasOwnProperty('bins')) {
-            const suffix = binned ? ((dim.bins[0] == 10) ? ' decile' : (dim.bins[0] == 100) ? ' centile' : ' quantile') : '';
-            settings.x = selected + suffix;
-            document.getElementById('x-quantile').checked = true;
-            document.getElementById('x-quantile').disabled = false;
-        } else {
-            settings.x = selected;
-            document.getElementById('x-quantile').checked = false;
-            document.getElementById('x-quantile').disabled = true;
-        }
-    } else {
-        settings.x = selected;
-        document.getElementById('x-quantile').checked = false;
-        if (dim && dim.hasOwnProperty('bins')) {
-            document.getElementById('x-quantile').disabled = false;
-        } else {
-            document.getElementById('x-quantile').disabled = true;
-        }
+function variableHasCalculatedOptions(v) {
+    var hasQuantile = false;
+    var hasInterval = false;
+    var hasRank = false;
+    var suffixQuantile = null;
+    var suffixInterval = null;
+    var suffixRank = null;
+    if (v.bins) {
+        hasQuantile = true;
+        suffixQuantile = (v.bins[0] == 10) ? ' decile' : (v.bins[0] == 100) ? ' centile' : ' quantile';
     }
-    hideSelected("y-select", selected, settings.y, binned);
-    hideSelected("x-select", binned ? 'Count of ' + datasetTitle + 's' : settings.y, selected);
+    if (v.bins && (v.type === 'Number' || v.type === 'Percentage')) {
+        hasInterval = true;
+        suffixInterval = ' interval';
+    }
+    if (v.type === 'Number' || v.type === 'Percentage') {
+        hasRank = true;
+        suffixRank = ' rank';
+    }
+    return [hasQuantile, suffixQuantile, hasInterval, suffixInterval, hasRank, suffixRank];
+}
+
+function handleXVariableChange(selected, quantileSelected, intervalSelected, rankSelected) {
+    const dim = dimensions[selected];
+    const [hasQuantile, suffixQuantile, hasInterval, suffixInterval, hasRank, suffixRank] = variableHasCalculatedOptions(dim);
+    // Make checkboxes selectable/non-selectable
+    document.getElementById('x-quantile').disabled = !hasQuantile;
+    document.getElementById('x-interval').disabled = !hasInterval;
+    document.getElementById('x-rank').disabled = !hasRank;
+    // Set the checkboxes to the correct state
+    document.getElementById('x-quantile').checked = hasQuantile && quantileSelected;
+    document.getElementById('x-interval').checked = hasInterval && intervalSelected;
+    document.getElementById('x-rank').checked = hasRank && rankSelected;
+    // Set the x variable to the correct value
+    settings.x = selected;
+    if (quantileSelected && hasQuantile) {
+        settings.x = selected + suffixQuantile;
+    }
+    if (intervalSelected && hasInterval) {
+        settings.x = selected + suffixInterval;
+    }
+    if (rankSelected && hasRank) {
+        settings.x = selected + suffixRank;
+    }
+    // Hide the y variable if it's the same as the x variable
+    hideSelected("y-select", selected, settings.y, (quantileSelected && hasQuantile) || (intervalSelected && hasInterval));
+    // Hide the x variable if it's the same as the y variable
+    hideSelected("x-select", (quantileSelected && hasQuantile) || (intervalSelected && hasInterval) ? 'Count of ' + datasetTitle + 's' : settings.y, selected);
+    // Update the y variable selector
     $('#y-select').trigger('change');
+    // Update the x variable selector
     $('#x-select').trigger('change');
 }
 
 // Add event listeners for the checkboxes
-document.getElementById('x-quantile').addEventListener('change', function (e) {
-    handleXVariableChange(document.getElementById('x-select').value, e.target.checked);
-    updateChart();
+document.querySelectorAll('.x-option').forEach(element => {
+    element.addEventListener('change', function (e) {
+        handleXVariableChange(document.getElementById('x-select').value, document.getElementById('x-quantile').checked, document.getElementById('x-interval').checked, document.getElementById('x-rank').checked);
+        updateChart();
+    });
 });
 
 document.getElementById('bottom-sheet').addEventListener('submit', function(event) {
