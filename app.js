@@ -144,13 +144,13 @@ function initialiseDimensionSettings(params, dimensions) {
     if (dimensions.hasOwnProperty(params.get("x"))) {
         settings.x = params.get("x");
     } else {
-        settings.x = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number')[0][0];
+        settings.x = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number' || a[1].type == 'People')[0][0];
     }
     // Take either y from URL params or default to second numeric dimension
     if (dimensions.hasOwnProperty(params.get("y"))) {
         settings.y = params.get("y");
     } else {
-        settings.y = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number')[1][0];
+        settings.y = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number' || a[1].type == 'People')[1][0];
     }
     // Take either colour from URL params or default to first category dimension
     if (dimensions.hasOwnProperty(params.get("colour"))) {
@@ -276,11 +276,11 @@ function onDataLoad(results) {
         const [name, newDimension] = calculateQuantileBins(d[0], d[1]);
         dimensions[name] = newDimension;
     });
-    Object.entries(dimensions).filter(v => v[1].bins && (v[1].type === 'Number' || v[1].type === 'Percentage')).forEach((d) => {
+    Object.entries(dimensions).filter(v => v[1].bins && (v[1].type === 'Number' || v[1].type === 'Percentage' || v[1].type === 'People')).forEach((d) => {
         const [name, newDimension] = calculateIntervalBins(d[0], d[1]);
         dimensions[name] = newDimension;
     });
-    Object.entries(dimensions).filter(v => (v[1].type === 'Number' || v[1].type === 'Percentage')).forEach((d) => {
+    Object.entries(dimensions).filter(v => (v[1].type === 'Number' || v[1].type === 'Percentage' || v[1].type === 'People')).forEach((d) => {
         const [name, newDimension] = calculateRanks(d[0], d[1]);
         dimensions[name] = newDimension;
     });
@@ -297,7 +297,7 @@ function onDataLoad(results) {
     var ogcc = createOptGroup('Categories');
     var ogcb = createOptGroup('Binned metrics');
     for (const [key, value] of Object.entries(dimensions)) {
-        if (value.type == 'Rank' || value.type == 'Percentage' || value.type == 'Geographic' || value.type == 'Number') {
+        if (value.type == 'Rank' || value.type == 'Percentage' || value.type == 'Geographic' || value.type == 'Number' || value.type == 'People') {
             ogxm.append(createOption(useTitleIfExists(key), key, (key == settings.x), (key == settings.y)));
             ogym.append(createOption(useTitleIfExists(key), key, (key == settings.y), (key == settings.x)));
         } else if (value.type == 'Category') {
@@ -1020,11 +1020,11 @@ function variableHasCalculatedOptions(v) {
         hasQuantile = true;
         suffixQuantile = (v.bins[0] == 10) ? ' decile' : (v.bins[0] == 100) ? ' centile' : ' quantile';
     }
-    if (v.bins && (v.type === 'Number' || v.type === 'Percentage')) {
+    if (v.bins && (v.type === 'Number' || v.type === 'Percentage' || v.type === 'People')) {
         hasInterval = true;
         suffixInterval = ' interval';
     }
-    if (v.type === 'Number' || v.type === 'Percentage') {
+    if (v.type === 'Number' || v.type === 'Percentage' || v.type === 'People') {
         hasRank = true;
         suffixRank = ' rank';
     }
