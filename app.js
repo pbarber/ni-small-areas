@@ -168,41 +168,32 @@ function initialiseDimensionSettings(params, dimensions) {
     }
 }
 
-function calculateDimension(name, config) {
+function calculateBinnedDimension(name, config) {
     const binSize = store.length / config.bins[0];
     const suffix = (config.bins[0] == 10) ? ' decile' : (config.bins[0] == 100) ? ' centile' : ' binned';
 
-    // Create a temporary array for sorting without modifying original data
-    const tempArray = store.map((a, idx) => ({
+    store.map((a, idx) => ({
         index: idx,
         value: a[name]
-    })).sort((a, b) => (a.value - b.value));
-
-    // Sort the temporary array and calculate bins
-    tempArray.forEach((e, i) => {
+    })).sort(
+        (a, b) => (a.value - b.value)
+    ).forEach((e, i) => {
         const value = parseInt(i / binSize) + 1;
         store[e.index][name + suffix] = value;
     });
 
-    var dimension = {
+    const dimension = {
+        ...config,
         type: 'Binned',
         binSource: name
     };
-    if (config.hasOwnProperty('description')) {
+    if (config.description) {
         dimension.description = config.description + suffix;
-    }
-    if (config.hasOwnProperty('URL')) {
-        dimension.URL = config.URL;
-    }
-    if (config.hasOwnProperty('date')) {
-        dimension.date = config.date;
-    }
-    if (config.hasOwnProperty('extremes')) {
-        dimension.extremes = config.extremes;
     }
     if (config.title) {
         dimension.title = config.title + suffix;
     }
+
     return [(name + suffix), dimension];
 }
 
@@ -226,7 +217,7 @@ function onDataLoad(results) {
 
     // Add calculated dimensions
     Object.entries(dimensions).filter(v => v[1].bins).forEach((d, idx) => {
-        const [name, newDimension] = calculateDimension(d[0], d[1]);
+        const [name, newDimension] = calculateBinnedDimension(d[0], d[1]);
         dimensions[name] = newDimension;
     });
     initialiseDimensionSettings(params, dimensions);
