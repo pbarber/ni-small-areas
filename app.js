@@ -141,6 +141,71 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
     });
 });
 
+function initialiseDimensionSettings(params, dimensions) {
+    // Take either x from URL params or default to first numeric dimension
+    if (dimensions.hasOwnProperty(params.get("x"))) {
+        settings.x = params.get("x");
+    } else {
+        settings.x = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number')[0][0];
+    }
+    // Take either y from URL params or default to second numeric dimension
+    if (dimensions.hasOwnProperty(params.get("y"))) {
+        settings.y = params.get("y");
+    } else {
+        settings.y = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number')[1][0];
+    }
+    // Take either colour from URL params or default to first category dimension
+    if (dimensions.hasOwnProperty(params.get("colour"))) {
+        settings.colour = params.get("colour");
+    } else {
+        settings.colour = Object.entries(dimensions).filter(a => a[1].type == 'Category')[0][0];
+    }
+    // Take either smallMultiple from URL params or default to none
+    if (dimensions.hasOwnProperty(params.get("smallMultiple"))) {
+        settings.smallMultiple = params.get("smallMultiple");
+    } else {
+        settings.smallMultiple = 'None';
+    }
+}
+
+function calculateDimension(name, config) {
+    const binSize = store.length / config.bins[0];
+    const suffix = (config.bins[0] == 10) ? ' decile' : (config.bins[0] == 100) ? ' centile' : ' binned';
+
+    // Create a temporary array for sorting without modifying original data
+    const tempArray = store.map((a, idx) => ({
+        index: idx,
+        value: a[name]
+    })).sort((a, b) => (a.value - b.value));
+
+    // Sort the temporary array and calculate bins
+    tempArray.forEach((e, i) => {
+        const value = parseInt(i / binSize) + 1;
+        store[e.index][name + suffix] = value;
+    });
+
+    var dimension = {
+        type: 'Binned',
+        binSource: name
+    };
+    if (config.hasOwnProperty('description')) {
+        dimension.description = config.description + suffix;
+    }
+    if (config.hasOwnProperty('URL')) {
+        dimension.URL = config.URL;
+    }
+    if (config.hasOwnProperty('date')) {
+        dimension.date = config.date;
+    }
+    if (config.hasOwnProperty('extremes')) {
+        dimension.extremes = config.extremes;
+    }
+    if (config.title) {
+        dimension.title = config.title + suffix;
+    }
+    return [(name + suffix), dimension];
+}
+
 function onDataLoad(results) {
     // Create a promise for loading the GeoJSON file
     geoJSONPromise = fetch(datasetGeoJSON).then(response => response.json()).then(function (data) {
@@ -148,6 +213,7 @@ function onDataLoad(results) {
         return data;
     });
 
+    // Initialise the data store from the loaded data
     store = results.data.map(row => {
         // Convert each row to an object
         return Object.fromEntries(
@@ -157,65 +223,14 @@ function onDataLoad(results) {
             })
         );
     }).sort((a, b) => b[datasetIndex] - a[datasetIndex]);
-    // TODO: fix the way that store is overwritten
+
+    // Add calculated dimensions
     Object.entries(dimensions).filter(v => v[1].bins).forEach((d, idx) => {
-        const name = d[0];
-        const config = d[1];
-        const binSize = store.length / config.bins[0];
-        const suffix = (config.bins[0] == 10) ? ' decile' : (config.bins[0] == 100) ? ' centile' : ' binned';
-
-        // Create a temporary array for sorting without modifying original data
-        const tempArray = store.map((a, idx) => ({
-            index: idx,
-            value: a[name]
-        })).sort((a, b) => (a.value - b.value));
-
-        // Sort the temporary array and calculate bins
-        tempArray.forEach((e, i) => {
-            const value = parseInt(i / binSize) + 1;
-            store[e.index][name + suffix] = value;
-        });
-
-        dimensions[name + suffix] = {
-            type: 'Binned',
-            binSource: name
-        };
-        if (config.hasOwnProperty('description')) {
-            dimensions[name + suffix].description = config.description + suffix;
-        }
-        if (config.hasOwnProperty('URL')) {
-            dimensions[name + suffix].URL = config.URL;
-        }
-        if (config.hasOwnProperty('date')) {
-            dimensions[name + suffix].date = config.date;
-        }
-        if (config.hasOwnProperty('extremes')) {
-            dimensions[name + suffix].extremes = config.extremes;
-        }
-        if (config.title) {
-            dimensions[name + suffix].title = config.title + suffix;
-        }
+        const [name, newDimension] = calculateDimension(d[0], d[1]);
+        dimensions[name] = newDimension;
     });
-    if (dimensions.hasOwnProperty(params.get("x"))) {
-        settings.x = params.get("x");
-    } else {
-        settings.x = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number')[0][0];
-    }
-    if (dimensions.hasOwnProperty(params.get("y"))) {
-        settings.y = params.get("y");
-    } else {
-        settings.y = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number')[1][0];
-    }
-    if (dimensions.hasOwnProperty(params.get("colour"))) {
-        settings.colour = params.get("colour");
-    } else {
-        settings.colour = Object.entries(dimensions).filter(a => a[1].type == 'Category')[0][0];
-    }
-    if (dimensions.hasOwnProperty(params.get("smallMultiple"))) {
-        settings.smallMultiple = params.get("smallMultiple");
-    } else {
-        settings.smallMultiple = 'None';
-    }
+    initialiseDimensionSettings(params, dimensions);
+
     updateChart();
 
     // Fill out the options in the selectors based on the dimensions of the dataset
