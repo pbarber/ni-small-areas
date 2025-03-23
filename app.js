@@ -187,6 +187,7 @@ function calculateQuantileBins(name, config) {
         type: 'Quantile',
         binSource: name
     };
+    delete dimension.summaryOrder;
     if (config.description) {
         dimension.description = config.description + suffix;
     }
@@ -214,6 +215,7 @@ function calculateIntervalBins(name, config) {
         binSource: name,
         binRange: [min, max]
     };
+    delete dimension.summaryOrder;
     if (config.description) {
         dimension.description = config.description + ' interval';
     }
@@ -239,6 +241,7 @@ function calculateRanks(name, config) {
         type: 'Calculated Rank',
         binSource: name
     };
+    delete dimension.summaryOrder;
     if (config.description) {
         dimension.description = config.description + ' rank';
     }
