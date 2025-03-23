@@ -1,7 +1,8 @@
 // TODO: fill out Data Zones dataset - document the new variables
 // TODO: add choropleth map
 // TODO: add hex map
-// TODO: add denominator for counts, add Raw option
+// TODO: indicate that People variables are percentages - maybe just copy entire dimension?
+// TODO: round percentages to 1 decimal place
 // TODO: load a column at a time from S3
 // TODO: Add NIMDM travel data for small areas
 // TODO: Update summary order for DZs to %s
@@ -87,6 +88,7 @@ function updateMetadata(metadata) {
     datasetGeoJSON = metadata.geojson;
     datasetExploreURL = metadata.exploreURL;
     datasetExplorerName = metadata.explorerName;
+    datasetDenominator = metadata.population;
     settings.chartTitle = "NI " + datasetTitle + " statistics explorer";
     return metadata;
 }
@@ -294,6 +296,12 @@ function onDataLoad(results) {
 
     // Add calculated dimensions
     Object.entries(dimensions).forEach((d) => {
+        // If the dimension is a people variable, convert to percentages using denominator
+        if (d[1].type == 'People' && datasetDenominator) {
+            store.forEach(a => a[d[0]] = 100 * a[d[0]] / a[datasetDenominator]);
+        }
+
+        // Add extra calculated dimensions
         const [hasQuantile, suffixQuantile, hasInterval, suffixInterval, hasRank, suffixRank] = variableHasCalculatedOptions(d[1]);
         if (hasQuantile) {
             const [name, newDimension] = calculateQuantileBins(d[0], d[1], suffixQuantile);
