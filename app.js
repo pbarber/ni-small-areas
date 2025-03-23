@@ -1,7 +1,6 @@
 // TODO: fill out Data Zones dataset - document the new variables
 // TODO: add choropleth map
 // TODO: add hex map
-// TODO: fix multi-select of Quantiles etc
 // TODO: add denominator for counts, add Raw option
 // TODO: load a column at a time from S3
 // TODO: Add NIMDM travel data for small areas
@@ -1067,7 +1066,20 @@ function handleXVariableChange(selected, quantileSelected, intervalSelected, ran
 // Add event listeners for the checkboxes
 document.querySelectorAll('.x-option').forEach(element => {
     element.addEventListener('change', function (e) {
-        handleXVariableChange(document.getElementById('x-select').value, document.getElementById('x-quantile').checked, document.getElementById('x-interval').checked, document.getElementById('x-rank').checked);
+        // If this checkbox was checked, uncheck the others
+        if (e.target.checked) {
+            document.querySelectorAll('.x-option').forEach(checkbox => {
+                if (checkbox !== e.target) {
+                    checkbox.checked = false;
+                }
+            });
+        }
+        handleXVariableChange(
+            document.getElementById('x-select').value,
+            document.getElementById('x-quantile').checked,
+            document.getElementById('x-interval').checked,
+            document.getElementById('x-rank').checked
+        );
         updateChart();
     });
 });
