@@ -205,7 +205,7 @@ function calculateIntervalBins(name, config) {
 
     store.forEach((item, idx) => {
         const value = Math.min(config.bins[0], Math.ceil((item[name] - min) / binWidth));
-        store[idx][name + suffix] = value;
+        store[idx][name + ' interval'] = value;
     });
 
     const dimension = {
@@ -221,7 +221,32 @@ function calculateIntervalBins(name, config) {
         dimension.title = config.title + ' interval';
     }
 
-    return [(name + suffix), dimension];
+    return [(name + ' interval'), dimension];
+}
+
+function calculateRanks(name, config) {
+    store.map((a, idx) => ({
+        index: idx,
+        value: a[name]
+    })).sort(
+        (a, b) => (a.value - b.value)
+    ).forEach((e, i) => {
+        store[e.index][name + ' rank'] = i+1;
+    });
+
+    const dimension = {
+        ...config,
+        type: 'Calculated Rank',
+        binSource: name
+    };
+    if (config.description) {
+        dimension.description = config.description + ' rank';
+    }
+    if (config.title) {
+        dimension.title = config.title + ' rank';
+    }
+
+    return [(name + ' rank'), dimension];
 }
 
 function onDataLoad(results) {
@@ -249,6 +274,10 @@ function onDataLoad(results) {
     });
     Object.entries(dimensions).filter(v => v[1].bins && (v[1].type === 'Number' || v[1].type === 'Percentage')).forEach((d) => {
         const [name, newDimension] = calculateIntervalBins(d[0], d[1]);
+        dimensions[name] = newDimension;
+    });
+    Object.entries(dimensions).filter(v => (v[1].type === 'Number' || v[1].type === 'Percentage')).forEach((d) => {
+        const [name, newDimension] = calculateRanks(d[0], d[1]);
         dimensions[name] = newDimension;
     });
     initialiseDimensionSettings(params, dimensions);
