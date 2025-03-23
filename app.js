@@ -166,9 +166,8 @@ function initialiseDimensionSettings(params, dimensions) {
     }
 }
 
-function calculateQuantileBins(name, config) {
+function calculateQuantileBins(name, config, suffix) {
     const binSize = store.length / config.bins[0];
-    const suffix = (config.bins[0] == 10) ? ' decile' : (config.bins[0] == 100) ? ' centile' : ' quantile';
 
     store.map((a, idx) => ({
         index: idx,
@@ -197,7 +196,7 @@ function calculateQuantileBins(name, config) {
     return [(name + suffix), dimension];
 }
 
-function calculateIntervalBins(name, config) {
+function calculateIntervalBins(name, config, suffix) {
     const values = store.map(a => a[name]);
     const min = Math.min(...values);
     const max = Math.max(...values);
@@ -205,7 +204,7 @@ function calculateIntervalBins(name, config) {
 
     store.forEach((item, idx) => {
         const value = Math.min(config.bins[0]-1, Math.floor((item[name] - min) / binWidth));
-        store[idx][name + ' interval'] = value+1;
+        store[idx][name + suffix] = value+1;
     });
 
     const dimension = {
@@ -217,23 +216,23 @@ function calculateIntervalBins(name, config) {
     delete dimension.summaryOrder;
     delete dimension.bins;
     if (config.description) {
-        dimension.description = config.description + ' interval';
+        dimension.description = config.description + suffix;
     }
     if (config.title) {
-        dimension.title = config.title + ' interval';
+        dimension.title = config.title + suffix;
     }
 
-    return [(name + ' interval'), dimension];
+    return [(name + suffix), dimension];
 }
 
-function calculateRanks(name, config) {
+function calculateRanks(name, config, suffix) {
     store.map((a, idx) => ({
         index: idx,
         value: a[name]
     })).sort(
         (a, b) => (a.value - b.value)
     ).forEach((e, i) => {
-        store[e.index][name + ' rank'] = i+1;
+        store[e.index][name + suffix] = i+1;
     });
 
     const dimension = {
@@ -244,13 +243,35 @@ function calculateRanks(name, config) {
     delete dimension.summaryOrder;
     delete dimension.bins;
     if (config.description) {
-        dimension.description = config.description + ' rank';
+        dimension.description = config.description + suffix;
     }
     if (config.title) {
-        dimension.title = config.title + ' rank';
+        dimension.title = config.title + suffix;
     }
 
-    return [(name + ' rank'), dimension];
+    return [(name + suffix), dimension];
+}
+
+function variableHasCalculatedOptions(v) {
+    var hasQuantile = false;
+    var hasInterval = false;
+    var hasRank = false;
+    var suffixQuantile = null;
+    var suffixInterval = null;
+    var suffixRank = null;
+    if (v.bins) {
+        hasQuantile = true;
+        suffixQuantile = (v.bins[0] == 10) ? ' decile' : (v.bins[0] == 100) ? ' centile' : ' quantile';
+    }
+    if (v.bins && (v.type === 'Number' || v.type === 'Percentage' || v.type === 'People')) {
+        hasInterval = true;
+        suffixInterval = ' interval';
+    }
+    if (v.type === 'Number' || v.type === 'Percentage' || v.type === 'People') {
+        hasRank = true;
+        suffixRank = ' rank';
+    }
+    return [hasQuantile, suffixQuantile, hasInterval, suffixInterval, hasRank, suffixRank];
 }
 
 function onDataLoad(results) {
@@ -272,17 +293,20 @@ function onDataLoad(results) {
     }).sort((a, b) => b[datasetIndex] - a[datasetIndex]);
 
     // Add calculated dimensions
-    Object.entries(dimensions).filter(v => v[1].bins).forEach((d) => {
-        const [name, newDimension] = calculateQuantileBins(d[0], d[1]);
-        dimensions[name] = newDimension;
-    });
-    Object.entries(dimensions).filter(v => v[1].bins && (v[1].type === 'Number' || v[1].type === 'Percentage' || v[1].type === 'People')).forEach((d) => {
-        const [name, newDimension] = calculateIntervalBins(d[0], d[1]);
-        dimensions[name] = newDimension;
-    });
-    Object.entries(dimensions).filter(v => (v[1].type === 'Number' || v[1].type === 'Percentage' || v[1].type === 'People')).forEach((d) => {
-        const [name, newDimension] = calculateRanks(d[0], d[1]);
-        dimensions[name] = newDimension;
+    Object.entries(dimensions).forEach((d) => {
+        const [hasQuantile, suffixQuantile, hasInterval, suffixInterval, hasRank, suffixRank] = variableHasCalculatedOptions(d[1]);
+        if (hasQuantile) {
+            const [name, newDimension] = calculateQuantileBins(d[0], d[1], suffixQuantile);
+            dimensions[name] = newDimension;
+        }
+        if (hasInterval) {
+            const [name, newDimension] = calculateIntervalBins(d[0], d[1], suffixInterval);
+            dimensions[name] = newDimension;
+        }
+        if (hasRank) {
+            const [name, newDimension] = calculateRanks(d[0], d[1], suffixRank);
+            dimensions[name] = newDimension;
+        }
     });
     initialiseDimensionSettings(params, dimensions);
 
@@ -1007,28 +1031,6 @@ function updateChart() {
             document.getElementById('area-details-modal').scrollTop = 0;
         }
     });
-}
-
-function variableHasCalculatedOptions(v) {
-    var hasQuantile = false;
-    var hasInterval = false;
-    var hasRank = false;
-    var suffixQuantile = null;
-    var suffixInterval = null;
-    var suffixRank = null;
-    if (v.bins) {
-        hasQuantile = true;
-        suffixQuantile = (v.bins[0] == 10) ? ' decile' : (v.bins[0] == 100) ? ' centile' : ' quantile';
-    }
-    if (v.bins && (v.type === 'Number' || v.type === 'Percentage' || v.type === 'People')) {
-        hasInterval = true;
-        suffixInterval = ' interval';
-    }
-    if (v.type === 'Number' || v.type === 'Percentage' || v.type === 'People') {
-        hasRank = true;
-        suffixRank = ' rank';
-    }
-    return [hasQuantile, suffixQuantile, hasInterval, suffixInterval, hasRank, suffixRank];
 }
 
 function handleXVariableChange(selected, quantileSelected, intervalSelected, rankSelected) {
