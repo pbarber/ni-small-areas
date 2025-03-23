@@ -168,9 +168,9 @@ function initialiseDimensionSettings(params, dimensions) {
     }
 }
 
-function calculateBinnedDimension(name, config) {
+function calculateQuantileBins(name, config) {
     const binSize = store.length / config.bins[0];
-    const suffix = (config.bins[0] == 10) ? ' decile' : (config.bins[0] == 100) ? ' centile' : ' binned';
+    const suffix = (config.bins[0] == 10) ? ' decile' : (config.bins[0] == 100) ? ' centile' : ' quantile';
 
     store.map((a, idx) => ({
         index: idx,
@@ -184,7 +184,7 @@ function calculateBinnedDimension(name, config) {
 
     const dimension = {
         ...config,
-        type: 'Binned',
+        type: 'Quantile',
         binSource: name
     };
     if (config.description) {
@@ -192,6 +192,33 @@ function calculateBinnedDimension(name, config) {
     }
     if (config.title) {
         dimension.title = config.title + suffix;
+    }
+
+    return [(name + suffix), dimension];
+}
+
+function calculateIntervalBins(name, config) {
+    const values = store.map(a => a[name]);
+    const min = Math.min(...values);
+    const max = Math.max(...values);
+    const binWidth = (max - min) / config.bins[0];
+
+    store.forEach((item, idx) => {
+        const value = Math.min(config.bins[0], Math.ceil((item[name] - min) / binWidth));
+        store[idx][name + suffix] = value;
+    });
+
+    const dimension = {
+        ...config,
+        type: 'Interval',
+        binSource: name,
+        binRange: [min, max]
+    };
+    if (config.description) {
+        dimension.description = config.description + ' interval';
+    }
+    if (config.title) {
+        dimension.title = config.title + ' interval';
     }
 
     return [(name + suffix), dimension];
@@ -216,8 +243,12 @@ function onDataLoad(results) {
     }).sort((a, b) => b[datasetIndex] - a[datasetIndex]);
 
     // Add calculated dimensions
-    Object.entries(dimensions).filter(v => v[1].bins).forEach((d, idx) => {
-        const [name, newDimension] = calculateBinnedDimension(d[0], d[1]);
+    Object.entries(dimensions).filter(v => v[1].bins).forEach((d) => {
+        const [name, newDimension] = calculateQuantileBins(d[0], d[1]);
+        dimensions[name] = newDimension;
+    });
+    Object.entries(dimensions).filter(v => v[1].bins && (v[1].type === 'Number' || v[1].type === 'Percentage')).forEach((d) => {
+        const [name, newDimension] = calculateIntervalBins(d[0], d[1]);
         dimensions[name] = newDimension;
     });
     initialiseDimensionSettings(params, dimensions);
@@ -239,7 +270,7 @@ function onDataLoad(results) {
         } else if (value.type == 'Category') {
             ogmc.append(createOption(useTitleIfExists(key), key, false, false));
             ogcc.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
-        } else if (value.type == 'Binned') {
+        } else if (value.type == 'Quantile' || value.type == 'Interval') {
             ogmb.append(createOption(useTitleIfExists(key), key, false, false));
             ogcb.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
         }
@@ -257,7 +288,8 @@ function onDataLoad(results) {
     for (const key of Object.keys(metbrewer)) {
         document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
     }
-    handleXVariableChange((dimensions[settings.x].type == 'Binned') ? dimensions[settings.x].binSource : settings.x, (dimensions[settings.x].type == 'Binned'));
+    const xBinned = dimensions[settings.x].type == 'Quantile' || dimensions[settings.x].type == 'Interval';
+    handleXVariableChange(xBinned ? dimensions[settings.x].binSource : settings.x, xBinned);
 
     $('#x-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
     $('#y-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
@@ -304,13 +336,14 @@ function onDataLoad(results) {
     });
 
     $('#x-select').on('select2:select', function (e) {
-        handleXVariableChange(e.target.value, document.getElementById('x-binned').checked);
+        handleXVariableChange(e.target.value, document.getElementById('x-quantile').checked);
         updateChart();
     });
 
     $('#y-select').on('select2:select', function (e) {
         settings.y = e.target.value;
-        hideSelected("x-select", (dimensions[settings.x].type == 'Binned') ? 'Count of ' + datasetTitle + 's' : settings.y, settings.x);
+        const xBinned = dimensions[settings.x].type == 'Quantile' || dimensions[settings.x].type == 'Interval';
+        hideSelected("x-select", xBinned ? 'Count of ' + datasetTitle + 's' : settings.y, settings.x);
         $('#x-select').trigger('change');
         updateChart();
     });
@@ -418,7 +451,8 @@ function useTitleIfExists(column) {
 }
 
 function labelExtremes(column, idx, maxIdx, value) {
-    if ((dimensions[column].type == 'Binned') && (dimensions[column].hasOwnProperty('extremes'))) {
+    const binned = dimensions[column].type == 'Quantile' || dimensions[column].type == 'Interval';
+    if (binned && (dimensions[column].hasOwnProperty('extremes'))) {
         if (idx == 0) {
             return (value + ' - ' + dimensions[column].extremes[0]);
         } else if (idx == maxIdx) {
@@ -429,8 +463,9 @@ function labelExtremes(column, idx, maxIdx, value) {
 }
 
 function orderCategories(column) {
+    const binned = dimensions[column].type == 'Quantile' || dimensions[column].type == 'Interval';
     var cats = [...new Set(store.map(a => a[column]))];
-    if (dimensions[column].type == 'Binned') {
+    if (binned) {
         cats.sort((a, b) => parseInt(a) - parseInt(b));
     } else if (dimensions[column].hasOwnProperty('order')) {
         cats.sort((a, b) => dimensions[column].order.indexOf(a) - dimensions[column].order.indexOf(b));
@@ -476,8 +511,9 @@ myChart.setOption({
                 title: 'Show information',
                 icon: 'path://M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z',
                 onclick: function () {
+                    const xBinned = dimensions[settings.x].type == 'Quantile' || dimensions[settings.x].type == 'Interval';
                     showInfo('x-axis', settings.x);
-                    showInfo('y-axis', (dimensions[settings.x].type == 'Binned') ? 'Count of ' + datasetTitle + 's' : settings.y);
+                    showInfo('y-axis', xBinned ? 'Count of ' + datasetTitle + 's' : settings.y);
                     showInfo('small-multiples', settings.smallMultiple);
                     showInfo('colours', settings.colour);
                     showInfo('colour-scheme', settings.palette);
@@ -532,9 +568,9 @@ function updateChart() {
     var titles = [];
     const xHasDataMin = dimensions[settings.x] ? (dimensions[settings.x].dataMin ? true : false) : false;
     const yHasDataMin = dimensions[settings.y] ? (dimensions[settings.y].dataMin ? true : false) : false;
-    const yBinned = (dimensions[settings.y].type == 'Binned');
-    const xBinned = (dimensions[settings.x].type == 'Binned');
-    const colourBinned = (dimensions[settings.colour].type == 'Binned');
+    const yBinned = (dimensions[settings.y].type == 'Quantile' || dimensions[settings.y].type == 'Interval');
+    const xBinned = (dimensions[settings.x].type == 'Quantile' || dimensions[settings.x].type == 'Interval');
+    const colourBinned = (dimensions[settings.colour].type == 'Quantile' || dimensions[settings.colour].type == 'Interval');
     const xCategories = xBinned ? [...new Set(store.map(a => a[settings.x]))] : [];
     if (isSmallMultiple) {
         var yCategories = orderCategories(settings.smallMultiple);
@@ -551,7 +587,7 @@ function updateChart() {
         // Create the data object dependent on whether x is binned or not
         var data = {};
         yCategories.forEach(function (cat, idx) {
-            if (dimensions[settings.x].type == 'Binned') {
+            if (xBinned) {
                 const subset = Object.entries(store.filter(d => d[settings.smallMultiple] == cat).reduce(
                     function (acc, item) {
                         acc[item[settings.x]][item[settings.colour]]++;
@@ -945,22 +981,22 @@ function handleXVariableChange(selected, binned) {
     const dim = dimensions[selected];
     if (binned) {
         if (dim && dim.hasOwnProperty('bins')) {
-            const suffix = binned ? ((dim.bins[0] == 10) ? ' decile' : (dim.bins[0] == 100) ? ' centile' : ' binned') : '';
+            const suffix = binned ? ((dim.bins[0] == 10) ? ' decile' : (dim.bins[0] == 100) ? ' centile' : ' quantile') : '';
             settings.x = selected + suffix;
-            document.getElementById('x-binned').checked = true;
-            document.getElementById('x-binned').disabled = false;
+            document.getElementById('x-quantile').checked = true;
+            document.getElementById('x-quantile').disabled = false;
         } else {
             settings.x = selected;
-            document.getElementById('x-binned').checked = false;
-            document.getElementById('x-binned').disabled = true;
+            document.getElementById('x-quantile').checked = false;
+            document.getElementById('x-quantile').disabled = true;
         }
     } else {
         settings.x = selected;
-        document.getElementById('x-binned').checked = false;
+        document.getElementById('x-quantile').checked = false;
         if (dim && dim.hasOwnProperty('bins')) {
-            document.getElementById('x-binned').disabled = false;
+            document.getElementById('x-quantile').disabled = false;
         } else {
-            document.getElementById('x-binned').disabled = true;
+            document.getElementById('x-quantile').disabled = true;
         }
     }
     hideSelected("y-select", selected, settings.y, binned);
@@ -970,7 +1006,7 @@ function handleXVariableChange(selected, binned) {
 }
 
 // Add event listeners for the checkboxes
-document.getElementById('x-binned').addEventListener('change', function (e) {
+document.getElementById('x-quantile').addEventListener('change', function (e) {
     handleXVariableChange(document.getElementById('x-select').value, e.target.checked);
     updateChart();
 });
