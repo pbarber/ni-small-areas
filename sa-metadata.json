@@ -5,6 +5,17 @@
       "name": "SOA2001_name",
       "geojson": "sa2011_epsg4326_simplified15.geojson",
       "population": "MYE",
+      "summaryVariables": [
+            "MYE",
+            "2015 Default Urban/Rural",
+            "LGD2014NAME",
+            "Multiple Deprivation Measure Rank",
+            "Type of long-term condition: No condition (%)",
+            "Religion: Catholic (%)",
+            "Religion: Presbyterian Church in Ireland (%)",
+            "Religion: Church of Ireland (%)",
+            "Religion: No religion (%)"
+      ],
       "dimensions": {
             "Multiple Deprivation Measure Rank": {
                   "type": "Rank",
@@ -15,7 +26,6 @@
                         "Most Deprived",
                         "Least Deprived"
                   ],
-                  "summaryOrder": 3,
                   "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
                   "date": "2018-04-12",
                   "description": "Multiple Deprivation Measure Rank (where 1 is most deprived) for Small Areas, this is a combination of the different Domain Ranks"
@@ -147,7 +157,6 @@
                         "Least Catholic",
                         "Most Catholic"
                   ],
-                  "summaryOrder": 5,
                   "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-ethnicity-identity-language-and-religion",
                   "date": "2012-12-11",
                   "description": "Percentage of the population stating their religion as Catholic"
@@ -161,7 +170,6 @@
                         "Least Presbyterian",
                         "Most Presbyterian"
                   ],
-                  "summaryOrder": 6,
                   "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-ethnicity-identity-language-and-religion",
                   "date": "2012-12-11",
                   "description": "Percentage of the population stating their religion as Presbyterian Church in Ireland"
@@ -175,7 +183,6 @@
                         "Least Church of Ireland",
                         "Most Church of Ireland"
                   ],
-                  "summaryOrder": 7,
                   "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-ethnicity-identity-language-and-religion",
                   "date": "2012-12-11",
                   "description": "Percentage of the population stating their religion as Church of Ireland"
@@ -228,7 +235,6 @@
                         "Least No religion",
                         "Most No religion"
                   ],
-                  "summaryOrder": 8,
                   "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-ethnicity-identity-language-and-religion",
                   "date": "2012-12-11",
                   "description": "Percentage of the population stating their religion as No religion"
@@ -270,7 +276,6 @@
                         "Mixed urban/rural",
                         "Rural"
                   ],
-                  "summaryOrder": 1,
                   "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
                   "date": "2018-04-12",
                   "description": "Urban/rural categorisation of Small Areas"
@@ -280,8 +285,7 @@
                   "title": "Local Government District",
                   "URL": "https://www.nisra.gov.uk/publications/nimdm17-sa-level-results",
                   "date": "2018-04-12",
-                  "description": "Local Government District (2014) of Small Areas",
-                  "summaryOrder": 2
+                  "description": "Local Government District (2014) of Small Areas"
             },
             "MYE": {
                   "type": "Number",
@@ -293,7 +297,6 @@
                         "Least populous",
                         "Most populous"
                   ],
-                  "summaryOrder": 0,
                   "URL": "https://www.nisra.gov.uk/publications/2020-mid-year-population-estimates-small-areas",
                   "date": "2021-11-25",
                   "description": "Mid-year population estimate"
@@ -478,7 +481,6 @@
                         "Most affected",
                         "Least affected"
                   ],
-                  "summaryOrder": 4,
                   "URL": "https://www.nisra.gov.uk/publications/2011-census-key-statistics-tables-health",
                   "date": "2012-12-11",
                   "description": "Percentage of the population with no condition"

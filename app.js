@@ -3,7 +3,7 @@
 // TODO: add hex map
 // TODO: load a column at a time from S3
 // TODO: Add NIMDM travel data for small areas
-// TODO: Update summary order for DZs to %s
+// TODO: Add help indicators to guide users
 
 // Initialize the echarts instance based on the prepared dom
 var myChart = echarts.init(document.getElementById('main'));
@@ -13,6 +13,8 @@ var metbrewer = null;
 var datasetURL = null;
 var datasetTitle = null;
 var datasetIndex = null;
+var datasetDenominator = null;
+var summaryVariables = [];
 var settings = {};
 var categories = [];
 var isSmallMultiple = false;
@@ -87,6 +89,7 @@ function updateMetadata(metadata) {
     datasetExploreURL = metadata.exploreURL;
     datasetExplorerName = metadata.explorerName;
     datasetDenominator = metadata.population;
+    summaryVariables = metadata.summaryVariables;
     settings.chartTitle = "NI " + datasetTitle + " statistics explorer";
     return metadata;
 }
@@ -184,7 +187,6 @@ function calculateQuantileBins(name, config, suffix) {
         type: 'Quantile',
         calcSource: name
     };
-    delete dimension.summaryOrder;
     delete dimension.bins;
     if (config.description) {
         dimension.description = config.description + suffix;
@@ -213,7 +215,6 @@ function calculateIntervalBins(name, config, suffix) {
         calcSource: name,
         binRange: [min, max]
     };
-    delete dimension.summaryOrder;
     delete dimension.bins;
     if (config.description) {
         dimension.description = config.description + suffix;
@@ -240,7 +241,6 @@ function calculateRanks(name, config, suffix) {
         type: 'Calculated Rank',
         calcSource: name
     };
-    delete dimension.summaryOrder;
     delete dimension.bins;
     if (config.description) {
         dimension.description = config.description + suffix;
@@ -262,7 +262,6 @@ function calculatePercentages(name, config, suffix) {
         calcNumerator: name,
         calcDenominator: datasetDenominator
     };
-    delete dimension.summaryOrder;
     if (config.description) {
         dimension.description = config.description + suffix;
     }
@@ -1032,8 +1031,8 @@ function updateChart() {
             const fullDetails = store.filter(e => e[datasetIndex] == params.data[3])[0];
 
             let orderedFields = Object.keys(dimensions)
-                .filter(key => dimensions[key].summaryOrder !== undefined)
-                .sort((a, b) => dimensions[a].summaryOrder - dimensions[b].summaryOrder);
+                .filter(key => summaryVariables.includes(key))
+                .sort((a, b) => summaryVariables.indexOf(a) - summaryVariables.indexOf(b));
 
             var summaryTable = '<table class="striped"><tbody>';
             orderedFields.forEach(field => {
