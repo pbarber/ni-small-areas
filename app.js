@@ -2,7 +2,6 @@
 // TODO: add choropleth map
 // TODO: add hex map
 // TODO: indicate that People variables are percentages - maybe just copy entire dimension?
-// TODO: round percentages to 1 decimal place
 // TODO: load a column at a time from S3
 // TODO: Add NIMDM travel data for small areas
 // TODO: Update summary order for DZs to %s
@@ -472,8 +471,8 @@ function matchWithOptGroups(params, data) {
 function tooltipCallback(args) {
     return (
         ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (args.data[3] + ': ' + args.data[5] + '<br />') : '') +
-        (dimensions[settings.x] ? useTitleIfExists(settings.x) : settings.x) + ': ' + args.data[0] + '<br />' +
-        ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (useTitleIfExists(settings.y) + ': ') : ('Count of ' + datasetTitle + 's: ')) + args.data[1] + '<br />' +
+        (dimensions[settings.x] ? useTitleIfExists(settings.x) : settings.x) + ': ' + (typeof args.data[0] === 'number' && !Number.isInteger(args.data[0]) ? args.data[0].toFixed(1) : args.data[0]) + (dimensions[settings.x].type == 'Percentage' ? '%' : '') + '<br />' +
+        ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (useTitleIfExists(settings.y) + ': ') : ('Count of ' + datasetTitle + 's: ')) + (typeof args.data[1] === 'number' && !Number.isInteger(args.data[1]) ? args.data[1].toFixed(1) : args.data[1]) + (dimensions[settings.y].type == 'Percentage' ? '%' : '') + '<br />' +
         args.marker + ' ' + useTitleIfExists(settings.colour) + ': ' + args.data[4]
     );
 }
@@ -990,8 +989,8 @@ function updateChart() {
             document.getElementById('area-details-modal-header').innerHTML = params.data[3] + ': ' + params.data[5];
             var content = `
                 <strong>${useTitleIfExists(settings.colour)}:${params.data[4]}</strong><br>
-                ${useTitleIfExists(settings.x)}: ${params.data[0]}<br>
-                ${useTitleIfExists(settings.y)}: ${params.data[1]}
+                ${useTitleIfExists(settings.x)}: ${typeof params.data[0] === 'number' && !Number.isInteger(params.data[0]) ? params.data[0].toFixed(1) : params.data[0]}${dimensions[settings.x].type == 'Percentage' ? '%' : ''}<br>
+                ${useTitleIfExists(settings.y)}: ${typeof params.data[1] === 'number' && !Number.isInteger(params.data[1]) ? params.data[1].toFixed(1) : params.data[1]}${dimensions[settings.y].type == 'Percentage' ? '%' : ''}
             `;
             document.getElementById('area-details-modal-point').innerHTML = content;
 
@@ -1010,7 +1009,11 @@ function updateChart() {
             var summaryTable = '<table class="striped"><tbody>';
             orderedFields.forEach(field => {
                 if (fullDetails.hasOwnProperty(field)) {
-                    summaryTable += `<tr><td>${useTitleIfExists(field)} (<a href=${dimensions[field].URL}>${dimensions[field].date}</a>)</td><td>${fullDetails[field]}</td><td></td></tr>`;
+                    summaryTable += `<tr><td>
+                        ${useTitleIfExists(field)} (<a href=${dimensions[field].URL}>${dimensions[field].date}</a>)
+                    </td><td>
+                        ${typeof fullDetails[field] === 'number' && !Number.isInteger(fullDetails[field]) ? fullDetails[field].toFixed(1) : fullDetails[field]}${dimensions[field].type == 'Percentage' ? '%' : ''}
+                    </td></tr>`;
                 }
             });
             summaryTable += '</tbody></table>';
