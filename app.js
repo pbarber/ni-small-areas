@@ -1,7 +1,6 @@
 // TODO: fill out Data Zones dataset - document the new variables
 // TODO: add choropleth map
 // TODO: add hex map
-// TODO: indicate that People variables are percentages - maybe just copy entire dimension?
 // TODO: load a column at a time from S3
 // TODO: Add NIMDM travel data for small areas
 // TODO: Update summary order for DZs to %s
@@ -145,13 +144,13 @@ function initialiseDimensionSettings(params, dimensions) {
     if (dimensions.hasOwnProperty(params.get("x"))) {
         settings.x = params.get("x");
     } else {
-        settings.x = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number' || a[1].type == 'People')[0][0];
+        settings.x = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number' || a[1].type == 'People' || a[1].type == 'Calculated Percentage')[0][0];
     }
     // Take either y from URL params or default to second numeric dimension
     if (dimensions.hasOwnProperty(params.get("y"))) {
         settings.y = params.get("y");
     } else {
-        settings.y = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number' || a[1].type == 'People')[1][0];
+        settings.y = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number' || a[1].type == 'People' || a[1].type == 'Calculated Percentage')[1][0];
     }
     // Take either colour from URL params or default to first category dimension
     if (dimensions.hasOwnProperty(params.get("colour"))) {
@@ -253,26 +252,74 @@ function calculateRanks(name, config, suffix) {
     return [(name + suffix), dimension];
 }
 
+// Percentages are selectable as a new variable rather than via a checbox
+function calculatePercentages(name, config, suffix) {
+    store.forEach(a => a[name + suffix] = 100 * a[name] / a[datasetDenominator]);
+
+    const dimension = {
+        ...config,
+        type: 'Calculated Percentage',
+        calcNumerator: name,
+        calcDenominator: datasetDenominator
+    };
+    delete dimension.summaryOrder;
+    if (config.description) {
+        dimension.description = config.description + suffix;
+    }
+    if (config.title) {
+        dimension.title = config.title + suffix;
+    }
+
+    return [(name + suffix), dimension];
+}
+
 function variableHasCalculatedOptions(v) {
     var hasQuantile = false;
     var hasInterval = false;
     var hasRank = false;
+    var hasPercentage = false;
     var suffixQuantile = null;
     var suffixInterval = null;
     var suffixRank = null;
+    var suffixPercentage = null;
     if (v.bins) {
         hasQuantile = true;
         suffixQuantile = (v.bins[0] == 10) ? ' decile' : (v.bins[0] == 100) ? ' centile' : ' quantile';
     }
-    if (v.bins && (v.type === 'Number' || v.type === 'Percentage' || v.type === 'People')) {
+    if (v.bins && (v.type === 'Number' || v.type === 'Percentage' || v.type === 'Calculated Percentage' || v.type === 'People')) {
         hasInterval = true;
         suffixInterval = ' interval';
     }
-    if (v.type === 'Number' || v.type === 'Percentage' || v.type === 'People') {
+    if (v.type === 'Number' || v.type === 'Percentage' || v.type === 'Calculated Percentage' || v.type === 'People') {
         hasRank = true;
         suffixRank = ' rank';
     }
-    return [hasQuantile, suffixQuantile, hasInterval, suffixInterval, hasRank, suffixRank];
+    if (v.type === 'People') {
+        hasPercentage = true;
+        suffixPercentage = ' (%)';
+    }
+    return [hasQuantile, suffixQuantile, hasInterval, hasPercentage, suffixInterval, hasRank, suffixRank, suffixPercentage];
+}
+
+function addCalculatedDimensions(d) {
+    // Add extra calculated dimensions
+    const [hasQuantile, suffixQuantile, hasInterval, hasPercentage, suffixInterval, hasRank, suffixRank, suffixPercentage] = variableHasCalculatedOptions(d[1]);
+    if (hasQuantile) {
+        const [name, newDimension] = calculateQuantileBins(d[0], d[1], suffixQuantile);
+        dimensions[name] = newDimension;
+    }
+    if (hasInterval) {
+        const [name, newDimension] = calculateIntervalBins(d[0], d[1], suffixInterval);
+        dimensions[name] = newDimension;
+    }
+    if (hasRank) {
+        const [name, newDimension] = calculateRanks(d[0], d[1], suffixRank);
+        dimensions[name] = newDimension;
+    }
+    if (hasPercentage) {
+        const [name, newDimension] = calculatePercentages(d[0], d[1], suffixPercentage);
+        dimensions[name] = newDimension;
+    }
 }
 
 function onDataLoad(results) {
@@ -293,28 +340,10 @@ function onDataLoad(results) {
         );
     }).sort((a, b) => b[datasetIndex] - a[datasetIndex]);
 
-    // Add calculated dimensions
-    Object.entries(dimensions).forEach((d) => {
-        // If the dimension is a people variable, convert to percentages using denominator
-        if (d[1].type == 'People' && datasetDenominator) {
-            store.forEach(a => a[d[0]] = 100 * a[d[0]] / a[datasetDenominator]);
-        }
-
-        // Add extra calculated dimensions
-        const [hasQuantile, suffixQuantile, hasInterval, suffixInterval, hasRank, suffixRank] = variableHasCalculatedOptions(d[1]);
-        if (hasQuantile) {
-            const [name, newDimension] = calculateQuantileBins(d[0], d[1], suffixQuantile);
-            dimensions[name] = newDimension;
-        }
-        if (hasInterval) {
-            const [name, newDimension] = calculateIntervalBins(d[0], d[1], suffixInterval);
-            dimensions[name] = newDimension;
-        }
-        if (hasRank) {
-            const [name, newDimension] = calculateRanks(d[0], d[1], suffixRank);
-            dimensions[name] = newDimension;
-        }
-    });
+    // Add calculated dimensions (once for the whole dataset and again for the calculated percentage dimensions)
+    Object.entries(dimensions).forEach((d) => addCalculatedDimensions(d));
+    Object.entries(dimensions).filter(a => a[1].type == 'Calculated Percentage').forEach((d) => addCalculatedDimensions(d));
+    // Initialise the dimension settings
     initialiseDimensionSettings(params, dimensions);
 
     updateChart();
@@ -328,7 +357,7 @@ function onDataLoad(results) {
     var ogcc = createOptGroup('Categories');
     var ogcb = createOptGroup('Binned metrics');
     for (const [key, value] of Object.entries(dimensions)) {
-        if (value.type == 'Rank' || value.type == 'Percentage' || value.type == 'Geographic' || value.type == 'Number' || value.type == 'People') {
+        if (value.type == 'Rank' || value.type == 'Percentage' || value.type == 'Geographic' || value.type == 'Number' || value.type == 'People' || value.type == 'Calculated Percentage') {
             ogxm.append(createOption(useTitleIfExists(key), key, (key == settings.x), (key == settings.y)));
             ogym.append(createOption(useTitleIfExists(key), key, (key == settings.y), (key == settings.x)));
         } else if (value.type == 'Category') {
@@ -471,8 +500,8 @@ function matchWithOptGroups(params, data) {
 function tooltipCallback(args) {
     return (
         ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (args.data[3] + ': ' + args.data[5] + '<br />') : '') +
-        (dimensions[settings.x] ? useTitleIfExists(settings.x) : settings.x) + ': ' + (typeof args.data[0] === 'number' && !Number.isInteger(args.data[0]) ? args.data[0].toFixed(1) : args.data[0]) + (dimensions[settings.x].type == 'Percentage' ? '%' : '') + '<br />' +
-        ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (useTitleIfExists(settings.y) + ': ') : ('Count of ' + datasetTitle + 's: ')) + (typeof args.data[1] === 'number' && !Number.isInteger(args.data[1]) ? args.data[1].toFixed(1) : args.data[1]) + (dimensions[settings.y].type == 'Percentage' ? '%' : '') + '<br />' +
+        (dimensions[settings.x] ? useTitleIfExists(settings.x) : settings.x) + ': ' + (typeof args.data[0] === 'number' && !Number.isInteger(args.data[0]) ? args.data[0].toFixed(1) : args.data[0]) + (dimensions[settings.x].type == 'Percentage' || dimensions[settings.x].type == 'Calculated Percentage' ? '%' : '') + '<br />' +
+        ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (useTitleIfExists(settings.y) + ': ') : ('Count of ' + datasetTitle + 's: ')) + (typeof args.data[1] === 'number' && !Number.isInteger(args.data[1]) ? args.data[1].toFixed(1) : args.data[1]) + (dimensions[settings.y].type == 'Percentage' || dimensions[settings.y].type == 'Calculated Percentage' ? '%' : '') + '<br />' +
         args.marker + ' ' + useTitleIfExists(settings.colour) + ': ' + args.data[4]
     );
 }
@@ -989,8 +1018,8 @@ function updateChart() {
             document.getElementById('area-details-modal-header').innerHTML = params.data[3] + ': ' + params.data[5];
             var content = `
                 <strong>${useTitleIfExists(settings.colour)}:${params.data[4]}</strong><br>
-                ${useTitleIfExists(settings.x)}: ${typeof params.data[0] === 'number' && !Number.isInteger(params.data[0]) ? params.data[0].toFixed(1) : params.data[0]}${dimensions[settings.x].type == 'Percentage' ? '%' : ''}<br>
-                ${useTitleIfExists(settings.y)}: ${typeof params.data[1] === 'number' && !Number.isInteger(params.data[1]) ? params.data[1].toFixed(1) : params.data[1]}${dimensions[settings.y].type == 'Percentage' ? '%' : ''}
+                ${useTitleIfExists(settings.x)}: ${typeof params.data[0] === 'number' && !Number.isInteger(params.data[0]) ? params.data[0].toFixed(1) : params.data[0]}${dimensions[settings.x].type == 'Percentage' || dimensions[settings.x].type == 'Calculated Percentage' ? '%' : ''}<br>
+                ${useTitleIfExists(settings.y)}: ${typeof params.data[1] === 'number' && !Number.isInteger(params.data[1]) ? params.data[1].toFixed(1) : params.data[1]}${dimensions[settings.y].type == 'Percentage' || dimensions[settings.y].type == 'Calculated Percentage' ? '%' : ''}
             `;
             document.getElementById('area-details-modal-point').innerHTML = content;
 
@@ -1012,7 +1041,7 @@ function updateChart() {
                     summaryTable += `<tr><td>
                         ${useTitleIfExists(field)} (<a href=${dimensions[field].URL}>${dimensions[field].date}</a>)
                     </td><td>
-                        ${typeof fullDetails[field] === 'number' && !Number.isInteger(fullDetails[field]) ? fullDetails[field].toFixed(1) : fullDetails[field]}${dimensions[field].type == 'Percentage' ? '%' : ''}
+                        ${typeof fullDetails[field] === 'number' && !Number.isInteger(fullDetails[field]) ? fullDetails[field].toFixed(1) : fullDetails[field]}${dimensions[field].type == 'Percentage' || dimensions[field].type == 'Calculated Percentage' ? '%' : ''}
                     </td></tr>`;
                 }
             });
@@ -1046,7 +1075,7 @@ function updateChart() {
 
 function handleXVariableChange(selected, quantileSelected, intervalSelected, rankSelected) {
     const dim = dimensions[selected];
-    const [hasQuantile, suffixQuantile, hasInterval, suffixInterval, hasRank, suffixRank] = variableHasCalculatedOptions(dim);
+    const [hasQuantile, suffixQuantile, hasInterval, _hasPercentage, suffixInterval, hasRank, suffixRank, _suffixPercentage] = variableHasCalculatedOptions(dim);
     // Make checkboxes selectable/non-selectable
     document.getElementById('x-quantile').disabled = !hasQuantile;
     document.getElementById('x-interval').disabled = !hasInterval;
