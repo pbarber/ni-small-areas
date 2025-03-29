@@ -1,4 +1,4 @@
-// TODO: fill out Data Zones dataset - document the new variables
+// TODO: fill out Data Zones dataset - document/title the new variables and add extremes
 // TODO: add choropleth map
 // TODO: add hex map
 // TODO: load a column at a time from S3
@@ -20,6 +20,120 @@ var categories = [];
 var isSmallMultiple = false;
 var chartAxes = 0;
 var chartSeries = 0;
+
+// Initialize Shepherd tour
+const tour = new Shepherd.Tour({
+    useModalOverlay: true,
+    defaultStepOptions: {
+        classes: 'shepherd-theme-default',
+        scrollTo: false,
+        modalOverlayOpeningPadding: 4
+    }
+});
+
+// Add tour steps
+tour.addStep({
+    id: 'choose-variables',
+    arrow: false,
+    attachTo: {
+        element: 'body',
+        on: 'top'
+    },
+    text: 'Click the pen icon top-right to open the Settings and customize your chart.',
+    buttons: [
+        {
+            text: 'Next',
+            action: tour.next
+        },
+        {
+            text: 'Skip',
+            action: function() {
+                tour.complete();
+                myChart.setOption({toolbox: {feature: {myTool1: {iconStyle: {borderWidth: 1, borderColor: '#808080'}}}}});
+            }
+        },
+        {
+            text: 'Don\'t ask again',
+            action: function() {
+                tour.complete();
+                localStorage.setItem('tourComplete', 'true');
+                myChart.setOption({toolbox: {feature: {myTool1: {iconStyle: {borderWidth: 1, borderColor: '#808080'}}}}});
+            }
+        }
+    ],
+    popperOptions: {
+        modifiers: [{
+            name: 'offset',
+            options: {
+                offset: [30, 120]
+            }
+        }],
+        placement: 'right-start',
+        strategy: 'fixed'
+    },
+    when: {
+        show: () => {
+            // Draw box around toolbox icon
+            myChart.setOption({toolbox: {feature: {myTool1: {iconStyle: {borderWidth: 2, borderColor: '#3288e6'}}}}});
+        },
+        hide: () => {
+            // Remove box
+            myChart.setOption({toolbox: {feature: {myTool1: {iconStyle: {borderWidth: 1, borderColor: '#808080'}}}}});
+        }
+    }
+});
+
+tour.addStep({
+    id: 'x-axis-selection',
+    arrow: false,
+    attachTo: {
+        element: 'body',
+        on: 'top'
+    },
+    text: 'Choose a variable for the X axis. You can also apply different transformations like rankings or intervals.',
+    buttons: [
+        {
+            text: 'Back',
+            action: () => {
+                tour.back();
+                document.getElementById('x-select').parentElement.parentElement.style.backgroundColor = 'rgba(255,255,255,0)';
+            }
+        },
+        {
+            text: 'Done',
+            action: () => {
+                tour.complete();
+                document.getElementById('x-select').parentElement.parentElement.style.backgroundColor = 'rgba(255,255,255,0)';
+            }
+        }
+    ],
+    popperOptions: {
+        modifiers: [{
+            name: 'offset',
+            options: {
+                offset: [30, 120]
+            }
+        }],
+        placement: 'right-start',
+        strategy: 'fixed'
+    },
+    when: {
+        show: () => {
+            // Open the bottom sheet if it's not already open
+            if (!bottomSheetInstance.isOpen) {
+                bottomSheetInstance.open();
+            }
+            // Draw box around x-axis selector
+            // Add a box around the x-axis selector
+            document.getElementById('x-select').parentElement.parentElement.style.backgroundColor = '#e3f2fd';
+        },
+        hide: () => {
+            // Remove box
+            document.getElementById('x-select').parentElement.parentElement.style.backgroundColor = 'rgba(255,255,255,0)';
+        }
+    }
+});
+
 var bottomSheetInstance = M.Modal.init(document.getElementById('bottom-sheet'), {
     dismissible: true,
     inDuration: 250,
@@ -346,6 +460,13 @@ function onDataLoad(results) {
     initialiseDimensionSettings(params, dimensions);
 
     updateChart();
+
+    // Start the tour if it hasn't been shown before
+    if (!localStorage.getItem('tourComplete')) {
+        setTimeout(() => {
+            tour.start();
+        }, 1000); // Short delay to ensure chart is fully rendered
+    }
 
     // Fill out the options in the selectors based on the dimensions of the dataset
     // Hide x options when selected for y and vice versa
