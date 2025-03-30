@@ -155,7 +155,11 @@ tour.addStep({
             }
         },
         {
-            text: 'Done',
+            text: 'Next',
+            action: tour.next
+        },
+        {
+            text: 'Exit',
             action: () => {
                 tour.complete();
                 document.getElementById('x-quantile').parentElement.parentElement.parentElement.style.backgroundColor = 'rgba(255,255,255,0)';
@@ -185,6 +189,58 @@ tour.addStep({
         hide: () => {
             // Remove box
             document.getElementById('x-quantile').parentElement.parentElement.parentElement.style.backgroundColor = 'rgba(255,255,255,0)';
+        }
+    }
+});
+
+tour.addStep({
+    id: 'chart-actions',
+    arrow: false,
+    attachTo: {
+        element: 'body',
+        on: 'top'
+    },
+    text: 'You can use the highlighted icons to <b>download</b> the chart as an image, or to <b>copy</b> a URL you can use to share the chart via email or social media.<br>You can also click individual points in the scatter plot to <b>show more details</b> about that area, including a map.',
+    buttons: [
+        {
+            text: 'Back',
+            action: () => {
+                tour.back();
+                myChart.setOption({toolbox: {feature: {saveAsImage: {iconStyle: {borderWidth: 1, borderColor: '#808080'}}}}});
+                myChart.setOption({toolbox: {feature: {myTool2: {iconStyle: {borderWidth: 1, borderColor: '#808080'}}}}});
+            }
+        },
+        {
+            text: 'Exit',
+            action: () => {
+                tour.complete();
+                myChart.setOption({toolbox: {feature: {saveAsImage: {iconStyle: {borderWidth: 1, borderColor: '#808080'}}}}});
+                myChart.setOption({toolbox: {feature: {myTool2: {iconStyle: {borderWidth: 1, borderColor: '#808080'}}}}});
+            }
+        }
+    ],
+    popperOptions: {
+        modifiers: [{
+            name: 'offset',
+            options: {
+                offset: [30, 120]
+            }
+        }],
+        placement: 'right-start',
+        strategy: 'fixed'
+    },
+    when: {
+        show: () => {
+            if (bottomSheetInstance.isOpen) {
+                bottomSheetInstance.close();
+            }
+            myChart.setOption({toolbox: {feature: {saveAsImage: {iconStyle: {borderWidth: 2, borderColor: '#3288e6'}}}}});
+            myChart.setOption({toolbox: {feature: {myTool2: {iconStyle: {borderWidth: 2, borderColor: '#3288e6'}}}}});
+        },
+        hide: () => {
+            // Remove box
+            myChart.setOption({toolbox: {feature: {saveAsImage: {iconStyle: {borderWidth: 1, borderColor: '#808080'}}}}});
+            myChart.setOption({toolbox: {feature: {myTool2: {iconStyle: {borderWidth: 1, borderColor: '#808080'}}}}});
         }
     }
 });
