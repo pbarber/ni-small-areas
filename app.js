@@ -39,7 +39,7 @@ tour.addStep({
         element: 'body',
         on: 'top'
     },
-    text: 'Click the pen icon top-right to open the Settings and customize your chart.',
+    text: 'Welcome to the <b>NI small area statistics explorer</b>, which allows you to compare statistics across different areas of Northern Ireland.<br>Use the pencil icon top-right to open the Settings and customize the chart.',
     buttons: [
         {
             text: 'Next',
@@ -53,7 +53,7 @@ tour.addStep({
             }
         },
         {
-            text: 'Don\'t ask again',
+            text: 'Don\'t show again',
             action: function() {
                 tour.complete();
                 localStorage.setItem('tourComplete', 'true');
@@ -90,7 +90,7 @@ tour.addStep({
         element: 'body',
         on: 'top'
     },
-    text: 'Choose a variable for the X axis. You can also apply different transformations like rankings or intervals.',
+    text: 'You can choose the variable for the X axis (highlighted in blue). This will update the chart, you can also change the y axis, colouring and create small charts based on categories or binned variables. Some variables have count and percentage options.',
     buttons: [
         {
             text: 'Back',
@@ -100,7 +100,11 @@ tour.addStep({
             }
         },
         {
-            text: 'Done',
+            text: 'Next',
+            action: tour.next
+        },
+        {
+            text: 'Exit',
             action: () => {
                 tour.complete();
                 document.getElementById('x-select').parentElement.parentElement.style.backgroundColor = 'rgba(255,255,255,0)';
@@ -130,6 +134,57 @@ tour.addStep({
         hide: () => {
             // Remove box
             document.getElementById('x-select').parentElement.parentElement.style.backgroundColor = 'rgba(255,255,255,0)';
+        }
+    }
+});
+
+tour.addStep({
+    id: 'quantile-selection',
+    arrow: false,
+    attachTo: {
+        element: 'body',
+        on: 'top'
+    },
+    text: 'You can choose how numerical variables are displayed (highlighted in blue), as <b>quantiles</b> (where the data is ranked and split into equal groups), <b>intervals</b> (where the data is split into equal sized ranges, useful for showing the distribution of values), or <b>ranks</b> (where each area is ranked against other areas).',
+    buttons: [
+        {
+            text: 'Back',
+            action: () => {
+                tour.back();
+                document.getElementById('x-quantile').parentElement.parentElement.parentElement.style.backgroundColor = 'rgba(255,255,255,0)';
+            }
+        },
+        {
+            text: 'Done',
+            action: () => {
+                tour.complete();
+                document.getElementById('x-quantile').parentElement.parentElement.parentElement.style.backgroundColor = 'rgba(255,255,255,0)';
+            }
+        }
+    ],
+    popperOptions: {
+        modifiers: [{
+            name: 'offset',
+            options: {
+                offset: [30, 120]
+            }
+        }],
+        placement: 'right-start',
+        strategy: 'fixed'
+    },
+    when: {
+        show: () => {
+            // Open the bottom sheet if it's not already open
+            if (!bottomSheetInstance.isOpen) {
+                bottomSheetInstance.open();
+            }
+            // Draw box around x-axis selector
+            // Add a box around the x-axis selector
+            document.getElementById('x-quantile').parentElement.parentElement.parentElement.style.backgroundColor = '#e3f2fd';
+        },
+        hide: () => {
+            // Remove box
+            document.getElementById('x-quantile').parentElement.parentElement.parentElement.style.backgroundColor = 'rgba(255,255,255,0)';
         }
     }
 });
