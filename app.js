@@ -1,9 +1,10 @@
 // TODO: fill out Data Zones dataset - document/title the new variables and add extremes
 // TODO: add choropleth map
 // TODO: add hex map
+// TODO: calculate columns as required
 // TODO: load a column at a time from S3
 // TODO: Add NIMDM travel data for small areas
-// TODO: Add help indicators to guide users
+// TODO: Allow users to choose an area to highlight on the charts
 
 // Initialize the echarts instance based on the prepared dom
 var myChart = echarts.init(document.getElementById('main'));
@@ -394,8 +395,8 @@ function initialiseDimensionSettings(params, dimensions) {
     }
 }
 
-function calculateQuantileBins(name, config, suffix) {
-    const binSize = store.length / config.bins[0];
+function calculateQuantileBins(name, suffix, bins) {
+    const binSize = store.length / bins;
 
     store.map((a, idx) => ({
         index: idx,
@@ -406,52 +407,21 @@ function calculateQuantileBins(name, config, suffix) {
         const value = parseInt(i / binSize) + 1;
         store[e.index][name + suffix] = value;
     });
-
-    const dimension = {
-        ...config,
-        type: 'Quantile',
-        calcSource: name
-    };
-    delete dimension.bins;
-    if (config.description) {
-        dimension.description = config.description + suffix;
-    }
-    if (config.title) {
-        dimension.title = config.title + suffix;
-    }
-
-    return [(name + suffix), dimension];
 }
 
-function calculateIntervalBins(name, config, suffix) {
+function calculateIntervalBins(name, suffix, bins) {
     const values = store.map(a => a[name]);
     const min = Math.min(...values);
     const max = Math.max(...values);
-    const binWidth = (max - min) / config.bins[0];
+    const binWidth = (max - min) / bins;
 
     store.forEach((item, idx) => {
-        const value = Math.min(config.bins[0]-1, Math.floor((item[name] - min) / binWidth));
+        const value = Math.min(bins-1, Math.floor((item[name] - min) / binWidth));
         store[idx][name + suffix] = value+1;
     });
-
-    const dimension = {
-        ...config,
-        type: 'Interval',
-        calcSource: name,
-        binRange: [min, max]
-    };
-    delete dimension.bins;
-    if (config.description) {
-        dimension.description = config.description + suffix;
-    }
-    if (config.title) {
-        dimension.title = config.title + suffix;
-    }
-
-    return [(name + suffix), dimension];
 }
 
-function calculateRanks(name, config, suffix) {
+function calculateRanks(name, suffix) {
     store.map((a, idx) => ({
         index: idx,
         value: a[name]
@@ -460,41 +430,11 @@ function calculateRanks(name, config, suffix) {
     ).forEach((e, i) => {
         store[e.index][name + suffix] = i+1;
     });
-
-    const dimension = {
-        ...config,
-        type: 'Calculated Rank',
-        calcSource: name
-    };
-    delete dimension.bins;
-    if (config.description) {
-        dimension.description = config.description + suffix;
-    }
-    if (config.title) {
-        dimension.title = config.title + suffix;
-    }
-
-    return [(name + suffix), dimension];
 }
 
 // Percentages are selectable as a new variable rather than via a checbox
-function calculatePercentages(name, config, suffix) {
+function calculatePercentages(name, suffix) {
     store.forEach(a => a[name + suffix] = 100 * a[name] / a[datasetDenominator]);
-
-    const dimension = {
-        ...config,
-        type: 'Calculated Percentage',
-        calcNumerator: name,
-        calcDenominator: datasetDenominator
-    };
-    if (config.description) {
-        dimension.description = config.description + suffix;
-    }
-    if (config.title) {
-        dimension.title = config.title + suffix;
-    }
-
-    return [(name + suffix), dimension];
 }
 
 function variableHasCalculatedOptions(v) {
@@ -506,7 +446,7 @@ function variableHasCalculatedOptions(v) {
     var suffixInterval = null;
     var suffixRank = null;
     var suffixPercentage = null;
-    if (v.bins) {
+    if (v.bins && (v.type === 'Number' || v.type === 'Percentage' || v.type === 'Calculated Percentage' || v.type === 'People' || v.type === 'Quantile' || v.type === 'Rank')) {
         hasQuantile = true;
         suffixQuantile = (v.bins[0] == 10) ? ' decile' : (v.bins[0] == 100) ? ' centile' : ' quantile';
     }
@@ -527,22 +467,68 @@ function variableHasCalculatedOptions(v) {
 
 function addCalculatedDimensions(d) {
     // Add extra calculated dimensions
-    const [hasQuantile, suffixQuantile, hasInterval, hasPercentage, suffixInterval, hasRank, suffixRank, suffixPercentage] = variableHasCalculatedOptions(d[1]);
+    const name = d[0];
+    const config = d[1];
+    const [hasQuantile, suffixQuantile, hasInterval, hasPercentage, suffixInterval, hasRank, suffixRank, suffixPercentage] = variableHasCalculatedOptions(config);
     if (hasQuantile) {
-        const [name, newDimension] = calculateQuantileBins(d[0], d[1], suffixQuantile);
-        dimensions[name] = newDimension;
+        dimensions[(name + suffixQuantile)] = {
+            ...config,
+            type: 'Quantile',
+            calcSource: name
+        };
+        if (config.description) {
+            dimensions[(name + suffixQuantile)].description = config.description + suffixQuantile;
+        }
+        if (config.title) {
+            dimensions[(name + suffixQuantile)].title = config.title + suffixQuantile;
+        }
+    
+        calculateQuantileBins(name, suffixQuantile, config.bins[0]);
     }
     if (hasInterval) {
-        const [name, newDimension] = calculateIntervalBins(d[0], d[1], suffixInterval);
-        dimensions[name] = newDimension;
+        dimensions[(name + suffixInterval)] = {
+            ...config,
+            type: 'Interval',
+            calcSource: name
+        };
+        if (config.description) {
+            dimensions[(name + suffixInterval)].description = config.description + suffixInterval;
+        }
+        if (config.title) {
+            dimensions[(name + suffixInterval)].title = config.title + suffixInterval;
+        }
+
+        calculateIntervalBins(name, suffixInterval, config.bins[0]);
     }
     if (hasRank) {
-        const [name, newDimension] = calculateRanks(d[0], d[1], suffixRank);
-        dimensions[name] = newDimension;
+        dimensions[(name + suffixRank)] = {
+            ...config,
+            type: 'Calculated Rank',
+            calcSource: name
+        };
+        if (config.description) {
+            dimensions[(name + suffixRank)].description = config.description + suffixRank;
+        }
+        if (config.title) {
+            dimensions[(name + suffixRank)].title = config.title + suffixRank;
+        }
+    
+        calculateRanks(name, suffixRank);
     }
     if (hasPercentage) {
-        const [name, newDimension] = calculatePercentages(d[0], d[1], suffixPercentage);
-        dimensions[name] = newDimension;
+        dimensions[(name + suffixPercentage)] = {
+            ...config,
+            type: 'Calculated Percentage',
+            calcNumerator: name,
+            calcDenominator: datasetDenominator
+        };
+        if (config.description) {
+            dimensions[(name + suffixPercentage)].description = config.description + suffixPercentage;
+        }
+        if (config.title) {
+            dimensions[(name + suffixPercentage)].title = config.title + suffixPercentage;
+        }
+        calculatePercentages(name, suffixPercentage);
     }
 }
 
