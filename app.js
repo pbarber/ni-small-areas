@@ -201,7 +201,7 @@ tour.addStep({
         element: 'body',
         on: 'top'
     },
-    text: 'You can use the highlighted icons to <b>download</b> the chart as an image, or to <b>copy</b> a URL you can use to share the chart via email or social media.<br>You can also click individual points in the scatter plot to <b>show more details</b> about that area, including a map.',
+    text: 'You can use the highlighted icons to <b>download</b><i class="material-icons tiny" style="vertical-align: middle;">download</i> the chart as an image, or to <b>copy</b><i class="material-icons tiny" style="vertical-align: middle;">content_copy</i> a URL you can use to share the chart via email or social media.<br>You can also click individual points in the scatter plot to <b>show more details</b> about that area, including a map.',
     buttons: [
         {
             text: 'Back',
