@@ -462,14 +462,14 @@ function variableHasCalculatedOptions(v) {
         hasPercentage = true;
         suffixPercentage = ' (%)';
     }
-    return [hasQuantile, suffixQuantile, hasInterval, hasPercentage, suffixInterval, hasRank, suffixRank, suffixPercentage];
+    return [hasQuantile, hasInterval, hasRank, hasPercentage, suffixQuantile, suffixInterval, suffixRank, suffixPercentage];
 }
 
 function addCalculatedDimensions(d) {
     // Add extra calculated dimensions
     const name = d[0];
     const config = d[1];
-    const [hasQuantile, suffixQuantile, hasInterval, hasPercentage, suffixInterval, hasRank, suffixRank, suffixPercentage] = variableHasCalculatedOptions(config);
+    const [hasQuantile, hasInterval, hasRank, hasPercentage, suffixQuantile, suffixInterval, suffixRank, suffixPercentage] = variableHasCalculatedOptions(config);
     if (hasQuantile) {
         dimensions[(name + suffixQuantile)] = {
             ...config,
@@ -482,8 +482,6 @@ function addCalculatedDimensions(d) {
         if (config.title) {
             dimensions[(name + suffixQuantile)].title = config.title + suffixQuantile;
         }
-    
-        calculateQuantileBins(name, suffixQuantile, config.bins[0]);
     }
     if (hasInterval) {
         dimensions[(name + suffixInterval)] = {
@@ -497,8 +495,6 @@ function addCalculatedDimensions(d) {
         if (config.title) {
             dimensions[(name + suffixInterval)].title = config.title + suffixInterval;
         }
-
-        calculateIntervalBins(name, suffixInterval, config.bins[0]);
     }
     if (hasRank) {
         dimensions[(name + suffixRank)] = {
@@ -512,8 +508,6 @@ function addCalculatedDimensions(d) {
         if (config.title) {
             dimensions[(name + suffixRank)].title = config.title + suffixRank;
         }
-    
-        calculateRanks(name, suffixRank);
     }
     if (hasPercentage) {
         dimensions[(name + suffixPercentage)] = {
@@ -528,7 +522,6 @@ function addCalculatedDimensions(d) {
         if (config.title) {
             dimensions[(name + suffixPercentage)].title = config.title + suffixPercentage;
         }
-        calculatePercentages(name, suffixPercentage);
     }
 }
 
@@ -848,9 +841,6 @@ myChart.getZr().on('click', function(params) {
     // Get click coordinates relative to canvas
     const pointInPixel = [params.offsetX, params.offsetY];
 
-    // Convert pixel coordinates to logical coordinates
-    const pointInGrid = myChart.convertFromPixel({seriesIndex: 0}, pointInPixel);
-
     // Check if click is in toolbox area
     if (myChart.containPixel('grid', pointInPixel)) {
         // Click was in main chart area
@@ -868,6 +858,29 @@ myChart.getZr().on('click', function(params) {
 var areaDetailsModalInstance = M.Modal.init(document.getElementById('area-details-modal'));
 
 function updateChart() {
+    // Only calculate values that don't already exist in the store
+    for (const dim of ([settings.x, settings.y, settings.colour, settings.smallMultiple].concat(summaryVariables))) {
+        if ((dim in dimensions) && !(dim in store[0])) {
+            if (dimensions[dim].type == 'Calculated Percentage') {
+                const [_hasQuantile, _hasInterval, _hasRank, _hasPercentage, _suffixQuantile, _suffixInterval, _suffixRank, suffixPercentage] = variableHasCalculatedOptions(dimensions[dimensions[dim].calcNumerator]);
+                calculatePercentages(dimensions[dim].calcNumerator, suffixPercentage);
+            } else if (dimensions[dimensions[dim].calcSource].type == 'Calculated Percentage') {
+                const [_hasQuantile, _hasInterval, _hasRank, _hasPercentage, _suffixQuantile, _suffixInterval, _suffixRank, suffixPercentage] = variableHasCalculatedOptions(dimensions[dimensions[dimensions[dim].calcSource].calcNumerator]);
+                calculatePercentages(dimensions[dimensions[dim].calcSource].calcNumerator, suffixPercentage);
+            }
+            if (dimensions[dim].hasOwnProperty('calcSource')) {
+                const [_hasQuantile, _hasInterval, _hasRank, _hasPercentage, suffixQuantile, suffixInterval, suffixRank, _suffixPercentage] = variableHasCalculatedOptions(dimensions[dimensions[dim].calcSource]);
+                if (dimensions[dim].type == 'Quantile') {
+                    calculateQuantileBins(dimensions[dim].calcSource, suffixQuantile, dimensions[dimensions[dim].calcSource].bins[0]);
+                } else if (dimensions[dim].type == 'Interval') {
+                    calculateIntervalBins(dimensions[dim].calcSource, suffixInterval, dimensions[dimensions[dim].calcSource].bins[0]);
+                } else if (dimensions[dim].type == 'Calculated Rank') {
+                    calculateRanks(dimensions[dim].calcSource, suffixRank);
+                }
+            }
+        }
+    }
+    
     categories = orderCategories(settings.colour);
     isSmallMultiple = (settings.smallMultiple != 'None');
     var series = [];
@@ -1292,7 +1305,7 @@ function updateChart() {
 
 function handleXVariableChange(selected, quantileSelected, intervalSelected, rankSelected) {
     const dim = dimensions[selected];
-    const [hasQuantile, suffixQuantile, hasInterval, _hasPercentage, suffixInterval, hasRank, suffixRank, _suffixPercentage] = variableHasCalculatedOptions(dim);
+    const [hasQuantile, hasInterval, hasRank, _hasPercentage, suffixQuantile, suffixInterval, suffixRank, _suffixPercentage] = variableHasCalculatedOptions(dim);
     // Make checkboxes selectable/non-selectable
     document.getElementById('x-quantile').disabled = !hasQuantile;
     document.getElementById('x-interval').disabled = !hasInterval;
