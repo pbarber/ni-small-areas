@@ -40,7 +40,7 @@ tour.addStep({
         element: 'body',
         on: 'top'
     },
-    text: 'Welcome to the <b>NI small area statistics explorer</b>, which allows you to compare statistics across different areas of Northern Ireland.<br>Use the pencil icon top-right to open the Settings and customize the chart.',
+    text: 'Welcome to the <b>NI small area statistics explorer</b>, which allows you to compare statistics across different areas of Northern Ireland.<br>Use the pencil<i class="material-icons tiny" style="vertical-align: middle;">edit</i> icon top-right to open the Settings and customize the chart.',
     buttons: [
         {
             text: 'Next',
