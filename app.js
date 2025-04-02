@@ -286,7 +286,7 @@ const params = new URLSearchParams(location.search);
 if (params.get("metadataURL")) {
     settings.metadataURL = params.get("metadataURL");
 } else {
-    settings.metadataURL = "sa-metadata.json";
+    settings.metadataURL = "dz-metadata.json";
 }
 if (params.get("chartTitle") == "") {
     settings.chartTitle = "";
