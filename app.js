@@ -1016,6 +1016,7 @@ function updateChart() {
             yAxis.push({
                 id: idx,
                 type: 'value',
+                show: true,
                 name: xBinned ? 'Count of ' + datasetTitle + 's' : useTitleIfExists(settings.y),
                 nameLocation: 'middle',
                 nameGap: 40,
@@ -1033,6 +1034,7 @@ function updateChart() {
             xAxis.push({
                 id: idx,
                 type: xBinned ? 'category' : 'value',
+                show: true,
                 name: (idx == yCategories.length - 1) ? useTitleIfExists(settings.x) : '',
                 min: xHasDataMin ? xMin : null,
                 max: xBinned ? xMax - 1 : xMax,
@@ -1139,7 +1141,7 @@ function updateChart() {
                     }
                 })) : data[idx],
                 stack: xBinned ? 'x' : null,
-                itemStyle: {
+                itemStyle: settings.showMap ? { borderColor: '#ccc', borderWidth: 0.5 } : {
                     color: function (data) {
                         return data.value[2];
                     }
@@ -1390,12 +1392,21 @@ document.getElementById('show-map').addEventListener('change', function(event) {
     if (event.target.checked) {
         document.getElementById('x-select').disabled = true;
         document.getElementById('y-select').disabled = true;
+        document.getElementById('x-quantile').disabled = true;
+        document.getElementById('x-interval').disabled = true;
+        document.getElementById('x-rank').disabled = true;
         document.getElementById('multiple-select').disabled = true;
         settings.showMap = true;
     } else {
         document.getElementById('x-select').disabled = false;
         document.getElementById('y-select').disabled = false;
         document.getElementById('multiple-select').disabled = false;
+        handleXVariableChange(
+            document.getElementById('x-select').value,
+            document.getElementById('x-quantile').checked,
+            document.getElementById('x-interval').checked,
+            document.getElementById('x-rank').checked
+        );
         settings.showMap = false;
     }
     updateChart();
