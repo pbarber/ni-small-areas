@@ -1110,25 +1110,38 @@ function updateChart() {
                 ));
             });
         }
-        console.log(data);
-        categories.forEach(function (cat, idx) {
-            series.push({
-                type: xBinned ? 'bar' : (settings.showMap ? 'map' : 'scatter'),
-                name: labelExtremes(settings.colour, idx, categories.length - 1, String(cat)),
-                id: idx,
-                yAxisIndex: 0,
-                xAxisIndex: 0,
-                coordinateSystem: 'cartesian2d',
-                map: settings.showMap ? 'map' : null,
-                data: data[idx],
-                stack: xBinned ? 'x' : null,
-                itemStyle: {
-                    color: function (data) {
-                        return data.value[2];
+        if (settings.showMap) {
+            series = [{
+                type: 'map',
+                map: 'map',
+                roam: true,
+                data: store.map(item => ({
+                    name: item[datasetIndex],  // area code
+                    itemStyle: {
+                        areaColor: metbrewer[settings.palette].colours[categories.indexOf(item[settings.colour])],
                     }
-                },
+                }))
+            }];
+        } else {
+            categories.forEach(function (cat, idx) {
+                series.push({
+                    type: xBinned ? 'bar' : (settings.showMap ? 'map' : 'scatter'),
+                    name: labelExtremes(settings.colour, idx, categories.length - 1, String(cat)),
+                    id: idx,
+                    yAxisIndex: 0,
+                    xAxisIndex: 0,
+                    coordinateSystem: 'cartesian2d',
+                    map: settings.showMap ? 'map' : null,
+                    data: data[idx],
+                    stack: xBinned ? 'x' : null,
+                    itemStyle: {
+                        color: function (data) {
+                            return data.value[2];
+                        }
+                    },
+                });
             });
-        });
+        }
         yAxis.push({
             id: 0,
             type: 'value',
@@ -1221,8 +1234,11 @@ function updateChart() {
     myChart.hideLoading();
     if (settings.showMap) {
         geoJSONPromise.then(function (geoJSONData) {
+            geoJSONData.features = geoJSONData.features.map(feature => {
+                feature.properties.name = feature.properties[datasetIndex];
+                return feature;
+            });
             echarts.registerMap('map', geoJSONData);
-            console.log(series);
             myChart.setOption({
                 title: titles,
                 grid: grid,
@@ -1388,15 +1404,13 @@ document.getElementById('bottom-sheet').addEventListener('submit', function(even
 document.getElementById('show-map').addEventListener('change', function(event) {
     event.preventDefault();
     if (event.target.checked) {
-        document.getElementById('x-select').parentElement.firstChild.textContent = 'Map colour';
+        document.getElementById('x-select').disabled = true;
         document.getElementById('y-select').disabled = true;
-        document.getElementById('colour-select').disabled = true;
         document.getElementById('multiple-select').disabled = true;
         settings.showMap = true;
     } else {
-        document.getElementById('x-select').parentElement.firstChild.textContent = 'X Axis';
+        document.getElementById('x-select').disabled = false;
         document.getElementById('y-select').disabled = false;
-        document.getElementById('colour-select').disabled = false;
         document.getElementById('multiple-select').disabled = false;
         settings.showMap = false;
     }
