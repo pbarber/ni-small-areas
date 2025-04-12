@@ -1,5 +1,6 @@
 // TODO: fill out Data Zones dataset - document/title the new variables and add extremes
-// TODO: add choropleth map
+// TODO: fix choropleth map colouring with some palettes
+// TODO: stop post-click highlight on map
 // TODO: add hex map
 // TODO: calculate columns as required
 // TODO: load a column at a time from S3
