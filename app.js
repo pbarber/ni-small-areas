@@ -10,13 +10,15 @@
 // Initialize the echarts instance based on the prepared dom
 var myChart = echarts.init(document.getElementById('main'));
 var store = null;
-var dimensions = null;
 var metbrewer = null;
-var datasetURL = null;
-var datasetTitle = null;
-var datasetIndex = null;
-var datasetDenominator = null;
-var summaryVariables = [];
+var dataset = {
+    title: null,
+    index: null,
+    URL: null,
+    denominator: null,
+    summaryVariables: [],
+    dimensions: null
+};
 var settings = {};
 var categories = [];
 var isSmallMultiple = false;
@@ -307,17 +309,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var geoJSONLayer = L.geoJSON(null).addTo(map);
 
 function updateMetadata(metadata) {
-    dimensions = metadata.dimensions;
-    datasetURL = metadata.dataset;
-    datasetTitle = metadata.title;
-    datasetIndex = metadata.index;
-    datasetName = metadata.name;
-    datasetGeoJSON = metadata.geojson;
-    datasetExploreURL = metadata.exploreURL;
-    datasetExplorerName = metadata.explorerName;
-    datasetDenominator = metadata.population;
-    summaryVariables = metadata.summaryVariables;
-    settings.chartTitle = "NI " + datasetTitle + " statistics explorer";
+    dataset = metadata;
+    settings.chartTitle = "NI " + dataset.title + " statistics explorer";
     return metadata;
 }
 
@@ -358,7 +351,7 @@ Promise.all([dimensionsPromise, metbrewerPromise]).then(function () {
         settings.palette = "Signac";
     }
     // Load sa-stats.json with the dynamically constructed URL
-    Papa.parse(datasetURL, {
+    Papa.parse(dataset.dataset, {
         download: true,
         header: true,
         dynamicTyping: true,
@@ -441,7 +434,7 @@ function calculateRanks(name, suffix) {
 
 // Percentages are selectable as a new variable rather than via a checbox
 function calculatePercentages(name, suffix) {
-    store.forEach(a => a[name + suffix] = 100 * a[name] / a[datasetDenominator]);
+    store.forEach(a => a[name + suffix] = 100 * a[name] / a[dataset.population]);
 }
 
 function variableHasCalculatedOptions(v) {
@@ -478,69 +471,69 @@ function addCalculatedDimensions(d) {
     const config = d[1];
     const [hasQuantile, hasInterval, hasRank, hasPercentage, suffixQuantile, suffixInterval, suffixRank, suffixPercentage] = variableHasCalculatedOptions(config);
     if (hasQuantile) {
-        dimensions[(name + suffixQuantile)] = {
+        dataset.dimensions[(name + suffixQuantile)] = {
             ...config,
             type: 'Quantile',
             calcSource: name
         };
         if (config.description) {
-            dimensions[(name + suffixQuantile)].description = config.description + suffixQuantile;
+            dataset.dimensions[(name + suffixQuantile)].description = config.description + suffixQuantile;
         }
         if (config.title) {
-            dimensions[(name + suffixQuantile)].title = config.title + suffixQuantile;
+            dataset.dimensions[(name + suffixQuantile)].title = config.title + suffixQuantile;
         }
     }
     if (hasInterval) {
-        dimensions[(name + suffixInterval)] = {
+        dataset.dimensions[(name + suffixInterval)] = {
             ...config,
             type: 'Interval',
             calcSource: name
         };
         if (config.description) {
-            dimensions[(name + suffixInterval)].description = config.description + suffixInterval;
+            dataset.dimensions[(name + suffixInterval)].description = config.description + suffixInterval;
         }
         if (config.title) {
-            dimensions[(name + suffixInterval)].title = config.title + suffixInterval;
+            dataset.dimensions[(name + suffixInterval)].title = config.title + suffixInterval;
         }
     }
     if (hasRank) {
-        dimensions[(name + suffixRank)] = {
+        dataset.dimensions[(name + suffixRank)] = {
             ...config,
             type: 'Calculated Rank',
             calcSource: name
         };
         if (config.description) {
-            dimensions[(name + suffixRank)].description = config.description + suffixRank;
+            dataset.dimensions[(name + suffixRank)].description = config.description + suffixRank;
         }
         if (config.title) {
-            dimensions[(name + suffixRank)].title = config.title + suffixRank;
+            dataset.dimensions[(name + suffixRank)].title = config.title + suffixRank;
         }
     }
     if (hasPercentage) {
-        dimensions[(name + suffixPercentage)] = {
+        dataset.dimensions[(name + suffixPercentage)] = {
             ...config,
             type: 'Calculated Percentage',
             calcNumerator: name,
-            calcDenominator: datasetDenominator
+            calcDenominator: dataset.population
         };
         if (config.description) {
-            dimensions[(name + suffixPercentage)].description = config.description + suffixPercentage;
+            dataset.dimensions[(name + suffixPercentage)].description = config.description + suffixPercentage;
         }
         if (config.title) {
-            dimensions[(name + suffixPercentage)].title = config.title + suffixPercentage;
+            dataset.dimensions[(name + suffixPercentage)].title = config.title + suffixPercentage;
         }
     }
 }
 
 function onDataLoad(results) {
     // Create a promise for loading the GeoJSON file
-    geoJSONPromise = fetch(datasetGeoJSON).then(response => response.json()).then(function (data) {
+    geoJSONPromise = fetch(dataset.geojson).then(response => response.json()).then(function (data) {
         geoJSONData = data;
         geoJSONData.features = geoJSONData.features.map(feature => {
-            feature.properties.name = feature.properties[datasetIndex];
+            feature.properties.name = feature.properties[dataset.index];
             return feature;
         });
-        echarts.registerMap(datasetName, geoJSONData);
+        echarts.registerMap(dataset.name, geoJSONData);
         return data;
     });
 
@@ -553,13 +546,13 @@ function onDataLoad(results) {
                 return [key.replaceAll(/_\d+(?=,)/g, ''), value === "" ? null : value];
             })
         );
-    }).sort((a, b) => b[datasetIndex] - a[datasetIndex]);
+    }).sort((a, b) => b[dataset.index] - a[dataset.index]);
 
     // Add calculated dimensions (once for the whole dataset and again for the calculated percentage dimensions)
-    Object.entries(dimensions).forEach((d) => addCalculatedDimensions(d));
-    Object.entries(dimensions).filter(a => a[1].type == 'Calculated Percentage').forEach((d) => addCalculatedDimensions(d));
+    Object.entries(dataset.dimensions).forEach((d) => addCalculatedDimensions(d));
+    Object.entries(dataset.dimensions).filter(a => a[1].type == 'Calculated Percentage').forEach((d) => addCalculatedDimensions(d));
     // Initialise the dimension settings
-    initialiseDimensionSettings(params, dimensions);
+    initialiseDimensionSettings(params, dataset.dimensions);
 
     updateChart();
 
@@ -578,7 +571,7 @@ function onDataLoad(results) {
     var ogmb = createOptGroup('Binned metrics');
     var ogcc = createOptGroup('Categories');
     var ogcb = createOptGroup('Binned metrics');
-    for (const [key, value] of Object.entries(dimensions)) {
+    for (const [key, value] of Object.entries(dataset.dimensions)) {
         if (value.type == 'Rank' || value.type == 'Percentage' || value.type == 'Geographic' || value.type == 'Number' || value.type == 'People' || value.type == 'Calculated Percentage') {
             ogxm.append(createOption(useTitleIfExists(key), key, (key == settings.x), (key == settings.y)));
             ogym.append(createOption(useTitleIfExists(key), key, (key == settings.y), (key == settings.x)));
@@ -590,7 +583,7 @@ function onDataLoad(results) {
             ogcb.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
         }
     }
-    ogym.append(createOption('Count of ' + datasetTitle + 's', 'Count of ' + datasetTitle + 's', false, true));
+    ogym.append(createOption('Count of ' + dataset.title + 's', 'Count of ' + dataset.title + 's', false, true));
     document.getElementById("x-select").replaceChildren(ogxm);
     document.getElementById("y-select").replaceChildren(ogym);
 
@@ -603,7 +596,7 @@ function onDataLoad(results) {
     for (const key of Object.keys(metbrewer)) {
         document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
     }
-    handleXVariableChange(dimensions[settings.x].hasOwnProperty('calcSource') ? dimensions[settings.x].calcSource : settings.x, dimensions[settings.x].type == 'Quantile'), dimensions[settings.x].type == 'Interval', dimensions[settings.x].type == 'Calculated Rank';
+    handleXVariableChange(dataset.dimensions[settings.x].hasOwnProperty('calcSource') ? dataset.dimensions[settings.x].calcSource : settings.x, dataset.dimensions[settings.x].type == 'Quantile'), dataset.dimensions[settings.x].type == 'Interval', dataset.dimensions[settings.x].type == 'Calculated Rank';
 
     $('#x-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
     $('#y-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
@@ -656,8 +649,8 @@ function onDataLoad(results) {
 
     $('#y-select').on('select2:select', function (e) {
         settings.y = e.target.value;
-        const xBinned = dimensions[settings.x].type == 'Quantile' || dimensions[settings.x].type == 'Interval';
-        hideSelected("x-select", xBinned ? 'Count of ' + datasetTitle + 's' : settings.y, settings.x);
+        const xBinned = dataset.dimensions[settings.x].type == 'Quantile' || dataset.dimensions[settings.x].type == 'Interval';
+        hideSelected("x-select", xBinned ? 'Count of ' + dataset.title + 's' : settings.y, settings.x);
         $('#x-select').trigger('change');
         updateChart();
     });
@@ -669,7 +662,7 @@ function onDataLoad(results) {
             .done(function(metadataData) {
                 updateMetadata(metadataData);
                 // Load sa-stats.json with the dynamically constructed URL
-                Papa.parse(datasetURL, {
+                Papa.parse(dataset.dataset, {
                     download: true,
                     header: true,
                     dynamicTyping: true,
@@ -724,9 +717,9 @@ function tooltipCallback(args) {
     if (settings.showMap) {
         content = args.name + ': ' + args.data.areaName + '<br />' + useTitleIfExists(settings.colour) + ': ' + args.data.category;
     } else {
-        content = ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (args.data[3] + ': ' + args.data[5] + '<br />') : '') +
-            (dimensions[settings.x] ? useTitleIfExists(settings.x) : settings.x) + ': ' + (typeof args.data[0] === 'number' && !Number.isInteger(args.data[0]) ? args.data[0].toFixed(1) : args.data[0]) + (dimensions[settings.x].type == 'Percentage' || dimensions[settings.x].type == 'Calculated Percentage' ? '%' : '') + '<br />' +
-            ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (useTitleIfExists(settings.y) + ': ') : ('Count of ' + datasetTitle + 's: ')) + (typeof args.data[1] === 'number' && !Number.isInteger(args.data[1]) ? args.data[1].toFixed(1) : args.data[1]) + (dimensions[settings.y].type == 'Percentage' || dimensions[settings.y].type == 'Calculated Percentage' ? '%' : '') + '<br />' +
+        content = ((args.data[3] != 'Count of ' + dataset.title + 's') ? (args.data[3] + ': ' + args.data[5] + '<br />') : '') +
+            (dataset.dimensions[settings.x] ? useTitleIfExists(settings.x) : settings.x) + ': ' + (typeof args.data[0] === 'number' && !Number.isInteger(args.data[0]) ? args.data[0].toFixed(1) : args.data[0]) + (dataset.dimensions[settings.x].type == 'Percentage' || dataset.dimensions[settings.x].type == 'Calculated Percentage' ? '%' : '') + '<br />' +
+            ((args.data[3] != 'Count of ' + dataset.title + 's') ? (useTitleIfExists(settings.y) + ': ') : ('Count of ' + dataset.title + 's: ')) + (typeof args.data[1] === 'number' && !Number.isInteger(args.data[1]) ? args.data[1].toFixed(1) : args.data[1]) + (dataset.dimensions[settings.y].type == 'Percentage' || dataset.dimensions[settings.y].type == 'Calculated Percentage' ? '%' : '') + '<br />' +
             args.marker + ' ' + useTitleIfExists(settings.colour) + ': ' + args.data[4];
     }
 
@@ -751,7 +744,7 @@ function createOption(text, value, selected, disabled) {
 function hideSelected(selectorId, hide, selected, showCount = false) {
     var select = document.getElementById(selectorId);
     for (var i = 0; i < select.length; i++) {
-        if (select[i].value == 'Count of ' + datasetTitle + 's') {
+        if (select[i].value == 'Count of ' + dataset.title + 's') {
             select[i].disabled = !showCount;
             select[i].selected = showCount;
         } else {
@@ -762,32 +755,32 @@ function hideSelected(selectorId, hide, selected, showCount = false) {
 }
 
 function useTitleIfExists(column) {
-    if (dimensions[column] && dimensions[column].hasOwnProperty('title')) {
-        return (dimensions[column].title);
+    if (dataset.dimensions[column] && dataset.dimensions[column].hasOwnProperty('title')) {
+        return (dataset.dimensions[column].title);
     } else {
         return (column);
     }
 }
 
 function labelExtremes(column, idx, maxIdx, value) {
-    const binned = dimensions[column].type == 'Quantile' || dimensions[column].type == 'Interval';
-    if (binned && (dimensions[column].hasOwnProperty('extremes'))) {
+    const binned = dataset.dimensions[column].type == 'Quantile' || dataset.dimensions[column].type == 'Interval';
+    if (binned && (dataset.dimensions[column].hasOwnProperty('extremes'))) {
         if (idx == 0) {
-            return (value + ' - ' + dimensions[column].extremes[0]);
+            return (value + ' - ' + dataset.dimensions[column].extremes[0]);
         } else if (idx == maxIdx) {
-            return (value + ' - ' + dimensions[column].extremes[1]);
+            return (value + ' - ' + dataset.dimensions[column].extremes[1]);
         }
     }
     return (value);
 }
 
 function orderCategories(column) {
-    const binned = dimensions[column].type == 'Quantile' || dimensions[column].type == 'Interval';
+    const binned = dataset.dimensions[column].type == 'Quantile' || dataset.dimensions[column].type == 'Interval';
     var cats = [...new Set(store.map(a => a[column]))];
     if (binned) {
         cats.sort((a, b) => parseInt(a) - parseInt(b));
-    } else if (dimensions[column].hasOwnProperty('order')) {
-        cats.sort((a, b) => dimensions[column].order.indexOf(a) - dimensions[column].order.indexOf(b));
+    } else if (dataset.dimensions[column].hasOwnProperty('order')) {
+        cats.sort((a, b) => dataset.dimensions[column].order.indexOf(a) - dataset.dimensions[column].order.indexOf(b));
     } else {
         cats.sort();
     }
@@ -795,9 +788,9 @@ function orderCategories(column) {
 }
 
 function showInfo(item, variable) {
-    if (dimensions.hasOwnProperty(variable)) {
-        document.getElementById(item + '-info').innerHTML = dimensions[variable].description;
-        document.getElementById(item + '-url').innerHTML = '<a href="' + dimensions[variable].URL + '" target="_blank">' + dimensions[variable].date + '</a>';
+    if (dataset.dimensions.hasOwnProperty(variable)) {
+        document.getElementById(item + '-info').innerHTML = dataset.dimensions[variable].description;
+        document.getElementById(item + '-url').innerHTML = '<a href="' + dataset.dimensions[variable].URL + '" target="_blank">' + dataset.dimensions[variable].date + '</a>';
     } else {
         document.getElementById(item + '-info').innerHTML = variable;
         document.getElementById(item + '-url').innerHTML = '';
@@ -830,9 +823,9 @@ myChart.setOption({
                 title: 'Show information',
                 icon: 'path://M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z',
                 onclick: function () {
-                    const xBinned = dimensions[settings.x].type == 'Quantile' || dimensions[settings.x].type == 'Interval';
+                    const xBinned = dataset.dimensions[settings.x].type == 'Quantile' || dataset.dimensions[settings.x].type == 'Interval';
                     showInfo('x-axis', settings.x);
-                    showInfo('y-axis', xBinned ? 'Count of ' + datasetTitle + 's' : settings.y);
+                    showInfo('y-axis', xBinned ? 'Count of ' + dataset.title + 's' : settings.y);
                     showInfo('small-multiples', settings.smallMultiple);
                     showInfo('colours', settings.colour);
                     showInfo('colour-scheme', settings.palette);
@@ -876,23 +869,23 @@ var areaDetailsModalInstance = M.Modal.init(document.getElementById('area-detail
 
 function updateChart() {
     // Only calculate values that don't already exist in the store
-    for (const dim of ([settings.x, settings.y, settings.colour, settings.smallMultiple].concat(summaryVariables))) {
-        if ((dim in dimensions) && !(dim in store[0])) {
-            if (dimensions[dim].type == 'Calculated Percentage') {
-                const [_hasQuantile, _hasInterval, _hasRank, _hasPercentage, _suffixQuantile, _suffixInterval, _suffixRank, suffixPercentage] = variableHasCalculatedOptions(dimensions[dimensions[dim].calcNumerator]);
-                calculatePercentages(dimensions[dim].calcNumerator, suffixPercentage);
-            } else if (dimensions[dimensions[dim].calcSource].type == 'Calculated Percentage') {
-                const [_hasQuantile, _hasInterval, _hasRank, _hasPercentage, _suffixQuantile, _suffixInterval, _suffixRank, suffixPercentage] = variableHasCalculatedOptions(dimensions[dimensions[dimensions[dim].calcSource].calcNumerator]);
-                calculatePercentages(dimensions[dimensions[dim].calcSource].calcNumerator, suffixPercentage);
+    for (const dim of ([settings.x, settings.y, settings.colour, settings.smallMultiple].concat(dataset.summaryVariables))) {
+        if ((dim in dataset.dimensions) && !(dim in store[0])) {
+            if (dataset.dimensions[dim].type == 'Calculated Percentage') {
+                const [_hasQuantile, _hasInterval, _hasRank, _hasPercentage, _suffixQuantile, _suffixInterval, _suffixRank, suffixPercentage] = variableHasCalculatedOptions(dataset.dimensions[dataset.dimensions[dim].calcNumerator]);
+                calculatePercentages(dataset.dimensions[dim].calcNumerator, suffixPercentage);
+            } else if (dataset.dimensions[dataset.dimensions[dim].calcSource].type == 'Calculated Percentage') {
+                const [_hasQuantile, _hasInterval, _hasRank, _hasPercentage, _suffixQuantile, _suffixInterval, _suffixRank, suffixPercentage] = variableHasCalculatedOptions(dataset.dimensions[dataset.dimensions[dataset.dimensions[dim].calcSource].calcNumerator]);
+                calculatePercentages(dataset.dimensions[dataset.dimensions[dim].calcSource].calcNumerator, suffixPercentage);
             }
-            if (dimensions[dim].hasOwnProperty('calcSource')) {
-                const [_hasQuantile, _hasInterval, _hasRank, _hasPercentage, suffixQuantile, suffixInterval, suffixRank, _suffixPercentage] = variableHasCalculatedOptions(dimensions[dimensions[dim].calcSource]);
-                if (dimensions[dim].type == 'Quantile') {
-                    calculateQuantileBins(dimensions[dim].calcSource, suffixQuantile, dimensions[dimensions[dim].calcSource].bins[0]);
-                } else if (dimensions[dim].type == 'Interval') {
-                    calculateIntervalBins(dimensions[dim].calcSource, suffixInterval, dimensions[dimensions[dim].calcSource].bins[0]);
-                } else if (dimensions[dim].type == 'Calculated Rank') {
-                    calculateRanks(dimensions[dim].calcSource, suffixRank);
+            if (dataset.dimensions[dim].hasOwnProperty('calcSource')) {
+                const [_hasQuantile, _hasInterval, _hasRank, _hasPercentage, suffixQuantile, suffixInterval, suffixRank, _suffixPercentage] = variableHasCalculatedOptions(dataset.dimensions[dataset.dimensions[dim].calcSource]);
+                if (dataset.dimensions[dim].type == 'Quantile') {
+                    calculateQuantileBins(dataset.dimensions[dim].calcSource, suffixQuantile, dataset.dimensions[dataset.dimensions[dim].calcSource].bins[0]);
+                } else if (dataset.dimensions[dim].type == 'Interval') {
+                    calculateIntervalBins(dataset.dimensions[dim].calcSource, suffixInterval, dataset.dimensions[dataset.dimensions[dim].calcSource].bins[0]);
+                } else if (dataset.dimensions[dim].type == 'Calculated Rank') {
+                    calculateRanks(dataset.dimensions[dim].calcSource, suffixRank);
                 }
             }
         }
@@ -904,11 +897,11 @@ function updateChart() {
     var xAxis = [];
     var grid = [];
     var titles = [];
-    const xHasDataMin = dimensions[settings.x] ? (dimensions[settings.x].dataMin ? true : false) : false;
-    const yHasDataMin = dimensions[settings.y] ? (dimensions[settings.y].dataMin ? true : false) : false;
-    const yBinned = (dimensions[settings.y].type == 'Quantile' || dimensions[settings.y].type == 'Interval');
-    const xBinned = (dimensions[settings.x].type == 'Quantile' || dimensions[settings.x].type == 'Interval');
-    const colourBinned = (dimensions[settings.colour].type == 'Quantile' || dimensions[settings.colour].type == 'Interval');
+    const xHasDataMin = dataset.dimensions[settings.x] ? (dataset.dimensions[settings.x].dataMin ? true : false) : false;
+    const yHasDataMin = dataset.dimensions[settings.y] ? (dataset.dimensions[settings.y].dataMin ? true : false) : false;
+    const yBinned = (dataset.dimensions[settings.y].type == 'Quantile' || dataset.dimensions[settings.y].type == 'Interval');
+    const xBinned = (dataset.dimensions[settings.x].type == 'Quantile' || dataset.dimensions[settings.x].type == 'Interval');
+    const colourBinned = (dataset.dimensions[settings.colour].type == 'Quantile' || dataset.dimensions[settings.colour].type == 'Interval');
     const xCategories = xBinned ? [...new Set(store.map(a => a[settings.x]))] : [];
     if (isSmallMultiple) {
         var yCategories = orderCategories(settings.smallMultiple);
@@ -940,7 +933,7 @@ function updateChart() {
                             e[0],
                             d[1],
                             metbrewer[settings.palette].colours[categories.indexOf(colourBinned ? parseInt(d[0]) : d[0])],
-                            'Count of ' + datasetTitle + 's',
+                            'Count of ' + dataset.title + 's',
                             colourBinned ? parseInt(d[0]) : d[0],
                             null
                         ]
@@ -953,9 +946,9 @@ function updateChart() {
                         d[settings.x],
                         d[settings.y],
                         metbrewer[settings.palette].colours[categories.indexOf(d[settings.colour])],
-                        d[datasetIndex],
+                        d[dataset.index],
                         labelExtremes(settings.colour, categories.indexOf(d[settings.colour]), categories.length - 1, d[settings.colour]),
-                        d[datasetName]
+                        d[dataset.name]
                     ]
                 );
             }
@@ -1018,7 +1011,7 @@ function updateChart() {
                 id: idx,
                 type: 'value',
                 show: true,
-                name: xBinned ? 'Count of ' + datasetTitle + 's' : useTitleIfExists(settings.y),
+                name: xBinned ? 'Count of ' + dataset.title + 's' : useTitleIfExists(settings.y),
                 nameLocation: 'middle',
                 nameGap: 40,
                 gridIndex: idx,
@@ -1103,7 +1096,7 @@ function updateChart() {
                         e[0],
                         e[1],
                         metbrewer[settings.palette].colours[categories.indexOf(cat)],
-                        'Count of ' + datasetTitle + 's',
+                        'Count of ' + dataset.title + 's',
                         cat,
                         null
                     ]
@@ -1116,9 +1109,9 @@ function updateChart() {
                         d[settings.x],
                         d[settings.y],
                         metbrewer[settings.palette].colours[categories.indexOf(d[settings.colour])],
-                        d[datasetIndex],
+                        d[dataset.index],
                         d[settings.colour],
-                        d[datasetName]
+                        d[dataset.name]
                     ]
                 ));
             });
@@ -1132,11 +1125,11 @@ function updateChart() {
                 xAxisIndex: 0,
                 coordinateSystem: 'cartesian2d',
                 roam: settings.showMap,
-                map: settings.showMap ? datasetName : null,
+                map: settings.showMap ? dataset.name : null,
                 data: settings.showMap ? store.map(item => ({
-                    name: item[datasetIndex],
+                    name: item[dataset.index],
                     category: item[settings.colour],
-                    areaName: item[datasetName],
+                    areaName: item[dataset.name],
                     itemStyle: {
                         areaColor: metbrewer[settings.palette].colours[categories.indexOf(item[settings.colour])],
                     }
@@ -1152,7 +1145,7 @@ function updateChart() {
         yAxis.push({
             id: 0,
             type: 'value',
-            name: xBinned ? 'Count of ' + datasetTitle + 's' : useTitleIfExists(settings.y),
+            name: xBinned ? 'Count of ' + dataset.title + 's' : useTitleIfExists(settings.y),
             show: settings.showMap ? false : true,
             min: yHasDataMin ? 'dataMin' : null,
             max: yHasDataMin ? 'dataMax' : null,
@@ -1282,31 +1275,31 @@ function updateChart() {
             var content = `<strong>${useTitleIfExists(settings.colour)}:${colour}</strong><br>`;
             if (!settings.showMap) {
                 content += `
-                    ${useTitleIfExists(settings.x)}: ${typeof x === 'number' && !Number.isInteger(x) ? x.toFixed(1) : x}${dimensions[settings.x].type == 'Percentage' || dimensions[settings.x].type == 'Calculated Percentage' ? '%' : ''}<br>
-                    ${useTitleIfExists(settings.y)}: ${typeof y === 'number' && !Number.isInteger(y) ? y.toFixed(1) : y}${dimensions[settings.y].type == 'Percentage' || dimensions[settings.y].type == 'Calculated Percentage' ? '%' : ''}
+                    ${useTitleIfExists(settings.x)}: ${typeof x === 'number' && !Number.isInteger(x) ? x.toFixed(1) : x}${dataset.dimensions[settings.x].type == 'Percentage' || dataset.dimensions[settings.x].type == 'Calculated Percentage' ? '%' : ''}<br>
+                    ${useTitleIfExists(settings.y)}: ${typeof y === 'number' && !Number.isInteger(y) ? y.toFixed(1) : y}${dataset.dimensions[settings.y].type == 'Percentage' || dataset.dimensions[settings.y].type == 'Calculated Percentage' ? '%' : ''}
                 `;
             }
             document.getElementById('area-details-modal-point').innerHTML = content;
 
-            if (datasetExplorerName) {
-                document.getElementById('area-details-explorer-link').innerHTML = `More details on <a target="_blank" href="${datasetExploreURL.replace('{code}', code)}">${datasetExplorerName} for ${name}&nbsp;<i class="material-icons tiny" style="vertical-align: middle;">open_in_new</i></a> `;
+            if (dataset.explorerName) {
+                document.getElementById('area-details-explorer-link').innerHTML = `More details on <a target="_blank" href="${dataset.exploreURL.replace('{code}', code)}">${dataset.explorerName} for ${name}&nbsp;<i class="material-icons tiny" style="vertical-align: middle;">open_in_new</i></a> `;
             } else {
                 document.getElementById('area-details-explorer-link').innerHTML = '';
             }
 
-            const fullDetails = store.filter(e => e[datasetIndex] == code)[0];
+            const fullDetails = store.filter(e => e[dataset.index] == code)[0];
 
-            let orderedFields = Object.keys(dimensions)
-                .filter(key => summaryVariables.includes(key))
-                .sort((a, b) => summaryVariables.indexOf(a) - summaryVariables.indexOf(b));
+            let orderedFields = Object.keys(dataset.dimensions)
+                .filter(key => dataset.summaryVariables.includes(key))
+                .sort((a, b) => dataset.summaryVariables.indexOf(a) - dataset.summaryVariables.indexOf(b));
 
             var summaryTable = '<table class="striped"><tbody>';
             orderedFields.forEach(field => {
                 if (fullDetails.hasOwnProperty(field)) {
                     summaryTable += `<tr><td>
-                        ${useTitleIfExists(field)} (<a href=${dimensions[field].URL}>${dimensions[field].date}</a>)
+                        ${useTitleIfExists(field)} (<a href=${dataset.dimensions[field].URL}>${dataset.dimensions[field].date}</a>)
                     </td><td>
-                        ${typeof fullDetails[field] === 'number' && !Number.isInteger(fullDetails[field]) ? fullDetails[field].toFixed(1) : fullDetails[field]}${dimensions[field].type == 'Percentage' || dimensions[field].type == 'Calculated Percentage' ? '%' : ''}
+                        ${typeof fullDetails[field] === 'number' && !Number.isInteger(fullDetails[field]) ? fullDetails[field].toFixed(1) : fullDetails[field]}${dataset.dimensions[field].type == 'Percentage' || dataset.dimensions[field].type == 'Calculated Percentage' ? '%' : ''}
                     </td></tr>`;
                 }
             });
@@ -1314,7 +1307,7 @@ function updateChart() {
             document.getElementById('area-details-modal-summary').innerHTML = summaryTable;
             // Get the relevant row from the geoJSON promise
             geoJSONPromise.then(function (geoJSONData) {
-                const relevantFeature = geoJSONData.features.find(feature => feature.properties[datasetIndex] === code);
+                const relevantFeature = geoJSONData.features.find(feature => feature.properties[dataset.index] === code);
 
                 if (relevantFeature) {
                     map.removeLayer(geoJSONLayer);
@@ -1339,7 +1332,7 @@ function updateChart() {
 }
 
 function handleXVariableChange(selected, quantileSelected, intervalSelected, rankSelected) {
-    const dim = dimensions[selected];
+    const dim = dataset.dimensions[selected];
     const [hasQuantile, hasInterval, hasRank, _hasPercentage, suffixQuantile, suffixInterval, suffixRank, _suffixPercentage] = variableHasCalculatedOptions(dim);
     // Make checkboxes selectable/non-selectable
     document.getElementById('x-quantile').disabled = !hasQuantile;
@@ -1363,7 +1356,7 @@ function handleXVariableChange(selected, quantileSelected, intervalSelected, ran
     // Hide the y variable if it's the same as the x variable
     hideSelected("y-select", selected, settings.y, (quantileSelected && hasQuantile) || (intervalSelected && hasInterval));
     // Hide the x variable if it's the same as the y variable
-    hideSelected("x-select", (quantileSelected && hasQuantile) || (intervalSelected && hasInterval) ? 'Count of ' + datasetTitle + 's' : settings.y, selected);
+    hideSelected("x-select", (quantileSelected && hasQuantile) || (intervalSelected && hasInterval) ? 'Count of ' + dataset.title + 's' : settings.y, selected);
     // Update the y variable selector
     $('#y-select').trigger('change');
     // Update the x variable selector
