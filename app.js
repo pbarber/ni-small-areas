@@ -1081,7 +1081,7 @@ function updateChart() {
         // Not small multiples
         myChart.resize({ height: window.innerHeight });
         var data = [];
-        if (xBinned) {
+        if (xBinned && !settings.showMap) {
             categories.slice().reverse().forEach(function (cat, idx) {
                 data.push(Object.entries(store.filter(d => d[settings.colour] == cat).reduce(
                     function (acc, item) {
@@ -1118,7 +1118,7 @@ function updateChart() {
         }
         categories.forEach(function (cat, idx) {
             series.push({
-                type: xBinned ? 'bar' : (settings.showMap ? 'map' : 'scatter'),
+                type: settings.showMap ? 'map' : (xBinned ? 'bar' : 'scatter'),
                 name: labelExtremes(settings.colour, idx, categories.length - 1, String(cat)),
                 id: idx,
                 yAxisIndex: 0,
@@ -1134,7 +1134,7 @@ function updateChart() {
                         areaColor: metbrewer[settings.palette].colours[categories.indexOf(item[settings.colour])],
                     }
                 })) : data[idx],
-                stack: xBinned ? 'x' : null,
+                stack: (!settings.showMap && xBinned) ? 'x' : null,
                 itemStyle: settings.showMap ? { borderColor: '#ccc', borderWidth: 0.5 } : {
                     color: function (data) {
                         return data.value[2];
