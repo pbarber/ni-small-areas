@@ -714,12 +714,17 @@ function matchWithOptGroups(params, data) {
 }
 
 function tooltipCallback(args) {
-    return (
-        ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (args.data[3] + ': ' + args.data[5] + '<br />') : '') +
-        (dimensions[settings.x] ? useTitleIfExists(settings.x) : settings.x) + ': ' + (typeof args.data[0] === 'number' && !Number.isInteger(args.data[0]) ? args.data[0].toFixed(1) : args.data[0]) + (dimensions[settings.x].type == 'Percentage' || dimensions[settings.x].type == 'Calculated Percentage' ? '%' : '') + '<br />' +
-        ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (useTitleIfExists(settings.y) + ': ') : ('Count of ' + datasetTitle + 's: ')) + (typeof args.data[1] === 'number' && !Number.isInteger(args.data[1]) ? args.data[1].toFixed(1) : args.data[1]) + (dimensions[settings.y].type == 'Percentage' || dimensions[settings.y].type == 'Calculated Percentage' ? '%' : '') + '<br />' +
-        args.marker + ' ' + useTitleIfExists(settings.colour) + ': ' + args.data[4]
-    );
+    var content = '';
+    if (settings.showMap) {
+        content = args.name + ': ' + args.data.areaName + '<br />' + useTitleIfExists(settings.colour) + ': ' + args.data.category;
+    } else {
+        content = ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (args.data[3] + ': ' + args.data[5] + '<br />') : '') +
+            (dimensions[settings.x] ? useTitleIfExists(settings.x) : settings.x) + ': ' + (typeof args.data[0] === 'number' && !Number.isInteger(args.data[0]) ? args.data[0].toFixed(1) : args.data[0]) + (dimensions[settings.x].type == 'Percentage' || dimensions[settings.x].type == 'Calculated Percentage' ? '%' : '') + '<br />' +
+            ((args.data[3] != 'Count of ' + datasetTitle + 's') ? (useTitleIfExists(settings.y) + ': ') : ('Count of ' + datasetTitle + 's: ')) + (typeof args.data[1] === 'number' && !Number.isInteger(args.data[1]) ? args.data[1].toFixed(1) : args.data[1]) + (dimensions[settings.y].type == 'Percentage' || dimensions[settings.y].type == 'Calculated Percentage' ? '%' : '') + '<br />' +
+            args.marker + ' ' + useTitleIfExists(settings.colour) + ': ' + args.data[4];
+    }
+
+    return (content);
 }
 
 function createOptGroup(label) {
@@ -1116,7 +1121,9 @@ function updateChart() {
                 map: 'map',
                 roam: true,
                 data: store.map(item => ({
-                    name: item[datasetIndex],  // area code
+                    name: item[datasetIndex],
+                    category: item[settings.colour],
+                    areaName: item[datasetName],
                     itemStyle: {
                         areaColor: metbrewer[settings.palette].colours[categories.indexOf(item[settings.colour])],
                     }
