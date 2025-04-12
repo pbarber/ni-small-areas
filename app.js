@@ -535,6 +535,11 @@ function onDataLoad(results) {
     // Create a promise for loading the GeoJSON file
     geoJSONPromise = fetch(datasetGeoJSON).then(response => response.json()).then(function (data) {
         geoJSONData = data;
+        geoJSONData.features = geoJSONData.features.map(feature => {
+            feature.properties.name = feature.properties[datasetIndex];
+            return feature;
+        });
+        echarts.registerMap(datasetName, geoJSONData);
         return data;
     });
 
@@ -1231,42 +1236,21 @@ function updateChart() {
         });
     });
     myChart.hideLoading();
-    if (settings.showMap) {
-        geoJSONPromise.then(function (geoJSONData) {
-            geoJSONData.features = geoJSONData.features.map(feature => {
-                feature.properties.name = feature.properties[datasetIndex];
-                return feature;
-            });
-            echarts.registerMap(datasetName, geoJSONData);
-            myChart.setOption({
-                title: titles,
-                grid: grid,
-                xAxis: {
-                    show: false
-                },
-                yAxis: {
-                    show: false
-                },
-                series: series
-            });
-        });
-    } else {
-        myChart.setOption({
-            title: titles,
-            grid: grid,
-            xAxis: xAxis,
-            yAxis: yAxis,
-            series: series,
-            legend: {
-                top: 'middle',
-                right: 0,
-                orient: 'vertical',
-                align: 'right',
-                icon: 'roundRect',
-                data: legendData,
-            },
-        });
-    }
+    myChart.setOption({
+        title: titles,
+        grid: grid,
+        xAxis: settings.showMap ? { show: false } : xAxis,
+        yAxis: settings.showMap ? { show: false } : yAxis,
+        series: series,
+        legend: {
+            top: 'middle',
+            right: 0,
+            orient: 'vertical',
+            align: 'right',
+            icon: 'roundRect',
+            data: legendData,
+        },
+    });
     // Add click event listener to the chart
     myChart.off('click'); // Remove any existing click listeners
     myChart.on('click', function (params) {
