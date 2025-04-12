@@ -1150,7 +1150,7 @@ function updateChart() {
             id: 0,
             type: 'value',
             name: xBinned ? 'Count of ' + datasetTitle + 's' : useTitleIfExists(settings.y),
-            show: true,
+            show: settings.showMap ? false : true,
             min: yHasDataMin ? 'dataMin' : null,
             max: yHasDataMin ? 'dataMax' : null,
             axisLabel: {
@@ -1162,6 +1162,7 @@ function updateChart() {
             id: 0,
             type: xBinned ? 'category' : 'value',
             name: useTitleIfExists(settings.x),
+            show: settings.showMap ? false : true,
             min: xHasDataMin ? 'dataMin' : null,
             max: xHasDataMin ? 'dataMax' : null,
             axisLabel: {
@@ -1232,15 +1233,15 @@ function updateChart() {
     categories.forEach(function (cat, idx) {
         legendData.push({
             name: labelExtremes(settings.colour, idx, categories.length - 1, String(cat)),
-            itemStyle: { color: metbrewer[settings.palette].colours[idx] },
+            itemStyle: { color: metbrewer[settings.palette].colours[idx], borderWidth: 0 },
         });
     });
     myChart.hideLoading();
     myChart.setOption({
         title: titles,
         grid: grid,
-        xAxis: settings.showMap ? { show: false } : xAxis,
-        yAxis: settings.showMap ? { show: false } : yAxis,
+        xAxis: xAxis,
+        yAxis: yAxis,
         series: series,
         legend: {
             top: 'middle',
