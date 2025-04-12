@@ -525,6 +525,31 @@ function addCalculatedDimensions(d) {
     }
 }
 
+function adjustAvailablePalettes(colour, palette) {
+    const numCats = orderCategories(colour).length;
+    // Handle the case where the palette doesn't hold enough colours by hiding options and selecting an alternative
+    var change = false;
+    if (numCats > metbrewer[palette].colours.length) {
+        change = true;
+    }
+    var pselect = document.getElementById("palette-select");
+    for (var i = 0; i < pselect.length; i++) {
+        if (numCats > metbrewer[pselect[i].value].colours.length) {
+            pselect[i].disabled = true;
+            pselect[i].selected = false;
+        } else {
+            pselect[i].disabled = false;
+            if (change) {
+                palette = pselect[i].value;
+                pselect[i].selected = true;
+                change = false;
+            }
+        }
+    }
+    $('#palette-select').trigger('change');
+    return palette;
+}
+
 function onDataLoad(results) {
     // Create a promise for loading the GeoJSON file
     geoJSONPromise = fetch(dataset.geojson).then(response => response.json()).then(function (data) {
@@ -605,6 +630,9 @@ function onDataLoad(results) {
     $('#palette-select').select2({ width: '100%', dropdownParent: $("#bottom-sheet") });
     $('#geography-select').select2({ width: '100%', dropdownParent: $("#bottom-sheet") });
 
+    // Make sure the correct palette options are available for the colour variable
+    settings.palette = adjustAvailablePalettes(settings.colour, settings.palette);
+
     // When the selectors change, update the chart options
     $('#multiple-select').on('select2:select', function (e) {
         settings.smallMultiple = e.target.value;
@@ -613,27 +641,7 @@ function onDataLoad(results) {
 
     $('#colour-select').on('select2:select', function (e) {
         settings.colour = e.target.value;
-        const numCats = orderCategories(settings.colour).length;
-        // Handle the case where the palette doesn't hold enough colours by hiding options and selecting an alternative
-        var change = false;
-        if (numCats > metbrewer[settings.palette].colours.length) {
-            change = true;
-        }
-        var pselect = document.getElementById("palette-select");
-        for (var i = 0; i < pselect.length; i++) {
-            if (numCats > metbrewer[pselect[i].value].colours.length) {
-                pselect[i].disabled = true;
-                pselect[i].selected = false;
-            } else {
-                pselect[i].disabled = false;
-                if (change) {
-                    settings.palette = pselect[i].value;
-                    pselect[i].selected = true;
-                    change = false;
-                }
-            }
-        }
-        $('#palette-select').trigger('change');
+        settings.palette = adjustAvailablePalettes(settings.colour, settings.palette);
         updateChart();
     });
 
