@@ -1115,40 +1115,32 @@ function updateChart() {
                 ));
             });
         }
-        if (settings.showMap) {
-            series = [{
-                type: 'map',
-                map: 'map',
-                roam: true,
-                data: store.map(item => ({
+        categories.forEach(function (cat, idx) {
+            series.push({
+                type: xBinned ? 'bar' : (settings.showMap ? 'map' : 'scatter'),
+                name: labelExtremes(settings.colour, idx, categories.length - 1, String(cat)),
+                id: idx,
+                yAxisIndex: 0,
+                xAxisIndex: 0,
+                coordinateSystem: 'cartesian2d',
+                roam: settings.showMap,
+                map: settings.showMap ? datasetName : null,
+                data: settings.showMap ? store.map(item => ({
                     name: item[datasetIndex],
                     category: item[settings.colour],
                     areaName: item[datasetName],
                     itemStyle: {
                         areaColor: metbrewer[settings.palette].colours[categories.indexOf(item[settings.colour])],
                     }
-                }))
-            }];
-        } else {
-            categories.forEach(function (cat, idx) {
-                series.push({
-                    type: xBinned ? 'bar' : (settings.showMap ? 'map' : 'scatter'),
-                    name: labelExtremes(settings.colour, idx, categories.length - 1, String(cat)),
-                    id: idx,
-                    yAxisIndex: 0,
-                    xAxisIndex: 0,
-                    coordinateSystem: 'cartesian2d',
-                    map: settings.showMap ? 'map' : null,
-                    data: data[idx],
-                    stack: xBinned ? 'x' : null,
-                    itemStyle: {
-                        color: function (data) {
-                            return data.value[2];
-                        }
-                    },
-                });
+                })) : data[idx],
+                stack: xBinned ? 'x' : null,
+                itemStyle: {
+                    color: function (data) {
+                        return data.value[2];
+                    }
+                },
             });
-        }
+        });
         yAxis.push({
             id: 0,
             type: 'value',
@@ -1245,7 +1237,7 @@ function updateChart() {
                 feature.properties.name = feature.properties[datasetIndex];
                 return feature;
             });
-            echarts.registerMap('map', geoJSONData);
+            echarts.registerMap(datasetName, geoJSONData);
             myChart.setOption({
                 title: titles,
                 grid: grid,
