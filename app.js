@@ -1257,7 +1257,7 @@ function updateChart() {
     // Add click event listener to the chart
     myChart.off('click'); // Remove any existing click listeners
     myChart.on('click', function (params) {
-        if (params.componentType === 'series' && params.seriesType === 'scatter') {
+        if ((params.componentType === 'series' && params.seriesType === 'scatter') || (params.componentType === 'series' && params.seriesType === 'map')) {
             // Prevent immediate tooltip hide/show cycle
             setTimeout(() => {
                 myChart.dispatchAction({
@@ -1271,21 +1271,29 @@ function updateChart() {
                 params.event.event.stopPropagation();
             }
 
-            document.getElementById('area-details-modal-header').innerHTML = params.data[3] + ': ' + params.data[5];
-            var content = `
-                <strong>${useTitleIfExists(settings.colour)}:${params.data[4]}</strong><br>
-                ${useTitleIfExists(settings.x)}: ${typeof params.data[0] === 'number' && !Number.isInteger(params.data[0]) ? params.data[0].toFixed(1) : params.data[0]}${dimensions[settings.x].type == 'Percentage' || dimensions[settings.x].type == 'Calculated Percentage' ? '%' : ''}<br>
-                ${useTitleIfExists(settings.y)}: ${typeof params.data[1] === 'number' && !Number.isInteger(params.data[1]) ? params.data[1].toFixed(1) : params.data[1]}${dimensions[settings.y].type == 'Percentage' || dimensions[settings.y].type == 'Calculated Percentage' ? '%' : ''}
-            `;
+            const code = settings.showMap ? params.data.name : params.data[3];
+            const name = settings.showMap ? params.data.areaName : params.data[5];
+            const colour = settings.showMap ? params.data.category : params.data[4];
+            const x = settings.showMap ? null : params.data[0];
+            const y = settings.showMap ? null : params.data[1];
+
+            document.getElementById('area-details-modal-header').innerHTML = code + ': ' + name;
+            var content = `<strong>${useTitleIfExists(settings.colour)}:${colour}</strong><br>`;
+            if (!settings.showMap) {
+                content += `
+                    ${useTitleIfExists(settings.x)}: ${typeof x === 'number' && !Number.isInteger(x) ? x.toFixed(1) : x}${dimensions[settings.x].type == 'Percentage' || dimensions[settings.x].type == 'Calculated Percentage' ? '%' : ''}<br>
+                    ${useTitleIfExists(settings.y)}: ${typeof y === 'number' && !Number.isInteger(y) ? y.toFixed(1) : y}${dimensions[settings.y].type == 'Percentage' || dimensions[settings.y].type == 'Calculated Percentage' ? '%' : ''}
+                `;
+            }
             document.getElementById('area-details-modal-point').innerHTML = content;
 
             if (datasetExplorerName) {
-                document.getElementById('area-details-explorer-link').innerHTML = `More details on <a target="_blank" href="${datasetExploreURL.replace('{code}', params.data[3])}">${datasetExplorerName} for ${params.data[5]}&nbsp;<i class="material-icons tiny" style="vertical-align: middle;">open_in_new</i></a> `;
+                document.getElementById('area-details-explorer-link').innerHTML = `More details on <a target="_blank" href="${datasetExploreURL.replace('{code}', code)}">${datasetExplorerName} for ${name}&nbsp;<i class="material-icons tiny" style="vertical-align: middle;">open_in_new</i></a> `;
             } else {
                 document.getElementById('area-details-explorer-link').innerHTML = '';
             }
 
-            const fullDetails = store.filter(e => e[datasetIndex] == params.data[3])[0];
+            const fullDetails = store.filter(e => e[datasetIndex] == code)[0];
 
             let orderedFields = Object.keys(dimensions)
                 .filter(key => summaryVariables.includes(key))
@@ -1305,7 +1313,7 @@ function updateChart() {
             document.getElementById('area-details-modal-summary').innerHTML = summaryTable;
             // Get the relevant row from the geoJSON promise
             geoJSONPromise.then(function (geoJSONData) {
-                const relevantFeature = geoJSONData.features.find(feature => feature.properties[datasetIndex] === params.data[3]);
+                const relevantFeature = geoJSONData.features.find(feature => feature.properties[datasetIndex] === code);
 
                 if (relevantFeature) {
                     map.removeLayer(geoJSONLayer);
