@@ -1,7 +1,6 @@
 // TODO: fill out Data Zones dataset - document/title the new variables and add extremes
 // TODO: add hex map
 // TODO: load a column at a time from NISRA
-// TODO: better colour selection using checkboxes
 // TODO: Add NIMDM travel data for small areas
 // TODO: Allow users to choose an area to highlight on the charts
 
@@ -602,11 +601,10 @@ function onDataLoad(results) {
         } else if (value.type == 'Category') {
             ogmc.append(createOption(useTitleIfExists(key), key, false, false));
             ogcc.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
-        } else if (value.type == 'Quantile' || value.type == 'Interval') {
-            ogmb.append(createOption(useTitleIfExists(key), key, false, false));
         }
-        // Add variable to colour options if it's binned
+        // Add variable to colour/small multiple options if it's binned
         if ((hasQuantile || hasInterval) && (value.type != 'Calculated Percentage')) {
+            ogmb.append(createOption(useTitleIfExists(key), key, false, false));
             ogcb.append(createOption(useTitleIfExists(key), key, (key == settings.colour), false));
         }
     }
@@ -629,7 +627,8 @@ function onDataLoad(results) {
         dataset.dimensions[settings.x].type == 'Interval', 
         dataset.dimensions[settings.x].type == 'Calculated Rank'
     );
-    handleColourVariableChange(
+    settings.colour = handleColourOrMultipleVariableChange(
+        'colour',
         dataset.dimensions[settings.colour].hasOwnProperty('calcNumerator') ? 
             dataset.dimensions[settings.colour].calcNumerator : 
             (dataset.dimensions[settings.colour].hasOwnProperty('calcSource') ? 
@@ -638,6 +637,17 @@ function onDataLoad(results) {
         dataset.dimensions[settings.colour].type == 'Quantile', 
         dataset.dimensions[settings.colour].type == 'Interval', 
         dataset.dimensions[settings.colour].type == 'Calculated Percentage'
+    );
+    settings.smallMultiple = handleColourOrMultipleVariableChange(
+        'multiple',
+        ((settings.smallMultiple in dataset.dimensions) && dataset.dimensions[settings.smallMultiple].hasOwnProperty('calcNumerator')) ? 
+            dataset.dimensions[settings.smallMultiple].calcNumerator : 
+            (((settings.smallMultiple in dataset.dimensions) && dataset.dimensions[settings.smallMultiple].hasOwnProperty('calcSource')) ? 
+                dataset.dimensions[settings.smallMultiple].calcSource : 
+                settings.smallMultiple), 
+        (settings.smallMultiple in dataset.dimensions) && (dataset.dimensions[settings.smallMultiple].type == 'Quantile'), 
+        (settings.smallMultiple in dataset.dimensions) && (dataset.dimensions[settings.smallMultiple].type == 'Interval'), 
+        (settings.smallMultiple in dataset.dimensions) && (dataset.dimensions[settings.smallMultiple].type == 'Calculated Percentage')
     );
 
     $('#x-select').select2({ width: '100%', matcher: matchWithOptGroups, dropdownParent: $("#bottom-sheet") });
@@ -652,12 +662,24 @@ function onDataLoad(results) {
 
     // When the selectors change, update the chart options
     $('#multiple-select').on('select2:select', function (e) {
-        settings.smallMultiple = e.target.value;
+        settings.smallMultiple = handleColourOrMultipleVariableChange(
+            'multiple',
+            e.target.value,
+            document.getElementById('multiple-quantile').checked,
+            document.getElementById('multiple-interval').checked,
+            document.getElementById('multiple-percentage').checked
+        );
         updateChart();
     });
 
     $('#colour-select').on('select2:select', function (e) {
-        handleColourVariableChange(e.target.value, document.getElementById('colour-quantile').checked, document.getElementById('colour-interval').checked, document.getElementById('colour-percentage').checked);
+        settings.colour = handleColourOrMultipleVariableChange(
+            'colour',
+            e.target.value,
+            document.getElementById('colour-quantile').checked,
+            document.getElementById('colour-interval').checked,
+            document.getElementById('colour-percentage').checked
+        );
         settings.palette = adjustAvailablePalettes(settings.colour, settings.palette);
         updateChart();
     });
@@ -1391,27 +1413,29 @@ function handleXVariableChange(selected, quantileSelected, intervalSelected, ran
     $('#x-select').trigger('change');
 }
 
-function handleColourVariableChange(selected, quantileSelected, intervalSelected, percentageSelected) {
-    const [hasQuantile, hasInterval, _hasRank, hasPercentage, suffixQuantile, suffixInterval, _suffixRank, suffixPercentage] = variableHasCalculatedOptions(dataset.dimensions[selected]);
-    // Make checkboxes selectable/non-selectable
-    document.getElementById('colour-quantile').disabled = !hasQuantile;
-    document.getElementById('colour-interval').disabled = !hasInterval;
-    document.getElementById('colour-percentage').disabled = !hasPercentage;
-    // Set the checkboxes to the correct state
-    document.getElementById('colour-quantile').checked = hasQuantile && (quantileSelected || !intervalSelected);
-    document.getElementById('colour-interval').checked = hasInterval && intervalSelected;
-    document.getElementById('colour-percentage').checked = hasPercentage && percentageSelected;
-    // Set the colour variable to the correct value
-    settings.colour = selected;
-    if (percentageSelected && hasPercentage) {
-        selected += suffixPercentage;
+function handleColourOrMultipleVariableChange(variable, selected, quantileSelected, intervalSelected, percentageSelected) {
+    if (selected in dataset.dimensions) {
+        const [hasQuantile, hasInterval, _hasRank, hasPercentage, suffixQuantile, suffixInterval, _suffixRank, suffixPercentage] = variableHasCalculatedOptions(dataset.dimensions[selected]);
+        // Make checkboxes selectable/non-selectable
+        document.getElementById(variable+'-quantile').disabled = !hasQuantile;
+        document.getElementById(variable+'-interval').disabled = !hasInterval;
+        document.getElementById(variable+'-percentage').disabled = !hasPercentage;
+        // Set the checkboxes to the correct state
+        document.getElementById(variable+'-quantile').checked = hasQuantile && (quantileSelected || !intervalSelected);
+        document.getElementById(variable+'-interval').checked = hasInterval && intervalSelected;
+        document.getElementById(variable+'-percentage').checked = hasPercentage && percentageSelected;
+        // Set the colour variable to the correct value
+        if (percentageSelected && hasPercentage) {
+            selected += suffixPercentage;
+        }
+        if ((quantileSelected || !intervalSelected) && hasQuantile) {
+            selected += suffixQuantile;
+        }
+        if (intervalSelected && hasInterval) {
+            selected += suffixInterval;
+        }
     }
-    if ((quantileSelected || !intervalSelected) && hasQuantile) {
-        settings.colour = selected + suffixQuantile;
-    }
-    if (intervalSelected && hasInterval) {
-        settings.colour = selected + suffixInterval;
-    }
+    return selected;
 }
 
 // Add event listeners for the x axis checkboxes
@@ -1444,11 +1468,32 @@ document.querySelectorAll('.colour-option').forEach(element => {
         } else if (e.target.id == 'colour-interval') {
             document.getElementById('colour-quantile').checked = !e.target.checked;
         }
-        handleColourVariableChange(
+        settings.colour = handleColourOrMultipleVariableChange(
+            'colour',
             document.getElementById('colour-select').value,
             document.getElementById('colour-quantile').checked,
             document.getElementById('colour-interval').checked,
             document.getElementById('colour-percentage').checked
+        );
+        updateChart();
+    });
+});
+
+// Add event listeners for the small multiple options checkboxes
+document.querySelectorAll('.multiple-option').forEach(element => {
+    element.addEventListener('change', function (e) {
+        // If this checkbox was checked, uncheck the others
+        if (e.target.id == 'multiple-quantile') {
+            document.getElementById('multiple-interval').checked = !e.target.checked;
+        } else if (e.target.id == 'multiple-interval') {
+            document.getElementById('multiple-quantile').checked = !e.target.checked;
+        }
+        settings.smallMultiple = handleColourOrMultipleVariableChange(
+            'multiple',
+            document.getElementById('multiple-select').value,
+            document.getElementById('multiple-quantile').checked,
+            document.getElementById('multiple-interval').checked,
+            document.getElementById('multiple-percentage').checked
         );
         updateChart();
     });
