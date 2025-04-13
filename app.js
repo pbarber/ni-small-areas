@@ -1,9 +1,8 @@
 // TODO: fill out Data Zones dataset - document/title the new variables and add extremes
-// TODO: fix choropleth map colouring with some palettes
 // TODO: stop post-click highlight on map
 // TODO: add hex map
-// TODO: calculate columns as required
-// TODO: load a column at a time from S3
+// TODO: load a column at a time from NISRA
+// TODO: better colour selection using checkboxes
 // TODO: Add NIMDM travel data for small areas
 // TODO: Allow users to choose an area to highlight on the charts
 
@@ -856,11 +855,8 @@ myChart.setOption({
 
 // Add a global click handler for the chart
 myChart.getZr().on('click', function(params) {
-    // Get click coordinates relative to canvas
-    const pointInPixel = [params.offsetX, params.offsetY];
-
     // Check if click is in toolbox area
-    if (myChart.containPixel('grid', pointInPixel)) {
+    if (myChart.containPixel('grid', [params.offsetX, params.offsetY])) {
         // Click was in main chart area
         return;
     }
@@ -1142,6 +1138,12 @@ function updateChart() {
                         areaColor: metbrewer[settings.palette].colours[categories.indexOf(item[settings.colour])],
                     }
                 })) : data[idx],
+                select: {
+                    disabled: true,
+                    label: {
+                        show: false
+                    }
+                },
                 stack: (!settings.showMap && xBinned) ? 'x' : null,
                 itemStyle: settings.showMap ? { borderColor: '#ccc', borderWidth: 0.5 } : {
                     color: function (data) {
