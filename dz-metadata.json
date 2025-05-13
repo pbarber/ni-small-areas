@@ -816,7 +816,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least rest of UK/IE",
+                "Most rest of UK/IE"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born."
         },
@@ -826,7 +829,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least outside UK/IE",
+                "Most outside UK/IE"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born."
         },
@@ -836,7 +842,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Europe other",
+                "Most Europe other"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'Europe: Other' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -846,7 +855,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -856,7 +868,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least GB",
+                "Most GB"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -866,7 +881,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Americas/Caribbean",
+                "Most Americas/Caribbean"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -876,7 +894,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other EU",
+                "Most other EU"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -886,7 +907,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Middle East/Asia",
+                "Most Middle East/Asia"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -896,7 +920,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Americas",
+                "Most Americas"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -906,7 +933,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Africa",
+                "Most Africa"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -916,7 +946,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Antarctic/Oceania/Other",
+                "Most Antarctic/Oceania/Other"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -926,7 +959,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other EU",
+                "Most other EU"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -936,7 +972,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Middle East/Asia other",
+                "Most Middle East/Asia other"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -946,7 +985,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Americas other",
+                "Most Americas other"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -956,7 +998,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Nigeria",
+                "Most Nigeria"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -966,7 +1011,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other Africa",
+                "Most other Africa"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -976,7 +1024,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least South Africa",
+                "Most South Africa"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -986,7 +1037,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Zimbabwe",
+                "Most Zimbabwe"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -996,7 +1050,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Australia",
+                "Most Australia"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1006,7 +1063,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1016,7 +1076,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Bulgaria",
+                "Most Bulgaria"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1026,7 +1089,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least France",
+                "Most France"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1036,7 +1102,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Germany",
+                "Most Germany"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1046,7 +1115,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Hungary",
+                "Most Hungary"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1056,7 +1128,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Italy",
+                "Most Italy"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1066,7 +1141,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Latvia",
+                "Most Latvia"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1076,7 +1154,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Lithuania",
+                "Most Lithuania"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1086,7 +1167,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other EU",
+                "Most other EU"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1096,7 +1180,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other non-EU",
+                "Most other non-EU"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1106,7 +1193,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Poland",
+                "Most Poland"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1116,7 +1206,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Portugal",
+                "Most Portugal"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1126,7 +1219,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least IE",
+                "Most IE"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1136,7 +1232,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Romania",
+                "Most Romania"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1146,7 +1245,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Slovakia",
+                "Most Slovakia"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1156,7 +1258,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Spain",
+                "Most Spain"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1166,7 +1271,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least England",
+                "Most England"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1176,7 +1284,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Scotland",
+                "Most Scotland"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1186,7 +1297,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Wales",
+                "Most Wales"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1196,7 +1310,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least China",
+                "Most China"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1206,7 +1323,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least East Timor",
+                "Most East Timor"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1216,7 +1336,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Hong Kong",
+                "Most Hong Kong"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1226,7 +1349,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least India",
+                "Most India"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1236,7 +1362,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1246,7 +1375,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Pakistan",
+                "Most Pakistan"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1256,7 +1388,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Philippines",
+                "Most Philippines"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1266,7 +1401,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Syria",
+                "Most Syria"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1276,7 +1414,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Canada",
+                "Most Canada"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1286,7 +1427,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1296,7 +1440,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least USA",
+                "Most USA"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
@@ -1306,7 +1453,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least South America",
+                "Most South America"
+            ],
             "date": "2024-04-03",
             "description": "The country in which a person was born. 'EU' is the European Union and is as defined on Census Day (21 March 2021). People who gave 'Cyprus' as their country of birth are included within the 'Europe: Other EU countries' category. 'Europe: Other Non-EU countries' includes United Kingdom (part not specified) and Ireland (part not specified)."
         },
