@@ -1,4 +1,4 @@
-// TODO: fill out Data Zones dataset - document/title the new variables and add extremes
+// TODO: fill out Data Zones dataset - document/title the new variables and add extremes via command line tool
 // TODO: add hex map
 // TODO: load a column at a time from NISRA
 // TODO: Add NIMDM travel data for small areas
@@ -443,7 +443,7 @@ function variableHasCalculatedOptions(v) {
     var suffixInterval = null;
     var suffixRank = null;
     var suffixPercentage = null;
-    if (v.bins && (v.type === 'Number' || v.type === 'Percentage' || v.type === 'Calculated Percentage' || v.type === 'People' || v.type === 'Quantile' || v.type === 'Rank')) {
+    if (v.bins && (v.type === 'Number' || v.type === 'Percentage' || v.type === 'Calculated Percentage' || v.type === 'People')) {
         hasQuantile = true;
         suffixQuantile = (v.bins[0] == 10) ? ' decile' : (v.bins[0] == 100) ? ' centile' : ' quantile';
     }
