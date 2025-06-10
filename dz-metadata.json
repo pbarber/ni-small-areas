@@ -739,8 +739,8 @@
                 10
             ],
             "extremes": [
-                "Most School Age",
-                "Least School Age"
+                "Least School Age",
+                "Most School Age"
             ],
             "date": "2024-04-03",
             "description": "A person's age on 1 July 2020. Compulsory School Age indicates whether an individual is below compulsory school age (i.e. pre-primary school age), compulsory school age (i.e. primary or post-primary school age) or above compulsory school age (i.e. aged 16 or over on 1 July 2020)."
@@ -2896,7 +2896,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Household reference",
+                "Most Household reference"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether an individual is the household reference person."
         },
@@ -2906,7 +2909,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not household reference",
+                "Most not household reference"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether an individual is the household reference person."
         },
@@ -2916,7 +2922,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least whole house/bungalow",
+                "Most whole house/bungalow"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the type of building or structure. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -2926,7 +2935,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least flat etc",
+                "Most flat etc"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the type of building or structure. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -2936,7 +2948,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least caravan",
+                "Most caravan"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the type of building or structure. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -2946,7 +2961,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least flat etc in commercial building",
+                "Most flat etc in commercial building"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the type of building or structure. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -2956,7 +2974,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least flat in converted house",
+                "Most flat in converted house"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the type of building or structure. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -2966,7 +2987,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least purpose built flat",
+                "Most purpose built flat"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the type of building or structure. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -2976,7 +3000,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least detached",
+                "Most detached"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the type of building or structure. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -2986,7 +3013,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least semi-detached",
+                "Most semi-detached"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the type of building or structure. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -2996,7 +3026,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least terraced",
+                "Most terraced"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the type of building or structure. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3006,7 +3039,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least designed or adapted",
+                "Most designed or adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of household adaptations. Adaptation to Accommodation refers to household accommodation that has been adapted or designed for one or more of the following: internal wheelchair usage, external wheelchair access, other physical or mobility difficulties, visual difficulties, hearing difficulties, or other. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3016,7 +3052,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not designed or adapted",
+                "Most not designed or adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of household adaptations. Adaptation to Accommodation refers to household accommodation that has been adapted or designed for one or more of the following: internal wheelchair usage, external wheelchair access, other physical or mobility difficulties, visual difficulties, hearing difficulties, or other. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3026,7 +3065,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 4+ adaptations",
+                "Most 4+ adaptations"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of household adaptations. Adaptation to Accommodation refers to household accommodation that has been adapted or designed for one or more of the following: internal wheelchair usage, external wheelchair access, other physical or mobility difficulties, visual difficulties, hearing difficulties, or other. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3036,7 +3078,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 adaptation",
+                "Most 1 adaptation"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of household adaptations. Adaptation to Accommodation refers to household accommodation that has been adapted or designed for one or more of the following: internal wheelchair usage, external wheelchair access, other physical or mobility difficulties, visual difficulties, hearing difficulties, or other. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3046,7 +3091,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3 adaptations",
+                "Most 3 adaptations"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of household adaptations. Adaptation to Accommodation refers to household accommodation that has been adapted or designed for one or more of the following: internal wheelchair usage, external wheelchair access, other physical or mobility difficulties, visual difficulties, hearing difficulties, or other. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3056,7 +3104,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 adaptations",
+                "Most 2 adaptations"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of household adaptations. Adaptation to Accommodation refers to household accommodation that has been adapted or designed for one or more of the following: internal wheelchair usage, external wheelchair access, other physical or mobility difficulties, visual difficulties, hearing difficulties, or other. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3066,7 +3117,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least cars/vans available",
+                "Most cars/vans available"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3076,7 +3130,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+ cars/vans available",
+                "Most 2+ cars/vans available"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3086,7 +3143,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 car/van available",
+                "Most 1 car/van available"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3096,7 +3156,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 cars/vans",
+                "Most 2 cars/vans"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3106,7 +3169,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3 cars/vans",
+                "Most 3 cars/vans"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3116,7 +3182,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 4 cars/vans",
+                "Most 4 cars/vans"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3126,7 +3195,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 5+ cars/vans",
+                "Most 5+ cars/vans"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3136,7 +3208,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no car/van",
+                "Most no car/van"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3146,7 +3221,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least central heating",
+                "Most central heating"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3156,7 +3234,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least single type central heating",
+                "Most single type central heating"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3166,7 +3247,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other central heating",
+                "Most other central heating"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3176,7 +3260,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+ central heating",
+                "Most 2+ central heating"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3186,7 +3273,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no central heating",
+                "Most no central heating"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3196,7 +3286,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least electric",
+                "Most electric"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3206,7 +3299,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least mains gas",
+                "Most mains gas"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3216,7 +3312,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least oil",
+                "Most oil"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3226,7 +3325,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3236,7 +3338,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least renewable",
+                "Most renewable"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3246,7 +3351,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least solid fuel",
+                "Most solid fuel"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3256,7 +3364,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least tank gas",
+                "Most tank gas"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3266,7 +3377,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least wood",
+                "Most wood"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3276,7 +3390,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least gas/electric",
+                "Most gas/electric"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3286,7 +3403,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least gas/solid fuel",
+                "Most gas/solid fuel"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3296,7 +3416,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least gas/wood",
+                "Most gas/wood"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3306,7 +3429,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least gas/wood/solid fuel",
+                "Most gas/wood/solid fuel"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3316,7 +3442,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least oil/electric",
+                "Most oil/electric"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3326,7 +3455,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least oil/gas",
+                "Most oil/gas"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3336,7 +3468,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least oil/renewable",
+                "Most oil/renewable"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3346,7 +3481,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least oil/solid fuel",
+                "Most oil/solid fuel"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3356,7 +3494,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least oil/tank gas",
+                "Most oil/tank gas"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3366,7 +3507,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least oil/wood",
+                "Most oil/wood"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3376,7 +3520,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least oil/electric/solid",
+                "Most oil/electric/solid"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3386,7 +3533,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least oil/electric/wood/solid",
+                "Most oil/electric/wood/solid"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3396,7 +3546,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least oil/tanl gas/solid",
+                "Most oil/tanl gas/solid"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3406,7 +3559,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least oil/wood/solid",
+                "Most oil/wood/solid"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3416,7 +3572,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
