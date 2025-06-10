@@ -3585,7 +3585,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least dependent children",
+                "Most dependent children"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3595,7 +3598,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no dependent children",
+                "Most no dependent children"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3605,7 +3611,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least youngest 0-4",
+                "Most youngest 0-4"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3615,7 +3624,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least youngest 12-18",
+                "Most youngest 12-18"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3625,7 +3637,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least youngest 5-11",
+                "Most youngest 5-11"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3635,7 +3650,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least one dependent",
+                "Most one dependent"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3645,7 +3663,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3+ dependents",
+                "Most 3+ dependents"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3655,7 +3676,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 dependents",
+                "Most 2 dependents"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3665,7 +3689,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no children",
+                "Most no children"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3675,7 +3702,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no dependent",
+                "Most no dependent"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3685,7 +3715,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least one aged 0-4",
+                "Most one aged 0-4"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3695,7 +3728,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least one aged 12-18",
+                "Most one aged 12-18"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3705,7 +3741,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least one aged 5-11",
+                "Most one aged 5-11"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3715,7 +3754,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3+ youngest 0-4",
+                "Most 3+ youngest 0-4"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3725,7 +3767,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3+ youngest 12-18",
+                "Most 3+ youngest 12-18"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3735,7 +3780,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3+ youngest 5-11",
+                "Most 3+ youngest 5-11"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3745,7 +3793,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 youngest 0-4",
+                "Most 2 youngest 0-4"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3755,7 +3806,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 youngest 12-18",
+                "Most 2 youngest 12-18"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3765,7 +3819,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 youngest 5-11",
+                "Most 2 youngest 5-11"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by classifying the household according to the number of dependent children in the household, and by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3775,7 +3832,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no renewable energy",
+                "Most no renewable energy"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that has renewable energy systems. Renewable energy systems are those used to generate heat or energy for a household. A household can have one or more renewable energy systems, examples of those present are; solar panels for electricity, solar panels for heating water, biomass and wind turbines. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3785,7 +3845,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least renewable energy",
+                "Most renewable energy"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that has renewable energy systems. Renewable energy systems are those used to generate heat or energy for a household. A household can have one or more renewable energy systems, examples of those present are; solar panels for electricity, solar panels for heating water, biomass and wind turbines. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3795,7 +3858,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least occupancy rating 0+",
+                "Most occupancy rating 0+"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the occupancy rating, this provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -3805,7 +3871,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least occupancy rating -1 or less",
+                "Most occupancy rating -1 or less"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the occupancy rating, this provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -3815,7 +3884,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least occupancy rating +1",
+                "Most occupancy rating +1"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the occupancy rating, this provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -3825,7 +3897,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least occupancy rating +2 or more",
+                "Most occupancy rating +2 or more"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the occupancy rating, this provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -3835,7 +3910,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least occupancy rating -1",
+                "Most occupancy rating -1"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the occupancy rating, this provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -3845,7 +3923,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least occupancy rating -2 or less",
+                "Most occupancy rating -2 or less"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the occupancy rating, this provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -3855,7 +3936,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least occupancy rating 0",
+                "Most occupancy rating 0"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the occupancy rating, this provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -3865,7 +3949,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 0.5-1 persons/room",
+                "Most 0.5-1 persons/room"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of persons per room, this is equal to the number of household members divided by the number of rooms in that household's accommodation. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -3875,7 +3962,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1-1.5 persons/room",
+                "Most 1-1.5 persons/room"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of persons per room, this is equal to the number of household members divided by the number of rooms in that household's accommodation. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -3885,7 +3975,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1.5+ persons/room",
+                "Most 1.5+ persons/room"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of persons per room, this is equal to the number of household members divided by the number of rooms in that household's accommodation. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -3895,7 +3988,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least under 0.5 persons/room",
+                "Most under 0.5 persons/room"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household by the number of persons per room, this is equal to the number of household members divided by the number of rooms in that household's accommodation. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -3905,7 +4001,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+ people",
+                "Most 2+ people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people usually resident in the household. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3915,7 +4014,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3+ people",
+                "Most 3+ people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people usually resident in the household. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3925,7 +4027,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 4+ people",
+                "Most 4+ people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people usually resident in the household. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3935,7 +4040,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 5+ people",
+                "Most 5+ people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people usually resident in the household. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3945,7 +4053,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 person",
+                "Most 1 person"
+            ],
             "date": "2024-04-03",
             "description": "The number of people usually resident in the household. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3955,7 +4066,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 people",
+                "Most 2 people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people usually resident in the household. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3965,7 +4079,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3 people",
+                "Most 3 people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people usually resident in the household. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3975,7 +4092,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 4 people",
+                "Most 4 people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people usually resident in the household. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3985,7 +4105,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 5 people",
+                "Most 5 people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people usually resident in the household. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -3995,7 +4118,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 6+ people",
+                "Most 6+ people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people usually resident in the household. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4005,7 +4131,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least owner occupied",
+                "Most owner occupied"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4015,7 +4144,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least private rented",
+                "Most private rented"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4025,7 +4157,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least social rented",
+                "Most social rented"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4035,7 +4170,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least owns with mortgage",
+                "Most owns with mortgage"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4045,7 +4183,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other rented",
+                "Most other rented"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4055,7 +4196,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least private landlord/agency",
+                "Most private landlord/agency"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4065,7 +4209,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least lives rent free",
+                "Most lives rent free"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4075,7 +4222,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least owns outright",
+                "Most owns outright"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4085,7 +4235,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least owns with mortgage",
+                "Most owns with mortgage"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4095,7 +4248,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least employer owned",
+                "Most employer owned"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4105,7 +4261,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least letting agency",
+                "Most letting agency"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4115,7 +4274,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4125,7 +4287,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least private landlord",
+                "Most private landlord"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4135,7 +4300,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least relative owned",
+                "Most relative owned"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4145,7 +4313,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least part-owns part-rents",
+                "Most part-owns part-rents"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4155,7 +4326,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least housing association",
+                "Most housing association"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
@@ -4165,7 +4339,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least NIHE",
+                "Most NIHE"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a person lives in a household that owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association. This variable applies to all people living in households. As such, this variable reports 'No code required' for the subset of the population living in communal establishments."
         },
