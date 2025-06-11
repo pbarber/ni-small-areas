@@ -4963,7 +4963,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Other combination",
+                "Most Other combination"
+            ],
             "date": "2024-04-03",
             "description": "A person has ability in Irish if they can do one or more of the following: understand Irish; speak Irish; read Irish; or write Irish. An ability to speak, read or write Irish does not imply an ability to understand Irish unless stated. Persons in these categories may or may not have the ability to understand Irish. Irish (Ability) is applicable to people aged 3 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6312,7 +6315,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L1/2/3",
+                "Most L1/2/3"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6322,7 +6328,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L14.1/2",
+                "Most L14.1/2"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6332,7 +6341,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L1/2",
+                "Most L1/2"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6342,7 +6354,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L10/11",
+                "Most L10/11"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6352,7 +6367,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L4/5/6",
+                "Most L4/5/6"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6362,7 +6380,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L8/9",
+                "Most L8/9"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6372,7 +6393,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L10",
+                "Most L10"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6382,7 +6406,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L11",
+                "Most L11"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6392,7 +6419,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L12",
+                "Most L12"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6402,7 +6432,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L13",
+                "Most L13"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6412,7 +6445,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L14.1",
+                "Most L14.1"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6422,7 +6458,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L14.2",
+                "Most L14.2"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6432,7 +6471,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L15",
+                "Most L15"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6442,7 +6484,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L1",
+                "Most L1"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6452,7 +6497,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L2",
+                "Most L2"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6462,7 +6510,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L3",
+                "Most L3"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6472,7 +6523,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L4",
+                "Most L4"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6482,7 +6536,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L5",
+                "Most L5"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6492,7 +6549,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L6",
+                "Most L6"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6502,7 +6562,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L7",
+                "Most L7"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6512,7 +6575,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L8",
+                "Most L8"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6522,7 +6588,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least L9",
+                "Most L9"
+            ],
             "date": "2024-04-03",
             "description": "The National Statistics Socio-economic Classification (NS-SeC) indicates a person's socio-economic position based on their occupation and other job characteristics. Full-time students are recorded in the 'full-time students' category regardless of whether they are economically active. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected. This variable uses information from the 'Ever worked' question in the census. Users are advised to visit https://www.nisra.gov.uk/statistics/2021-census/results/quality-notes-issues-and-corrections for more information regarding the 'Ever worked' question."
         },
@@ -6532,7 +6601,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least managers/directors/seniors",
+                "Most managers/directors/seniors"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6542,7 +6614,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least professional",
+                "Most professional"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6552,7 +6627,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least associate professional/technical",
+                "Most associate professional/technical"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6562,7 +6640,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least administrative/secretarial",
+                "Most administrative/secretarial"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6572,7 +6653,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least skilled trades",
+                "Most skilled trades"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6582,7 +6666,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least caring/leisure/other services",
+                "Most caring/leisure/other services"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6592,7 +6679,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least sales/customer service",
+                "Most sales/customer service"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6602,7 +6692,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least process/plan/machine operatives",
+                "Most process/plan/machine operatives"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6612,7 +6705,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least elementary",
+                "Most elementary"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6622,7 +6718,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least corporate managers/directors",
+                "Most corporate managers/directors"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6632,7 +6731,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other managers",
+                "Most other managers"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6642,7 +6744,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least science/research/eng/tech",
+                "Most science/research/eng/tech"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6652,7 +6757,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least health professionals",
+                "Most health professionals"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6662,7 +6770,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least teaching/education",
+                "Most teaching/education"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6672,7 +6783,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least businesss/media/public service",
+                "Most businesss/media/public service"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6682,7 +6796,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least science/eng/tech associates",
+                "Most science/eng/tech associates"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6692,7 +6809,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least health associates",
+                "Most health associates"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6702,7 +6822,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least protective services",
+                "Most protective services"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6712,7 +6835,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least culture/media/sports",
+                "Most culture/media/sports"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6722,7 +6848,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least business/public service",
+                "Most business/public service"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6732,7 +6861,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least administrative",
+                "Most administrative"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6742,7 +6874,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least secretarial and related",
+                "Most secretarial and related"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6752,7 +6887,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least skilled agricultural",
+                "Most skilled agricultural"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6762,7 +6900,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least skilled metal/electrical/electronic",
+                "Most skilled metal/electrical/electronic"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6772,7 +6913,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least skilled construction",
+                "Most skilled construction"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6782,7 +6926,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least textiles/printing",
+                "Most textiles/printing"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6792,7 +6939,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least caring personal service",
+                "Most caring personal service"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6802,7 +6952,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least leisure/travel",
+                "Most leisure/travel"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6812,7 +6965,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least enforcement",
+                "Most enforcement"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6822,7 +6978,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least sales",
+                "Most sales"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6832,7 +6991,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least customer service",
+                "Most customer service"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6842,7 +7004,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least process/plant/machine operatives",
+                "Most process/plant/machine operatives"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6852,7 +7017,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least transport/mobile drivers",
+                "Most transport/mobile drivers"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6862,7 +7030,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least elementary trades",
+                "Most elementary trades"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -6872,7 +7043,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least elementary admin/service",
+                "Most elementary admin/service"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Occupation is applicable to people aged 16 and over in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
