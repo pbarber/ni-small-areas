@@ -7056,7 +7056,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least former managers/directors/seniors",
+                "Most former managers/directors/seniors"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were not in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Former occupation is applicable to people aged 16 and over not in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7066,7 +7069,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least former professional",
+                "Most former professional"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were not in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Former occupation is applicable to people aged 16 and over not in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7076,7 +7082,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least former associate professional/technical",
+                "Most former associate professional/technical"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were not in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Former occupation is applicable to people aged 16 and over not in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7086,7 +7095,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least former administrative/secretarial",
+                "Most former administrative/secretarial"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were not in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Former occupation is applicable to people aged 16 and over not in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7096,7 +7108,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least former skilled trades",
+                "Most former skilled trades"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were not in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Former occupation is applicable to people aged 16 and over not in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7106,7 +7121,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least former caring/leisure/other services",
+                "Most former caring/leisure/other services"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were not in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Former occupation is applicable to people aged 16 and over not in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7116,7 +7134,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least former sales/customer service",
+                "Most former sales/customer service"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were not in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Former occupation is applicable to people aged 16 and over not in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7126,7 +7147,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least former process/plant/machine operatives",
+                "Most former process/plant/machine operatives"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were not in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Former occupation is applicable to people aged 16 and over not in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7136,7 +7160,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least former elementary",
+                "Most former elementary"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were not in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Former occupation is applicable to people aged 16 and over not in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7146,7 +7173,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least never worked",
+                "Most never worked"
+            ],
             "date": "2024-04-03",
             "description": "The occupation classification of people who were not in employment in the week before Census Day (21 March 2021). The Occupation classification is based on the Standard Occupation Classification 2020 (SOC2020). Former occupation is applicable to people aged 16 and over not in employment in the week before census (including economically active full-time students in employment). As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
