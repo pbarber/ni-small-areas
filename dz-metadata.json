@@ -7200,8 +7200,8 @@
                 10
             ],
             "extremes": [
-                "Least non-Irish passports",
-                "Most non-Irish passports"
+                "Least non-Irish only passports",
+                "Most non-Irish only passports"
             ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports."
@@ -7213,8 +7213,8 @@
                 10
             ],
             "extremes": [
-                "Least non-UK passports",
-                "Most non-UK passports"
+                "Least non-UK only passports",
+                "Most non-UK only passports"
             ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports."
@@ -7264,7 +7264,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least EU Member only passports",
+                "Most EU Member only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7274,7 +7277,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Other EU only passports",
+                "Most Other EU only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7284,7 +7290,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Middle East/Asia only passports",
+                "Most Middle East/Asia only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7294,7 +7303,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least North/Central American/Caribbean only passports",
+                "Most North/Central American/Caribbean only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7304,7 +7316,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Ireland and non-UK passports",
+                "Most Ireland and non-UK passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7314,7 +7329,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Ireland only passports",
+                "Most Ireland only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7324,7 +7342,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least African only passports",
+                "Most African only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7334,7 +7355,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Antarctic/Oceanian only passports",
+                "Most Antarctic/Oceanian only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7344,7 +7368,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Bulgarian only passports",
+                "Most Bulgarian only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7354,7 +7381,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least French only passports",
+                "Most French only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7364,7 +7394,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least German only passports",
+                "Most German only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7374,7 +7407,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Hungarian only passports",
+                "Most Hungarian only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7384,7 +7420,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Italian only passports",
+                "Most Italian only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7394,7 +7433,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Latvian only passports",
+                "Most Latvian only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7404,7 +7446,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Lithuanian only passports",
+                "Most Lithuanian only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7414,7 +7459,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Other EU only passports",
+                "Most Other EU only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7424,7 +7472,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Other Non-EU only passports",
+                "Most Other Non-EU only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7434,7 +7485,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Polish only passports",
+                "Most Polish only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7444,7 +7498,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Portuguese only passports",
+                "Most Portuguese only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7454,7 +7511,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Romanian only passports",
+                "Most Romanian only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7464,7 +7524,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Slovakian only passports",
+                "Most Slovakian only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7474,7 +7537,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Spanish only passports",
+                "Most Spanish only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7484,7 +7550,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Chinese only passports",
+                "Most Chinese only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7494,7 +7563,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Indian only passports",
+                "Most Indian only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7504,7 +7576,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Middle East/Asia Other only passports",
+                "Most Middle East/Asia Other only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7514,7 +7589,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Philippines only passports",
+                "Most Philippines only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7524,7 +7602,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no passport",
+                "Most no passport"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7534,7 +7615,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least North/Central American/Caribbean Other only passports",
+                "Most North/Central American/Caribbean Other only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7544,7 +7628,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least US only passports",
+                "Most US only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7554,7 +7641,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least South American only passports",
+                "Most South American only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7564,7 +7654,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least UK and Ireland only passports",
+                "Most UK and Ireland only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7574,7 +7667,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least UK and non-Irish only passports",
+                "Most UK and non-Irish only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7584,7 +7680,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least UK only passports",
+                "Most UK only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
@@ -7594,7 +7693,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least UK, Ireland and other only passports",
+                "Most UK, Ireland and other only passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports. The categories 'Other EU' and 'Other Non-EU' relate to the European Union (EU) as at 21 March 2021. People who indicated they have a passport from 'Cyprus' are included within the 'Europe: Other EU' category. People who indicated they have a passport from British Overseas Territories are included in 'Europe: Other non-EU'."
         },
