@@ -7186,7 +7186,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Irish passports",
+                "Most Irish passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports."
         },
@@ -7196,7 +7199,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least non-Irish passports",
+                "Most non-Irish passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports."
         },
@@ -7206,7 +7212,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least non-UK passports",
+                "Most non-UK passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports."
         },
@@ -7216,7 +7225,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least UK passports",
+                "Most UK passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports."
         },
@@ -7226,7 +7238,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports."
         },
@@ -7236,7 +7251,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other passports",
+                "Most other passports"
+            ],
             "date": "2024-04-03",
             "description": "The passports held by people as stated in the census. The Passports Held question was 'tick all that apply'. As such, results relating to passports may classify people with a single passport or a combination of passports."
         },
