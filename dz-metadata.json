@@ -7706,7 +7706,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 20km+ travel",
+                "Most in NI, 20km+ travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of study. This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7716,7 +7719,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least home, non NI or no fixed place",
+                "Most home, non NI or no fixed place"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of study. This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7726,7 +7732,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 30km+ travel",
+                "Most in NI, 30km+ travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of study. This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7736,7 +7745,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least non NI or no fixed place",
+                "Most non NI or no fixed place"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of study. This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7746,7 +7758,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 10-20km travel",
+                "Most in NI, 10-20km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of study. This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7756,7 +7771,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 20-30km travel",
+                "Most in NI, 20-30km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of study. This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7766,7 +7784,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 2-5km travel",
+                "Most in NI, 2-5km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of study. This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7776,7 +7797,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 30-40km travel",
+                "Most in NI, 30-40km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of study. This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7786,7 +7810,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 40-60km travel",
+                "Most in NI, 40-60km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of study. This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7796,7 +7823,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 5-10km travel",
+                "Most in NI, 5-10km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of study. This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7806,7 +7836,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 60km+ travel",
+                "Most in NI, 60km+ travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of study. This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7816,7 +7849,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, <2km travel",
+                "Most in NI, <2km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of study. This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7826,7 +7862,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other/mainly at home",
+                "Most other/mainly at home"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of study (including school). This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7836,7 +7875,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of study (including school). This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7846,7 +7888,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least bicycle",
+                "Most bicycle"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of study (including school). This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7856,7 +7901,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least bus, minibus or coach",
+                "Most bus, minibus or coach"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of study (including school). This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7866,7 +7914,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least car or van",
+                "Most car or van"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of study (including school). This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7876,7 +7927,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least at or from home",
+                "Most at or from home"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of study (including school). This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7886,7 +7940,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least on foot",
+                "Most on foot"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of study (including school). This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7896,7 +7953,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of study (including school). This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7906,7 +7966,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least passenger in car/van",
+                "Most passenger in car/van"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of study (including school). This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7916,7 +7979,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least taxi",
+                "Most taxi"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of study (including school). This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7926,7 +7992,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least train",
+                "Most train"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of study (including school). This variable applies to people of primary school age and over in full-time education. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7936,7 +8005,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least non NI/no fixed place",
+                "Most non NI/no fixed place"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7946,7 +8018,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 20km+ travel",
+                "Most in NI, 20km+ travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7956,7 +8031,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least non NI",
+                "Most non NI"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7966,7 +8044,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 30km+ travel",
+                "Most in NI, 30km+ travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7976,7 +8057,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no fixed place",
+                "Most no fixed place"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7986,7 +8070,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least GB",
+                "Most GB"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -7996,7 +8083,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Republic of Ireland",
+                "Most Republic of Ireland"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8006,7 +8096,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least non UK/Ireland",
+                "Most non UK/Ireland"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8016,7 +8109,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 10-20km travel",
+                "Most in NI, 10-20km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8026,7 +8122,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 20-30km travel",
+                "Most in NI, 20-30km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8036,7 +8135,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 2-5km travel",
+                "Most in NI, 2-5km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8046,7 +8148,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 30-40km travel",
+                "Most in NI, 30-40km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8056,7 +8161,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 40-60km travel",
+                "Most in NI, 40-60km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8066,7 +8174,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 5-10km travel",
+                "Most in NI, 5-10km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8076,7 +8187,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, 60km+ travel",
+                "Most in NI, 60km+ travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8086,7 +8200,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in NI, <2km travel",
+                "Most in NI, <2km travel"
+            ],
             "date": "2024-04-03",
             "description": "Distance travelled is calculated as the straight line distance, in kilometres, between place of residence and place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8096,7 +8213,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8106,7 +8226,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8116,7 +8239,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least bicycle",
+                "Most bicycle"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8126,7 +8252,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least bus, minibus or coach",
+                "Most bus, minibus or coach"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8136,7 +8265,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least car or van pool",
+                "Most car or van pool"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8146,7 +8278,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least driving a car or van",
+                "Most driving a car or van"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8156,7 +8291,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least at or from home",
+                "Most at or from home"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8166,7 +8304,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least motorcycle, scooter or moped",
+                "Most motorcycle, scooter or moped"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8176,7 +8317,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least on foot",
+                "Most on foot"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8186,7 +8330,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8196,7 +8343,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least passenger in car/van",
+                "Most passenger in car/van"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8206,7 +8356,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least taxi",
+                "Most taxi"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8216,7 +8369,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least train",
+                "Most train"
+            ],
             "date": "2024-04-03",
             "description": "The method of travel used for the longest part, by distance, of the usual journey to place of work. This variable applies to people aged 16 and over (excluding full-time students) in employment. As such, it reports 'No code required' for the subset of the population where no response was expected."
         },
