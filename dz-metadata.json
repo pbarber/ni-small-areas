@@ -8382,7 +8382,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1+ hours",
+                "Most 1+ hours"
+            ],
             "date": "2024-04-03",
             "description": "A person is a provider of unpaid care if they give any help or support to anyone because of long-term physical or mental health conditions or illnesses, or problems related to old age. This does not include any activities as part of paid employment. Provision of Unpaid care is applicable to people aged 5 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8392,7 +8395,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 20-49 hours",
+                "Most 20-49 hours"
+            ],
             "date": "2024-04-03",
             "description": "A person is a provider of unpaid care if they give any help or support to anyone because of long-term physical or mental health conditions or illnesses, or problems related to old age. This does not include any activities as part of paid employment. Provision of Unpaid care is applicable to people aged 5 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8402,7 +8408,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1-19 hours",
+                "Most 1-19 hours"
+            ],
             "date": "2024-04-03",
             "description": "A person is a provider of unpaid care if they give any help or support to anyone because of long-term physical or mental health conditions or illnesses, or problems related to old age. This does not include any activities as part of paid employment. Provision of Unpaid care is applicable to people aged 5 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8412,7 +8421,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 20-34 hours",
+                "Most 20-34 hours"
+            ],
             "date": "2024-04-03",
             "description": "A person is a provider of unpaid care if they give any help or support to anyone because of long-term physical or mental health conditions or illnesses, or problems related to old age. This does not include any activities as part of paid employment. Provision of Unpaid care is applicable to people aged 5 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8422,7 +8434,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 35-49 hours",
+                "Most 35-49 hours"
+            ],
             "date": "2024-04-03",
             "description": "A person is a provider of unpaid care if they give any help or support to anyone because of long-term physical or mental health conditions or illnesses, or problems related to old age. This does not include any activities as part of paid employment. Provision of Unpaid care is applicable to people aged 5 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8432,7 +8447,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 50+ hours",
+                "Most 50+ hours"
+            ],
             "date": "2024-04-03",
             "description": "A person is a provider of unpaid care if they give any help or support to anyone because of long-term physical or mental health conditions or illnesses, or problems related to old age. This does not include any activities as part of paid employment. Provision of Unpaid care is applicable to people aged 5 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8442,7 +8460,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no unpaid care",
+                "Most no unpaid care"
+            ],
             "date": "2024-04-03",
             "description": "A person is a provider of unpaid care if they give any help or support to anyone because of long-term physical or mental health conditions or illnesses, or problems related to old age. This does not include any activities as part of paid employment. Provision of Unpaid care is applicable to people aged 5 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8452,7 +8473,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Most apprenticeship",
+                "Least apprenticeship"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether an individual has gained an apprenticeship qualification. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8462,7 +8486,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least apprenticeship",
+                "Most apprenticeship"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether an individual has gained an apprenticeship qualification. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8472,7 +8499,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least qualifications",
+                "Most qualifications"
+            ],
             "date": "2024-04-03",
             "description": "Qualifications (Highest Level) is highest level qualification held by the individual as stated on census. For qualifications gained outside Northern Ireland, respondents were directed to select the nearest equivalent. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8482,7 +8512,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "Qualifications (Highest Level) is highest level qualification held by the individual as stated on census. For qualifications gained outside Northern Ireland, respondents were directed to select the nearest equivalent. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8492,7 +8525,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least apprenticeship",
+                "Most apprenticeship"
+            ],
             "date": "2024-04-03",
             "description": "Qualifications (Highest Level) is highest level qualification held by the individual as stated on census. For qualifications gained outside Northern Ireland, respondents were directed to select the nearest equivalent. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8502,7 +8538,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least level 1",
+                "Most level 1"
+            ],
             "date": "2024-04-03",
             "description": "Qualifications (Highest Level) is highest level qualification held by the individual as stated on census. For qualifications gained outside Northern Ireland, respondents were directed to select the nearest equivalent. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8512,7 +8551,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least level 2",
+                "Most level 2"
+            ],
             "date": "2024-04-03",
             "description": "Qualifications (Highest Level) is highest level qualification held by the individual as stated on census. For qualifications gained outside Northern Ireland, respondents were directed to select the nearest equivalent. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8522,7 +8564,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least level 3",
+                "Most level 3"
+            ],
             "date": "2024-04-03",
             "description": "Qualifications (Highest Level) is highest level qualification held by the individual as stated on census. For qualifications gained outside Northern Ireland, respondents were directed to select the nearest equivalent. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8532,7 +8577,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least level 4",
+                "Most level 4"
+            ],
             "date": "2024-04-03",
             "description": "Qualifications (Highest Level) is highest level qualification held by the individual as stated on census. For qualifications gained outside Northern Ireland, respondents were directed to select the nearest equivalent. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8542,7 +8590,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no qualifications",
+                "Most no qualifications"
+            ],
             "date": "2024-04-03",
             "description": "Qualifications (Highest Level) is highest level qualification held by the individual as stated on census. For qualifications gained outside Northern Ireland, respondents were directed to select the nearest equivalent. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8552,7 +8603,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "Qualifications (Highest Level) is highest level qualification held by the individual as stated on census. For qualifications gained outside Northern Ireland, respondents were directed to select the nearest equivalent. This variable is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8562,7 +8616,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least non-white",
+                "Most non-white"
+            ],
             "date": "2024-04-03",
             "description": "A racial equality variable as specified by The Executive Office (TEO). Individuals who recorded their ethnic group as white are divided into two groups. The first group includes people with a British, Irish or Northern Irish national identity only, and who reported their religion as Christian, no religion, or did not state a religion. The second group includes people who did not have a British, Irish or Northern Irish national identity, or who reported a non-Christian religion. A final group includes everyone with a non-white ethnicity. British, Irish or Northern Irish national identities also include English, Scottish, Welsh, Guernsey Islander, Jersey Islander, Manx, Cornish, Channel Islander, Ulster Scots, and Gaelic."
         },
@@ -8572,7 +8629,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least white British/Irish/NI",
+                "Most white British/Irish/NI"
+            ],
             "date": "2024-04-03",
             "description": "A racial equality variable as specified by The Executive Office (TEO). Individuals who recorded their ethnic group as white are divided into two groups. The first group includes people with a British, Irish or Northern Irish national identity only, and who reported their religion as Christian, no religion, or did not state a religion. The second group includes people who did not have a British, Irish or Northern Irish national identity, or who reported a non-Christian religion. A final group includes everyone with a non-white ethnicity. British, Irish or Northern Irish national identities also include English, Scottish, Welsh, Guernsey Islander, Jersey Islander, Manx, Cornish, Channel Islander, Ulster Scots, and Gaelic."
         },
@@ -8582,7 +8642,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least white non-British/Irish/NI",
+                "Most white non-British/Irish/NI"
+            ],
             "date": "2024-04-03",
             "description": "A racial equality variable as specified by The Executive Office (TEO). Individuals who recorded their ethnic group as white are divided into two groups. The first group includes people with a British, Irish or Northern Irish national identity only, and who reported their religion as Christian, no religion, or did not state a religion. The second group includes people who did not have a British, Irish or Northern Irish national identity, or who reported a non-Christian religion. A final group includes everyone with a non-white ethnicity. British, Irish or Northern Irish national identities also include English, Scottish, Welsh, Guernsey Islander, Jersey Islander, Manx, Cornish, Channel Islander, Ulster Scots, and Gaelic."
         },
@@ -8592,7 +8655,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no religion",
+                "Most no religion"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8602,7 +8668,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Protestant/Other Christian",
+                "Most Protestant/Other Christian"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8612,7 +8681,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Christian",
+                "Most Christian"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8622,7 +8694,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Hindu",
+                "Most Hindu"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8632,7 +8707,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Muslim",
+                "Most Muslim"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8642,7 +8720,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other religion",
+                "Most other religion"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8652,7 +8733,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Catholic",
+                "Most Catholic"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8662,7 +8746,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Church of Ireland",
+                "Most Church of Ireland"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8672,7 +8759,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Methodist",
+                "Most Methodist"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8682,7 +8772,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no religion",
+                "Most no religion"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8692,7 +8785,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other Christian",
+                "Most other Christian"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8702,7 +8798,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other religions",
+                "Most other religions"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8712,7 +8811,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Presbyterian",
+                "Most Presbyterian"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8722,7 +8824,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not stated",
+                "Most not stated"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
@@ -8732,7 +8837,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least nan",
+                "Most nan"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to or was brought up in, this combines the responses to the questions on Religion and Religion Brought Up In. It identifies the religious group that someone belongs to, or the religious group brought up in for people who do not belong to any religion."
         },
@@ -8742,7 +8850,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Catholic",
+                "Most Catholic"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to or was brought up in, this combines the responses to the questions on Religion and Religion Brought Up In. It identifies the religious group that someone belongs to, or the religious group brought up in for people who do not belong to any religion."
         },
@@ -8752,7 +8863,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other religions",
+                "Most other religions"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to or was brought up in, this combines the responses to the questions on Religion and Religion Brought Up In. It identifies the religious group that someone belongs to, or the religious group brought up in for people who do not belong to any religion."
         },
@@ -8762,7 +8876,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least Protestant/Other Christian",
+                "Most Protestant/Other Christian"
+            ],
             "date": "2024-04-03",
             "description": "The religion, religious denomination or body a person belongs to or was brought up in, this combines the responses to the questions on Religion and Religion Brought Up In. It identifies the religious group that someone belongs to, or the religious group brought up in for people who do not belong to any religion."
         },
@@ -8772,7 +8889,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in communal establishment",
+                "Most in communal establishment"
+            ],
             "date": "2024-04-03",
             "description": "The type of residence that usual residents lives in. It categorises usual residents as living in a household or living in a communal establishment. Communal establishment residents includes people who were resident in care homes, university halls of residence and other places of communal living. The communal establishment resident figures also include people who were sleeping rough for Census 2021."
         },
@@ -8782,7 +8902,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least in a household",
+                "Most in a household"
+            ],
             "date": "2024-04-03",
             "description": "The type of residence that usual residents lives in. It categorises usual residents as living in a household or living in a communal establishment. Communal establishment residents includes people who were resident in care homes, university halls of residence and other places of communal living. The communal establishment resident figures also include people who were sleeping rough for Census 2021."
         },
@@ -8792,7 +8915,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least female",
+                "Most female"
+            ],
             "date": "2024-04-03",
             "description": "A person's sex as stated in the census."
         },
@@ -8802,7 +8928,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least male",
+                "Most male"
+            ],
             "date": "2024-04-03",
             "description": "A person's sex as stated in the census."
         },
@@ -8812,7 +8941,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least gay, lesbian, bisexual, other",
+                "Most gay, lesbian, bisexual, other"
+            ],
             "date": "2024-04-03",
             "description": "A person's sexual orientation as stated in the census. Missing answers for Sexual Orientation were not imputed, so the output classification includes a not stated category. Sexual orientation is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8822,7 +8954,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not stated",
+                "Most not stated"
+            ],
             "date": "2024-04-03",
             "description": "A person's sexual orientation as stated in the census. Missing answers for Sexual Orientation were not imputed, so the output classification includes a not stated category. Sexual orientation is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8832,7 +8967,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least straight or heterosexual",
+                "Most straight or heterosexual"
+            ],
             "date": "2024-04-03",
             "description": "A person's sexual orientation as stated in the census. Missing answers for Sexual Orientation were not imputed, so the output classification includes a not stated category. Sexual orientation is applicable to people aged 16 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
