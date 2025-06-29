@@ -1,4 +1,5 @@
 // TODO: fill out Data Zones dataset - document/title the new variables and add extremes via command line tool
+// TODO: fix available palettes for binned variable
 // TODO: add hex map
 // TODO: load a column at a time from NISRA
 // TODO: Add NIMDM travel data for small areas
