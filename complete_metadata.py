@@ -6,6 +6,15 @@ def main(input_file, output_file):
     with open(input_file, "r") as f:
         metadata = json.load(f)
 
+    items = 0
+    process = 0
+    for key, value in metadata['dimensions'].items():
+        items += 1
+        if value.get('bins') is not None and (value.get('extremes') is None or value.get('extremes') == []):
+            process += 1
+
+    print(f"Items: {items}, To process: {process}")
+
     # Fill in missing extremes
     for key, value in metadata['dimensions'].items():
         if value.get('bins') is not None and (value.get('extremes') is None or value.get('extremes') == []):
