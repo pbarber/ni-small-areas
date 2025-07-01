@@ -11164,7 +11164,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1, HRP 16-34",
+                "Most 1, HRP 16-34"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11174,7 +11177,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 16-34",
+                "Most 2+, HRP 16-34"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11184,7 +11190,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 16-34",
+                "Most 2+, HRP 16-34"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11194,7 +11203,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1, HRP 55+",
+                "Most 1, HRP 55+"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11204,7 +11216,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 55+",
+                "Most 2+, HRP 55+"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11214,7 +11229,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 55+",
+                "Most 2+, HRP 55+"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11224,7 +11242,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1, HRP 16-24",
+                "Most 1, HRP 16-24"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11234,7 +11255,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 16-24",
+                "Most 2+, HRP 16-24"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11244,7 +11268,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 16-24",
+                "Most 2+, HRP 16-24"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11254,7 +11281,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1, HRP 25-34",
+                "Most 1, HRP 25-34"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11264,7 +11294,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 25-34",
+                "Most 2+, HRP 25-34"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11274,7 +11307,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 25-34",
+                "Most 2+, HRP 25-34"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11284,7 +11320,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1, HRP 35-54",
+                "Most 1, HRP 35-54"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11294,7 +11333,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 35-54",
+                "Most 2+, HRP 35-54"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11304,7 +11346,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 35-54",
+                "Most 2+, HRP 35-54"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11314,7 +11359,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1, HRP 55-65",
+                "Most 1, HRP 55-65"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11324,7 +11372,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 55-65",
+                "Most 2+, HRP 55-65"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11334,7 +11385,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 55-65",
+                "Most 2+, HRP 55-65"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11344,7 +11398,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1, HRP 66+",
+                "Most 1, HRP 66+"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11354,7 +11411,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 66+",
+                "Most 2+, HRP 66+"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11364,7 +11424,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+, HRP 66+",
+                "Most 2+, HRP 66+"
+            ],
             "date": "2024-04-03",
             "description": "Household Lifestage classifies households according to the age of the Household Reference Person (HRP) and the people in the household. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). Dependent children does not include any children who have a spouse, partner or child living in the household."
         },
@@ -11374,7 +11437,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 with health problem",
+                "Most 1 with health problem"
+            ],
             "date": "2024-04-03",
             "description": "The number of people in a household who assessed their day-to-day activities as limited by a health problem or disability which has lasted, or is expected to last, at least 12 months. This includes problems that are due to old age."
         },
@@ -11384,7 +11450,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+ with health problem",
+                "Most 2+ with health problem"
+            ],
             "date": "2024-04-03",
             "description": "The number of people in a household who assessed their day-to-day activities as limited by a health problem or disability which has lasted, or is expected to last, at least 12 months. This includes problems that are due to old age."
         },
@@ -11394,7 +11463,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no one with health problem",
+                "Most no one with health problem"
+            ],
             "date": "2024-04-03",
             "description": "The number of people in a household who assessed their day-to-day activities as limited by a health problem or disability which has lasted, or is expected to last, at least 12 months. This includes problems that are due to old age."
         },
@@ -11404,7 +11476,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+ unpaid carers",
+                "Most 2+ unpaid carers"
+            ],
             "date": "2024-04-03",
             "description": "The number of people in a household who provide unpaid care. A person provides unpaid care if they give any help or support to anyone because of long-term physical or mental health conditions or illnesses, or problems related to old age. This does not include any activities as part of paid employment. Provision of Unpaid care was not asked of people aged under 5, so this variable counts usual residents aged 5 years and over."
         },
@@ -11414,7 +11489,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 unpaid carer",
+                "Most 1 unpaid carer"
+            ],
             "date": "2024-04-03",
             "description": "The number of people in a household who provide unpaid care. A person provides unpaid care if they give any help or support to anyone because of long-term physical or mental health conditions or illnesses, or problems related to old age. This does not include any activities as part of paid employment. Provision of Unpaid care was not asked of people aged under 5, so this variable counts usual residents aged 5 years and over."
         },
@@ -11424,7 +11502,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 unpaid carers",
+                "Most 2 unpaid carers"
+            ],
             "date": "2024-04-03",
             "description": "The number of people in a household who provide unpaid care. A person provides unpaid care if they give any help or support to anyone because of long-term physical or mental health conditions or illnesses, or problems related to old age. This does not include any activities as part of paid employment. Provision of Unpaid care was not asked of people aged under 5, so this variable counts usual residents aged 5 years and over."
         },
@@ -11434,7 +11515,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3 unpaid carers",
+                "Most 3 unpaid carers"
+            ],
             "date": "2024-04-03",
             "description": "The number of people in a household who provide unpaid care. A person provides unpaid care if they give any help or support to anyone because of long-term physical or mental health conditions or illnesses, or problems related to old age. This does not include any activities as part of paid employment. Provision of Unpaid care was not asked of people aged under 5, so this variable counts usual residents aged 5 years and over."
         },
@@ -11444,7 +11528,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 4+ unpaid carers",
+                "Most 4+ unpaid carers"
+            ],
             "date": "2024-04-03",
             "description": "The number of people in a household who provide unpaid care. A person provides unpaid care if they give any help or support to anyone because of long-term physical or mental health conditions or illnesses, or problems related to old age. This does not include any activities as part of paid employment. Provision of Unpaid care was not asked of people aged under 5, so this variable counts usual residents aged 5 years and over."
         },
@@ -11454,7 +11541,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no unpaid carers",
+                "Most no unpaid carers"
+            ],
             "date": "2024-04-03",
             "description": "The number of people in a household who provide unpaid care. A person provides unpaid care if they give any help or support to anyone because of long-term physical or mental health conditions or illnesses, or problems related to old age. This does not include any activities as part of paid employment. Provision of Unpaid care was not asked of people aged under 5, so this variable counts usual residents aged 5 years and over."
         },
@@ -11464,7 +11554,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1+ mixed",
+                "Most 1+ mixed"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by combinations of Religion or Religion Brought Up In. These combinations identify households with the same Religion or Religion Brought Up In and households with mixed Religion or Religion Brought Up In."
         },
@@ -11474,7 +11567,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1+ single",
+                "Most 1+ single"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by combinations of Religion or Religion Brought Up In. These combinations identify households with the same Religion or Religion Brought Up In and households with mixed Religion or Religion Brought Up In."
         },
@@ -11484,7 +11580,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 person",
+                "Most 1 person"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by combinations of Religion or Religion Brought Up In. These combinations identify households with the same Religion or Religion Brought Up In and households with mixed Religion or Religion Brought Up In."
         },
@@ -11494,7 +11593,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no renewable energy systems",
+                "Most no renewable energy systems"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has renewable energy systems. Renewable energy systems are those used to generate heat or energy for a household. A household can have one or more renewable energy systems, examples of those present are; solar panels for electricity, solar panels for heating water, biomass and wind turbines."
         },
@@ -11504,7 +11606,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least renewable energy systems",
+                "Most renewable energy systems"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has renewable energy systems. Renewable energy systems are those used to generate heat or energy for a household. A household can have one or more renewable energy systems, examples of those present are; solar panels for electricity, solar panels for heating water, biomass and wind turbines."
         },
@@ -11514,7 +11619,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 6+ rooms",
+                "Most 6+ rooms"
+            ],
             "date": "2024-04-03",
             "description": "The number of habitable rooms available in a household's accommodation, modelled using information from the Land & Property Services Domestic Property List and other sources. The count includes rooms such as living rooms, studies, bedrooms, and separate dining rooms. It does not include bathrooms, toilets, halls or landings, conservatories, utility rooms and kitchens used solely for kitchen purposes (i.e. those without dining/sitting areas). Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11524,7 +11632,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 7+ rooms",
+                "Most 7+ rooms"
+            ],
             "date": "2024-04-03",
             "description": "The number of habitable rooms available in a household's accommodation, modelled using information from the Land & Property Services Domestic Property List and other sources. The count includes rooms such as living rooms, studies, bedrooms, and separate dining rooms. It does not include bathrooms, toilets, halls or landings, conservatories, utility rooms and kitchens used solely for kitchen purposes (i.e. those without dining/sitting areas). Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11534,7 +11645,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3 rooms or less",
+                "Most 3 rooms or less"
+            ],
             "date": "2024-04-03",
             "description": "The number of habitable rooms available in a household's accommodation, modelled using information from the Land & Property Services Domestic Property List and other sources. The count includes rooms such as living rooms, studies, bedrooms, and separate dining rooms. It does not include bathrooms, toilets, halls or landings, conservatories, utility rooms and kitchens used solely for kitchen purposes (i.e. those without dining/sitting areas). Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11544,7 +11658,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 4 rooms",
+                "Most 4 rooms"
+            ],
             "date": "2024-04-03",
             "description": "The number of habitable rooms available in a household's accommodation, modelled using information from the Land & Property Services Domestic Property List and other sources. The count includes rooms such as living rooms, studies, bedrooms, and separate dining rooms. It does not include bathrooms, toilets, halls or landings, conservatories, utility rooms and kitchens used solely for kitchen purposes (i.e. those without dining/sitting areas). Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11554,7 +11671,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 5 rooms",
+                "Most 5 rooms"
+            ],
             "date": "2024-04-03",
             "description": "The number of habitable rooms available in a household's accommodation, modelled using information from the Land & Property Services Domestic Property List and other sources. The count includes rooms such as living rooms, studies, bedrooms, and separate dining rooms. It does not include bathrooms, toilets, halls or landings, conservatories, utility rooms and kitchens used solely for kitchen purposes (i.e. those without dining/sitting areas). Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11564,7 +11684,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 6 rooms",
+                "Most 6 rooms"
+            ],
             "date": "2024-04-03",
             "description": "The number of habitable rooms available in a household's accommodation, modelled using information from the Land & Property Services Domestic Property List and other sources. The count includes rooms such as living rooms, studies, bedrooms, and separate dining rooms. It does not include bathrooms, toilets, halls or landings, conservatories, utility rooms and kitchens used solely for kitchen purposes (i.e. those without dining/sitting areas). Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11574,7 +11697,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 7 rooms",
+                "Most 7 rooms"
+            ],
             "date": "2024-04-03",
             "description": "The number of habitable rooms available in a household's accommodation, modelled using information from the Land & Property Services Domestic Property List and other sources. The count includes rooms such as living rooms, studies, bedrooms, and separate dining rooms. It does not include bathrooms, toilets, halls or landings, conservatories, utility rooms and kitchens used solely for kitchen purposes (i.e. those without dining/sitting areas). Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11584,7 +11710,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 8+ rooms",
+                "Most 8+ rooms"
+            ],
             "date": "2024-04-03",
             "description": "The number of habitable rooms available in a household's accommodation, modelled using information from the Land & Property Services Domestic Property List and other sources. The count includes rooms such as living rooms, studies, bedrooms, and separate dining rooms. It does not include bathrooms, toilets, halls or landings, conservatories, utility rooms and kitchens used solely for kitchen purposes (i.e. those without dining/sitting areas). Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11594,7 +11723,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least ideal/underoccupied",
+                "Most ideal/underoccupied"
+            ],
             "date": "2024-04-03",
             "description": "Occupancy Rating provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11604,7 +11736,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least overcrowded",
+                "Most overcrowded"
+            ],
             "date": "2024-04-03",
             "description": "Occupancy Rating provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11614,7 +11749,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least underoccupied",
+                "Most underoccupied"
+            ],
             "date": "2024-04-03",
             "description": "Occupancy Rating provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11624,7 +11762,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+ underoccupied",
+                "Most 2+ underoccupied"
+            ],
             "date": "2024-04-03",
             "description": "Occupancy Rating provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11634,7 +11775,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least one room less",
+                "Most one room less"
+            ],
             "date": "2024-04-03",
             "description": "Occupancy Rating provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11644,7 +11788,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least two rooms less",
+                "Most two rooms less"
+            ],
             "date": "2024-04-03",
             "description": "Occupancy Rating provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11654,7 +11801,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least ideal",
+                "Most ideal"
+            ],
             "date": "2024-04-03",
             "description": "Occupancy Rating provides a measure of whether a household's accommodation is overcrowded, ideally occupied or under occupied. The ages of the household members and their relationships to each other are used to derive the number of rooms they require, based on a standard formula. The number of rooms required is subtracted from the number of rooms in the household's accommodation to obtain the occupancy rating. An occupancy rating of -1 implies that a household has one fewer room than required, 0 suggests that a household's accommodation has an ideal number of rooms, and +1 implies that they have one more room than the standard requirement. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11664,7 +11814,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 0.5-1 persons/room",
+                "Most 0.5-1 persons/room"
+            ],
             "date": "2024-04-03",
             "description": "The number of Persons per Room is equal to the number of household members divided by the number of rooms in that household's accommodation. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11674,7 +11827,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1-1.5 persons/room",
+                "Most 1-1.5 persons/room"
+            ],
             "date": "2024-04-03",
             "description": "The number of Persons per Room is equal to the number of household members divided by the number of rooms in that household's accommodation. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11684,7 +11840,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1.5+ persons/room",
+                "Most 1.5+ persons/room"
+            ],
             "date": "2024-04-03",
             "description": "The number of Persons per Room is equal to the number of household members divided by the number of rooms in that household's accommodation. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11694,7 +11853,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 0-0.5 persons/room",
+                "Most 0-0.5 persons/room"
+            ],
             "date": "2024-04-03",
             "description": "The number of Persons per Room is equal to the number of household members divided by the number of rooms in that household's accommodation. The number of rooms data are modelled using information from the Land & Property Services Domestic Property List and other sources. Census 2021 did not ask a 'Number of rooms' question. There are definitional differences between Census 2011 and the modelled count produced for Census 2021. Therefore, comparisons cannot be made between Census 2021 and Census 2011."
         },
@@ -11704,7 +11866,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least owner occupied",
+                "Most owner occupied"
+            ],
             "date": "2024-04-03",
             "description": "Whether a household owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association."
         },
@@ -11714,7 +11879,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least private rented",
+                "Most private rented"
+            ],
             "date": "2024-04-03",
             "description": "Whether a household owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association."
         },
@@ -11724,7 +11892,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least social rented",
+                "Most social rented"
+            ],
             "date": "2024-04-03",
             "description": "Whether a household owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association."
         },
@@ -11734,7 +11905,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least lives rent free",
+                "Most lives rent free"
+            ],
             "date": "2024-04-03",
             "description": "Whether a household owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association."
         },
@@ -11744,7 +11918,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least owns outright",
+                "Most owns outright"
+            ],
             "date": "2024-04-03",
             "description": "Whether a household owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association."
         },
@@ -11754,7 +11931,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least owns mortgage/loan/shared",
+                "Most owns mortgage/loan/shared"
+            ],
             "date": "2024-04-03",
             "description": "Whether a household owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association."
         },
@@ -11764,7 +11944,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other private",
+                "Most other private"
+            ],
             "date": "2024-04-03",
             "description": "Whether a household owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association."
         },
@@ -11774,7 +11957,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least private landlord/agency",
+                "Most private landlord/agency"
+            ],
             "date": "2024-04-03",
             "description": "Whether a household owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association."
         },
@@ -11784,7 +11970,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least association/trust",
+                "Most association/trust"
+            ],
             "date": "2024-04-03",
             "description": "Whether a household owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association."
         },
@@ -11794,7 +11983,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least NIHE",
+                "Most NIHE"
+            ],
             "date": "2024-04-03",
             "description": "Whether a household owns or rents the accommodation that it occupies. Owner-occupied accommodation can be: owned outright; with a mortgage or loan; or part-owned on a shared ownership scheme. Rented accommodation can be: private rented or social rented through a local council or housing association."
         }
