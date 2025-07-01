@@ -9682,7 +9682,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 adult",
+                "Most 1 adult"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by the age of the people in them. In this classification, an adult is any person aged 16 and over and a child is any person aged under 16 years. It does not take into account the relationships between people in the household."
         },
@@ -9692,7 +9695,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+ adults",
+                "Most 2+ adults"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by the age of the people in them. In this classification, an adult is any person aged 16 and over and a child is any person aged under 16 years. It does not take into account the relationships between people in the household."
         },
@@ -9702,7 +9708,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 adult+children",
+                "Most 1 adult+children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by the age of the people in them. In this classification, an adult is any person aged 16 and over and a child is any person aged under 16 years. It does not take into account the relationships between people in the household."
         },
@@ -9712,7 +9721,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3+ adults",
+                "Most 3+ adults"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by the age of the people in them. In this classification, an adult is any person aged 16 and over and a child is any person aged under 16 years. It does not take into account the relationships between people in the household."
         },
@@ -9722,7 +9734,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3+ adults+children",
+                "Most 3+ adults+children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by the age of the people in them. In this classification, an adult is any person aged 16 and over and a child is any person aged under 16 years. It does not take into account the relationships between people in the household."
         },
@@ -9732,7 +9747,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+ adults",
+                "Most 2+ adults"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by the age of the people in them. In this classification, an adult is any person aged 16 and over and a child is any person aged under 16 years. It does not take into account the relationships between people in the household."
         },
@@ -9742,7 +9760,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+ adults+children",
+                "Most 2+ adults+children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by the age of the people in them. In this classification, an adult is any person aged 16 and over and a child is any person aged under 16 years. It does not take into account the relationships between people in the household."
         },
@@ -9752,7 +9773,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 adult employed",
+                "Most 1 adult employed"
+            ],
             "date": "2024-04-03",
             "description": "The number of employed adults in a household. An adult is a person who is not a dependent child. A person aged 16 years and over is defined as in employment if in the week before the census they carried out at least one hour's paid work, either as an employee or self-employed. This also includes: any other form of paid work; being away from work ill, on holiday or temporarily laid off; or on maternity or paternity leave."
         },
@@ -9762,7 +9786,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 adults employed",
+                "Most 2 adults employed"
+            ],
             "date": "2024-04-03",
             "description": "The number of employed adults in a household. An adult is a person who is not a dependent child. A person aged 16 years and over is defined as in employment if in the week before the census they carried out at least one hour's paid work, either as an employee or self-employed. This also includes: any other form of paid work; being away from work ill, on holiday or temporarily laid off; or on maternity or paternity leave."
         },
@@ -9772,7 +9799,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3+ adults employed",
+                "Most 3+ adults employed"
+            ],
             "date": "2024-04-03",
             "description": "The number of employed adults in a household. An adult is a person who is not a dependent child. A person aged 16 years and over is defined as in employment if in the week before the census they carried out at least one hour's paid work, either as an employee or self-employed. This also includes: any other form of paid work; being away from work ill, on holiday or temporarily laid off; or on maternity or paternity leave."
         },
@@ -9782,7 +9812,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no adults employed",
+                "Most no adults employed"
+            ],
             "date": "2024-04-03",
             "description": "The number of employed adults in a household. An adult is a person who is not a dependent child. A person aged 16 years and over is defined as in employment if in the week before the census they carried out at least one hour's paid work, either as an employee or self-employed. This also includes: any other form of paid work; being away from work ill, on holiday or temporarily laid off; or on maternity or paternity leave."
         },
@@ -9792,7 +9825,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1+ cars/vans",
+                "Most 1+ cars/vans"
+            ],
             "date": "2024-04-03",
             "description": "The number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. The number of cars or vans available in an area relates only to households. Cars or vans used by communal establishment residents are not counted. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed."
         },
@@ -9802,7 +9838,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+ cars/vans",
+                "Most 2+ cars/vans"
+            ],
             "date": "2024-04-03",
             "description": "The number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. The number of cars or vans available in an area relates only to households. Cars or vans used by communal establishment residents are not counted. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed."
         },
@@ -9812,7 +9851,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 car/van",
+                "Most 1 car/van"
+            ],
             "date": "2024-04-03",
             "description": "The number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. The number of cars or vans available in an area relates only to households. Cars or vans used by communal establishment residents are not counted. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed."
         },
@@ -9822,7 +9864,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 cars/vans",
+                "Most 2 cars/vans"
+            ],
             "date": "2024-04-03",
             "description": "The number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. The number of cars or vans available in an area relates only to households. Cars or vans used by communal establishment residents are not counted. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed."
         },
@@ -9832,7 +9877,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3 cars/vans",
+                "Most 3 cars/vans"
+            ],
             "date": "2024-04-03",
             "description": "The number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. The number of cars or vans available in an area relates only to households. Cars or vans used by communal establishment residents are not counted. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed."
         },
@@ -9842,7 +9890,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 4 cars/vans",
+                "Most 4 cars/vans"
+            ],
             "date": "2024-04-03",
             "description": "The number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. The number of cars or vans available in an area relates only to households. Cars or vans used by communal establishment residents are not counted. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed."
         },
@@ -9852,7 +9903,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 5+ cars/vans",
+                "Most 5+ cars/vans"
+            ],
             "date": "2024-04-03",
             "description": "The number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. The number of cars or vans available in an area relates only to households. Cars or vans used by communal establishment residents are not counted. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed."
         },
@@ -9862,7 +9916,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no cars/vans",
+                "Most no cars/vans"
+            ],
             "date": "2024-04-03",
             "description": "The number of cars or vans owned or available for use by household members. Car or Van Availability includes any company cars or vans available for private use. It does not include motorbikes or scooters. The number of cars or vans available in an area relates only to households. Cars or vans used by communal establishment residents are not counted. This count is not exact as responses indicating a number of cars or vans greater than 20 were treated as invalid and a value was imputed."
         },
@@ -9872,7 +9929,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least central heating",
+                "Most central heating"
+            ],
             "date": "2024-04-03",
             "description": "Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). Central heating is classified by fuel type, for example, gas, electric (including storage heaters) or oil."
         },
@@ -9882,7 +9942,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least one type of central heating",
+                "Most one type of central heating"
+            ],
             "date": "2024-04-03",
             "description": "Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). Central heating is classified by fuel type, for example, gas, electric (including storage heaters) or oil."
         },
@@ -9892,7 +9955,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). Central heating is classified by fuel type, for example, gas, electric (including storage heaters) or oil."
         },
@@ -9902,7 +9968,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least electric",
+                "Most electric"
+            ],
             "date": "2024-04-03",
             "description": "Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). Central heating is classified by fuel type, for example, gas, electric (including storage heaters) or oil."
         },
@@ -9912,7 +9981,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least mains gas",
+                "Most mains gas"
+            ],
             "date": "2024-04-03",
             "description": "Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). Central heating is classified by fuel type, for example, gas, electric (including storage heaters) or oil."
         },
@@ -9922,7 +9994,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no central heating",
+                "Most no central heating"
+            ],
             "date": "2024-04-03",
             "description": "Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). Central heating is classified by fuel type, for example, gas, electric (including storage heaters) or oil."
         },
@@ -9932,7 +10007,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least oil",
+                "Most oil"
+            ],
             "date": "2024-04-03",
             "description": "Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). Central heating is classified by fuel type, for example, gas, electric (including storage heaters) or oil."
         },
@@ -9942,7 +10020,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). Central heating is classified by fuel type, for example, gas, electric (including storage heaters) or oil."
         },
@@ -9952,7 +10033,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least renewable",
+                "Most renewable"
+            ],
             "date": "2024-04-03",
             "description": "Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). Central heating is classified by fuel type, for example, gas, electric (including storage heaters) or oil."
         },
@@ -9962,7 +10046,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least solid fuel",
+                "Most solid fuel"
+            ],
             "date": "2024-04-03",
             "description": "Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). Central heating is classified by fuel type, for example, gas, electric (including storage heaters) or oil."
         },
@@ -9972,7 +10059,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least tank/bottled gas",
+                "Most tank/bottled gas"
+            ],
             "date": "2024-04-03",
             "description": "Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). Central heating is classified by fuel type, for example, gas, electric (including storage heaters) or oil."
         },
@@ -9982,7 +10072,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+ types",
+                "Most 2+ types"
+            ],
             "date": "2024-04-03",
             "description": "Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). Central heating is classified by fuel type, for example, gas, electric (including storage heaters) or oil."
         },
@@ -9992,7 +10085,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least wood",
+                "Most wood"
+            ],
             "date": "2024-04-03",
             "description": "Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not). Central heating is classified by fuel type, for example, gas, electric (including storage heaters) or oil."
         },
@@ -10002,7 +10098,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no electric",
+                "Most no electric"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has electric central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10012,7 +10111,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least electric",
+                "Most electric"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has electric central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10022,7 +10124,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no mains gas",
+                "Most no mains gas"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has mains gas central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10032,7 +10137,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least mains gas",
+                "Most mains gas"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has mains gas central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10042,7 +10150,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no oil",
+                "Most no oil"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has oil central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10052,7 +10163,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least oil",
+                "Most oil"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has oil central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10062,7 +10176,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not other",
+                "Most not other"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has an other central heating system. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10072,7 +10189,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has an other central heating system. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10082,7 +10202,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no renewable",
+                "Most no renewable"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has a renewable central heating system. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10092,7 +10215,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least renewable",
+                "Most renewable"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has a renewable central heating system. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10102,7 +10228,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no solid fuel",
+                "Most no solid fuel"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has solid fuel central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10112,7 +10241,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least solid fuel",
+                "Most solid fuel"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has solid fuel central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10122,7 +10254,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no tank/bottled gas",
+                "Most no tank/bottled gas"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has tank or bottled gas central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10132,7 +10267,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least tank/bottled gas",
+                "Most tank/bottled gas"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has tank or bottled gas central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10142,7 +10280,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no wood",
+                "Most no wood"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has wood central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10152,7 +10293,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least wood",
+                "Most wood"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has wood central heating. Central heating is a central system that generates heat for multiple rooms. A household's accommodation is classified as having central heating if it is present in some or all rooms (whether used or not)."
         },
@@ -10162,7 +10306,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least dependent children",
+                "Most dependent children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10172,7 +10319,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no dependent children",
+                "Most no dependent children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10182,7 +10332,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 0-4",
+                "Most 0-4"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10192,7 +10345,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 12-18",
+                "Most 12-18"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10202,7 +10358,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 5-11",
+                "Most 5-11"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10212,7 +10371,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 dependent child",
+                "Most 1 dependent child"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10222,7 +10384,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3+ dependent children",
+                "Most 3+ dependent children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10232,7 +10397,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 dependent children",
+                "Most 2 dependent children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10242,7 +10410,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no children",
+                "Most no children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10252,7 +10423,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no dependent children",
+                "Most no dependent children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10262,7 +10436,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 aged 0-4",
+                "Most 1 aged 0-4"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10272,7 +10449,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 aged 12-18",
+                "Most 1 aged 12-18"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10282,7 +10462,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 aged 5-11",
+                "Most 1 aged 5-11"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10292,7 +10475,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3+ youngest 0-4",
+                "Most 3+ youngest 0-4"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10302,7 +10488,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3+ youngest 12-18",
+                "Most 3+ youngest 12-18"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10312,7 +10501,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3+ youngest 5-11",
+                "Most 3+ youngest 5-11"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10322,7 +10514,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 youngest 0-4",
+                "Most 2 youngest 0-4"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10332,7 +10527,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 youngest 12-18",
+                "Most 2 youngest 12-18"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10342,7 +10540,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 youngest 5-11",
+                "Most 2 youngest 5-11"
+            ],
             "date": "2024-04-03",
             "description": "Classifies the number of dependent children in a household, by the age of the youngest child. A dependent child is a person aged 0 to 15 in a household (whether or not in a family) or aged 16 to 18 in full-time education and living in a family with his or her parent(s) or grandparent(s). It does not include any children who have a spouse, partner or child living in the household. 'Age' is age at last birthday."
         },
@@ -10352,7 +10553,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least different ethnic groups",
+                "Most different ethnic groups"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by whether members identify as having the same or different ethnic groups. 'Same ethnic group' means within the same ethnic group as defined by the 13-way ethnic classification (White, Irish Traveller, Roma, Indian, Chinese, Filipino, Pakistani, Arab, Other Asian, Black African, Black Other, Mixed, Other ethnicities). 'Different ethnic groups within partnerships' includes all households where there are different ethnic groups within partnerships whether or not there are also different ethnic groups between generations."
         },
@@ -10362,7 +10566,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least same ethnic group",
+                "Most same ethnic group"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by whether members identify as having the same or different ethnic groups. If multiple ethnic groups are present, this identifies whether they differ between generations or partnerships within the household. 'Same ethnic group' means within the same ethnic group as defined by the 13-way ethnic classification (White, Irish Traveller, Roma, Indian, Chinese, Filipino, Pakistani, Arab, Other Asian, Black African, Black Other, Mixed, Other ethnicities). 'Different ethnic groups within partnerships' includes all households where there are different ethnic groups within partnerships whether or not there are also different ethnic groups between generations."
         },
@@ -10372,7 +10579,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by whether members identify as having the same or different ethnic groups. If multiple ethnic groups are present, this identifies whether they differ between generations or partnerships within the household. 'Same ethnic group' means within the same ethnic group as defined by the 13-way ethnic classification (White, Irish Traveller, Roma, Indian, Chinese, Filipino, Pakistani, Arab, Other Asian, Black African, Black Other, Mixed, Other ethnicities). 'Different ethnic groups within partnerships' includes all households where there are different ethnic groups within partnerships whether or not there are also different ethnic groups between generations."
         },
@@ -10382,7 +10592,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least different ethnic groups between generations",
+                "Most different ethnic groups between generations"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by whether members identify as having the same or different ethnic groups. If multiple ethnic groups are present, this identifies whether they differ between generations or partnerships within the household. 'Same ethnic group' means within the same ethnic group as defined by the 13-way ethnic classification (White, Irish Traveller, Roma, Indian, Chinese, Filipino, Pakistani, Arab, Other Asian, Black African, Black Other, Mixed, Other ethnicities). 'Different ethnic groups within partnerships' includes all households where there are different ethnic groups within partnerships whether or not there are also different ethnic groups between generations."
         },
@@ -10392,7 +10605,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least different ethnic groups within partnerships",
+                "Most different ethnic groups within partnerships"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by whether members identify as having the same or different ethnic groups. If multiple ethnic groups are present, this identifies whether they differ between generations or partnerships within the household. 'Same ethnic group' means within the same ethnic group as defined by the 13-way ethnic classification (White, Irish Traveller, Roma, Indian, Chinese, Filipino, Pakistani, Arab, Other Asian, Black African, Black Other, Mixed, Other ethnicities). 'Different ethnic groups within partnerships' includes all households where there are different ethnic groups within partnerships whether or not there are also different ethnic groups between generations."
         },
@@ -10402,7 +10618,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 family",
+                "Most 1 family"
+            ],
             "date": "2024-04-03",
             "description": "The number of families in a household. A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with his or her grandchildren, if there is no parent in the intervening generation in the household. Children in couple families need not belong to both members of the couple."
         },
@@ -10412,7 +10631,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+ families",
+                "Most 2+ families"
+            ],
             "date": "2024-04-03",
             "description": "The number of families in a household. A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with his or her grandchildren, if there is no parent in the intervening generation in the household. Children in couple families need not belong to both members of the couple."
         },
@@ -10422,7 +10644,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no families",
+                "Most no families"
+            ],
             "date": "2024-04-03",
             "description": "The number of families in a household. A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with his or her grandchildren, if there is no parent in the intervening generation in the household. Children in couple families need not belong to both members of the couple."
         },
@@ -10432,7 +10657,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least single family",
+                "Most single family"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households according to the relationships between the household members. A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with their grandchildren, if there is no parent in the intervening generation in the household. Children in couple families do not need to belong to both members of the couple."
         },
@@ -10442,7 +10670,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least couple family",
+                "Most couple family"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households according to the relationships between the household members. A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with their grandchildren, if there is no parent in the intervening generation in the household. Children in couple families do not need to belong to both members of the couple."
         },
@@ -10452,7 +10683,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least lone parent family",
+                "Most lone parent family"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households according to the relationships between the household members. A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with their grandchildren, if there is no parent in the intervening generation in the household. Children in couple families do not need to belong to both members of the couple."
         },
@@ -10462,7 +10696,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households according to the relationships between the household members. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s). A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with their grandchildren, if there is no parent in the intervening generation in the household. Children in couple families do not need to belong to both members of the couple."
         },
@@ -10472,7 +10709,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households according to the relationships between the household members. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s). A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with their grandchildren, if there is no parent in the intervening generation in the household. Children in couple families do not need to belong to both members of the couple."
         },
@@ -10482,7 +10722,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least couple: no dependent children",
+                "Most couple: no dependent children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households according to the relationships between the household members. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s). A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with their grandchildren, if there is no parent in the intervening generation in the household. Children in couple families do not need to belong to both members of the couple."
         },
@@ -10492,7 +10735,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least couple: dependent children",
+                "Most couple: dependent children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households according to the relationships between the household members. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s). A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with their grandchildren, if there is no parent in the intervening generation in the household. Children in couple families do not need to belong to both members of the couple."
         },
@@ -10502,7 +10748,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least couple: no children",
+                "Most couple: no children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households according to the relationships between the household members. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s). A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with their grandchildren, if there is no parent in the intervening generation in the household. Children in couple families do not need to belong to both members of the couple."
         },
@@ -10512,7 +10761,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least lone: no dependent children",
+                "Most lone: no dependent children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households according to the relationships between the household members. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s). A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with their grandchildren, if there is no parent in the intervening generation in the household. Children in couple families do not need to belong to both members of the couple."
         },
@@ -10522,7 +10774,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least lone: dependent children",
+                "Most lone: dependent children"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households according to the relationships between the household members. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s). A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with their grandchildren, if there is no parent in the intervening generation in the household. Children in couple families do not need to belong to both members of the couple."
         },
@@ -10532,7 +10787,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households according to the relationships between the household members. A 'dependent child' is a person in a household aged 0-15 (whether or not in a family) or a person aged 16-18 who is a full-time student and in a family with parent(s). A family consists of a couple (married, civil partnership or cohabiting) with or without children, or a lone parent and their children. It also includes a married, civil partnership or cohabiting couple with their grandchildren or a lone grandparent with their grandchildren, if there is no parent in the intervening generation in the household. Children in couple families do not need to belong to both members of the couple."
         },
@@ -10542,7 +10800,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least deprived",
+                "Most deprived"
+            ],
             "date": "2024-04-03",
             "description": "The dimensions of deprivation used to classify households are indicators based on four selected household characteristics: Education - A household is classified as deprived in the education dimension if no one has at least level 2 education and no one aged 16 to 18 years is a full-time student. Employment - A household is classified as deprived in the employment dimension if any member, not a full-time student, is either unemployed or economically inactive due to long-term sickness or disability. Health - A household is classified as deprived in the health dimension if any person in the household has a health problem or disability lasting or expected to last 12 months or more that reduces their ability to carry out day to day activities and/or who has general health that is bad or very bad. Housing - A household is classified as deprived in the housing dimension if the household's accommodation is either overcrowded or has no central heating."
         },
@@ -10552,7 +10813,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 dimension deprived",
+                "Most 1 dimension deprived"
+            ],
             "date": "2024-04-03",
             "description": "The dimensions of deprivation used to classify households are indicators based on four selected household characteristics: Education - A household is classified as deprived in the education dimension if no one has at least level 2 education and no one aged 16 to 18 years is a full-time student. Employment - A household is classified as deprived in the employment dimension if any member, not a full-time student, is either unemployed or economically inactive due to long-term sickness or disability. Health - A household is classified as deprived in the health dimension if any person in the household has a health problem or disability lasting or expected to last 12 months or more that reduces their ability to carry out day to day activities and/or who has general health that is bad or very bad. Housing - A household is classified as deprived in the housing dimension if the household's accommodation is either overcrowded or has no central heating."
         },
@@ -10562,7 +10826,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 dimensions deprived",
+                "Most 2 dimensions deprived"
+            ],
             "date": "2024-04-03",
             "description": "The dimensions of deprivation used to classify households are indicators based on four selected household characteristics: Education - A household is classified as deprived in the education dimension if no one has at least level 2 education and no one aged 16 to 18 years is a full-time student. Employment - A household is classified as deprived in the employment dimension if any member, not a full-time student, is either unemployed or economically inactive due to long-term sickness or disability. Health - A household is classified as deprived in the health dimension if any person in the household has a health problem or disability lasting or expected to last 12 months or more that reduces their ability to carry out day to day activities and/or who has general health that is bad or very bad. Housing - A household is classified as deprived in the housing dimension if the household's accommodation is either overcrowded or has no central heating."
         },
@@ -10572,7 +10839,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3 dimensions deprived",
+                "Most 3 dimensions deprived"
+            ],
             "date": "2024-04-03",
             "description": "The dimensions of deprivation used to classify households are indicators based on four selected household characteristics: Education - A household is classified as deprived in the education dimension if no one has at least level 2 education and no one aged 16 to 18 years is a full-time student. Employment - A household is classified as deprived in the employment dimension if any member, not a full-time student, is either unemployed or economically inactive due to long-term sickness or disability. Health - A household is classified as deprived in the health dimension if any person in the household has a health problem or disability lasting or expected to last 12 months or more that reduces their ability to carry out day to day activities and/or who has general health that is bad or very bad. Housing - A household is classified as deprived in the housing dimension if the household's accommodation is either overcrowded or has no central heating."
         },
@@ -10582,7 +10852,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 4 dimensions deprived",
+                "Most 4 dimensions deprived"
+            ],
             "date": "2024-04-03",
             "description": "The dimensions of deprivation used to classify households are indicators based on four selected household characteristics: Education - A household is classified as deprived in the education dimension if no one has at least level 2 education and no one aged 16 to 18 years is a full-time student. Employment - A household is classified as deprived in the employment dimension if any member, not a full-time student, is either unemployed or economically inactive due to long-term sickness or disability. Health - A household is classified as deprived in the health dimension if any person in the household has a health problem or disability lasting or expected to last 12 months or more that reduces their ability to carry out day to day activities and/or who has general health that is bad or very bad. Housing - A household is classified as deprived in the housing dimension if the household's accommodation is either overcrowded or has no central heating."
         },
@@ -10592,7 +10865,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not deprived",
+                "Most not deprived"
+            ],
             "date": "2024-04-03",
             "description": "The dimensions of deprivation used to classify households are indicators based on four selected household characteristics: Education - A household is classified as deprived in the education dimension if no one has at least level 2 education and no one aged 16 to 18 years is a full-time student. Employment - A household is classified as deprived in the employment dimension if any member, not a full-time student, is either unemployed or economically inactive due to long-term sickness or disability. Health - A household is classified as deprived in the health dimension if any person in the household has a health problem or disability lasting or expected to last 12 months or more that reduces their ability to carry out day to day activities and/or who has general health that is bad or very bad. Housing - A household is classified as deprived in the housing dimension if the household's accommodation is either overcrowded or has no central heating."
         },
@@ -10602,7 +10878,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least education deprived",
+                "Most education deprived"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household is deprived in the education dimension. A household is classified as deprived in the education dimension if no one has at least a level 2 education and no one aged 16 to 18 years is a full-time student."
         },
@@ -10612,7 +10891,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not education deprived",
+                "Most not education deprived"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household is deprived in the education dimension. A household is classified as deprived in the education dimension if no one has at least a level 2 education and no one aged 16 to 18 years is a full-time student."
         },
@@ -10622,7 +10904,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least employment deprived",
+                "Most employment deprived"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household is deprived in the employment dimension. A household is classified as deprived in the employment dimension if any member, not a full-time student, is either unemployed or economically inactive due to long-term sickness or disability."
         },
@@ -10632,7 +10917,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not employment deprived",
+                "Most not employment deprived"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household is deprived in the employment dimension. A household is classified as deprived in the employment dimension if any member, not a full-time student, is either unemployed or economically inactive due to long-term sickness or disability."
         },
@@ -10642,7 +10930,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least health deprived",
+                "Most health deprived"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household is deprived in the health dimension. A household is classified as deprived in the health dimension if any member has a health problem or disability lasting or expected to last 12 months or more that reduces their ability to carry out day to day activities and/or who has general health that is bad or very bad."
         },
@@ -10652,7 +10943,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not health deprived",
+                "Most not health deprived"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household is deprived in the health dimension. A household is classified as deprived in the health dimension if any member has a health problem or disability lasting or expected to last 12 months or more that reduces their ability to carry out day to day activities and/or who has general health that is bad or very bad."
         },
@@ -10662,7 +10956,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least housing deprived",
+                "Most housing deprived"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household is deprived in the housing dimension. A household is classified as deprived in the housing dimension if the household's accommodation is either overcrowded or has no central heating."
         },
@@ -10672,7 +10969,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not housing deprived",
+                "Most not housing deprived"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household is deprived in the housing dimension. A household is classified as deprived in the housing dimension if the household's accommodation is either overcrowded or has no central heating."
         },
@@ -10682,7 +10982,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2+ people",
+                "Most 2+ people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people resident in the household who are usual residents of the UK. People are included at their usual place of residence in the UK, so visitors and non-usual residents listed on the form at an address do not contribute to the household size."
         },
@@ -10692,7 +10995,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3+ people",
+                "Most 3+ people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people resident in the household who are usual residents of the UK. People are included at their usual place of residence in the UK, so visitors and non-usual residents listed on the form at an address do not contribute to the household size."
         },
@@ -10702,7 +11008,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 4+ people",
+                "Most 4+ people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people resident in the household who are usual residents of the UK. People are included at their usual place of residence in the UK, so visitors and non-usual residents listed on the form at an address do not contribute to the household size."
         },
@@ -10712,7 +11021,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 5+ people",
+                "Most 5+ people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people resident in the household who are usual residents of the UK. People are included at their usual place of residence in the UK, so visitors and non-usual residents listed on the form at an address do not contribute to the household size."
         },
@@ -10722,7 +11034,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 people",
+                "Most 2 people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people resident in the household who are usual residents of the UK. People are included at their usual place of residence in the UK, so visitors and non-usual residents listed on the form at an address do not contribute to the household size."
         },
@@ -10732,7 +11047,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3 people",
+                "Most 3 people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people resident in the household who are usual residents of the UK. People are included at their usual place of residence in the UK, so visitors and non-usual residents listed on the form at an address do not contribute to the household size."
         },
@@ -10742,7 +11060,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 4 people",
+                "Most 4 people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people resident in the household who are usual residents of the UK. People are included at their usual place of residence in the UK, so visitors and non-usual residents listed on the form at an address do not contribute to the household size."
         },
@@ -10752,7 +11073,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 5 people",
+                "Most 5 people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people resident in the household who are usual residents of the UK. People are included at their usual place of residence in the UK, so visitors and non-usual residents listed on the form at an address do not contribute to the household size."
         },
@@ -10762,7 +11086,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 6+ people",
+                "Most 6+ people"
+            ],
             "date": "2024-04-03",
             "description": "The number of people resident in the household who are usual residents of the UK. People are included at their usual place of residence in the UK, so visitors and non-usual residents listed on the form at an address do not contribute to the household size."
         },
@@ -10772,7 +11099,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1+ person has English",
+                "Most 1+ person has English"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by the combination of persons aged 16 and over, and those aged 3-15 years, that have English as a main language."
         },
@@ -10782,7 +11112,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least all adults have English",
+                "Most all adults have English"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by the combination of persons aged 16 and over, and those aged 3-15 years, that have English as a main language."
         },
@@ -10792,7 +11125,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1+ adult has English",
+                "Most 1+ adult has English"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by the combination of persons aged 16 and over, and those aged 3-15 years, that have English as a main language."
         },
@@ -10802,7 +11138,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least children only have English",
+                "Most children only have English"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by the combination of persons aged 16 and over, and those aged 3-15 years, that have English as a main language."
         },
@@ -10812,7 +11151,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no one has English",
+                "Most no one has English"
+            ],
             "date": "2024-04-03",
             "description": "Classifies households by the combination of persons aged 16 and over, and those aged 3-15 years, that have English as a main language."
         },
