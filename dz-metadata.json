@@ -8980,7 +8980,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least no ability in Ulster-Scots",
+                "Most no ability in Ulster-Scots"
+            ],
             "date": "2024-04-03",
             "description": "A person has ability in Ulster-Scots if they can do one or more of the following: understand Ulster-Scots; speak Ulster-Scots; read Ulster-Scots; or write Ulster-Scots. An ability to speak, read or write Ulster-Scots does not imply an ability to understand Ulster-Scots unless stated. Persons in these categories may or may not have the ability to understand Ulster-Scots. Ulster-Scots (Ability) is applicable to people aged 3 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -8990,7 +8993,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other",
+                "Most other"
+            ],
             "date": "2024-04-03",
             "description": "A person has ability in Ulster-Scots if they can do one or more of the following: understand Ulster-Scots; speak Ulster-Scots; read Ulster-Scots; or write Ulster-Scots. An ability to speak, read or write Ulster-Scots does not imply an ability to understand Ulster-Scots unless stated. Persons in these categories may or may not have the ability to understand Ulster-Scots. Ulster-Scots (Ability) is applicable to people aged 3 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -9000,7 +9006,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least speaks/reads, does not write Ulster-Scots",
+                "Most speaks/reads, does not write Ulster-Scots"
+            ],
             "date": "2024-04-03",
             "description": "A person has ability in Ulster-Scots if they can do one or more of the following: understand Ulster-Scots; speak Ulster-Scots; read Ulster-Scots; or write Ulster-Scots. An ability to speak, read or write Ulster-Scots does not imply an ability to understand Ulster-Scots unless stated. Persons in these categories may or may not have the ability to understand Ulster-Scots. Ulster-Scots (Ability) is applicable to people aged 3 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -9010,7 +9019,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least speaks, does not read/write Ulster-Scots",
+                "Most speaks, does not read/write Ulster-Scots"
+            ],
             "date": "2024-04-03",
             "description": "A person has ability in Ulster-Scots if they can do one or more of the following: understand Ulster-Scots; speak Ulster-Scots; read Ulster-Scots; or write Ulster-Scots. An ability to speak, read or write Ulster-Scots does not imply an ability to understand Ulster-Scots unless stated. Persons in these categories may or may not have the ability to understand Ulster-Scots. Ulster-Scots (Ability) is applicable to people aged 3 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -9020,7 +9032,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least speaks/reads/writes/understands Ulster-Scots",
+                "Most speaks/reads/writes/understands Ulster-Scots"
+            ],
             "date": "2024-04-03",
             "description": "A person has ability in Ulster-Scots if they can do one or more of the following: understand Ulster-Scots; speak Ulster-Scots; read Ulster-Scots; or write Ulster-Scots. An ability to speak, read or write Ulster-Scots does not imply an ability to understand Ulster-Scots unless stated. Persons in these categories may or may not have the ability to understand Ulster-Scots. Ulster-Scots (Ability) is applicable to people aged 3 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -9030,7 +9045,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least understands, does not read/write/speak Ulster-Scots",
+                "Most understands, does not read/write/speak Ulster-Scots"
+            ],
             "date": "2024-04-03",
             "description": "A person has ability in Ulster-Scots if they can do one or more of the following: understand Ulster-Scots; speak Ulster-Scots; read Ulster-Scots; or write Ulster-Scots. An ability to speak, read or write Ulster-Scots does not imply an ability to understand Ulster-Scots unless stated. Persons in these categories may or may not have the ability to understand Ulster-Scots. Ulster-Scots (Ability) is applicable to people aged 3 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -9040,7 +9058,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least able to, never speaks Ulster-Scots",
+                "Most able to, never speaks Ulster-Scots"
+            ],
             "date": "2024-04-03",
             "description": "Frequency of speaking Ulster-Scots is how often people speak Ulster-Scots. The frequency can be: daily; weekly; less often; or never. Ulster-Scots (Speak Frequency) is only applicable to people aged 3 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -9050,7 +9071,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least speaks Ulster-Scots daily",
+                "Most speaks Ulster-Scots daily"
+            ],
             "date": "2024-04-03",
             "description": "Frequency of speaking Ulster-Scots is how often people speak Ulster-Scots. The frequency can be: daily; weekly; less often; or never. Ulster-Scots (Speak Frequency) is only applicable to people aged 3 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -9060,7 +9084,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least speaks Ulster-Scots less often than weekly",
+                "Most speaks Ulster-Scots less often than weekly"
+            ],
             "date": "2024-04-03",
             "description": "Frequency of speaking Ulster-Scots is how often people speak Ulster-Scots. The frequency can be: daily; weekly; less often; or never. Ulster-Scots (Speak Frequency) is only applicable to people aged 3 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -9070,7 +9097,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least speaks Ulster-Scots weekly",
+                "Most speaks Ulster-Scots weekly"
+            ],
             "date": "2024-04-03",
             "description": "Frequency of speaking Ulster-Scots is how often people speak Ulster-Scots. The frequency can be: daily; weekly; less often; or never. Ulster-Scots (Speak Frequency) is only applicable to people aged 3 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -9080,7 +9110,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least cannot speak Ulster-Scots",
+                "Most cannot speak Ulster-Scots"
+            ],
             "date": "2024-04-03",
             "description": "Frequency of speaking Ulster-Scots is how often people speak Ulster-Scots. The frequency can be: daily; weekly; less often; or never. Ulster-Scots (Speak Frequency) is only applicable to people aged 3 and over. As such, this variable reports 'No code required' for the subset of the population where no response was expected."
         },
@@ -9090,7 +9123,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived pre-2001",
+                "Most arrived pre-2001"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9100,7 +9136,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived 2011-2021",
+                "Most arrived 2011-2021"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9110,7 +9149,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived pre-1991",
+                "Most arrived pre-1991"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9120,7 +9162,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived pre-1971",
+                "Most arrived pre-1971"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9130,7 +9175,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived 1951-1960",
+                "Most arrived 1951-1960"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9140,7 +9188,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived 1961-1970",
+                "Most arrived 1961-1970"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9150,7 +9201,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived 1971-1980",
+                "Most arrived 1971-1980"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9160,7 +9214,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived 1981-1990",
+                "Most arrived 1981-1990"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9170,7 +9227,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived 1991-2000",
+                "Most arrived 1991-2000"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9180,7 +9240,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived 2001-2010",
+                "Most arrived 2001-2010"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9190,7 +9253,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived 2011-2013",
+                "Most arrived 2011-2013"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9200,7 +9266,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived 2014-2016",
+                "Most arrived 2014-2016"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9210,7 +9279,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived 2017-2019",
+                "Most arrived 2017-2019"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9220,7 +9292,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived 2020-2021",
+                "Most arrived 2020-2021"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9230,7 +9305,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least arrived pre-1951",
+                "Most arrived pre-1951"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9240,7 +9318,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least born in NI",
+                "Most born in NI"
+            ],
             "date": "2024-04-03",
             "description": "The year of arrival for those usually resident here who were not born in Northern Ireland."
         },
@@ -9250,7 +9331,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least whole house/bungalow",
+                "Most whole house/bungalow"
+            ],
             "date": "2024-04-03",
             "description": "The type of building or structure used by an individual or household. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan."
         },
@@ -9260,7 +9344,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least flat/maisonette/apartment/caravan/mobile/temporary",
+                "Most flat/maisonette/apartment/caravan/mobile/temporary"
+            ],
             "date": "2024-04-03",
             "description": "The type of building or structure used by an individual or household. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan."
         },
@@ -9270,7 +9357,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least caravan/mobile/temporary",
+                "Most caravan/mobile/temporary"
+            ],
             "date": "2024-04-03",
             "description": "The type of building or structure used by an individual or household. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan."
         },
@@ -9280,7 +9370,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least flat/maisonette/apartment in commercial",
+                "Most flat/maisonette/apartment in commercial"
+            ],
             "date": "2024-04-03",
             "description": "The type of building or structure used by an individual or household. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan."
         },
@@ -9290,7 +9383,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least flat/maisonette/apartment in converted/shared",
+                "Most flat/maisonette/apartment in converted/shared"
+            ],
             "date": "2024-04-03",
             "description": "The type of building or structure used by an individual or household. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan."
         },
@@ -9300,7 +9396,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least purpose-built flat/maisonette/apartment",
+                "Most purpose-built flat/maisonette/apartment"
+            ],
             "date": "2024-04-03",
             "description": "The type of building or structure used by an individual or household. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan."
         },
@@ -9310,7 +9409,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least detached",
+                "Most detached"
+            ],
             "date": "2024-04-03",
             "description": "The type of building or structure used by an individual or household. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan."
         },
@@ -9320,7 +9422,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least semi-detached",
+                "Most semi-detached"
+            ],
             "date": "2024-04-03",
             "description": "The type of building or structure used by an individual or household. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan."
         },
@@ -9330,7 +9435,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least terraced",
+                "Most terraced"
+            ],
             "date": "2024-04-03",
             "description": "The type of building or structure used by an individual or household. This could be: a whole house or bungalow (detached, semi-detached, terraced); a flat, maisonette or apartment (in a purpose built block of flats, part of a converted or shared house, in a commercial building); or a mobile or temporary structure, such as a caravan."
         },
@@ -9340,7 +9448,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least adapted",
+                "Most adapted"
+            ],
             "date": "2024-04-03",
             "description": "The number of household adaptations. Adaptation to Accommodation refers to household accommodation that has been designed or adapted for one or more of the following: internal wheelchair usage, external wheelchair access, other physical or mobility difficulties, visual difficulties, hearing difficulties, or other. This only refers to households - communal establishments were not asked this question."
         },
@@ -9350,7 +9461,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not adapted",
+                "Most not adapted"
+            ],
             "date": "2024-04-03",
             "description": "The number of household adaptations. Adaptation to Accommodation refers to household accommodation that has been designed or adapted for one or more of the following: internal wheelchair usage, external wheelchair access, other physical or mobility difficulties, visual difficulties, hearing difficulties, or other. This only refers to households - communal establishments were not asked this question."
         },
@@ -9360,7 +9474,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 4+ adaptations",
+                "Most 4+ adaptations"
+            ],
             "date": "2024-04-03",
             "description": "The number of household adaptations. Adaptation to Accommodation refers to household accommodation that has been designed or adapted for one or more of the following: internal wheelchair usage, external wheelchair access, other physical or mobility difficulties, visual difficulties, hearing difficulties, or other. This only refers to households - communal establishments were not asked this question."
         },
@@ -9370,7 +9487,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 1 adaptation",
+                "Most 1 adaptation"
+            ],
             "date": "2024-04-03",
             "description": "The number of household adaptations. Adaptation to Accommodation refers to household accommodation that has been designed or adapted for one or more of the following: internal wheelchair usage, external wheelchair access, other physical or mobility difficulties, visual difficulties, hearing difficulties, or other. This only refers to households - communal establishments were not asked this question."
         },
@@ -9380,7 +9500,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 3 adaptations",
+                "Most 3 adaptations"
+            ],
             "date": "2024-04-03",
             "description": "The number of household adaptations. Adaptation to Accommodation refers to household accommodation that has been designed or adapted for one or more of the following: internal wheelchair usage, external wheelchair access, other physical or mobility difficulties, visual difficulties, hearing difficulties, or other. This only refers to households - communal establishments were not asked this question."
         },
@@ -9390,7 +9513,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least 2 adaptations",
+                "Most 2 adaptations"
+            ],
             "date": "2024-04-03",
             "description": "The number of household adaptations. Adaptation to Accommodation refers to household accommodation that has been designed or adapted for one or more of the following: internal wheelchair usage, external wheelchair access, other physical or mobility difficulties, visual difficulties, hearing difficulties, or other. This only refers to households - communal establishments were not asked this question."
         },
@@ -9400,7 +9526,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least hearing adapted",
+                "Most hearing adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has been designed or adapted for hearing difficulties. This only refers to households - communal establishments were not asked this question."
         },
@@ -9410,7 +9539,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not hearing adapted",
+                "Most not hearing adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has been designed or adapted for hearing difficulties. This only refers to households - communal establishments were not asked this question."
         },
@@ -9420,7 +9552,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other adapted",
+                "Most other adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has been designed or adapted for physical or mobility difficulties other than wheelchair access or usage. This only refers to households - communal establishments were not asked this question."
         },
@@ -9430,7 +9565,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not other adapted",
+                "Most not other adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has been designed or adapted for physical or mobility difficulties other than wheelchair access or usage. This only refers to households - communal establishments were not asked this question."
         },
@@ -9440,7 +9578,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other adapted",
+                "Most other adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has been designed or adapted for other reasons. This only refers to households - communal establishments were not asked this question."
         },
@@ -9450,7 +9591,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least other not adapted",
+                "Most other not adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has been designed or adapted for other reasons. This only refers to households - communal establishments were not asked this question."
         },
@@ -9460,7 +9604,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least visual adapted",
+                "Most visual adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has been designed or adapted for visual difficulties. This only refers to households - communal establishments were not asked this question."
         },
@@ -9470,7 +9617,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not visual adapted",
+                "Most not visual adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has been designed or adapted for visual difficulties. This only refers to households - communal establishments were not asked this question."
         },
@@ -9480,7 +9630,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least external wheelchair adapted",
+                "Most external wheelchair adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has been designed or adapted for external wheelchair access. This only refers to households - communal establishments were not asked this question."
         },
@@ -9490,7 +9643,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not external wheelchair adapted",
+                "Most not external wheelchair adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has been designed or adapted for external wheelchair access. This only refers to households - communal establishments were not asked this question."
         },
@@ -9500,7 +9656,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least internal wheelchair adapted",
+                "Most internal wheelchair adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has been designed or adapted for internal wheelchair usage. This only refers to households - communal establishments were not asked this question."
         },
@@ -9510,7 +9669,10 @@
             "bins": [
                 10
             ],
-            "extremes": [],
+            "extremes": [
+                "Least not internal wheelchair adapted",
+                "Most not internal wheelchair adapted"
+            ],
             "date": "2024-04-03",
             "description": "Identifies whether a household has been designed or adapted for internal wheelchair usage. This only refers to households - communal establishments were not asked this question."
         },
