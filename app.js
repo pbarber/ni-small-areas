@@ -371,13 +371,13 @@ function initialiseDimensionSettings(params, dimensions) {
     if (dimensions.hasOwnProperty(params.get("x"))) {
         settings.x = params.get("x");
     } else {
-        settings.x = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number' || a[1].type == 'People' || a[1].type == 'Calculated Percentage')[0][0];
+        settings.x = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number' || a[1].type == 'People' || a[1].type == 'Calculated Percentage' || a[1].type == 'Households')[0][0];
     }
     // Take either y from URL params or default to second numeric dimension
     if (dimensions.hasOwnProperty(params.get("y"))) {
         settings.y = params.get("y");
     } else {
-        settings.y = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number' || a[1].type == 'People' || a[1].type == 'Calculated Percentage')[1][0];
+        settings.y = Object.entries(dimensions).filter(a => a[1].type == 'Rank' || a[1].type == 'Percentage' || a[1].type == 'Number' || a[1].type == 'People' || a[1].type == 'Calculated Percentage' || a[1].type == 'Households')[1][0];
     }
     // Take either colour from URL params or default to first category dimension
     if (dimensions.hasOwnProperty(params.get("colour"))) {
@@ -437,8 +437,8 @@ function calculateRanks(name, suffix) {
 }
 
 // Percentages are selectable as a new variable rather than via a checbox
-function calculatePercentages(name, suffix) {
-    store.forEach(a => a[name + suffix] = 100 * a[name] / a[dataset.population]);
+function calculatePercentages(numerator, denominator, suffix) {
+    store.forEach(a => a[numerator + suffix] = 100 * a[numerator] / a[denominator]);
 }
 
 function variableHasCalculatedOptions(v) {
@@ -450,19 +450,19 @@ function variableHasCalculatedOptions(v) {
     var suffixInterval = null;
     var suffixRank = null;
     var suffixPercentage = null;
-    if (v.bins && (v.type === 'Number' || v.type === 'Percentage' || v.type === 'Calculated Percentage' || v.type === 'People')) {
+    if (v.bins && (v.type === 'Number' || v.type === 'Percentage' || v.type === 'Calculated Percentage' || v.type === 'People' || v.type === 'Households')) {
         hasQuantile = true;
         suffixQuantile = (v.bins[0] == 10) ? ' decile' : (v.bins[0] == 100) ? ' centile' : ' quantile';
     }
-    if (v.bins && (v.type === 'Number' || v.type === 'Percentage' || v.type === 'Calculated Percentage' || v.type === 'People')) {
+    if (v.bins && (v.type === 'Number' || v.type === 'Percentage' || v.type === 'Calculated Percentage' || v.type === 'People' || v.type === 'Households')) {
         hasInterval = true;
         suffixInterval = ' interval';
     }
-    if (v.type === 'Number' || v.type === 'Percentage' || v.type === 'Calculated Percentage' || v.type === 'People') {
+    if (v.type === 'Number' || v.type === 'Percentage' || v.type === 'Calculated Percentage' || v.type === 'People' || v.type === 'Households') {
         hasRank = true;
         suffixRank = ' rank';
     }
-    if (v.type === 'People') {
+    if (v.type === 'People' || v.type === 'Households') {
         hasPercentage = true;
         suffixPercentage = ' (%)';
     }
@@ -518,7 +518,7 @@ function addCalculatedDimensions(d) {
             ...config,
             type: 'Calculated Percentage',
             calcNumerator: name,
-            calcDenominator: dataset.population
+            calcDenominator: config.type == 'Households' ? dataset.households : dataset.population
         };
         if (config.description) {
             dataset.dimensions[(name + suffixPercentage)].description = config.description + suffixPercentage;
@@ -602,7 +602,7 @@ function onDataLoad(results) {
     var ogcb = createOptGroup('Binned metrics');
     for (const [key, value] of Object.entries(dataset.dimensions)) {
         const [hasQuantile, hasInterval, _hasRank, hasPercentage, _suffixQuantile, _suffixInterval, _suffixRank, _suffixPercentage] = variableHasCalculatedOptions(value);
-        if (value.type == 'Rank' || value.type == 'Percentage' || value.type == 'Geographic' || value.type == 'Number' || value.type == 'People' || value.type == 'Calculated Percentage') {
+        if (value.type == 'Rank' || value.type == 'Percentage' || value.type == 'Geographic' || value.type == 'Number' || value.type == 'People' || value.type == 'Calculated Percentage' || value.type == 'Households') {
             ogxm.append(createOption(useTitleIfExists(key), key, (key == settings.x), (key == settings.y)));
             ogym.append(createOption(useTitleIfExists(key), key, (key == settings.y), (key == settings.x)));
         } else if (value.type == 'Category') {
@@ -924,10 +924,10 @@ function updateChart() {
         if ((dim in dataset.dimensions) && !(dim in store[0])) {
             if (dataset.dimensions[dim].type == 'Calculated Percentage') {
                 const [_hasQuantile, _hasInterval, _hasRank, _hasPercentage, _suffixQuantile, _suffixInterval, _suffixRank, suffixPercentage] = variableHasCalculatedOptions(dataset.dimensions[dataset.dimensions[dim].calcNumerator]);
-                calculatePercentages(dataset.dimensions[dim].calcNumerator, suffixPercentage);
+                calculatePercentages(dataset.dimensions[dim].calcNumerator, dataset.dimensions[dim].calcDenominator, suffixPercentage);
             } else if (dataset.dimensions[dataset.dimensions[dim].calcSource].type == 'Calculated Percentage') {
                 const [_hasQuantile, _hasInterval, _hasRank, _hasPercentage, _suffixQuantile, _suffixInterval, _suffixRank, suffixPercentage] = variableHasCalculatedOptions(dataset.dimensions[dataset.dimensions[dataset.dimensions[dim].calcSource].calcNumerator]);
-                calculatePercentages(dataset.dimensions[dataset.dimensions[dim].calcSource].calcNumerator, suffixPercentage);
+                calculatePercentages(dataset.dimensions[dataset.dimensions[dim].calcSource].calcNumerator, dataset.dimensions[dataset.dimensions[dim].calcSource].calcDenominator, suffixPercentage);
             }
             if (dataset.dimensions[dim].hasOwnProperty('calcSource')) {
                 const [_hasQuantile, _hasInterval, _hasRank, _hasPercentage, suffixQuantile, suffixInterval, suffixRank, _suffixPercentage] = variableHasCalculatedOptions(dataset.dimensions[dataset.dimensions[dim].calcSource]);

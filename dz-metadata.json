@@ -9566,7 +9566,7 @@
         },
         "Accommodation Type - 2 Categories: Whole house or bungalow": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=ACCOMMODATION_TYPE_AGG2",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9580,7 +9580,7 @@
         },
         "Accommodation Type - 4 Categories: Flat, maisonette or apartment, a caravan or other mobile or temporary structure": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=ACCOMMODATION_TYPE_AGG4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9594,7 +9594,7 @@
         },
         "Accommodation Type: Caravan or other mobile or temporary structure": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=ACCOMMODATION_TYPE",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9607,7 +9607,7 @@
         },
         "Accommodation Type: Flat, maisonette or apartment: In a commercial building (for example in an office building, hotel, or over a shop)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=ACCOMMODATION_TYPE",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9620,7 +9620,7 @@
         },
         "Accommodation Type: Flat, maisonette or apartment: Part of a converted or shared house (including bed-sits)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=ACCOMMODATION_TYPE",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9633,7 +9633,7 @@
         },
         "Accommodation Type: Flat, maisonette or apartment: Purpose-built block of flats": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=ACCOMMODATION_TYPE",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9646,7 +9646,7 @@
         },
         "Accommodation Type: Whole house or bungalow: Detached": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=ACCOMMODATION_TYPE",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9659,7 +9659,7 @@
         },
         "Accommodation Type: Whole house or bungalow: Semi-detached": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=ACCOMMODATION_TYPE",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9672,7 +9672,7 @@
         },
         "Accommodation Type: Whole house or bungalow: Terraced (including end-terrace)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=ACCOMMODATION_TYPE",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9685,7 +9685,7 @@
         },
         "Adaptation to Accommodation - 2 Categories: Accommodation has been designed or adapted": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_IND",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9699,7 +9699,7 @@
         },
         "Adaptation to Accommodation: Accommodation has not been designed or adapted": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_NUM_TC4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9712,7 +9712,7 @@
         },
         "Adaptation to Accommodation: Four or more": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_NUM_TC4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9725,7 +9725,7 @@
         },
         "Adaptation to Accommodation: One": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_NUM_TC4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9738,7 +9738,7 @@
         },
         "Adaptation to Accommodation: Three": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_NUM_TC4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9751,7 +9751,7 @@
         },
         "Adaptation to Accommodation: Two": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_NUM_TC4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9764,7 +9764,7 @@
         },
         "Adaptation to Accommodation (Hearing Difficulties): Household is adapted for hearing difficulties": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_HEARING",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9777,7 +9777,7 @@
         },
         "Adaptation to Accommodation (Hearing Difficulties): Household is not adapted for hearing difficulties": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_HEARING",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9790,7 +9790,7 @@
         },
         "Adaptation to Accommodation (Other Physical or Mobility Difficulties): Household is adapted for other physical or mobility difficulties": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_OTHER_PHYSICAL_MOBILITY",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9803,7 +9803,7 @@
         },
         "Adaptation to Accommodation (Other Physical or Mobility Difficulties): Household is not adapted for other physical or mobility difficulties": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_OTHER_PHYSICAL_MOBILITY",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9816,7 +9816,7 @@
         },
         "Adaptation to Accommodation (Other Reason): Household is adapted for other reasons": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_OTHER",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9829,7 +9829,7 @@
         },
         "Adaptation to Accommodation (Other Reason): Household is not adapted for other reasons": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_OTHER",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9842,7 +9842,7 @@
         },
         "Adaptation to Accommodation (Visual Difficulties): Household is adapted for visual difficulties": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_VISUAL",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9855,7 +9855,7 @@
         },
         "Adaptation to Accommodation (Visual Difficulties): Household is not adapted for visual difficulties": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_VISUAL",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9868,7 +9868,7 @@
         },
         "Adaptation to Accommodation (Wheelchair - External): Household is adapted for external wheelchair access": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_EXTERNAL_WHEELCHAIR",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9881,7 +9881,7 @@
         },
         "Adaptation to Accommodation (Wheelchair - External): Household is not adapted for external wheelchair access": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_EXTERNAL_WHEELCHAIR",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9894,7 +9894,7 @@
         },
         "Adaptation to Accommodation (Wheelchair - Internal): Household is adapted for internal wheelchair usage": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_INTERNAL_WHEELCHAIR",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9907,7 +9907,7 @@
         },
         "Adaptation to Accommodation (Wheelchair - Internal): Household is not adapted for internal wheelchair usage": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADAPTED_INTERNAL_WHEELCHAIR",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9920,7 +9920,7 @@
         },
         "Adults and Children - 2 Categories: 1 adult in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADULTS_AND_CHILDREN_AGG2",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9934,7 +9934,7 @@
         },
         "Adults and Children - 2 Categories: 2 or more adults in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADULTS_AND_CHILDREN_AGG2",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9948,7 +9948,7 @@
         },
         "Adults and Children - 6 Categories: One adult of any age and one or more children": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADULTS_AND_CHILDREN_AGG6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9962,7 +9962,7 @@
         },
         "Adults and Children - 6 Categories: Three or more adults of any age and no children": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADULTS_AND_CHILDREN_AGG6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9976,7 +9976,7 @@
         },
         "Adults and Children - 6 Categories: Three or more adults of any age and one or more children": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADULTS_AND_CHILDREN_AGG6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -9990,7 +9990,7 @@
         },
         "Adults and Children - 6 Categories: Two adults of any age and no children": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADULTS_AND_CHILDREN_AGG6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10004,7 +10004,7 @@
         },
         "Adults and Children - 6 Categories: Two adults of any age and one or more children": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADULTS_AND_CHILDREN_AGG6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10018,7 +10018,7 @@
         },
         "Adults in Employment (Household): 1 adult in employment in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADULTS_EMPLOYMENT_TC3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10031,7 +10031,7 @@
         },
         "Adults in Employment (Household): 2 adults in employment in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADULTS_EMPLOYMENT_TC3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10044,7 +10044,7 @@
         },
         "Adults in Employment (Household): 3 or more adults in employment in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADULTS_EMPLOYMENT_TC3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10057,7 +10057,7 @@
         },
         "Adults in Employment (Household): No adults in employment in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_ADULTS_EMPLOYMENT_TC3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10070,7 +10070,7 @@
         },
         "Car or Van Availability - 2 Categories: 1 or more cars or vans available": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CAR_VAN_IND",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10084,7 +10084,7 @@
         },
         "Car or Van Availability - 3 Categories: 2 or more cars or vans available": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CAR_VAN_TC2",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10098,7 +10098,7 @@
         },
         "Car or Van Availability: 1 car or van available": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CAR_VAN_TC5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10111,7 +10111,7 @@
         },
         "Car or Van Availability: 2 cars or vans available": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CAR_VAN_TC5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10124,7 +10124,7 @@
         },
         "Car or Van Availability: 3 cars or vans available": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CAR_VAN_TC5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10137,7 +10137,7 @@
         },
         "Car or Van Availability: 4 cars or vans available": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CAR_VAN_TC5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10150,7 +10150,7 @@
         },
         "Car or Van Availability: 5 or more cars or vans available": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CAR_VAN_TC5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10163,7 +10163,7 @@
         },
         "Car or Van Availability: No cars or vans available": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CAR_VAN_TC5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10176,7 +10176,7 @@
         },
         "Central Heating - 2 Categories: Household has central heating": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_IND",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10190,7 +10190,7 @@
         },
         "Central Heating - 3 Categories: One type of central heating": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_AGG3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10204,7 +10204,7 @@
         },
         "Central Heating - 4 Categories: Other central heating": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_AGG4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10218,7 +10218,7 @@
         },
         "Central Heating - 10 Categories: Electric (for example storage heaters) only": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_AGG10",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10232,7 +10232,7 @@
         },
         "Central Heating - 10 Categories: Mains gas only": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_AGG10",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10246,7 +10246,7 @@
         },
         "Central Heating - 10 Categories: No central heating": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_AGG10",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10260,7 +10260,7 @@
         },
         "Central Heating - 10 Categories: Oil only": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_AGG10",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10274,7 +10274,7 @@
         },
         "Central Heating - 10 Categories: Other central heating only": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_AGG10",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10288,7 +10288,7 @@
         },
         "Central Heating - 10 Categories: Renewable heating system only": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_AGG10",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10302,7 +10302,7 @@
         },
         "Central Heating - 10 Categories: Solid fuel (for example coal) only": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_AGG10",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10316,7 +10316,7 @@
         },
         "Central Heating - 10 Categories: Tank or bottled gas only": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_AGG10",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10330,7 +10330,7 @@
         },
         "Central Heating - 10 Categories: Two or more types of central heating": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_AGG10",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10344,7 +10344,7 @@
         },
         "Central Heating - 10 Categories: Wood (for example logs or waste wood) only": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_AGG10",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10358,7 +10358,7 @@
         },
         "Central Heating (Electric): Household does not have electric central heating (for example storage heaters)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_ELEC",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10371,7 +10371,7 @@
         },
         "Central Heating (Electric): Household has electric central heating (for example storage heaters)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_ELEC",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10384,7 +10384,7 @@
         },
         "Central Heating (Mains Gas): Household does not have mains gas central heating": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_MAINS_GAS",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10397,7 +10397,7 @@
         },
         "Central Heating (Mains Gas): Household has mains gas central heating": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_MAINS_GAS",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10410,7 +10410,7 @@
         },
         "Central Heating (Oil): Household does not have oil central heating": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_OIL",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10423,7 +10423,7 @@
         },
         "Central Heating (Oil): Household has oil central heating": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_OIL",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10436,7 +10436,7 @@
         },
         "Central Heating (Other): Household does not have other central heating": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_OTHER",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10449,7 +10449,7 @@
         },
         "Central Heating (Other): Household has other central heating": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_OTHER",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10462,7 +10462,7 @@
         },
         "Central Heating (Renewable Heating System): Household does not have renewable heating system": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_RENEWABLE",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10475,7 +10475,7 @@
         },
         "Central Heating (Renewable Heating System): Household has renewable heating system": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_RENEWABLE",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10488,7 +10488,7 @@
         },
         "Central Heating (Solid Fuel): Household does not have solid fuel central heating (for example coal)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_SOLID_FUEL",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10501,7 +10501,7 @@
         },
         "Central Heating (Solid Fuel): Household has solid fuel central heating (for example coal)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_SOLID_FUEL",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10514,7 +10514,7 @@
         },
         "Central Heating (Tank or Bottled Gas): Household does not have tank or bottled gas central heating": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_TANK_BOTTLED_GAS",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10527,7 +10527,7 @@
         },
         "Central Heating (Tank or Bottled Gas): Household has tank or bottled gas central heating": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_TANK_BOTTLED_GAS",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10540,7 +10540,7 @@
         },
         "Central Heating (Wood): Household does not have wood central heating (for example logs or waste wood)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_WOOD",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10553,7 +10553,7 @@
         },
         "Central Heating (Wood): Household has wood central heating (for example logs or waste wood)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CENTRAL_HEATING_WOOD",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10566,7 +10566,7 @@
         },
         "Dependent Children (Household) - 2 Categories: Household with dependent children": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_IND",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10580,7 +10580,7 @@
         },
         "Dependent Children (Household) - 2 Categories: No dependent children in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_IND",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10594,7 +10594,7 @@
         },
         "Dependent Children (Household) - 5 Categories A: Youngest dependent child: Age 0 to 4": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG5A",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10608,7 +10608,7 @@
         },
         "Dependent Children (Household) - 5 Categories A: Youngest dependent child: Age 12 to 18": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG5A",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10622,7 +10622,7 @@
         },
         "Dependent Children (Household) - 5 Categories A: Youngest dependent child: Age 5 to 11": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG5A",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10636,7 +10636,7 @@
         },
         "Dependent Children (Household) - 5 Categories B: One dependent child": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG5B",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10650,7 +10650,7 @@
         },
         "Dependent Children (Household) - 5 Categories B: Three or more dependent children": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG5B",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10664,7 +10664,7 @@
         },
         "Dependent Children (Household) - 5 Categories B: Two dependent children": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG5B",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10678,7 +10678,7 @@
         },
         "Dependent Children (Household): No children in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG11",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10691,7 +10691,7 @@
         },
         "Dependent Children (Household): No dependent children in household/All children in household non-dependent": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG11",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10704,7 +10704,7 @@
         },
         "Dependent Children (Household): One dependent child aged 0-4": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG11",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10717,7 +10717,7 @@
         },
         "Dependent Children (Household): One dependent child aged 12-18": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG11",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10730,7 +10730,7 @@
         },
         "Dependent Children (Household): One dependent child aged 5-11": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG11",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10743,7 +10743,7 @@
         },
         "Dependent Children (Household): Three or more dependent children, youngest aged 0-4": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG11",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10756,7 +10756,7 @@
         },
         "Dependent Children (Household): Three or more dependent children, youngest aged 12-18": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG11",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10769,7 +10769,7 @@
         },
         "Dependent Children (Household): Three or more dependent children, youngest aged 5-11": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG11",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10782,7 +10782,7 @@
         },
         "Dependent Children (Household): Two dependent children, youngest aged 0-4": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG11",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10795,7 +10795,7 @@
         },
         "Dependent Children (Household): Two dependent children, youngest aged 12-18": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG11",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10808,7 +10808,7 @@
         },
         "Dependent Children (Household): Two dependent children, youngest aged 5-11": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPENDENT_CHILDREN_AGG11",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10821,7 +10821,7 @@
         },
         "Ethnic Group (Household) - 3 Categories: More than one person in a household: Household members have different ethnic groups": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_MULTI_ETHNIC_GROUP_AGG3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10835,7 +10835,7 @@
         },
         "Ethnic Group (Household): More than one person in a household: All household members have the same ethnic group": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_MULTI_ETHNIC_GROUP",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10848,7 +10848,7 @@
         },
         "Ethnic Group (Household): More than one person in a household: Any other combination of multiple ethnic groups": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_MULTI_ETHNIC_GROUP",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10861,7 +10861,7 @@
         },
         "Ethnic Group (Household): More than one person in a household: Different ethnic groups between the generations only": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_MULTI_ETHNIC_GROUP",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10874,7 +10874,7 @@
         },
         "Ethnic Group (Household): More than one person in a household: Different ethnic groups within partnerships": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_MULTI_ETHNIC_GROUP",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10887,7 +10887,7 @@
         },
         "Families (Count in Household): 1 family in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILIES_COUNT_AGG3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10900,7 +10900,7 @@
         },
         "Families (Count in Household): 2 or more families in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILIES_COUNT_AGG3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10913,7 +10913,7 @@
         },
         "Families (Count in Household): No families in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILIES_COUNT_AGG3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10926,7 +10926,7 @@
         },
         "Household Composition - 3 Categories: Single family household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILY_COMPOSITION_AGG3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10940,7 +10940,7 @@
         },
         "Household Composition - 5 Categories: Single family household: Couple family household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILY_COMPOSITION_AGG5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10954,7 +10954,7 @@
         },
         "Household Composition - 5 Categories: Single family household: Lone parent family": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILY_COMPOSITION_AGG5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10968,7 +10968,7 @@
         },
         "Household Composition - 9 Categories: One person household: Other": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILY_COMPOSITION_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10982,7 +10982,7 @@
         },
         "Household Composition - 9 Categories: Other household types": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILY_COMPOSITION_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -10996,7 +10996,7 @@
         },
         "Household Composition - 9 Categories: Single family household: Couple family household: All children non-dependent": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILY_COMPOSITION_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11010,7 +11010,7 @@
         },
         "Household Composition - 9 Categories: Single family household: Couple family household: Dependent children": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILY_COMPOSITION_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11024,7 +11024,7 @@
         },
         "Household Composition - 9 Categories: Single family household: Couple family household: No children": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILY_COMPOSITION_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11038,7 +11038,7 @@
         },
         "Household Composition - 9 Categories: Single family household: Lone parent family: All children non-dependent": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILY_COMPOSITION_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11052,7 +11052,7 @@
         },
         "Household Composition - 9 Categories: Single family household: Lone parent family: With dependent children": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILY_COMPOSITION_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11066,7 +11066,7 @@
         },
         "Household Composition - 9 Categories: Single family household: Other family composition (including all aged 66 and over)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_FAMILY_COMPOSITION_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11080,7 +11080,7 @@
         },
         "Household Deprivation - 2 Categories: Household is deprived in 1 or more dimensions": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION_IND",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11094,7 +11094,7 @@
         },
         "Household Deprivation: Household is deprived in 1 dimension": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11107,7 +11107,7 @@
         },
         "Household Deprivation: Household is deprived in 2 dimensions": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11120,7 +11120,7 @@
         },
         "Household Deprivation: Household is deprived in 3 dimensions": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11133,7 +11133,7 @@
         },
         "Household Deprivation: Household is deprived in 4 dimensions": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11146,7 +11146,7 @@
         },
         "Household Deprivation: Household is not deprived in any dimension": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11159,7 +11159,7 @@
         },
         "Household Deprivation (Education): Household is deprived in the education dimension": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION_EDUCATION",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11172,7 +11172,7 @@
         },
         "Household Deprivation (Education): Household is not deprived in the education dimension": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION_EDUCATION",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11185,7 +11185,7 @@
         },
         "Household Deprivation (Employment): Household is deprived in the employment dimension": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION_EMPLOYMENT",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11198,7 +11198,7 @@
         },
         "Household Deprivation (Employment): Household is not deprived in the employment dimension": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION_EMPLOYMENT",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11211,7 +11211,7 @@
         },
         "Household Deprivation (Health): Household is deprived in the health and disability dimension": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION_HEALTH",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11224,7 +11224,7 @@
         },
         "Household Deprivation (Health): Household is not deprived in the health and disability dimension": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION_HEALTH",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11237,7 +11237,7 @@
         },
         "Household Deprivation (Housing): Household is deprived in the housing dimension": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION_HOUSING",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11250,7 +11250,7 @@
         },
         "Household Deprivation (Housing): Household is not deprived in the housing dimension": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DEPRIVATION_HOUSING",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11263,7 +11263,7 @@
         },
         "Household Size - 2 Categories: Households: 2 or more people": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_SIZE_TC2",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11277,7 +11277,7 @@
         },
         "Household Size - 3 Categories: Households: 3 or more people": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_SIZE_TC3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11291,7 +11291,7 @@
         },
         "Household Size - 4 Categories: Households: 4 or more people": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_SIZE_TC4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11305,7 +11305,7 @@
         },
         "Household Size - 5 Categories: Households: 5 or more people": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_SIZE_TC5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11319,7 +11319,7 @@
         },
         "Household Size: Households: 2 people": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_SIZE_TC6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11332,7 +11332,7 @@
         },
         "Household Size: Households: 3 people": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_SIZE_TC6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11345,7 +11345,7 @@
         },
         "Household Size: Households: 4 people": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_SIZE_TC6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11358,7 +11358,7 @@
         },
         "Household Size: Households: 5 people": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_SIZE_TC6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11371,7 +11371,7 @@
         },
         "Household Size: Households: 6 or more people": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_SIZE_TC6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11384,7 +11384,7 @@
         },
         "Language (Household) - 2 Categories: Households where: At least one person has English as a main language": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LANGUAGE_AGG2",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11398,7 +11398,7 @@
         },
         "Language (Household): Households where: All people aged 16+ years have English as a main language": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LANGUAGE",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11411,7 +11411,7 @@
         },
         "Language (Household): Households where: At least one but not all people aged 16+ years have English as a main language": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LANGUAGE",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11424,7 +11424,7 @@
         },
         "Language (Household): Households where: No people aged 16+ years have English as a main language, but at least one person aged 3-15 years has English as a main language": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LANGUAGE",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11437,7 +11437,7 @@
         },
         "Language (Household): Households where: No people have English as a main language": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LANGUAGE",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11450,7 +11450,7 @@
         },
         "Lifestage (Household) - 9 Categories: Age of HRP 16-34 years: One person household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11464,7 +11464,7 @@
         },
         "Lifestage (Household) - 9 Categories: Age of HRP 16-34 years: Two or more person household - no dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11478,7 +11478,7 @@
         },
         "Lifestage (Household) - 9 Categories: Age of HRP 16-34 years: Two or more person household - with dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11492,7 +11492,7 @@
         },
         "Lifestage (Household) - 9 Categories: Age of HRP 55+ years: One person household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11506,7 +11506,7 @@
         },
         "Lifestage (Household) - 9 Categories: Age of HRP 55+ years: Two or more person household - no dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11520,7 +11520,7 @@
         },
         "Lifestage (Household) - 9 Categories: Age of HRP 55+ years: Two or more person household - with dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG9",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11534,7 +11534,7 @@
         },
         "Lifestage (Household): Age of HRP 16-24 years: One person household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11547,7 +11547,7 @@
         },
         "Lifestage (Household): Age of HRP 16-24 years: Two or more person household - no dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11560,7 +11560,7 @@
         },
         "Lifestage (Household): Age of HRP 16-24 years: Two or more person household - with dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11573,7 +11573,7 @@
         },
         "Lifestage (Household): Age of HRP 25-34 years: One person household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11586,7 +11586,7 @@
         },
         "Lifestage (Household): Age of HRP 25-34 years: Two or more person household - no dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11599,7 +11599,7 @@
         },
         "Lifestage (Household): Age of HRP 25-34 years: Two or more person household - with dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11612,7 +11612,7 @@
         },
         "Lifestage (Household): Age of HRP 35-54 years: One person household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11625,7 +11625,7 @@
         },
         "Lifestage (Household): Age of HRP 35-54 years: Two or more person household - no dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11638,7 +11638,7 @@
         },
         "Lifestage (Household): Age of HRP 35-54 years: Two or more person household - with dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11651,7 +11651,7 @@
         },
         "Lifestage (Household): Age of HRP 55-65 years: One person household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11664,7 +11664,7 @@
         },
         "Lifestage (Household): Age of HRP 55-65 years: Two or more person household - no dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11677,7 +11677,7 @@
         },
         "Lifestage (Household): Age of HRP 55-65 years: Two or more person household - with dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11690,7 +11690,7 @@
         },
         "Lifestage (Household): Age of HRP 66+ years: One person household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11703,7 +11703,7 @@
         },
         "Lifestage (Household): Age of HRP 66+ years: Two or more person household - no dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11716,7 +11716,7 @@
         },
         "Lifestage (Household): Age of HRP 66+ years: Two or more person household - with dependent child(ren)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_LIFESTAGE_AGG15",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11729,7 +11729,7 @@
         },
         "People with Health Problem or Disability (Household): 1 person in household with a health problem or disability which limits their daily activities": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DISABLED_TC2",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11742,7 +11742,7 @@
         },
         "People with Health Problem or Disability (Household): 2 or more people in household with a health problem or disability which limits their daily activities": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DISABLED_TC2",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11755,7 +11755,7 @@
         },
         "People with Health Problem or Disability (Household): No people in household with a health problem or disability which limits their daily activities": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_DISABLED_TC2",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11768,7 +11768,7 @@
         },
         "Provision of Unpaid Care (Household) - 3 Categories: 2 or more unpaid carers in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CARERS_TC2",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11782,7 +11782,7 @@
         },
         "Provision of Unpaid Care (Household): 1 unpaid carer in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CARERS_TC4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11795,7 +11795,7 @@
         },
         "Provision of Unpaid Care (Household): 2 unpaid carers in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CARERS_TC4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11808,7 +11808,7 @@
         },
         "Provision of Unpaid Care (Household): 3 unpaid carers in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CARERS_TC4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11821,7 +11821,7 @@
         },
         "Provision of Unpaid Care (Household): 4 or more unpaid carers in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CARERS_TC4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11834,7 +11834,7 @@
         },
         "Provision of Unpaid Care (Household): No unpaid carers in household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_CARERS_TC4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11847,7 +11847,7 @@
         },
         "Religion or Religion Brought Up In (Household) - 3 Categories: More than one person in a household: Mixed religion or religion brought up in": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_RELIGION_AGG3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11861,7 +11861,7 @@
         },
         "Religion or Religion Brought Up In (Household) - 3 Categories: More than one person in a household: Single religion or religion brought up in": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_RELIGION_AGG3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11875,7 +11875,7 @@
         },
         "Religion or Religion Brought Up In (Household) - 3 Categories: One person household": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_RELIGION_AGG3",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11889,7 +11889,7 @@
         },
         "Renewable Energy Systems: Household does not have renewable energy systems": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_RENEWABLE_ENERGY_IND",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11902,7 +11902,7 @@
         },
         "Renewable Energy Systems: Household has renewable energy systems": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_RENEWABLE_ENERGY_IND",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11915,7 +11915,7 @@
         },
         "Rooms (Number) - 4 Categories: 6+ rooms": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=NUMBER_OF_ROOMS_AGG4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11929,7 +11929,7 @@
         },
         "Rooms (Number) - 5 Categories: 7+ rooms": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=NUMBER_OF_ROOMS_AGG5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11943,7 +11943,7 @@
         },
         "Rooms (Number) - 6 Categories: 3 rooms or less": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=NUMBER_OF_ROOMS_AGG6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11957,7 +11957,7 @@
         },
         "Rooms (Number) - 6 Categories: 4 rooms": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=NUMBER_OF_ROOMS_AGG6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11971,7 +11971,7 @@
         },
         "Rooms (Number) - 6 Categories: 5 rooms": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=NUMBER_OF_ROOMS_AGG6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11985,7 +11985,7 @@
         },
         "Rooms (Number) - 6 Categories: 6 rooms": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=NUMBER_OF_ROOMS_AGG6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -11999,7 +11999,7 @@
         },
         "Rooms (Number) - 6 Categories: 7 rooms": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=NUMBER_OF_ROOMS_AGG6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12013,7 +12013,7 @@
         },
         "Rooms (Number) - 6 Categories: 8+ rooms": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=NUMBER_OF_ROOMS_AGG6",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12027,7 +12027,7 @@
         },
         "Rooms (Occupancy Rating) - 2 Categories: Occupancy rating (rooms) of 0 or more": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=OCCUPANCY_RATING_ROOMS_AGG2",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12041,7 +12041,7 @@
         },
         "Rooms (Occupancy Rating) - 4 Categories: Occupancy rating - Rooms: -1 or less": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=OCCUPANCY_RATING_ROOMS_AGG4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12055,7 +12055,7 @@
         },
         "Rooms (Occupancy Rating): Occupancy rating - Rooms: +1": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=OCCUPANCY_RATING_ROOMS_AGG5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12068,7 +12068,7 @@
         },
         "Rooms (Occupancy Rating): Occupancy rating - Rooms: +2 or more": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=OCCUPANCY_RATING_ROOMS_AGG5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12081,7 +12081,7 @@
         },
         "Rooms (Occupancy Rating): Occupancy rating - Rooms: -1": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=OCCUPANCY_RATING_ROOMS_AGG5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12094,7 +12094,7 @@
         },
         "Rooms (Occupancy Rating): Occupancy rating - Rooms: -2 or less": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=OCCUPANCY_RATING_ROOMS_AGG5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12107,7 +12107,7 @@
         },
         "Rooms (Occupancy Rating): Occupancy rating - Rooms: 0": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=OCCUPANCY_RATING_ROOMS_AGG5",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12120,7 +12120,7 @@
         },
         "Rooms (Persons per Room): Over 0.5 and up to and including 1.0 persons per room": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_PERSONS_PER_ROOM",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12133,7 +12133,7 @@
         },
         "Rooms (Persons per Room): Over 1.0 and up to and including 1.5 persons per room": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_PERSONS_PER_ROOM",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12146,7 +12146,7 @@
         },
         "Rooms (Persons per Room): Over 1.5 persons per room": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_PERSONS_PER_ROOM",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12159,7 +12159,7 @@
         },
         "Rooms (Persons per Room): Up to and including 0.5 persons per room": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_PERSONS_PER_ROOM",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12172,7 +12172,7 @@
         },
         "Tenure - 4 Categories: Owner occupied": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_TENURE_AGG4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12186,7 +12186,7 @@
         },
         "Tenure - 4 Categories: Private rented": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_TENURE_AGG4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12200,7 +12200,7 @@
         },
         "Tenure - 4 Categories: Social rented": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_TENURE_AGG4",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12214,7 +12214,7 @@
         },
         "Tenure - 7 Categories: Lives rent free": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_TENURE_AGG7",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12228,7 +12228,7 @@
         },
         "Tenure - 7 Categories: Owner occupied: Owns outright": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_TENURE_AGG7",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12242,7 +12242,7 @@
         },
         "Tenure - 7 Categories: Owner occupied: Owns with a mortgage or loan or shared ownership": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_TENURE_AGG7",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12256,7 +12256,7 @@
         },
         "Tenure - 7 Categories: Private rented: Other private rented": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_TENURE_AGG7",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12270,7 +12270,7 @@
         },
         "Tenure - 7 Categories: Private rented: Private landlord or letting agency": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_TENURE_AGG7",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12284,7 +12284,7 @@
         },
         "Tenure - 7 Categories: Social rented: Housing association or charitable trust": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_TENURE_AGG7",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
@@ -12298,7 +12298,7 @@
         },
         "Tenure - 7 Categories: Social rented: Northern Ireland Housing Executive": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=HOUSEHOLD&v=DZ21&v=HH_TENURE_AGG7",
-            "type": "Number",
+            "type": "Households",
             "bins": [
                 10
             ],
