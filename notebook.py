@@ -477,6 +477,12 @@ with open('dz-metadata.json', 'w') as fd:
 
 
 # %%
+download_file_if_not_exists('https://www.nisra.gov.uk/system/files/statistics/census-2021-ms-e01.xlsx', 'census-2021-ms-e01.xlsx')
+dzhs = pandas.read_excel('census-2021-ms-e01.xlsx', sheet_name='DZ', skiprows=5)
+dzhs = dzhs[['Geography code', 'All households']]
+dz_stats = dz_stats.merge(dzhs.rename(columns={'Geography code': 'DZ2021_cd'}), how='left', on='DZ2021_cd')
+
+# %%
 dz_stats.to_csv('dz-stats.csv', index=False)
 
 # %%

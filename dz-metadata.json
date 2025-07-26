@@ -7,8 +7,10 @@
     "exploreURL": "https://explore.nisra.gov.uk/area-explorer-2021/{code}",
     "explorerName": "NISRA Area Explorer",
     "population": "All usual residents",
+    "households": "All households",
     "summaryVariables": [
         "All usual residents",
+        "All households",
         "LGD2014_nm",
         "Health Conditions (Number): Does not have a long-term condition (%)",
         "Religion - 8 Categories: Catholic (%)",
@@ -29,6 +31,19 @@
             "URL": "https://www.nisra.gov.uk/publications/census-2021-person-and-household-estimates-for-data-zones-in-northern-ireland",
             "date": "2023-02-21",
             "description": "Population of all usual residents"
+        },
+        "All households": {
+            "type": "Number",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Households",
+                "Most Households"
+            ],
+            "URL": "https://www.nisra.gov.uk/publications/census-2021-person-and-household-estimates-for-data-zones-in-northern-ireland",
+            "date": "2023-02-21",
+            "description": "Number of households"
         },
         "Population density (number of usual residents per hectare)": {
             "type": "Number",
