@@ -1,4 +1,10 @@
-// TODO: fill out Data Zones dataset - document/title the new variables and add extremes via command line tool
+// TODO: fill out Data Zones dataset - remove all the Other columns
+// TODO: add denominator for households
+// TODO: add new category variables - side of the bann/white water and urban/rural (maybe deprivation/target areas)
+// TODO: check NISRA for other DZ/SDZ data
+// TODO: try a multi-variable analysis
+// TODO: more examples (education/job category/industry)
+// TODO: more geographies (DEA/Ward)
 // TODO: fix available palettes for binned variable
 // TODO: add hex map
 // TODO: load a column at a time from NISRA
