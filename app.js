@@ -6,9 +6,7 @@
 // TODO: add title to legend (or colour to title)
 // TODO: more examples (education/job category/industry)
 // TODO: more geographies (DEA/Ward)
-// TODO: fix available palettes for binned variable
 // TODO: add hex map
-// TODO: load a column at a time from NISRA - tried this and CORS policy prevents it
 // TODO: Add NIMDM travel data for small areas
 // TODO: Allow users to choose an area to highlight on the charts
 
@@ -530,8 +528,7 @@ function addCalculatedDimensions(d) {
     }
 }
 
-function adjustAvailablePalettes(colour, palette) {
-    const numCats = orderCategories(colour).length;
+function adjustAvailablePalettes(numCats, palette) {
     // Handle the case where the palette doesn't hold enough colours by hiding options and selecting an alternative
     var change = false;
     if (numCats > metbrewer[palette].colours.length) {
@@ -581,6 +578,12 @@ function onDataLoad(results) {
     // Add calculated dimensions (once for the whole dataset and again for the calculated percentage dimensions)
     Object.entries(dataset.dimensions).forEach((d) => addCalculatedDimensions(d));
     Object.entries(dataset.dimensions).filter(a => a[1].type == 'Calculated Percentage').forEach((d) => addCalculatedDimensions(d));
+
+    document.getElementById("palette-select").replaceChildren();
+    for (const key of Object.keys(metbrewer)) {
+        document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
+    }
+
     // Initialise the dimension settings
     initialiseDimensionSettings(params, dataset.dimensions);
 
@@ -625,10 +628,6 @@ function onDataLoad(results) {
     document.getElementById("multiple-select").replaceChildren(ogmc, ogmb);
     document.getElementById("colour-select").replaceChildren(ogcc, ogcb);
 
-    document.getElementById("palette-select").replaceChildren();
-    for (const key of Object.keys(metbrewer)) {
-        document.getElementById("palette-select").append(createOption(key, key, (key == settings.palette)));
-    }
     handleXVariableChange(
         dataset.dimensions[settings.x].hasOwnProperty('calcSource') ? dataset.dimensions[settings.x].calcSource : settings.x, 
         dataset.dimensions[settings.x].type == 'Quantile', 
@@ -665,9 +664,6 @@ function onDataLoad(results) {
     $('#palette-select').select2({ width: '100%', dropdownParent: $("#bottom-sheet") });
     $('#geography-select').select2({ width: '100%', dropdownParent: $("#bottom-sheet") });
 
-    // Make sure the correct palette options are available for the colour variable
-    settings.palette = adjustAvailablePalettes(settings.colour, settings.palette);
-
     // When the selectors change, update the chart options
     $('#multiple-select').on('select2:select', function (e) {
         settings.smallMultiple = handleColourOrMultipleVariableChange(
@@ -688,7 +684,6 @@ function onDataLoad(results) {
             document.getElementById('colour-interval').checked,
             document.getElementById('colour-percentage').checked
         );
-        settings.palette = adjustAvailablePalettes(settings.colour, settings.palette);
         updateChart();
     });
 
@@ -942,7 +937,10 @@ function updateChart() {
             }
         }
     }
+    // Make sure the correct palette options are available for the colour variable, once we have the fata loaded
     categories = orderCategories(settings.colour);
+    settings.palette = adjustAvailablePalettes(categories.length, settings.palette);
+
     isSmallMultiple = (settings.smallMultiple != 'None') && (!settings.showMap);
     var series = [];
     var yAxis = [];
