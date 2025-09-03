@@ -1,13 +1,14 @@
 // TODO: fill out Data Zones dataset - remove all the Other columns
-// TODO: add denominator for households
 // TODO: add new category variables - side of the bann/white water and urban/rural (maybe deprivation/target areas)
 // TODO: check NISRA for other DZ/SDZ data
 // TODO: try a multi-variable analysis
+// TODO: wrap long x and y axis captions
+// TODO: add title to legend (or colour to title)
 // TODO: more examples (education/job category/industry)
 // TODO: more geographies (DEA/Ward)
 // TODO: fix available palettes for binned variable
 // TODO: add hex map
-// TODO: load a column at a time from NISRA
+// TODO: load a column at a time from NISRA - tried this and CORS policy prevents it
 // TODO: Add NIMDM travel data for small areas
 // TODO: Allow users to choose an area to highlight on the charts
 
