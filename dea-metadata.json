@@ -4,6 +4,7 @@
     "index": "DEA_cd",
     "name": "Geography",
     "geojson": "dea2014_epsg4326_simplified3_5.geojson",
+    "geojsonIndex": "ONS_CODE",
     "exploreURL": "https://explore.nisra.gov.uk/area-explorer-2021/{code}",
     "explorerName": "NISRA Area Explorer",
     "population": "All usual residents",
