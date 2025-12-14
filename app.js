@@ -339,6 +339,10 @@ const geographyOptions = [
     {
         value: 'Small Area',
         URL: 'sa-metadata.json'
+    },
+    {
+        value: 'District Electoral Area',
+        URL: 'dea-metadata.json'
     }
 ];
 
