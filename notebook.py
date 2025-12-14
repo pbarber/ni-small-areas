@@ -362,76 +362,70 @@ benefits = dataset.write('dataframe')
 benefits = benefits[benefits['Year']=='2024'].drop(columns='Year').pivot(index='Data Zones', columns='Statistic', values='value').rename_axis('Geography')
 dz_stats = dz_stats.merge(benefits, how='left', on='Geography')
 
-# %%
-def get_stats_from_nisra_builder(url, group, values='Count', index='Census 2021 Data Zone Code'):
+# %% Helper functions for getting Census 2021 data
+def get_stats_from_nisra_builder(url, group, values='Count', index='Census 2021 Data Zone Code', rename_index='DZ2021_cd'):
     resp = requests.get(url)
     resp.raise_for_status()
     df = pandas.read_csv(io.StringIO(resp.text))
-    df = df.pivot(index=index, columns=(group + ' Label'), values=values).rename_axis('DZ2021_cd')
+    df = df.pivot(index=index, columns=(group + ' Label'), values=values).rename_axis(rename_index)
     return(df.add_prefix(f'{group}: ', axis='columns'))
 
-# %%
-session = requests.Session()
-base_url = 'https://build.nisra.gov.uk'
-tables = []
-for pop in ['PEOPLE', 'HOUSEHOLD']:
-    resp = session.get(base_url + f'/en/custom/variables?d={pop}&v=DZ21&st=')
-    resp.raise_for_status()
-    html = BeautifulSoup(resp.text)
-    for a in html.find_all('a', class_='choice__target', href=True):
-        sub = session.get(base_url + a['href'])
-        sub.raise_for_status()
-        subhtml = BeautifulSoup(sub.text)
-        labels = subhtml.find_all('label', class_='radio__label')
-        for l in labels:
-            query = '?d=' + pop + (''.join(f'&v={v}' for v in ['DZ21', l.get('for')]))
-            tables.append(
-                {
-                    'name': l.text.strip('\n'),
-                    'pageurl': f'{base_url}/en/custom/data{query}',
-                    'csvurl': f'{base_url}/en/custom/table.csv{query}'
-                }
-            )
+def get_all_census_tables_for_area(area_type):
+    session = requests.Session()
+    base_url = 'https://build.nisra.gov.uk'
+    tables = []
+    for pop in ['PEOPLE', 'HOUSEHOLD']:
+        resp = session.get(base_url + f'/en/custom/variables?d={pop}&v={area_type}&st=')
+        resp.raise_for_status()
+        html = BeautifulSoup(resp.text)
+        for a in html.find_all('a', class_='choice__target', href=True):
+            sub = session.get(base_url + a['href'])
+            sub.raise_for_status()
+            subhtml = BeautifulSoup(sub.text)
+            labels = subhtml.find_all('label', class_='radio__label')
+            for l in labels:
+                query = '?d=' + pop + (''.join(f'&v={v}' for v in [area_type, l.get('for')]))
+                tables.append(
+                    {
+                        'name': l.text.strip('\n'),
+                        'pageurl': f'{base_url}/en/custom/data{query}',
+                        'csvurl': f'{base_url}/en/custom/table.csv{query}'
+                    }
+                )
+    return tables
+
+def get_tables_from_census_builder(tables, df, index='Census 2021 Data Zone Code', rename_index='DZ2021_cd'):
+    fields = {}
+    for t in tables:
+        try:
+            table = get_stats_from_nisra_builder(t['csvurl'], t['name'], index=index, rename_index=rename_index)
+        except Exception as e:
+            logging.exception(f'Caught error accessing {t['name']}')
+        else:
+            df = df.merge(table, how='left', on=rename_index)
+            [fields.update({c: {'URL': t['pageurl'], 'type': 'Metric'}}) for c in table.columns.to_list()]
+
+    return fields, df
+
+def add_descriptions_from_nisra_builder(metadatafile):
+    session = requests.Session()
+    with open(metadatafile) as fd:
+        fields = json.load(fd)
+        for k, field in fields['dimensions'].items():
+            if field.get('description') is None:
+                m = re.search(r'\?d\=(\w+)\&v\=(\w+)\&v\=(\w+)', field.get('URL'))
+                url = f'https://build.nisra.gov.uk/en/metadata/variable?d={m.group(1)}&v={m.group(3)}'
+                resp = session.get(url)
+                resp.raise_for_status()
+                html = BeautifulSoup(resp.text)
+                fields['dimensions'][k]['description'] = html.find('div', class_='page-section-inner').text
+    with open(metadatafile, 'w') as fd:
+        json.dump(fields, fd)
 
 # %%
-fields = {}
-for t in tables:
-    try:
-        table = get_stats_from_nisra_builder(t['csvurl'], t['name'])
-    except Exception as e:
-        logging.exception(f'Caught error accessing {t['name']}')
-    else:
-        dz_stats = dz_stats.merge(table, how='left', on='DZ2021_cd')
-        [fields.update({c: {'URL': t['pageurl'], 'type': 'Metric'}}) for c in table.columns.to_list()]
-
-# %%
-dz_stats.to_csv('dz-stats.csv', index=False)
-
-# %%
-missing = identify_missing('dz-metadata.json', dz_stats)
-with open('dz-missing.json', 'w') as fd:
-    json.dump(missing, fd)
-
-# %%
-with open('table-builder.json', 'w') as fd:
-    json.dump(fields, fd)
-
-# %%
-session = requests.Session()
-with open('dz-metadata.json') as fd:
-    fields = json.load(fd)
-    for k, field in fields['dimensions'].items():
-        if field.get('description') is None:
-            m = re.search(r'\?d\=(\w+)\&v\=(\w+)\&v\=(\w+)', field.get('URL'))
-            url = f'https://build.nisra.gov.uk/en/metadata/variable?d={m.group(1)}&v={m.group(3)}'
-            resp = session.get(url)
-            resp.raise_for_status()
-            html = BeautifulSoup(resp.text)
-            fields['dimensions'][k]['description'] = html.find('div', class_='page-section-inner').text
-
-# %%
-with open('dz-metadata.json', 'w') as fd:
-    json.dump(fields, fd)
+dz_tabs = get_all_census_tables_for_area('DZ21')
+fields, dz_stats = get_tables_from_census_builder(dz_tabs, dz_stats, index='Census 2021 Data Zone Code', rename_index='DZ2021_cd')
+add_descriptions_from_nisra_builder('dz-metadata.json')
 
 # %%
 dz_stats = pandas.read_csv('dz-stats.csv')
@@ -484,5 +478,19 @@ dz_stats = dz_stats.merge(dzhs.rename(columns={'Geography code': 'DZ2021_cd'}), 
 
 # %%
 dz_stats.to_csv('dz-stats.csv', index=False)
+
+# %%
+download_file_if_not_exists('https://www.nisra.gov.uk/system/files/statistics/2025-05/MYE23_DEA.xlsx', 'MYE23_DEA.xlsx')
+dea = pandas.read_excel('MYE23_DEA.xlsx', sheet_name='Flat')
+dea = dea[(dea['Year']==2023) & (dea['Sex']=='All Persons') & (dea['Age']=='All ages')][['Area_code','Area_name','LGD2014_Name','MYE']]
+dea.rename(columns={'Area_code': 'DEA_cd', 'Area_name': 'DEA_nm', 'LGD2014_Name': 'LGD2014_nm', 'MYE': 'MYE2023'}, inplace=True)
+
+# %%
+dea_tabs = get_all_census_tables_for_area('DEA14')
+
+# %%
+fields, dea = get_tables_from_census_builder(dea_tabs, dea, index='District Electoral Area 2014 Code', rename_index='DEA_cd')
+# %%
+dea.to_csv('dea-stats.csv', index=False)
 
 # %%
