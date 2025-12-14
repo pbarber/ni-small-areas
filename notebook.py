@@ -34,6 +34,11 @@ census21index = {
         'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2021-ms-a14.xlsx',
         'skip': 5,
         'allcols': True
+    },
+    'MS-E01 Households': {
+        'url': 'https://www.nisra.gov.uk/system/files/statistics/census-2021-ms-e01.xlsx',
+        'skip': 5,
+        'allcols': True
     }
 }
 
@@ -330,22 +335,7 @@ dz2021[['DZ2021_cd','LGD2014_nm','Area_ha','Perim_km']]
 
 # Load DZ NI 2021 Census data
 dz_stats = pandas.DataFrame(dz2021[['DZ2021_cd','LGD2014_nm','Area_ha','Perim_km']])
-for k, v in census21index.items():
-    download_file_if_not_exists(v.get('url'), os.path.basename(v.get('url')))
-    census = pandas.read_excel(os.path.basename(v.get('url')), sheet_name='DZ', skiprows=v.get('skip'))
-    if 'Geography code' in census:
-        census.set_index('Geography code', inplace=True)
-    else:
-        census.set_index('Geography Code', inplace=True)
-    census.rename_axis('DZ2021_cd', inplace=True)
-    if not v.get('allcols', False):
-        census = census.filter(regex=r'\(%\)').reset_index()
-    census.drop(columns=['Access census area explorer'], inplace=True, errors='ignore')
-    if len(dz_stats)==0:
-        dz_stats = census.reset_index()
-    else:
-        dz_stats = dz_stats.merge(census, how='left', left_on='DZ2021_cd', right_on='DZ2021_cd', suffixes=('','.y'))
-    dz_stats.drop(columns=['DZ2021_cd.y'], inplace=True, errors='ignore')
+dz_stats = load_non_builder_census_data(census21index, dz_stats)
 
 download_file_if_not_exists('https://www.nisra.gov.uk/system/files/statistics/geography-census-2021-population-weighted-centroids-for-data-zones-and-super-data-zones.xlsx', 'geography-census-2021-population-weighted-centroids-for-data-zones-and-super-data-zones.xlsx')
 centroids = pandas.read_excel('geography-census-2021-population-weighted-centroids-for-data-zones-and-super-data-zones.xlsx')
@@ -446,6 +436,25 @@ def find_no_code_columns(df):
     no_code_cols = [col for col in df.columns if 'No code required' in col]
     return no_code_cols
 
+def load_non_builder_census_data(censusindex, df, sheet='DZ', index='DZ2021_cd'):
+    for k, v in censusindex.items():
+        download_file_if_not_exists(v.get('url'), os.path.basename(v.get('url')))
+        census = pandas.read_excel(os.path.basename(v.get('url')), sheet_name=sheet, skiprows=v.get('skip'))
+        if 'Geography code' in census:
+            census.set_index('Geography code', inplace=True)
+        else:
+            census.set_index('Geography Code', inplace=True)
+        census.rename_axis(index, inplace=True)
+        if not v.get('allcols', False):
+            census = census.filter(regex=r'\(%\)').reset_index()
+        census.drop(columns=['Access census area explorer'], inplace=True, errors='ignore')
+        if len(df)==0:
+            df = census.reset_index()
+        else:
+            df = df.merge(census, how='left', left_on=index, right_on=index, suffixes=('','.y'))
+        df.drop(columns=[f'{index}.y'], inplace=True, errors='ignore')
+    return df
+
 # %%
 dz_tabs = get_all_census_tables_for_area('DZ21')
 fields, dz_stats = get_tables_from_census_builder(dz_tabs, dz_stats, index='Census 2021 Data Zone Code', rename_index='DZ2021_cd')
@@ -473,6 +482,9 @@ dea_tabs = get_all_census_tables_for_area('DEA14')
 fields, dea = get_tables_from_census_builder(dea_tabs, dea, index='District Electoral Area 2014 Code', rename_index='DEA_cd')
 dea = dea.drop(columns=pandas.DataFrame(find_equivalent_columns(dea))[0].drop_duplicates())
 dea = dea.drop(columns=find_no_code_columns(dea))
+
+dea = load_non_builder_census_data(census21index, dea, sheet='DEA', index='DEA_cd')
+
 dea.to_csv('dea-stats.csv', index=False)
 
 # %%
@@ -483,5 +495,7 @@ with open('dea-metadata.json', 'w') as fd:
 # %%
 add_descriptions_from_nisra_builder('dea-metadata.json')
 remove_missing_metadata_entries('dea-metadata.json', dea)
+
+# %%
 
 # %%
