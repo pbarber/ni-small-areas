@@ -15,7 +15,7 @@
         "LGD2014_nm",
         "Health Conditions (Number): Does not have a long-term condition (%)",
         "Religion: Christian: Catholic (%)",
-        "Religion: Christian: Protestant (%)",
+        "Religion - 4 Categories: Protestant and Other Christian (including Christian related) (%)",
         "Religion: No religion (%)"
     ],
     "dimensions": {
@@ -10328,172 +10328,397 @@
         },
         "Religion - 19 Categories: Christian: Other Christian denominations": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_AGG19",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Other Christian",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least other Christian",
+                "Most other Christian"
+            ]
         },
         "Religion - 19 Categories: Other Religions: Other Religions": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_AGG19",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Other religions",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least other religions",
+                "Most other religions"
+            ]
         },
         "Religion: Christian: Baptist": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Baptist",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Baptist",
+                "Most Baptist"
+            ]
         },
         "Religion: Christian: Brethren": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Brethren",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Brethren",
+                "Most Brethren"
+            ]
         },
         "Religion: Christian: Catholic": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Catholic",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Catholic",
+                "Most Catholic"
+            ]
         },
         "Religion: Christian: Christian": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Christian",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Christian",
+                "Most Christian"
+            ]
         },
         "Religion: Christian: Christian Fellowship Church": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Christian Fellowship Church",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Fellowship Church",
+                "Most Fellowship Church"
+            ]
         },
         "Religion: Christian: Church of England": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Church of England",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Church of England",
+                "Most Church of England"
+            ]
         },
         "Religion: Christian: Church of Ireland": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Church of Ireland",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Church of Ireland",
+                "Most Church of Ireland"
+            ]
         },
         "Religion: Christian: Church of Jesus Christ of Latter Day Saints (Mormons)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Church of Jesus Christ of Latter Day Saints (Mormons)",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Mormon",
+                "Most Mormon"
+            ]
         },
         "Religion: Christian: Congregational Church": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Congregational Church",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Congregational",
+                "Most Congregational"
+            ]
         },
         "Religion: Christian: Evangelical": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Evangelical",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Evangelical",
+                "Most Evangelical"
+            ]
         },
         "Religion: Christian: Free Presbyterian": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
             "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Free Presbyterian",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Free Presbyterian",
+                "Most Free Presbyterian"
+            ]
         },
         "Religion: Christian: Independent Methodist": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
             "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Independent Methodist",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Independent Methodist",
+                "Most Independent Methodist"
+            ]
         },
         "Religion: Christian: Jehovah's Witness": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Jehovah's Witness",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Jehovah's Witness",
+                "Most Jehovah's Witness"
+            ]
         },
         "Religion: Christian: Methodist Church in Ireland": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Methodist Church in Ireland",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Methodist Church in Ireland",
+                "Most Methodist Church in Ireland"
+            ]
         },
         "Religion: Christian: Mixed Catholic/Protestant": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Mixed Catholic/Protestant",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Mixed Catholic/Protestant",
+                "Most Mixed Catholic/Protestant"
+            ]
         },
         "Religion: Christian: Non Denominational": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Non Denominational",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Non Denominational",
+                "Most Non Denominational"
+            ]
         },
         "Religion: Christian: Non-Subscribing Presbyterian": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Non-Subscribing Presbyterian",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Non-Subscribing Presbyterian",
+                "Most Non-Subscribing Presbyterian"
+            ]
         },
         "Religion: Christian: Orthodox Church": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Orthodox Church",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Orthodox Church",
+                "Most Orthodox Church"
+            ]
         },
         "Religion: Christian: Other Christian denominations": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Other Christian denominations",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Other Christian denominations",
+                "Most Other Christian denominations"
+            ]
         },
         "Religion: Christian: Pentecostal": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Pentecostal",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Pentecostal",
+                "Most Pentecostal"
+            ]
         },
         "Religion: Christian: Presbyterian": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Presbyterian",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Presbyterian",
+                "Most Presbyterian"
+            ]
         },
         "Religion: Christian: Presbyterian Church in Ireland": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Presbyterian Church in Ireland",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Presbyterian Church in Ireland",
+                "Most Presbyterian Church in Ireland"
+            ]
         },
         "Religion: Christian: Protestant": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
-            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
+            "type": "People",
+            "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'.",
+            "title": "Religion: Protestant",
+            "date": "2024-04-03",
+            "bins": [
+                10
+            ],
+            "extremes": [
+                "Least Protestant",
+                "Most Protestant"
+            ]
         },
         "Religion: Christian: Protestant (Mixed)": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
+            "type": "People",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
         "Religion: Christian: Reformed Presbyterian": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
+            "type": "People",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
         "Religion: Christian: Romanian Orthodox Church": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
+            "type": "People",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
         "Religion: No religion": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
+            "type": "People",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
         "Religion: Other Religions: Buddhist": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
+            "type": "People",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
         "Religion: Other Religions: Hindu": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
+            "type": "People",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
         "Religion: Other Religions: Muslim": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
+            "type": "People",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
         "Religion: Other Religions: Other Religions": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
+            "type": "People",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
         "Religion: Religion not stated": {
             "URL": "https://build.nisra.gov.uk/en/custom/data?d=PEOPLE&v=DEA14&v=RELIGION_BELONG_TO_DVO_1000",
-            "type": "Metric",
+            "type": "People",
             "description": "The religion, religious denomination or body a person belongs to as stated on the census. Missing answers for Religion are not imputed, so the output classifications include a not stated category. Those people who do not regard themselves as belonging to any religion are classified as 'No religion'."
         },
         "Religion or Religion Brought Up In: nan": {
