@@ -497,5 +497,21 @@ add_descriptions_from_nisra_builder('dea-metadata.json')
 remove_missing_metadata_entries('dea-metadata.json', dea)
 
 # %%
+def transfer_metadata(sourcefile, targetfile):
+    with open(sourcefile) as fd:
+        source = json.load(fd)
+    with open(targetfile) as fd:
+        target = json.load(fd)
+    for k, v in source['dimensions'].items():
+        if k in target['dimensions']:
+            for m in ['title', 'date', 'bins', 'extremes']:
+                if m not in target['dimensions'][k] and m in v:
+                    target['dimensions'][k][m] = v[m]
+            if v['type'] != target['dimensions'][k]['type']:
+                target['dimensions'][k]['type'] = v['type']
+    with open(targetfile, 'w') as fd:
+        json.dump(target, fd, indent=4)
+# %%
+transfer_metadata('dz-metadata.json', 'dea-metadata.json')
 
 # %%
