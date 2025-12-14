@@ -2,7 +2,7 @@
     "dataset": "dea-stats.csv",
     "title": "District Electoral Area",
     "index": "DEA_cd",
-    "name": "Geography",
+    "name": "DEA_nm",
     "geojson": "dea2014_epsg4326_simplified3_5.geojson",
     "geojsonIndex": "ONS_CODE",
     "exploreURL": "https://explore.nisra.gov.uk/area-explorer-2021/{code}",

@@ -561,7 +561,7 @@ function onDataLoad(results) {
     geoJSONPromise = fetch(dataset.geojson).then(response => response.json()).then(function (data) {
         geoJSONData = data;
         geoJSONData.features = geoJSONData.features.map(feature => {
-            feature.properties.name = feature.properties[dataset.hasOwnProperty('geoJsonIndex') ? dataset.geoJsonIndex : dataset.index];
+            feature.properties.name = feature.properties[dataset.hasOwnProperty('geojsonIndex') ? dataset.geojsonIndex : dataset.index];
             return feature;
         });
         echarts.registerMap(dataset.name, geoJSONData);
