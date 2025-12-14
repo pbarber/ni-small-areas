@@ -420,55 +420,39 @@ def add_descriptions_from_nisra_builder(metadatafile):
                 html = BeautifulSoup(resp.text)
                 fields['dimensions'][k]['description'] = html.find('div', class_='page-section-inner').text
     with open(metadatafile, 'w') as fd:
-        json.dump(fields, fd)
+        json.dump(fields, fd, indent=4)
+
+# Find columns that are equivalent (have the same values)
+def find_equivalent_columns(df):
+    equivalent_cols = []
+    cols = df.columns
+    for i in range(len(cols)):
+        for j in range(i+1, len(cols)):
+            if df[cols[i]].equals(df[cols[j]]):
+                equivalent_cols.append((cols[i], cols[j]))
+    return equivalent_cols
+
+def remove_missing_metadata_entries(metadatafile, df):
+    with open(metadatafile) as fd:
+        fields = json.load(fd)
+        missing_dimensions = [k for k, field in fields['dimensions'].items() 
+                             if k not in df.columns]
+        fields['dimensions'] = {k: v for k, v in fields['dimensions'].items() if k not in missing_dimensions}
+    with open(metadatafile, 'w') as fd:
+        json.dump(fields, fd, indent=4)
+
+# Find columns containing 'No code required'
+def find_no_code_columns(df):
+    no_code_cols = [col for col in df.columns if 'No code required' in col]
+    return no_code_cols
 
 # %%
 dz_tabs = get_all_census_tables_for_area('DZ21')
 fields, dz_stats = get_tables_from_census_builder(dz_tabs, dz_stats, index='Census 2021 Data Zone Code', rename_index='DZ2021_cd')
 add_descriptions_from_nisra_builder('dz-metadata.json')
-
-# %%
-dz_stats = pandas.read_csv('dz-stats.csv')
-
-# %%
-dz_stats
-
-# %%
-# Find columns containing 'No code required'
-no_code_cols = [col for col in dz_stats.columns if 'No code required' in col]
-
-# Drop the columns
-dz_stats = dz_stats.drop(columns=no_code_cols)
-
-# %%
-# Find columns that are equivalent (have the same values)
-equivalent_cols = []
-cols = dz_stats.columns
-for i in range(len(cols)):
-    for j in range(i+1, len(cols)):
-        if dz_stats[cols[i]].equals(dz_stats[cols[j]]):
-            equivalent_cols.append((cols[i], cols[j]))
-
-# Print equivalent column pairs
-for col1, col2 in equivalent_cols:
-    print(f"Equivalent columns: '{col1}' and '{col2}'")
-
-equivalent_cols = pandas.DataFrame(equivalent_cols)
-equivalent_cols.to_csv('dz_equivalent.csv', index=False)
-
-# %%
-dz_stats = dz_stats.drop(columns=equivalent_cols[0].drop_duplicates())
-
-# %%
-with open('dz-metadata.json') as fd:
-    fields = json.load(fd)
-    missing_dimensions = [k for k, field in fields['dimensions'].items() 
-                         if k not in dz_stats.columns]
-# Drop dimensions that are missing from dz_stats
-fields['dimensions'] = {k: v for k, v in fields['dimensions'].items() if k not in missing_dimensions}
-with open('dz-metadata.json', 'w') as fd:
-    json.dump(fields, fd)
-
+dz_stats = dz_stats.drop(columns=find_no_code_columns(dz_stats))
+dz_stats = dz_stats.drop(columns=find_equivalent_columns(dz_stats)[0].drop_duplicates())
+remove_missing_metadata_entries('dz-metadata.json', dz_stats)
 
 # %%
 download_file_if_not_exists('https://www.nisra.gov.uk/system/files/statistics/census-2021-ms-e01.xlsx', 'census-2021-ms-e01.xlsx')
@@ -479,18 +463,25 @@ dz_stats = dz_stats.merge(dzhs.rename(columns={'Geography code': 'DZ2021_cd'}), 
 # %%
 dz_stats.to_csv('dz-stats.csv', index=False)
 
-# %%
+# %% Load and clean data for District Electoral Areas
 download_file_if_not_exists('https://www.nisra.gov.uk/system/files/statistics/2025-05/MYE23_DEA.xlsx', 'MYE23_DEA.xlsx')
 dea = pandas.read_excel('MYE23_DEA.xlsx', sheet_name='Flat')
 dea = dea[(dea['Year']==2023) & (dea['Sex']=='All Persons') & (dea['Age']=='All ages')][['Area_code','Area_name','LGD2014_Name','MYE']]
 dea.rename(columns={'Area_code': 'DEA_cd', 'Area_name': 'DEA_nm', 'LGD2014_Name': 'LGD2014_nm', 'MYE': 'MYE2023'}, inplace=True)
 
-# %%
 dea_tabs = get_all_census_tables_for_area('DEA14')
+fields, dea = get_tables_from_census_builder(dea_tabs, dea, index='District Electoral Area 2014 Code', rename_index='DEA_cd')
+dea = dea.drop(columns=pandas.DataFrame(find_equivalent_columns(dea))[0].drop_duplicates())
+dea = dea.drop(columns=find_no_code_columns(dea))
+dea.to_csv('dea-stats.csv', index=False)
 
 # %%
-fields, dea = get_tables_from_census_builder(dea_tabs, dea, index='District Electoral Area 2014 Code', rename_index='DEA_cd')
+with open('dea-metadata.json', 'w') as fd:
+    json.dump(fields, fd, indent=4)
+# Followed by manual editing to setup the file format correctly
+
 # %%
-dea.to_csv('dea-stats.csv', index=False)
+add_descriptions_from_nisra_builder('dea-metadata.json')
+remove_missing_metadata_entries('dea-metadata.json', dea)
 
 # %%
